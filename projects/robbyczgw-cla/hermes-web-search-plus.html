@@ -61,11 +61,11 @@
   <p class="project-desc">Hermes Agent plugin: multi-provider web search (Serper, Tavily, Exa, Querit, Perplexity) with intelligent auto-routing</p>
 
   <div class="meta-row">
-    <span class="stars">★ 46</span>
+    <span class="stars">★ 52</span>
     <span><span class="meta-label">lang</span>Python</span>
     <span><span class="meta-label">license</span>MIT</span>
     
-    <span><span class="meta-label">updated</span>2026-04-20</span>
+    <span><span class="meta-label">updated</span>2026-04-23</span>
   </div>
 
   <div class="actions">
@@ -80,11 +80,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Web-search-plus is a multi-provider search plugin for Hermes Agent that consolidates various search engines into a single tool. It uses an intelligent auto-routing engine to select the most appropriate provider, such as Serper for news or Exa for semantic research, based on query intent and linguistic signals. The plugin features adaptive fallback mechanisms and local caching to ensure reliability and performance even when specific APIs are on cooldown. Users can also manually filter results by time range and domain or utilize specialized deep-research modes for complex document analysis.</p>
+    <p class="summary-text">Hermes Web Search Plus is a multi-provider search plugin for the Hermes Agent that enables intelligent retrieval from seven different search engines. The system utilizes an auto-routing engine to select the most appropriate provider, such as Serper for news or Exa for semantic discovery, based on the specific intent of the query. It features adaptive fallback mechanisms that skip providers on cooldown and includes local caching to prevent redundant API calls. Users can further refine results through time-range filtering, domain whitelisting, and specialized deep-research modes for complex synthesis.</p>
     <ul class="summary-highlights">
-      <li>Supports seven providers including Serper, Tavily, Exa, and Perplexity</li>
-      <li>Intelligent auto-routing selects providers based on query intent</li>
-      <li>Includes local caching and automatic provider fallback mechanisms</li>
+      <li>Auto-routes queries across Serper, Tavily, Exa, Querit, Perplexity, You, and SearXNG</li>
+      <li>Supports Exa deep-reasoning for multi-source synthesis and cross-document analysis</li>
+      <li>Includes adaptive fallback and local caching with one-hour TTL</li>
     </ul>
   </div>
 </section>
@@ -100,11 +100,24 @@
 <hr>
 <h3>Quick Start</h3>
 <pre><code class="language-bash">git clone https://github.com/robbyczgw-cla/hermes-web-search-plus.git ~/.hermes/plugins/web-search-plus
+cd ~/.hermes/hermes-agent
+source venv/bin/activate
 cd ~/.hermes/plugins/web-search-plus
-cp .env.template .env          # fill in at least SERPER_API_KEY
-pip install requests
+cp .env.template .env          # fill in at least one provider key
+# Optional: pip install httpx  # only needed for Exa deep/deep-reasoning
 </code></pre>
-<p>That&#39;s it. Start Hermes and use <code>web_search_plus</code>.</p>
+<p>Important:</p>
+<ul>
+<li>Use the Hermes virtualenv, not your system Python.</li>
+<li>Run <code>pip</code> only after <code>source ~/.hermes/hermes-agent/venv/bin/activate</code> (or from <code>~/.hermes/hermes-agent</code> via <code>source venv/bin/activate</code>).</li>
+<li>If you test the plugin from the CLI, prefer <code>~/.hermes/hermes-agent/venv/bin/python</code> or activate the Hermes venv first.</li>
+</ul>
+<p>Then enable the plugin in <code>~/.hermes/config.yaml</code>:</p>
+<pre><code class="language-yaml">plugins:
+  enabled:
+    - web-search-plus
+</code></pre>
+<p>Finally restart Hermes (or <code>/restart</code> + <code>/reset</code> in gateway chats) and use <code>web_search_plus</code>.</p>
 <hr>
 <h3>Features</h3>
 <ul>
@@ -253,7 +266,9 @@ web_search_plus(query=&quot;LoRA fine-tuning&quot;, include_domains=[&quot;arxiv
 # → arxiv only
 </code></pre>
 <h4>CLI testing</h4>
-<pre><code class="language-bash">python3 ~/.hermes/plugins/web-search-plus/search.py \
+<pre><code class="language-bash">cd ~/.hermes/hermes-agent
+source venv/bin/activate
+python ~/.hermes/plugins/web-search-plus/search.py \
   --query &quot;test query&quot; --provider auto --max-results 5 --compact
 </code></pre>
 <hr>
@@ -303,7 +318,7 @@ CHANGELOG.md     — Version history
         <div class="name"><span class="org">raulvidis /</span> hermes-cloudflare</div>
       </a>
       <a class="related-row" href="/projects/clawshell/clawshell">
-        <div class="stars">★ 266</div>
+        <div class="stars">★ 267</div>
         <div class="name"><span class="org">clawshell /</span> clawshell</div>
       </a>
     </div>

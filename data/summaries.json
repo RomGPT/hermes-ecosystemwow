@@ -187,18 +187,17 @@
     "auditedAt": "2026-04-20T08:40:30.247Z"
   },
   "Agents365-ai/drawio-skill": {
-    "summary": "drawio-skill is a tool that enables AI agents to generate professional draw.io diagrams from natural language descriptions. It produces .drawio XML files and utilizes the native draw.io desktop CLI to export them as PNG, SVG, PDF, or JPG. The skill features six diagram presets, including ML/Deep Learning and UML, and supports an iterative review loop for refining layouts. It is compatible with multiple AI platforms, including Hermes Agent, Claude Code, and Opencode.",
+    "summary": "The drawio-skill project is an agentic tool that converts natural language descriptions into professional .drawio diagrams. It utilizes a set of six diagram presets and a grid-aligned layout engine to generate XML files that can be exported to PNG, SVG, or PDF via the draw.io desktop CLI. The system features a self-correcting iterative loop that reads exported files to auto-fix layout issues and supports specialized ML model diagrams with tensor shape annotations. It integrates across multiple AI platforms including Claude Code, OpenClaw, and Hermes Agent.",
     "highlights": [
-      "Six presets for ERD, UML, Architecture, ML, and Flowcharts",
-      "Grid-aligned layouts with animated connectors and tensor shape annotations",
-      "Multi-platform support for Hermes Agent, Claude Code, and others"
+      "Generates six diagram types including UML, ERD, and ML architectures",
+      "Supports animated connectors and 10px grid-aligned coordinate snapping",
+      "Automates iterative refinement with a 5-round self-check safety valve"
     ],
-    "readmeHash": "a79b15296f307b4bc0ec62fdbf0e48dc6e802a3421fd2ab721d6e399da60ab93",
-    "generatedAt": "2026-04-20T07:17:07.496Z",
+    "readmeHash": "f8c751f209e450993fbf98498f6ef01822aaf67bf6ff8b9e99a87b930c34e098",
+    "generatedAt": "2026-04-23T15:40:11.888Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
-    "audit": "pass",
-    "auditedAt": "2026-04-20T08:40:32.803Z"
+    "audit": "pass"
   },
   "smartcontractkit/chainlink-agent-skills": {
     "summary": "Chainlink Agent Skills is a collection of standardized tools that enable AI agents to interact with Chainlink oracle services and smart contracts. The project implements the Agent Skills specification, allowing agents to discover and execute specific blockchain functions through a modular CLI-based installation. These skills provide capabilities for cross-chain transfers via CCIP, data feed integration, and Chainlink Runtime Environment (CRE) operations. By using these skills, developers can prompt agents to generate Solidity code, manage workflows, and perform local testing for decentralized applications.",
@@ -443,18 +442,17 @@
     "audit": "pass"
   },
   "robbyczgw-cla/hermes-web-search-plus": {
-    "summary": "Web-search-plus is a multi-provider search plugin for Hermes Agent that consolidates various search engines into a single tool. It uses an intelligent auto-routing engine to select the most appropriate provider, such as Serper for news or Exa for semantic research, based on query intent and linguistic signals. The plugin features adaptive fallback mechanisms and local caching to ensure reliability and performance even when specific APIs are on cooldown. Users can also manually filter results by time range and domain or utilize specialized deep-research modes for complex document analysis.",
+    "summary": "Hermes Web Search Plus is a multi-provider search plugin for the Hermes Agent that enables intelligent retrieval from seven different search engines. The system utilizes an auto-routing engine to select the most appropriate provider, such as Serper for news or Exa for semantic discovery, based on the specific intent of the query. It features adaptive fallback mechanisms that skip providers on cooldown and includes local caching to prevent redundant API calls. Users can further refine results through time-range filtering, domain whitelisting, and specialized deep-research modes for complex synthesis.",
     "highlights": [
-      "Supports seven providers including Serper, Tavily, Exa, and Perplexity",
-      "Intelligent auto-routing selects providers based on query intent",
-      "Includes local caching and automatic provider fallback mechanisms"
+      "Auto-routes queries across Serper, Tavily, Exa, Querit, Perplexity, You, and SearXNG",
+      "Supports Exa deep-reasoning for multi-source synthesis and cross-document analysis",
+      "Includes adaptive fallback and local caching with one-hour TTL"
     ],
-    "readmeHash": "6ff80b1c77c2a99be9238c774f1b42a197e0e44eda9b8cf2cc1dadea9674ff8a",
-    "generatedAt": "2026-04-17T18:16:57.050Z",
+    "readmeHash": "a674f02082794d0aa32c0ccb6a0070c2d9802e53bb10862af1284def6261b8ff",
+    "generatedAt": "2026-04-23T15:40:22.110Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
-    "audit": "pass",
-    "auditedAt": "2026-04-20T08:41:36.817Z"
+    "audit": "pass"
   },
   "42-evey/hermes-plugins": {
     "summary": "Evey's Hermes Plugins is a collection of 23 custom extensions designed to enhance the autonomy, observability, and cost-efficiency of the Hermes Agent framework. The suite implements specialized logic for multi-model decision debates, smart task routing with fallback chains, and structured telemetry logging. These tools enable agents to manage their own goals, perform self-correction loops, and consolidate long-term memory into vector storage. Additionally, the project includes a bidirectional bridge for Claude Code and budget enforcement via Langfuse integration.",
@@ -620,14 +618,14 @@
     "auditedAt": "2026-04-20T08:42:14.478Z"
   },
   "numtide/llm-agents.nix": {
-    "summary": "llm-agents.nix is a collection of Nix packages designed to simplify the deployment and management of various AI coding agents and development tools. The project provides a unified repository of Nix expressions that automate the installation of both source-based and binary-distributed agents through a daily update cycle. Users can instantly run or install a wide range of tools including Claude Code, Goose, and specialized orchestrators like Bernstein. This infrastructure ensures that developers have consistent, reproducible access to the latest agentic coding tools across different environments.",
+    "summary": "llm-agents.nix is a collection of Nix packages designed to simplify the deployment and management of AI coding agents and development tools. The project provides a centralized repository of Nix expressions that automate the installation of various CLI-based agents, ensuring they are updated daily from their respective sources. Users can execute these tools directly via Nix flakes, eliminating the need for manual environment configuration or dependency management. The collection includes a wide range of orchestrators, terminal-based assistants, and API proxies from both open-source and proprietary providers.",
     "highlights": [
-      "Provides reproducible Nix packages for numerous AI coding agents",
-      "Automatically updated daily to ensure access to latest versions",
-      "Supports both open-source and proprietary binary-distributed tools"
+      "Provides daily updated Nix packages for numerous AI coding agents",
+      "Enables direct execution of tools via Nix flake commands",
+      "Supports diverse agents including Goose, Claude Code, and Gemini CLI"
     ],
-    "readmeHash": "031c2179f51f25bd68519902dcfc6901e19b96a0b4d23aff745bec4608fb9b6e",
-    "generatedAt": "2026-04-21T15:54:31.974Z",
+    "readmeHash": "e5a0418fe6a7595eebba5593018c8c311f4c14ef1780634771bc07a415fbb25b",
+    "generatedAt": "2026-04-23T15:40:30.589Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"

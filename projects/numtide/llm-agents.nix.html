@@ -80,11 +80,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">llm-agents.nix is a collection of Nix packages designed to simplify the deployment and management of various AI coding agents and development tools. The project provides a unified repository of Nix expressions that automate the installation of both source-based and binary-distributed agents through a daily update cycle. Users can instantly run or install a wide range of tools including Claude Code, Goose, and specialized orchestrators like Bernstein. This infrastructure ensures that developers have consistent, reproducible access to the latest agentic coding tools across different environments.</p>
+    <p class="summary-text">llm-agents.nix is a collection of Nix packages designed to simplify the deployment and management of AI coding agents and development tools. The project provides a centralized repository of Nix expressions that automate the installation of various CLI-based agents, ensuring they are updated daily from their respective sources. Users can execute these tools directly via Nix flakes, eliminating the need for manual environment configuration or dependency management. The collection includes a wide range of orchestrators, terminal-based assistants, and API proxies from both open-source and proprietary providers.</p>
     <ul class="summary-highlights">
-      <li>Provides reproducible Nix packages for numerous AI coding agents</li>
-      <li>Automatically updated daily to ensure access to latest versions</li>
-      <li>Supports both open-source and proprietary binary-distributed tools</li>
+      <li>Provides daily updated Nix packages for numerous AI coding agents</li>
+      <li>Enables direct execution of tools via Nix flake commands</li>
+      <li>Supports diverse agents including Goose, Claude Code, and Gemini CLI</li>
     </ul>
   </div>
 </section>
@@ -587,6 +587,17 @@
 <li><strong>Homepage</strong>: <a href="https://github.com/anthropic-experimental/sandbox-runtime">https://github.com/anthropic-experimental/sandbox-runtime</a></li>
 <li><strong>Usage</strong>: <code>nix run github:numtide/llm-agents.nix#sandbox-runtime -- --help</code></li>
 <li><strong>Nix</strong>: <a href="packages/sandbox-runtime/package.nix">packages/sandbox-runtime/package.nix</a></li>
+</ul>
+</details>
+<details>
+<summary><strong>skills</strong> - The open agent skills tool for installing and managing skills across AI coding agents</summary>
+
+<ul>
+<li><strong>Source</strong>: source</li>
+<li><strong>License</strong>: MIT</li>
+<li><strong>Homepage</strong>: <a href="https://github.com/vercel-labs/skills">https://github.com/vercel-labs/skills</a></li>
+<li><strong>Usage</strong>: <code>nix run github:numtide/llm-agents.nix#skills -- --help</code></li>
+<li><strong>Nix</strong>: <a href="packages/skills/package.nix">packages/skills/package.nix</a></li>
 </ul>
 </details>
 <details>
@@ -1299,7 +1310,7 @@ nix flake check
         <div class="name"><span class="org">0xrsydn /</span> nix-hermes-agent</div>
       </a>
       <a class="related-row" href="/projects/rookiemann/portable-hermes-agent">
-        <div class="stars">★ 38</div>
+        <div class="stars">★ 39</div>
         <div class="name"><span class="org">rookiemann /</span> portable-hermes-agent</div>
       </a>
       <a class="related-row" href="/projects/xmbshwll/hermes-agent-docker">
