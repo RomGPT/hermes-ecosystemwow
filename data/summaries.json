@@ -374,14 +374,14 @@
     "audit": "pass"
   },
   "greyhaven-ai/autocontext": {
-    "summary": "autocontext is a recursive context harness designed to prevent AI agents from starting every task without prior knowledge. It uses a structured multi-agent loop—consisting of competitors, analysts, coaches, architects, and curators—to evaluate agent outputs and persist validated lessons into reusable knowledge. This system allows agents to improve over repeated runs by accumulating playbooks, artifacts, and datasets rather than just changing prompts. Users can also distill stable agent behaviors into cheaper local runtimes or coordinate long-running goals through verifier-driven missions.",
+    "summary": "autocontext is a recursive self-improving harness designed to help LLM agents succeed on complex tasks by turning repeated work into validated, reusable knowledge. The system utilizes a multi-agent loop—comprising roles like competitors, analysts, and coaches—to evaluate execution traces and persist successful strategies into playbooks or distilled models. It organizes work into structured scenarios, missions, and campaigns that use verifiers to gate progress and ensure stable behavior. Users can leverage the framework for evidence-driven investigations, parameter sweeps, and the creation of training datasets for local runtimes.",
     "highlights": [
-      "Accumulates validated knowledge and artifacts across repeated agent runs",
-      "Multi-agent loop evaluates strategies and gates knowledge persistence",
-      "Supports verifier-driven missions and complex multi-mission campaigns"
+      "Multi-agent loop for strategy proposal, analysis, and knowledge curation",
+      "Structured execution via scenarios, missions, and verifier-driven goals",
+      "Distills validated agent traces into cheaper local model runtimes"
     ],
-    "readmeHash": "83c24337a824d5cd2b16cbdca8c0e8e682c9a8e14b82bec812d29dc35d14df75",
-    "generatedAt": "2026-04-23T19:36:42.779Z",
+    "readmeHash": "40192391606ba52cad3fd40995a0ccca253fda30f2fe0bd193e1ce729f15cd68",
+    "generatedAt": "2026-04-23T21:25:57.045Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -442,14 +442,14 @@
     "audit": "pass"
   },
   "robbyczgw-cla/hermes-web-search-plus": {
-    "summary": "Hermes Web Search Plus is a multi-provider search plugin for the Hermes Agent that enables intelligent retrieval from seven different search engines. The system utilizes an auto-routing engine to select the most appropriate provider, such as Serper for news or Exa for semantic discovery, based on the specific intent of the query. It features adaptive fallback mechanisms that skip providers on cooldown and includes local caching to prevent redundant API calls. Users can further refine results through time-range filtering, domain whitelisting, and specialized deep-research modes for complex synthesis.",
+    "summary": "Hermes Web Search Plus is a multi-provider search plugin for the Hermes Agent that expands information retrieval beyond standard web tools. It utilizes an intelligent auto-routing engine to select the most appropriate search provider based on query intent, such as using Exa for research or Serper for news. The system features adaptive fallback logic to skip providers on cooldown and includes local caching to minimize redundant API calls. Users can also perform deep document analysis and filter results by time range or specific domains.",
     "highlights": [
-      "Auto-routes queries across Serper, Tavily, Exa, Querit, Perplexity, You, and SearXNG",
-      "Supports Exa deep-reasoning for multi-source synthesis and cross-document analysis",
-      "Includes adaptive fallback and local caching with one-hour TTL"
+      "Supports eight providers including Serper, Brave, Tavily, and Exa",
+      "Intelligent auto-routing based on query intent and linguistic patterns",
+      "Advanced filtering for time ranges and domain whitelisting or blacklisting"
     ],
-    "readmeHash": "a674f02082794d0aa32c0ccb6a0070c2d9802e53bb10862af1284def6261b8ff",
-    "generatedAt": "2026-04-23T15:40:22.110Z",
+    "readmeHash": "67f80ca867a52a857bfa88a8cd811b90a393b108f3f4e26a7ccc150d72d8aea9",
+    "generatedAt": "2026-04-23T21:26:02.051Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -536,14 +536,14 @@
     "audit": "pass"
   },
   "swarmclawai/swarmclaw": {
-    "summary": "SwarmClaw is a self-hosted runtime designed for orchestrating and managing autonomous AI agent swarms. It functions as a central hub that coordinates agents through heartbeats, schedules, and delegation while providing durable memory and runtime skill learning. The platform is MCP-native and integrates with over 20 model providers and CLI-based agents, including Hermes, OpenClaw, and various coding assistants. Users can visualize agent hierarchies via an organizational chart and manage complex workflows through a unified chat interface with operator controls.",
+    "summary": "SwarmClaw is a self-hosted runtime designed to manage and orchestrate autonomous AI agent swarms. It functions as an execution environment that supports memory, scheduling, delegation, and runtime skills across various model providers. The platform integrates with OpenClaw gateways and supports MCP-native workflows to facilitate complex multi-agent coordination. Users can visualize agent teams through an organizational chart and manage interactions via a durable chat interface.",
     "highlights": [
-      "Self-hosted runtime for autonomous agent orchestration and delegation",
-      "Native support for MCP and 23 built-in model providers",
-      "Features durable memory, scheduled tasks, and conversation-to-skill learning"
+      "Supports 23 built-in model and CLI providers",
+      "Features memory, delegation, and scheduled agent tasks",
+      "Provides visual org charts for agent team management"
     ],
-    "readmeHash": "41570b2026b0bea24c0c31fe1b5961810a04b9d4b73ad1abeb499a50c9249d0b",
-    "generatedAt": "2026-04-23T19:36:49.170Z",
+    "readmeHash": "03c3aac27b624b20d7e85f598ecb83a9d62adda8a9ea2614fe59156d7173a247",
+    "generatedAt": "2026-04-23T21:26:09.075Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -618,14 +618,14 @@
     "auditedAt": "2026-04-20T08:42:14.478Z"
   },
   "numtide/llm-agents.nix": {
-    "summary": "llm-agents.nix is a collection of Nix packages designed to simplify the deployment and management of AI coding agents and development tools. The project provides a centralized repository of Nix expressions that automate the installation of various CLI-based agents, ensuring they are updated daily from their respective sources. Users can execute these tools directly via Nix flakes, eliminating the need for manual environment configuration or dependency management. The collection includes a wide range of orchestrators, terminal-based assistants, and API proxies from both open-source and proprietary providers.",
+    "summary": "llm-agents.nix provides a collection of Nix packages designed to streamline the installation and management of AI coding agents and development tools. It offers a centralized repository of packages that are automatically updated on a daily basis. Users can easily deploy a variety of terminal-based agents, orchestrators, and proxy APIs for diverse AI providers. This ecosystem supports diverse workflows, ranging from local agent execution to multi-agent coordination.",
     "highlights": [
-      "Provides daily updated Nix packages for numerous AI coding agents",
-      "Enables direct execution of tools via Nix flake commands",
-      "Supports diverse agents including Goose, Claude Code, and Gemini CLI"
+      "Daily automatic updates for all included packages",
+      "Supports diverse AI agents like Claude Code and Goose",
+      "Includes multi-agent orchestrators and unified proxy APIs"
     ],
-    "readmeHash": "e5a0418fe6a7595eebba5593018c8c311f4c14ef1780634771bc07a415fbb25b",
-    "generatedAt": "2026-04-23T15:40:30.589Z",
+    "readmeHash": "c03e779439c9516bcd4082ec3f66ef9cdefe36bc53c3a74b878680a2fa82bcdb",
+    "generatedAt": "2026-04-23T21:26:15.591Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -1253,14 +1253,14 @@
     "audit": "pass"
   },
   "Codename-11/hermes-relay": {
-    "summary": "Hermes-Relay is a native Android companion application designed to provide a mobile interface for the Hermes agent platform. It establishes a connection between the mobile device and a Hermes server using a Python-based plugin and WebSockets (WSS) for real-time communication. Users can engage in chat, access a terminal, and exercise device control directly from their smartphones. The system simplifies setup through a QR-code pairing process that configures both the chat API and the relay server simultaneously.",
+    "summary": "Hermes-Relay is a native Android companion application designed to provide a mobile interface for the Hermes agent platform. It establishes a connection between a mobile device and a Hermes server using a Python-based plugin and WebSockets (WSS) for real-time communication. Users can engage in chat, access a terminal, and manage device controls directly from their phone. The system simplifies setup through a QR-code pairing process that configures both the chat API and the relay server simultaneously.",
     "highlights": [
       "Native Android client supporting chat and terminal interfaces",
-      "WebSocket-based relay for remote device control and connectivity",
-      "QR-code pairing system for automated server and plugin configuration"
+      "WebSocket-based relay for remote device control and monitoring",
+      "Streamlined QR-code pairing for automated server and plugin configuration"
     ],
-    "readmeHash": "a9dd7b4e1f082e08fc682f3fd9807b662171606bdc5ea6c0c1c5e8432b4c09fc",
-    "generatedAt": "2026-04-21T07:10:47.862Z",
+    "readmeHash": "60c03a9252e6b3743571416722fef3161c5191986db93b114fb13e7cf275b92d",
+    "generatedAt": "2026-04-23T21:26:28.964Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -1274,6 +1274,58 @@
     ],
     "readmeHash": "c5787ca063daa34c89be1aca78e8d211eb0efb9ab27d09e5757bcbf486dfc8b8",
     "generatedAt": "2026-04-21T07:10:51.716Z",
+    "model": "google/gemma-4-31b-it:free",
+    "version": 1,
+    "audit": "pass"
+  },
+  "briancaffey/hermes-otel": {
+    "summary": "hermes-otel is an observability plugin for the Hermes Agent that enables comprehensive monitoring of agentic workflows. It automatically captures and exports LLM tool calls, model invocations, and API requests as OpenTelemetry spans to any OTLP-compatible backend. The plugin provides deep visibility into session lifecycles, including parent-child span nesting and token usage aggregation. It supports a wide range of observability platforms including Phoenix, Langfuse, SigNoz, and Grafana for tracking traces, metrics, and logs.",
+    "highlights": [
+      "Exports LLM tool calls and model invocations as OTel spans",
+      "Supports multiple backends including Phoenix, Langfuse, and SigNoz",
+      "Aggregates token usage and session I/O metrics automatically"
+    ],
+    "readmeHash": "629579981519be4365f8708e1c052d51614e1b6f8b215f3cfcaa43ad50662747",
+    "generatedAt": "2026-04-23T21:26:33.093Z",
+    "model": "google/gemma-4-31b-it:free",
+    "version": 1,
+    "audit": "pass"
+  },
+  "EKKOLearnAI/hermes-web-ui": {
+    "summary": "Hermes Web UI is a comprehensive management dashboard for the Hermes Agent ecosystem that provides a graphical interface for AI interaction and system administration. It centralizes agent operations by allowing users to manage multi-platform chat sessions, configure communication channels, and monitor resource usage through a unified web portal. The platform features integrated tools for scheduling cron jobs, browsing remote files, and managing model provider credentials across local and containerized environments. By automating gateway configuration and port resolution, it simplifies the deployment of autonomous agents for both personal and enterprise workflows.",
+    "highlights": [
+      "Unified configuration for Telegram, Discord, Slack, WhatsApp, and Matrix channels",
+      "Real-time usage analytics with token tracking and cost estimation charts",
+      "Integrated web terminal and remote file browser for backend management"
+    ],
+    "readmeHash": "894e1ac3700251df17a6dd79e12a472842574388339adffa388d2a2ec71b0554",
+    "generatedAt": "2026-04-23T21:26:37.318Z",
+    "model": "google/gemma-4-31b-it:free",
+    "version": 1,
+    "audit": "pass"
+  },
+  "Web3CZ/Web3Hermes": {
+    "summary": "Web3Hermes is a lightweight WebUI for Hermes Agent specifically localized for Chinese-speaking users. It provides a desktop-optimized interface that simplifies interaction with the agent through a localized workflow and full Chinese language support. The platform integrates a built-in workspace file browser, session management tools, and support for multiple AI models including OpenAI, Anthropic, and DeepSeek. Users can manage tasks, edit code with syntax highlighting, and visualize tool calls within a responsive dark or light themed environment.",
+    "highlights": [
+      "Localized Chinese interface with dark and light theme support",
+      "Integrated workspace file browser for direct file editing and management",
+      "Comprehensive session management including export, search, and tool call visualization"
+    ],
+    "readmeHash": "0dfefc24a6af0162ae630a93041e3be63ba9a8715355c0dafd848fec6a8a97a8",
+    "generatedAt": "2026-04-23T21:26:41.323Z",
+    "model": "google/gemma-4-31b-it:free",
+    "version": 1,
+    "audit": "pass"
+  },
+  "AxDSan/mnemosyne": {
+    "summary": "Mnemosyne is a local-first memory system designed to provide private, low-latency context for Hermes Agents. It utilizes a SQLite-backed architecture featuring native vector search and FTS5 full-text search to eliminate the need for external databases or API keys. The system implements a three-tier BEAM architecture that manages hot working memory, long-term episodic memory, and a temporary scratchpad. It includes automatic consolidation processes that summarize and move old memories to long-term storage during sleep cycles.",
+    "highlights": [
+      "Sub-millisecond read and write latency using local SQLite storage",
+      "Hybrid search combining vector similarity, keyword ranking, and importance scores",
+      "BEAM architecture for tiered working, episodic, and scratchpad memory"
+    ],
+    "readmeHash": "b9399737c471a243bba0437679ca0b89ef7a546e1768b63e9e85e090f5f8ab76",
+    "generatedAt": "2026-04-23T21:26:45.724Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
