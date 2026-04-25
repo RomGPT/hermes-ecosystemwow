@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/unmodeled-tyler/vessel-browser#software",
   "name": "vessel-browser",
-  "description": "Vessel is an open-source Chromium-based browser designed to serve as a persistent runtime for autonomous agents rather than human-only navigation. It operates via the Model Context Protocol (MCP) to provide external agent harnesses with durable state, named sessions, and structured page visibility. The interface includes a supervisory UI that allows humans to audit, intervene, and redirect long-running agent workflows in real-time. It integrates with Hermes Agent and other MCP clients to transfo",
+  "description": "Vessel is an open-source, Chromium-based browser designed specifically for autonomous agent control rather than traditional human browsing. It provides a persistent runtime where external agent harnesses like Hermes Agent can drive workflows while humans monitor and intervene through a visible supervisory interface. The browser maintains durable state through named sessions, annotated checkpoints, and an action undo feature that rolls back the environment to a state prior to the last agent actio",
   "url": "https://hermesatlas.com/projects/unmodeled-tyler/vessel-browser",
   "codeRepository": "https://github.com/unmodeled-tyler/vessel-browser",
   "applicationCategory": "DeveloperApplication",
@@ -47,7 +47,7 @@
     "name": "unmodeled-tyler",
     "url": "https://github.com/unmodeled-tyler"
   },
-  "dateModified": "2026-04-24T03:32:14.000Z",
+  "dateModified": "2026-04-25T00:09:50.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
@@ -112,7 +112,7 @@
     <span><span class="meta-label">lang</span>TypeScript</span>
     <span><span class="meta-label">license</span>MIT</span>
     
-    <span><span class="meta-label">updated</span>2026-04-24</span>
+    <span><span class="meta-label">updated</span>2026-04-25</span>
   </div>
 
   <div class="actions">
@@ -127,11 +127,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Vessel is an open-source Chromium-based browser designed to serve as a persistent runtime for autonomous agents rather than human-only navigation. It operates via the Model Context Protocol (MCP) to provide external agent harnesses with durable state, named sessions, and structured page visibility. The interface includes a supervisory UI that allows humans to audit, intervene, and redirect long-running agent workflows in real-time. It integrates with Hermes Agent and other MCP clients to transform web automation from a headless process into a transparent, steerable environment.</p>
+    <p class="summary-text">Vessel is an open-source, Chromium-based browser designed specifically for autonomous agent control rather than traditional human browsing. It provides a persistent runtime where external agent harnesses like Hermes Agent can drive workflows while humans monitor and intervene through a visible supervisory interface. The browser maintains durable state through named sessions, annotated checkpoints, and an action undo feature that rolls back the environment to a state prior to the last agent action. It integrates with the Model Context Protocol (MCP) to expose browser tools, page schema inference, and structured bookmarks to AI agents.</p>
     <ul class="summary-highlights">
-      <li>Provides durable browser state with named sessions and checkpoints</li>
-      <li>Exposes structured page schemas and element visibility via MCP</li>
-      <li>Features a supervisory sidebar for human intervention and workflow auditing</li>
+      <li>Provides a human-visible UI for auditing and supervising autonomous agents</li>
+      <li>Maintains persistent browser state with named sessions and annotated checkpoints</li>
+      <li>Exposes structured page schemas and metadata via MCP for agents</li>
     </ul>
   </div>
 </section>
@@ -155,7 +155,7 @@
 <p>Vessel gives external agent harnesses a real browser with durable state, MCP control, and a human-visible supervisory UI. It is built for long-running workflows where the agent drives and the human audits, intervenes, and redirects when needed.</p>
 <ul>
 <li><strong>Built for agent harnesses</strong> such as Hermes Agent, OpenClaw, and other MCP clients</li>
-<li><strong>Keeps browser state alive</strong> with named sessions, bookmarks, checkpoints, and structured page visibility</li>
+<li><strong>Keeps browser state alive</strong> with named sessions, editable bookmarks, annotated checkpoints, action undo, and structured page visibility</li>
 <li><strong>Keeps humans in the loop</strong> with approvals, runtime controls, and a visible browser instead of a headless black box</li>
 </ul>
 <p><em>Vessel is in active development and currently makes no security assurances. Use and deploy it with care.</em></p>
@@ -202,14 +202,16 @@ npm run dev
 <li><strong>Agent-first browser model</strong> — Vessel is designed around an agent driving the browser while a human watches, intervenes, and redirects</li>
 <li><strong>Human-visible browser UI</strong> — pages render like a normal browser so agent activity stays legible instead of disappearing into a headless run</li>
 <li><strong>Command Bar</strong> (<code>Ctrl+L</code>) — a secondary operator surface for harness-driven workflows and future runtime commands</li>
-<li><strong>Supervisor Sidebar</strong> (<code>Ctrl+Shift+L</code>) — live supervision across five tabs: Supervisor, Bookmarks, Checkpoints, Chat, and Automate</li>
+<li><strong>Supervisor Sidebar</strong> (<code>Ctrl+Shift+L</code>) — live supervision across seven tabs: Supervisor, Bookmarks, Checkpoints, Chat, Automate, History, and Changes</li>
 <li><strong>Chat Assistant</strong> — built-in conversational AI in the sidebar Chat tab; supports Anthropic, OpenAI, Ollama, llama.cpp, Mistral, xAI, Google Gemini, OpenRouter, and any OpenAI-compatible endpoint; reads the current page automatically; has full access to the same browser tools as external agents; multi-turn session history; configure provider, model, and API key in Settings</li>
 <li><strong>Automation Kits</strong> (Premium) — parameterized workflow templates in the sidebar Automate tab; fill in a short form and the built-in agent executes the workflow autonomously; bundled kits include Research &amp; Collect (multi-source research with bookmark saving) and Price Scout (cross-retailer price comparison); designed for a future kit marketplace</li>
 <li><strong>Dev Tools Panel</strong> (<code>F12</code>) — inspect console output, network requests, and MCP/agent activity in a resizable panel at the bottom of the window; export logs by category and date range as JSON</li>
-<li><strong>Agent-Meaningful Bookmarks</strong> — bookmarks carry structured context the agent can read and act on: <code>intent</code> (what the page is for), <code>expectedContent</code> (what to expect on the page), <code>keyFields</code> (important form fields), <code>agentHints</code> (arbitrary directives), and a stored <code>pageSchema</code>; all fields are searchable</li>
+<li><strong>Action Undo / Rollback</strong> — restore the browser to the session snapshot captured immediately before the last successful mutating agent action; available from the Supervisor tab and through the <code>undo_last_action</code> tool</li>
+<li><strong>Agent-Meaningful Bookmarks</strong> — bookmarks carry structured context the agent can read and act on: <code>intent</code> (what the page is for), <code>expectedContent</code> (what to expect on the page), <code>keyFields</code> (important form fields), <code>agentHints</code> (arbitrary directives), and a stored <code>pageSchema</code>; humans can create and edit this metadata directly in the Bookmarks tab, and all fields are searchable</li>
 <li><strong>Page Schema Inference</strong> — Vessel automatically infers a typed schema for every page: <code>pageType</code> (article, product, form, search, checkout, login, dashboard), <code>primaryEntity</code> (structured fields for products and articles), <code>formFields</code> (with names, types, labels, selectors), and <code>actionButtons</code> (with inferred intents: submit, addToCart, login, etc.); schema is attached to every content extraction result</li>
 <li><strong>Bookmarks for Agents</strong> — save pages into folders, attach one-line folder summaries, and search bookmarks over MCP instead of dumping the entire library</li>
 <li><strong>Named Session Persistence</strong> — save cookies, localStorage, and current tab layout under a reusable name, then reload it after a restart</li>
+<li><strong>Annotated Checkpoints</strong> — capture and restore short-lived browser recovery points with names and editable notes, so humans and agents can mark why a checkpoint matters before risky flows</li>
 <li><strong>Page Highlights</strong> — agents can visually highlight text or elements on any page with labeled, color-coded markers that persist across navigation; highlight count and navigation controls appear in the sidebar; cleared explicitly or via tool call</li>
 <li><strong>Agent Transcript Dock</strong> — floating transcript overlay anchored to the browser chrome; configurable display modes (off, summary, full) set in Settings; shows live agent thinking and status updates without occupying sidebar space</li>
 <li><strong>Workflow Flow Tracking</strong> — agents can declare a named multi-step workflow at runtime using <code>flow_start</code>; progress is tracked step-by-step with <code>flow_advance</code> and visible in the sidebar throughout execution</li>
@@ -217,6 +219,7 @@ npm run dev
 <li><strong>Popup Recovery Tools</strong> — agents can explicitly dismiss common popups, newsletter gates, and consent walls instead of brute-forcing generic clicks</li>
 <li><strong>Form Autofill Profiles</strong> — save reusable personal or work profiles in Settings and fill common contact, address, and organization fields on the current page; Vessel matches fields using labels, names, placeholders, and autocomplete hints</li>
 <li><strong>Page Diff / &quot;What Changed?&quot;</strong> — Vessel remembers the last snapshot of a page and surfaces a <code>Changed</code> badge in the address bar when the title, headings, or main content differ on a later visit; expand it to see a compact summary of what changed since the last snapshot</li>
+<li><strong>What Changed Timeline</strong> (Premium) — the sidebar Changes tab keeps a per-page history of recent change bursts, showing when each update was detected and a compact summary of what changed</li>
 <li><strong>Per-Tab Ad Blocking Controls</strong> — tabs default to ad blocking on, but agents can selectively disable and re-enable blocking when a page misbehaves</li>
 <li><strong>Domain Policy</strong> — allowlist or blocklist domains globally in Settings; agents cannot navigate to blocked domains</li>
 <li><strong>Agent Credential Vault</strong> (Premium) — encrypted credential storage for agent-driven logins; credentials are filled directly into login forms via a &quot;blind fill&quot; pattern and are never sent to AI providers; user consent dialog before every use; TOTP 2FA support; domain-scoped access; append-only audit log</li>
@@ -281,7 +284,7 @@ npm run dev
 └── IPC Handlers ◄──contextBridge──► Preload API
 </code></pre>
 <p>Each browser tab is a separate <code>WebContentsView</code> managed by the main process. The browser chrome (SolidJS) runs in its own view layered on top. All communication between renderer and main goes through typed IPC channels via <code>contextBridge</code>.</p>
-<p>The sidebar Automate tab renders kit forms entirely in the renderer and passes the rendered prompt to the built-in agent via the same <code>query()</code> path used by the Chat tab — no additional IPC surface is needed.</p>
+<p>The sidebar Automate tab renders kit forms entirely in the renderer and passes the rendered prompt to the built-in agent via the same <code>query()</code> path used by the Chat tab — no additional IPC surface is needed. The Changes tab reads the current page&#39;s diff timeline through IPC and unlocks persisted history for Premium users.</p>
 <h3>Getting Started</h3>
 <p>The installer:</p>
 <ul>
@@ -355,8 +358,8 @@ npm run dist:mac:signed
 <li>Open Settings (<code>Ctrl+,</code>) to confirm MCP status, copy the endpoint, or change the MCP port</li>
 <li>Optional: set an Obsidian vault path, create autofill profiles, or adjust session preferences</li>
 <li>Start Hermes Agent or OpenClaw and point it at Vessel — the easiest way is <code>vessel-browser-mcp --stdio</code> as the MCP command (auth is resolved automatically), or connect directly to <code>http://127.0.0.1:&lt;mcpPort&gt;/mcp</code> with the bearer token from <code>~/.config/vessel/mcp-auth.json</code></li>
-<li>Use the Supervisor panel in Vessel&#39;s sidebar to pause the agent, change approval mode, review pending approvals, checkpoint, or restore the browser session while the harness runs</li>
-<li>Use the Bookmarks panel to organize saved pages into folders and expose those bookmarks back to the agent over MCP</li>
+<li>Use the Supervisor panel in Vessel&#39;s sidebar to pause the agent, change approval mode, review pending approvals, checkpoint, undo the last mutating action, or restore the browser session while the harness runs</li>
+<li>Use the Bookmarks panel to organize saved pages into folders, edit agent-facing bookmark metadata, and expose those bookmarks back to the agent over MCP</li>
 </ol>
 <p>Notes:</p>
 <ul>
@@ -370,6 +373,7 @@ npm run dist:mac:signed
 <li>Settings now show MCP runtime status, active endpoint, startup warnings, and allow changing the MCP port with an immediate server restart</li>
 <li>Settings also include reusable Form Autofill profiles for one-click filling of common contact and address forms on the active page</li>
 <li>The address bar can also show a <code>Changed</code> badge when Vessel detects that a previously visited page has meaningfully changed since the last saved snapshot</li>
+<li>Premium users can open the sidebar Changes tab for the full What Changed timeline for the active page</li>
 <li>Agents can selectively disable ad blocking for a problematic tab, reload, retry the flow, and turn blocking back on later</li>
 <li>Agents can persist authenticated state with named sessions, for example <code>github-logged-in</code>, and reload that state in later runs</li>
 <li>The intended control plane is an external harness driving Vessel through MCP</li>
@@ -422,6 +426,7 @@ npm run dist:mac:signed
 <li><code>vessel_set_ad_blocking</code></li>
 <li><code>vessel_wait_for</code></li>
 <li><code>vessel_screenshot</code> (Premium) — capture the full page as an image for visual AI analysis</li>
+<li><code>undo_last_action</code> — restore the browser to the snapshot captured before the last successful mutating agent action</li>
 </ul>
 <p>Page highlight tools:</p>
 <ul>
@@ -632,7 +637,7 @@ vessel-browser-launch --dry-run
 │   └── src/
 │       ├── components/
 │       │   ├── chrome/   # TitleBar, TabBar, AddressBar, AgentTranscriptDock
-│       │   ├── ai/       # CommandBar, Sidebar (Supervisor/Bookmarks/Checkpoints/Chat/Automate)
+│       │   ├── ai/       # CommandBar, Sidebar (Supervisor/Bookmarks/Checkpoints/Chat/Automate/History/Changes)
 │       │   ├── devtools/ # DevTools panel (Console, Network, Activity)
 │       │   └── shared/   # Settings panel
 │       ├── stores/       # SolidJS signal stores (tabs, ai, ui, runtime, bookmarks, etc.)
@@ -668,7 +673,7 @@ vessel-browser-launch --dry-run
         <div class="name"><span class="org">junhoyeo /</span> tokscale</div>
       </a>
       <a class="related-row" href="/projects/joeynyc/hermes-skins">
-        <div class="stars">★ 259</div>
+        <div class="stars">★ 261</div>
         <div class="name"><span class="org">joeynyc /</span> hermes-skins</div>
       </a>
       <a class="related-row" href="/projects/AlexAI-MCP/hermes-CCC">

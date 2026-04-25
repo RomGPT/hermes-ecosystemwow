@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/swarmclawai/swarmclaw#software",
   "name": "swarmclaw",
-  "description": "SwarmClaw is a self-hosted runtime designed for orchestrating and managing autonomous AI agent swarms. It functions as a central hub that coordinates agents through heartbeats, schedules, and delegation while providing durable memory and runtime skill learning. The platform is MCP-native and integrates with over 20 model providers and CLI backends, including Hermes, OpenClaw, and various local or cloud-based LLMs. Users can visualize agent hierarchies via an organizational chart and manage compl",
+  "description": "SwarmClaw is a self-hosted runtime designed for orchestrating and managing autonomous AI agent swarms. It operates by providing a centralized environment for agent delegation, memory management, and runtime skill acquisition through an MCP-native architecture. The platform supports over 20 model providers and CLI backends, including Hermes, OpenClaw, and various local or cloud-based LLMs. Users can visualize agent hierarchies via an organizational chart and automate workflows using heartbeats an",
   "url": "https://hermesatlas.com/projects/swarmclawai/swarmclaw",
   "codeRepository": "https://github.com/swarmclawai/swarmclaw",
   "applicationCategory": "DeveloperApplication",
@@ -47,13 +47,13 @@
     "name": "swarmclawai",
     "url": "https://github.com/swarmclawai"
   },
-  "dateModified": "2026-04-24T14:23:42.000Z",
+  "dateModified": "2026-04-24T16:39:58.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 395
+    "userInteractionCount": 397
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -108,7 +108,7 @@
   <p class="project-desc">Self-hosted multi-agent AI runtime with MCP server support. Build, orchestrate, and run autonomous agents with memory, skills, schedules, and 23+ LLM providers (Claude, GPT, Gemini, OpenRouter, Ollama).</p>
 
   <div class="meta-row">
-    <span class="stars">★ 395</span>
+    <span class="stars">★ 397</span>
     <span><span class="meta-label">lang</span>TypeScript</span>
     <span><span class="meta-label">license</span>MIT</span>
     
@@ -127,11 +127,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">SwarmClaw is a self-hosted runtime designed for orchestrating and managing autonomous AI agent swarms. It functions as a central hub that coordinates agents through heartbeats, schedules, and delegation while providing durable memory and runtime skill learning. The platform is MCP-native and integrates with over 20 model providers and CLI backends, including Hermes, OpenClaw, and various local or cloud-based LLMs. Users can visualize agent hierarchies via an organizational chart and manage complex workflows through a unified chat interface with operator controls.</p>
+    <p class="summary-text">SwarmClaw is a self-hosted runtime designed for orchestrating and managing autonomous AI agent swarms. It operates by providing a centralized environment for agent delegation, memory management, and runtime skill acquisition through an MCP-native architecture. The platform supports over 20 model providers and CLI backends, including Hermes, OpenClaw, and various local or cloud-based LLMs. Users can visualize agent hierarchies via an organizational chart and automate workflows using heartbeats and scheduled tasks.</p>
     <ul class="summary-highlights">
-      <li>Self-hosted runtime for autonomous agent orchestration and delegation</li>
-      <li>Native support for MCP and 23 built-in model providers</li>
-      <li>Visualizes agent teams and live activity through interactive org charts</li>
+      <li>Supports 23 model providers including Hermes and OpenClaw</li>
+      <li>MCP-native architecture with runtime skill learning and memory</li>
+      <li>Visualizes agent teams and delegation via interactive org charts</li>
     </ul>
   </div>
 </section>
@@ -512,6 +512,13 @@ OTEL_EXPORTER_OTLP_HEADERS=Authorization=Bearer your-token
 <p>If you need a trace-specific endpoint, set <code>OTEL_EXPORTER_OTLP_TRACES_ENDPOINT</code> directly instead.</p>
 <p>Operational docs: <a href="https://swarmclaw.ai/docs/observability">https://swarmclaw.ai/docs/observability</a></p>
 <h3>Releases</h3>
+<h4>v1.5.71 Highlights</h4>
+<p>Fast-follow release for <a href="https://github.com/swarmclawai/swarmclaw/pull/60">#60</a> by <a href="https://github.com/borislavnnikolov">@borislavnnikolov</a>. Thanks Borislav!</p>
+<ul>
+<li><strong>Browser MCP works from standalone builds again.</strong> The Next standalone output now includes the Playwright MCP runtime packages required by packaged SwarmClaw builds.</li>
+<li><strong>Host browser launches use cached Chromium.</strong> Local Playwright MCP startup now selects Chromium explicitly instead of depending on a system Chrome install.</li>
+<li><strong>Standalone repair is more robust.</strong> The build repair step now fills partially traced Playwright MCP package directories, and the packaging and browser startup paths are covered by regression tests.</li>
+</ul>
 <h4>v1.5.70 Highlights</h4>
 <p>Fast-follow release for <a href="https://github.com/swarmclawai/swarmclaw/pull/56">#56</a> by <a href="https://github.com/latentwill">@latentwill</a>. Thanks latentwill!</p>
 <p>Also includes fixes for <a href="https://github.com/swarmclawai/swarmclaw/issues/57">#57</a> and <a href="https://github.com/swarmclawai/swarmclaw/issues/58">#58</a> reported by <a href="https://github.com/zantak">@zantak</a>. Thanks zantak!</p>
@@ -664,7 +671,7 @@ OTEL_EXPORTER_OTLP_HEADERS=Authorization=Bearer your-token
         <div class="name"><span class="org">runtimenoteslabs /</span> gladiator</div>
       </a>
       <a class="related-row" href="/projects/1ilkhamov/opencode-hermes-multiagent">
-        <div class="stars">★ 56</div>
+        <div class="stars">★ 59</div>
         <div class="name"><span class="org">1ilkhamov /</span> opencode-hermes-multiagent</div>
       </a>
       <a class="related-row" href="/projects/supermodeltools/bigiron">

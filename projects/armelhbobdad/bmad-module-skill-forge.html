@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/armelhbobdad/bmad-module-skill-forge#software",
   "name": "bmad-module-skill-forge",
-  "description": "Skill Forge is a development tool that converts source code, documentation, and developer discourse into verified instruction files for AI agents to prevent API hallucinations. It uses Abstract Syntax Tree (AST) extraction to map agent instructions directly to specific file paths and line numbers in the source repository. The system generates version-pinned skills compliant with the agentskills.io specification, ensuring agents use correct function signatures and parameter types. It supports aut",
+  "description": "Skill Forge is a development tool that converts source code, documentation, and developer discourse into verified instruction files for AI agents. It uses Abstract Syntax Tree (AST) extraction to map function signatures and types directly to specific file paths and line numbers, ensuring agents use real APIs instead of hallucinating parameters. The tool generates version-pinned skills compliant with the agentskills.io specification, allowing for immutable audit trails via a provenance map. It su",
   "url": "https://hermesatlas.com/projects/armelhbobdad/bmad-module-skill-forge",
   "codeRepository": "https://github.com/armelhbobdad/bmad-module-skill-forge",
   "applicationCategory": "DeveloperApplication",
@@ -46,13 +46,13 @@
     "name": "armelhbobdad",
     "url": "https://github.com/armelhbobdad"
   },
-  "dateModified": "2026-04-24T13:29:23.000Z",
+  "dateModified": "2026-04-25T01:38:28.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 27
+    "userInteractionCount": 28
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -107,11 +107,11 @@
   <p class="project-desc">A standalone BMAD module that transforms code repositories, documentation websites, and developer discourse into agentskills.io-compliant, version-pinned, provenance-backed agent skills.</p>
 
   <div class="meta-row">
-    <span class="stars">★ 27</span>
+    <span class="stars">★ 28</span>
     <span><span class="meta-label">lang</span>JavaScript</span>
     
     
-    <span><span class="meta-label">updated</span>2026-04-24</span>
+    <span><span class="meta-label">updated</span>2026-04-25</span>
   </div>
 
   <div class="actions">
@@ -126,11 +126,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Skill Forge is a development tool that converts source code, documentation, and developer discourse into verified instruction files for AI agents to prevent API hallucinations. It uses Abstract Syntax Tree (AST) extraction to map agent instructions directly to specific file paths and line numbers in the source repository. The system generates version-pinned skills compliant with the agentskills.io specification, ensuring agents use correct function signatures and parameter types. It supports automated workflows for creating, testing, and exporting skills from both open-source repositories and closed-source SaaS documentation.</p>
+    <p class="summary-text">Skill Forge is a development tool that converts source code, documentation, and developer discourse into verified instruction files for AI agents. It uses Abstract Syntax Tree (AST) extraction to map function signatures and types directly to specific file paths and line numbers, ensuring agents use real APIs instead of hallucinating parameters. The tool generates version-pinned skills compliant with the agentskills.io specification, allowing for immutable audit trails via a provenance map. It supports automated workflows for creating, testing, and exporting skills to platforms like Cursor, Claude, and Copilot.</p>
     <ul class="summary-highlights">
-      <li>Maps every AI instruction to specific source code line numbers</li>
+      <li>Maps AI instructions to specific source code file and line numbers</li>
       <li>Generates agentskills.io-compliant markdown and JSON instruction sets</li>
-      <li>Supports version-pinned skill management for multiple library releases</li>
+      <li>Supports version-pinned skill management for library updates and migrations</li>
     </ul>
   </div>
 </section>
@@ -140,7 +140,7 @@
   <section class="readme" data-nosnippet>
     <div align="center">
 
-<img src="https://raw.githubusercontent.com/armelhbobdad/bmad-module-skill-forge/main/website/public/img/skf-logo.svg" alt="Skill Forge Logo" width="120" />
+<img src="https://raw.githubusercontent.com/armelhbobdad/bmad-module-skill-forge/main/website/public/img/skf-logo-animated.svg" alt="Skill Forge Logo" width="120" />
 
 <h2>Skill Forge (SKF)</h2>
 <p><strong>Turn code and docs into instructions AI agents can actually follow.</strong></p>
@@ -360,9 +360,9 @@ results = await cognee.search(
 <h3>Changelog</h3>
 <p>Past releases are documented in <a href="https://github.com/armelhbobdad/bmad-module-skill-forge/blob/main/CHANGELOG.md">CHANGELOG.md</a>.</p>
 <h3>Versioning &amp; Stability</h3>
-<p>The v1.0.0 public API contract is documented in <a href="https://github.com/armelhbobdad/bmad-module-skill-forge/blob/main/docs/STABILITY.md">docs/STABILITY.md</a>.</p>
+<p>The v1.0.0 public API contract is documented in <a href="https://github.com/armelhbobdad/bmad-module-skill-forge/blob/main/docs/_internal/STABILITY.md">docs/_internal/STABILITY.md</a>.</p>
 <h3>Release Process</h3>
-<p>Maintainers: see <a href="https://github.com/armelhbobdad/bmad-module-skill-forge/blob/main/docs/RELEASING.md">docs/RELEASING.md</a> for branch-protection rules, required status checks, the <a href="https://github.com/armelhbobdad/bmad-module-skill-forge/blob/main/docs/RELEASING.md#release-environment"><code>release</code> environment with required-reviewer gate</a>, the <a href="https://github.com/armelhbobdad/bmad-module-skill-forge/blob/main/docs/RELEASING.md#npm-trusted-publisher">npm Trusted Publisher registration</a> (OIDC-backed publish, auto-provenance), and the <a href="https://github.com/armelhbobdad/bmad-module-skill-forge/blob/main/docs/RELEASING.md#rollback-playbook">rollback playbook</a> covering seven failure scenarios.</p>
+<p>Maintainers: see <a href="https://github.com/armelhbobdad/bmad-module-skill-forge/blob/main/docs/_internal/RELEASING.md">docs/_internal/RELEASING.md</a> for branch-protection rules, required status checks, the <a href="https://github.com/armelhbobdad/bmad-module-skill-forge/blob/main/docs/_internal/RELEASING.md#release-environment"><code>release</code> environment with required-reviewer gate</a>, the <a href="https://github.com/armelhbobdad/bmad-module-skill-forge/blob/main/docs/_internal/RELEASING.md#npm-trusted-publisher">npm Trusted Publisher registration</a> (OIDC-backed publish, auto-provenance), and the <a href="https://github.com/armelhbobdad/bmad-module-skill-forge/blob/main/docs/_internal/RELEASING.md#rollback-playbook">rollback playbook</a> covering seven failure scenarios.</p>
 <h3>License</h3>
 <p>MIT License — see <a href="LICENSE">LICENSE</a> for details.</p>
 <hr>
@@ -389,7 +389,7 @@ results = await cognee.search(
         <div class="name"><span class="org">conorbronsdon /</span> avoid-ai-writing</div>
       </a>
       <a class="related-row" href="/projects/wondelai/skills">
-        <div class="stars">★ 714</div>
+        <div class="stars">★ 721</div>
         <div class="name"><span class="org">wondelai /</span> skills</div>
       </a>
       <a class="related-row" href="/projects/DougTrajano/pydantic-ai-skills">
@@ -397,7 +397,7 @@ results = await cognee.search(
         <div class="name"><span class="org">DougTrajano /</span> pydantic-ai-skills</div>
       </a>
       <a class="related-row" href="/projects/Agents365-ai/drawio-skill">
-        <div class="stars">★ 517</div>
+        <div class="stars">★ 540</div>
         <div class="name"><span class="org">Agents365-ai /</span> drawio-skill</div>
       </a>
       <a class="related-row" href="/projects/smartcontractkit/chainlink-agent-skills">
@@ -405,7 +405,7 @@ results = await cognee.search(
         <div class="name"><span class="org">smartcontractkit /</span> chainlink-agent-skills</div>
       </a>
       <a class="related-row" href="/projects/tlehman/litprog-skill">
-        <div class="stars">★ 104</div>
+        <div class="stars">★ 105</div>
         <div class="name"><span class="org">tlehman /</span> litprog-skill</div>
       </a>
       <a class="related-row" href="/projects/esaradev/icarus-plugin">

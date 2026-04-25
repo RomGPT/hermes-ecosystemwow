@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/dodo-reach/hermes-desktop#software",
   "name": "hermes-desktop",
-  "description": "Hermes Desktop is a native macOS application that provides a dedicated workspace for managing Hermes Agent hosts via SSH. It connects directly to remote machines to manage sessions, skills, and cron jobs without requiring a gateway API, local file mirroring, or remote daemon. The app features a multi-tabbed terminal, conflict-aware file editing, and profile-specific usage analytics. It serves as a local companion for users who want a polished desktop interface while maintaining the remote host a",
+  "description": "Hermes Desktop is a native macOS application that provides a localized workspace for managing Hermes Agent hosts over SSH. It connects directly to remote environments to manage sessions, skills, and cron jobs without requiring a gateway API, local file mirroring, or remote daemon. The app features a multi-tabbed terminal and profile-aware views that surface usage trends and canonical file states directly from the host. This allows users to maintain a persistent, native interface for multi-agent ",
   "url": "https://hermesatlas.com/projects/dodo-reach/hermes-desktop",
   "codeRepository": "https://github.com/dodo-reach/hermes-desktop",
   "applicationCategory": "DesktopEnhancementApplication",
@@ -47,13 +47,13 @@
     "name": "dodo-reach",
     "url": "https://github.com/dodo-reach"
   },
-  "dateModified": "2026-04-21T13:22:54.000Z",
+  "dateModified": "2026-04-24T21:55:49.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 654
+    "userInteractionCount": 660
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -108,11 +108,11 @@
   <p class="project-desc">A native Mac workspace for Hermes: real SSH, real terminal, real session data.</p>
 
   <div class="meta-row">
-    <span class="stars">★ 654</span>
+    <span class="stars">★ 660</span>
     <span><span class="meta-label">lang</span>Swift</span>
     <span><span class="meta-label">license</span>MIT</span>
     
-    <span><span class="meta-label">updated</span>2026-04-21</span>
+    <span><span class="meta-label">updated</span>2026-04-24</span>
   </div>
 
   <div class="actions">
@@ -127,11 +127,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Hermes Desktop is a native macOS application that provides a dedicated workspace for managing Hermes Agent hosts via SSH. It connects directly to remote machines to manage sessions, skills, and cron jobs without requiring a gateway API, local file mirroring, or remote daemon. The app features a multi-tabbed terminal, conflict-aware file editing, and profile-specific usage analytics. It serves as a local companion for users who want a polished desktop interface while maintaining the remote host as the single source of truth.</p>
+    <p class="summary-text">Hermes Desktop is a native macOS application that provides a localized workspace for managing Hermes Agent hosts over SSH. It connects directly to remote environments to manage sessions, skills, and cron jobs without requiring a gateway API, local file mirroring, or remote daemon. The app features a multi-tabbed terminal and profile-aware views that surface usage trends and canonical file states directly from the host. This allows users to maintain a persistent, native interface for multi-agent workflows while keeping the remote server as the single source of truth.</p>
     <ul class="summary-highlights">
-      <li>Direct SSH connection with no middle-layer API or remote daemon</li>
-      <li>Real multi-tabbed terminal with profile-aware environment variables</li>
-      <li>Management of remote cron jobs, skills, and SQLite session stores</li>
+      <li>Direct SSH connection with no remote helper service required</li>
+      <li>Profile-aware management of sessions, skills, and cron jobs</li>
+      <li>Native multi-tabbed terminal with live theme and color controls</li>
     </ul>
   </div>
 </section>
@@ -217,6 +217,8 @@ conflict checks against the live remote <code>SKILL.md</code></li>
 <li>cron job browsing, creation, editing, pause, resume, run-now, and deletion
 for the canonical remote scheduler state in <code>~/.hermes/cron/jobs.json</code>,
 including schedule, model, attached skills, and delivery target details</li>
+<li>app localization resources for English, Simplified Chinese, and Russian in a
+single macOS bundle that follows the user&#39;s preferred system language</li>
 <li>universal packaging for Apple Silicon and Intel Macs from the same build flow</li>
 </ul>
 <p>If Hermes runs there and SSH already works, Hermes Desktop will usually meet you
@@ -510,6 +512,8 @@ same SSH target</li>
 <li><input checked="" disabled="" type="checkbox"> native cron job workflows for the canonical remote scheduler state</li>
 <li><input checked="" disabled="" type="checkbox"> a real embedded SSH terminal with tabs, appearance controls, and coherent
 multi-profile workspace behavior</li>
+<li><input checked="" disabled="" type="checkbox"> English, Simplified Chinese, and Russian localization resources packaged
+in the app bundle</li>
 <li><input checked="" disabled="" type="checkbox"> universal macOS release packaging for Apple Silicon and Intel, with
 bundle version stamping in the packaging flow</li>
 </ul>
@@ -553,11 +557,11 @@ and Intel Macs</li>
   <div>
     <div class="related-list">
       <a class="related-row" href="/projects/outsourc-e/hermes-workspace">
-        <div class="stars">★ 2.2K</div>
+        <div class="stars">★ 2.3K</div>
         <div class="name"><span class="org">outsourc-e /</span> hermes-workspace</div>
       </a>
       <a class="related-row" href="/projects/fathah/hermes-desktop">
-        <div class="stars">★ 379</div>
+        <div class="stars">★ 384</div>
         <div class="name"><span class="org">fathah /</span> hermes-desktop</div>
       </a>
       <a class="related-row" href="/projects/sanchomuzax/hermes-webui">
@@ -565,7 +569,7 @@ and Intel Macs</li>
         <div class="name"><span class="org">sanchomuzax /</span> hermes-webui</div>
       </a>
       <a class="related-row" href="/projects/Euraika-Labs/pan-ui">
-        <div class="stars">★ 52</div>
+        <div class="stars">★ 53</div>
         <div class="name"><span class="org">Euraika-Labs /</span> pan-ui</div>
       </a>
       <a class="related-row" href="/projects/xaspx/hermes-control-interface">
@@ -577,7 +581,7 @@ and Intel Macs</li>
         <div class="name"><span class="org">nesquena /</span> hermes-webui</div>
       </a>
       <a class="related-row" href="/projects/pyrate-llama/hermes-ui">
-        <div class="stars">★ 34</div>
+        <div class="stars">★ 35</div>
         <div class="name"><span class="org">pyrate-llama /</span> hermes-ui</div>
       </a>
       <a class="related-row" href="/projects/clawvader-tech/hermes-telegram-miniapp">

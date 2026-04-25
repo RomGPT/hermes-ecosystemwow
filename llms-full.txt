@@ -1,6 +1,6 @@
 # Hermes Atlas — Full Context Bundle
 
-> Complete content of hermesatlas.com as of 2026-04-24. Concatenated from guide pages, ecosystem overview, the quarterly report, and project summaries. Canonical URLs preserved throughout.
+> Complete content of hermesatlas.com as of 2026-04-25. Concatenated from guide pages, ecosystem overview, the quarterly report, and project summaries. Canonical URLs preserved throughout.
 
 This file is the companion to https://hermesatlas.com/llms.txt (the concise index).
 
@@ -323,7 +323,7 @@ Canonical URL: https://hermesatlas.com/guide/
 
 By [Kevin Simback](https://x.com/ksimback) · Hermes Atlas maintainer · Updated 2026-04-20
 
-> Based on 93 ecosystem projects reviewed, 33 research sources, and the live GitHub repo. We update this handbook monthly.
+> Based on 100+ ecosystem projects reviewed, 33 research sources, and the live GitHub repo. We update this handbook monthly.
 
 ---
 
@@ -679,7 +679,7 @@ Run Hermes in production for a team. Docker, systemd, managed cloud templates, K
 
 ### Bookmark the Atlas
 
-The handbook teaches you the fundamentals. The Atlas is where you find the specific tool you need for a specific job, ranked, filtered, and security-reviewed. **[Browse all 93 projects →](/)**.
+The handbook teaches you the fundamentals. The Atlas is where you find the specific tool you need for a specific job, ranked, filtered, and security-reviewed. **[Browse all 100+ projects →](/)**.
 
 And if you want the broader picture of where Hermes is right now — stars, PRs, key launches, what's next — read the quarterly report: **[The State of Hermes Agent — April 2026 →](/reports/state-of-hermes-april-2026)**.
 
@@ -751,7 +751,7 @@ If something is wrong, unclear, or out of date, open an issue on [the Atlas repo
 
 **Cited stats:**
 - 104,791 GitHub stars, 14,957 forks, 5,762 open issues (source: `api.github.com/repos/NousResearch/hermes-agent`, as of 2026-04-20)
-- 93 projects in the Hermes Atlas (as of 2026-04-19)
+- 100+ projects in the Hermes Atlas (as of 2026-04-24)
 - 643 skills in the community Hub (as of 2026-04-19)
 
 **Corrections and feedback:** [open an issue](https://github.com/ksimback/hermes-ecosystem/issues/new) or message on X.
@@ -885,7 +885,7 @@ As of 2026-04-20, yes, with caveats. 104,791 GitHub stars, an active Nous team s
 ## What next
 
 - **New to Hermes?** Start with the full beginner's walkthrough: **[The Hermes Handbook →](/guide/)**
-- **Want the tool landscape?** Browse **[all 93 projects in the Atlas →](/)**
+- **Want the tool landscape?** Browse **[all 100+ projects in the Atlas →](/)**
 - **Curious about the ecosystem?** Read the **[State of Hermes — April 2026 report →](/reports/state-of-hermes-april-2026)**
 
 ---
@@ -1142,6 +1142,123 @@ ln -s "$(pwd)/bin/hermes" ~/.local/bin/hermes
 
  rm -rf ~/.hermes/
 curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash 
+
+ Get the ecosystem inside your agent 
+
+ Install the hermes-atlas MCP server so Claude Desktop, Cursor, Claude Code, or any MCP-aware client can search the catalog, fetch project summaries, and answer free-form questions about the Hermes ecosystem mid-chat. Five tools: search_projects , get_project , list_by_category , get_guide , ask_atlas . 
+
+ Recommended — one command 
+
+ Run this in a terminal. The installer detects your OS, finds the right config file for your client, and safely merges in the hermes-atlas entry without touching anything else: 
+
+ npx -y hermes-atlas-mcp install --client claude-desktop 
+
+ Replace claude-desktop with cursor or claude-code as needed. Add --print first if you want to preview the exact diff without writing anything. 
+
+ Then fully quit and reopen the client — closing the window isn't enough, the whole process has to restart. In a new chat, click the tool icon (usually at the bottom of the message box) and you'll see the five tools listed. 
+
+ To remove later: 
+
+ npx -y hermes-atlas-mcp uninstall --client claude-desktop 
+
+ Manual install — Claude Desktop 
+
+ If you'd rather edit the config yourself, or the installer doesn't work on your setup, here's the full walkthrough. 
+
+ Step 1 — open the config file 
+
+ The easiest way is through Claude Desktop's built-in button: 
+
+ Open Claude Desktop. 
+ Click the Settings gear (or Cmd/Ctrl+, ). 
+ Select the Developer tab on the left. 
+ Click the Edit Config button. The file opens in your default text editor. 
+
+ If you'd rather find it by path: 
+ 
+ macOS: ~/Library/Application Support/Claude/claude_desktop_config.json 
+ Windows: %APPDATA%\Claude\claude_desktop_config.json (usually C:\Users\YOU\AppData\Roaming\Claude\claude_desktop_config.json ) 
+ Linux: ~/.config/Claude/claude_desktop_config.json 
+
+ Step 2 — add the hermes-atlas entry 
+
+ If the file is empty, or doesn't exist, paste this as the full contents: 
+
+ {
+ "mcpServers": {
+ "hermes-atlas": {
+ "command": "npx",
+ "args": ["-y", "hermes-atlas-mcp"]
+ }
+ }
+} 
+
+ If the file already has content, merge the new entry into the existing mcpServers block. For example, if your file currently looks like this: 
+
+ {
+ "mcpServers": {
+ "filesystem": {
+ "command": "npx",
+ "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path"]
+ }
+ }
+} 
+
+ ...change it to this (add a comma after the filesystem block, then the new hermes-atlas object): 
+
+ {
+ "mcpServers": {
+ "filesystem": {
+ "command": "npx",
+ "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path"]
+ },
+ "hermes-atlas": {
+ "command": "npx",
+ "args": ["-y", "hermes-atlas-mcp"]
+ }
+ }
+} 
+
+ If the file has top-level settings like preferences or anything other than mcpServers , leave those alone — only merge into the mcpServers object (or add it if it doesn't exist yet). 
+
+ Step 3 — save and fully restart Claude Desktop 
+
+ Save the file. Then fully quit Claude Desktop — closing the window isn't enough, the background process has to restart. 
+ 
+ macOS: Cmd+Q with Claude Desktop focused, or right-click the dock icon → Quit. 
+ Windows: File → Exit, or right-click the taskbar icon → Close window, or kill it in Task Manager if a Claude process lingers. 
+ 
+ Reopen Claude Desktop normally. 
+
+ Step 4 — verify 
+
+ Start a new chat. Click the tool / attachment icon at the bottom of the message box. You should see five tools listed under hermes-atlas : 
+ 
+ search_projects 
+ get_project 
+ list_by_category 
+ get_guide 
+ ask_atlas 
+
+ If they're missing, most-likely causes in order: 
+ 
+ You didn't fully quit Claude Desktop. Quit and reopen again. 
+ The JSON isn't valid (a missing comma, extra trailing comma, unbalanced brace). Paste the file into any online JSON validator. 
+ You don't have Node.js installed (the npx command needs it). Install from nodejs.org — any LTS version works. 
+
+ Manual install — Cursor 
+
+ File: ~/.cursor/mcp.json (global, applies to every project) or .cursor/mcp.json at your project root (per-project). Use the same JSON shape as Claude Desktop above. Restart Cursor. 
+
+ Manual install — Claude Code 
+
+ Easiest: inside a Claude Code session, run /mcp — the built-in UI walks you through adding a server without touching any file. Otherwise, edit ~/.claude.json using the same shape. 
+
+ Continue, Windsurf, Zed, other MCP clients 
+
+ Any MCP-compatible client works the same way. Configure a server named hermes-atlas that runs npx -y hermes-atlas-mcp via stdio. The client docs will point you at the right config file. 
+
+ Source: github.com/ksimback/hermes-atlas-mcp · npm . MIT-licensed, experimental (0.x), batch releases weekly. 
 
  What to do next 
 
@@ -1794,12 +1911,12 @@ Category: Workspaces & GUIs
 Stars: 313
 A native Mac workspace for Hermes: real SSH, real terminal, real session data.
 
-Hermes Desktop is a native macOS application that provides a dedicated workspace for managing Hermes Agent hosts via SSH. It connects directly to remote machines to manage sessions, skills, and cron jobs without requiring a gateway API, local file mirroring, or remote daemon. The app features a multi-tabbed terminal, conflict-aware file editing, and profile-specific usage analytics. It serves as a local companion for users who want a polished desktop interface while maintaining the remote host as the single source of truth.
+Hermes Desktop is a native macOS application that provides a localized workspace for managing Hermes Agent hosts over SSH. It connects directly to remote environments to manage sessions, skills, and cron jobs without requiring a gateway API, local file mirroring, or remote daemon. The app features a multi-tabbed terminal and profile-aware views that surface usage trends and canonical file states directly from the host. This allows users to maintain a persistent, native interface for multi-agent workflows while keeping the remote server as the single source of truth.
 
 Highlights:
-- Direct SSH connection with no middle-layer API or remote daemon
-- Real multi-tabbed terminal with profile-aware environment variables
-- Management of remote cron jobs, skills, and SQLite session stores
+- Direct SSH connection with no remote helper service required
+- Profile-aware management of sessions, skills, and cron jobs
+- Native multi-tabbed terminal with live theme and color controls
 
 ---
 
@@ -1811,12 +1928,12 @@ Category: Multi-Agent & Orchestration
 Stars: 285
 Build autonomous AI agent swarms with orchestration, skills, and multiple model providers
 
-SwarmClaw is a self-hosted runtime designed for orchestrating and managing autonomous AI agent swarms. It functions as a central hub that coordinates agents through heartbeats, schedules, and delegation while providing durable memory and runtime skill learning. The platform is MCP-native and integrates with over 20 model providers and CLI backends, including Hermes, OpenClaw, and various local or cloud-based LLMs. Users can visualize agent hierarchies via an organizational chart and manage complex workflows through a unified chat interface with operator controls.
+SwarmClaw is a self-hosted runtime designed for orchestrating and managing autonomous AI agent swarms. It operates by providing a centralized environment for agent delegation, memory management, and runtime skill acquisition through an MCP-native architecture. The platform supports over 20 model providers and CLI backends, including Hermes, OpenClaw, and various local or cloud-based LLMs. Users can visualize agent hierarchies via an organizational chart and automate workflows using heartbeats and scheduled tasks.
 
 Highlights:
-- Self-hosted runtime for autonomous agent orchestration and delegation
-- Native support for MCP and 23 built-in model providers
-- Visualizes agent teams and live activity through interactive org charts
+- Supports 23 model providers including Hermes and OpenClaw
+- MCP-native architecture with runtime skill learning and memory
+- Visualizes agent teams and delegation via interactive org charts
 
 ---
 
@@ -2202,12 +2319,12 @@ Category: Developer Tools
 Stars: 44
 AI-native browser built for autonomous agent control via MCP
 
-Vessel is an open-source Chromium-based browser designed to serve as a persistent runtime for autonomous agents rather than human-only navigation. It operates via the Model Context Protocol (MCP) to provide external agent harnesses with durable state, named sessions, and structured page visibility. The interface includes a supervisory UI that allows humans to audit, intervene, and redirect long-running agent workflows in real-time. It integrates with Hermes Agent and other MCP clients to transform web automation from a headless process into a transparent, steerable environment.
+Vessel is an open-source, Chromium-based browser designed specifically for autonomous agent control rather than traditional human browsing. It provides a persistent runtime where external agent harnesses like Hermes Agent can drive workflows while humans monitor and intervene through a visible supervisory interface. The browser maintains durable state through named sessions, annotated checkpoints, and an action undo feature that rolls back the environment to a state prior to the last agent action. It integrates with the Model Context Protocol (MCP) to expose browser tools, page schema inference, and structured bookmarks to AI agents.
 
 Highlights:
-- Provides durable browser state with named sessions and checkpoints
-- Exposes structured page schemas and element visibility via MCP
-- Features a supervisory sidebar for human intervention and workflow auditing
+- Provides a human-visible UI for auditing and supervising autonomous agents
+- Maintains persistent browser state with named sessions and annotated checkpoints
+- Exposes structured page schemas and metadata via MCP for agents
 
 ---
 
@@ -2304,12 +2421,12 @@ Category: Memory & Context
 Stars: 29
 The Zero-Dependency, Sub-Millisecond AI Memory System for Hermes Agents
 
-Mnemosyne is a local-first memory system designed to provide private, low-latency context for Hermes Agents. It utilizes a SQLite-backed architecture featuring native vector search and FTS5 full-text search to eliminate the need for external databases or API keys. The system implements a three-tier BEAM architecture that manages hot working memory, long-term episodic memory, and a temporary scratchpad. It includes automatic consolidation processes that summarize and move old memories to long-term storage during sleep cycles.
+Mnemosyne is a local-first memory system designed for the Hermes Agent framework that provides low-latency storage for conversations and knowledge. It utilizes a SQLite backend with native vector search and full-text search to eliminate the need for external databases or cloud APIs. The system features a three-tier BEAM architecture that manages hot working memory, long-term episodic memory, and a temporary scratchpad. It automatically consolidates and summarizes aging data through a sleep cycle process while maintaining privacy by keeping all data on the local machine.
 
 Highlights:
-- Sub-millisecond read and write latency using local SQLite storage
-- Hybrid search combining vector similarity, keyword ranking, and importance scores
-- BEAM architecture for tiered working, episodic, and scratchpad memory
+- Sub-millisecond read and write latency using SQLite-backed storage
+- Hybrid search combining vector similarity, FTS5 ranking, and importance scoring
+- Automatic memory consolidation via local LLM summarization and sleep cycles
 
 ---
 
@@ -2457,12 +2574,12 @@ Category: Plugins & Extensions
 Stars: 21
 Multi-provider web search (Serper, Tavily, Exa, Querit, Perplexity) with auto-routing
 
-Web-search-plus is a multi-provider search plugin for Hermes Agent that consolidates ten different search engines into a single interface. It uses an intelligent auto-routing engine to select the most appropriate provider based on query intent, such as semantic discovery via Exa or news via Serper. The system includes built-in adaptive fallbacks that skip providers on cooldown and local caching to prevent redundant API calls. Users can also apply specific filters for time ranges, domain whitelisting, and deep-reasoning research modes.
+Hermes Web Search Plus is a multi-provider search plugin for the Hermes Agent that enables intelligent information retrieval from ten different search engines. The system uses an auto-routing engine to select the most appropriate provider, such as Exa for semantic discovery or Serper for news, based on the specific intent of the user's query. It features adaptive fallback logic to skip providers on cooldown and includes a dedicated tool for extracting clean markdown content from URLs. Users can further refine results through time-range filtering, domain restrictions, and specialized deep-research modes for complex synthesis.
 
 Highlights:
-- Supports 10 providers including Serper, Brave, Tavily, and Exa
-- Intelligent auto-routing selects providers based on query intent signals
-- Features adaptive fallback and local caching with one-hour TTL
+- Auto-routes queries across 10 providers including Brave, Exa, and Tavily
+- Supports deep research and cross-document analysis via Exa integration
+- Includes URL extraction tool for converting web content to markdown
 
 ---
 
@@ -2491,12 +2608,12 @@ Category: Skills & Skill Registries
 Stars: 17
 Converts repos, docs, and developer discourse into agentskills.io-compliant skills
 
-Skill Forge is a development tool that converts source code, documentation, and developer discourse into verified instruction files for AI agents to prevent API hallucinations. It uses Abstract Syntax Tree (AST) extraction to map agent instructions directly to specific file paths and line numbers in the source repository. The system generates version-pinned skills compliant with the agentskills.io specification, ensuring agents use correct function signatures and parameter types. It supports automated workflows for creating, testing, and exporting skills from both open-source repositories and closed-source SaaS documentation.
+Skill Forge is a development tool that converts source code, documentation, and developer discourse into verified instruction files for AI agents. It uses Abstract Syntax Tree (AST) extraction to map function signatures and types directly to specific file paths and line numbers, ensuring agents use real APIs instead of hallucinating parameters. The tool generates version-pinned skills compliant with the agentskills.io specification, allowing for immutable audit trails via a provenance map. It supports automated workflows for creating, testing, and exporting skills to platforms like Cursor, Claude, and Copilot.
 
 Highlights:
-- Maps every AI instruction to specific source code line numbers
+- Maps AI instructions to specific source code file and line numbers
 - Generates agentskills.io-compliant markdown and JSON instruction sets
-- Supports version-pinned skill management for multiple library releases
+- Supports version-pinned skill management for library updates and migrations
 
 ---
 
