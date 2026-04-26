@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/junhoyeo/tokscale#software",
   "name": "tokscale",
-  "description": "Tokscale is a high-performance CLI tool and visualization dashboard designed to track token consumption and costs across various AI coding agents. It works by scanning local session databases and logs from supported clients to aggregate usage data into a native Rust TUI or a web-based 3D contribution graph. The tool integrates with LiteLLM pricing data to provide real-time cost calculations, including tiered pricing and cache discounts. It supports a wide range of agents including Hermes Agent, ",
+  "description": "Tokscale is a CLI tool and TUI dashboard designed to track token consumption and associated costs across various AI coding agents. It works by scanning local database files and session logs from supported clients to aggregate usage data into a centralized interface. The tool provides real-time pricing calculations using LiteLLM data and supports a wide range of agents including Hermes Agent, Claude Code, and GitHub Copilot CLI. Users can visualize their daily activity, model distribution, and hi",
   "url": "https://hermesatlas.com/projects/junhoyeo/tokscale",
   "codeRepository": "https://github.com/junhoyeo/tokscale",
   "applicationCategory": "DeveloperApplication",
@@ -47,13 +47,13 @@
     "name": "junhoyeo",
     "url": "https://github.com/junhoyeo"
   },
-  "dateModified": "2026-04-25T15:20:36.000Z",
+  "dateModified": "2026-04-26T06:39:38.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 2196
+    "userInteractionCount": 2213
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -112,7 +112,7 @@
     <span><span class="meta-label">lang</span>Rust</span>
     <span><span class="meta-label">license</span>MIT</span>
     
-    <span><span class="meta-label">updated</span>2026-04-25</span>
+    <span><span class="meta-label">updated</span>2026-04-26</span>
   </div>
 
   <div class="actions">
@@ -127,11 +127,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Tokscale is a high-performance CLI tool and visualization dashboard designed to track token consumption and costs across various AI coding agents. It works by scanning local session databases and logs from supported clients to aggregate usage data into a native Rust TUI or a web-based 3D contribution graph. The tool integrates with LiteLLM pricing data to provide real-time cost calculations, including tiered pricing and cache discounts. It supports a wide range of agents including Hermes Agent, Claude Code, OpenClaw, and Cursor.</p>
+    <p class="summary-text">Tokscale is a CLI tool and TUI dashboard designed to track token consumption and associated costs across various AI coding agents. It works by scanning local database files and session logs from supported clients to aggregate usage data into a centralized interface. The tool provides real-time pricing calculations using LiteLLM data and supports a wide range of agents including Hermes Agent, Claude Code, and GitHub Copilot CLI. Users can visualize their daily activity, model distribution, and historical stats through a native Rust terminal interface or a web-based dashboard.</p>
     <ul class="summary-highlights">
-      <li>Tracks token usage across 20+ AI coding agents and CLIs</li>
-      <li>Provides real-time cost calculations using LiteLLM pricing data</li>
-      <li>Features a native Rust TUI and 3D visualization dashboard</li>
+      <li>Tracks token usage and costs across multiple AI coding agents</li>
+      <li>Native Rust TUI for real-time local data visualization</li>
+      <li>Integrates with Hermes Agent, Claude Code, Gemini, and Cursor</li>
     </ul>
   </div>
 </section>
@@ -287,6 +287,12 @@ I drop new open-source work every week. Don&#39;t miss the next one.</p>
 <td>✅ Yes</td>
 </tr>
 <tr>
+<td><img width="48px" src="https://avatars.githubusercontent.com/u/189203002?s=200&v=4" alt="Codebuff" /></td>
+<td><a href="https://codebuff.com/">Codebuff</a></td>
+<td><code>~/.config/manicode/</code> (+ <code>manicode-dev</code>, <code>manicode-staging</code>; override via <code>CODEBUFF_DATA_DIR</code>)</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
 <td><img width="48px" src="https://raw.githubusercontent.com/junhoyeo/tokscale/main/.github/assets/client-droid.png" alt="Droid" /></td>
 <td><a href="https://factory.ai/">Droid (Factory Droid)</a></td>
 <td><code>~/.factory/sessions/</code></td>
@@ -425,7 +431,7 @@ I drop new open-source work every week. Don&#39;t miss the next one.</p>
 <li>Zero flicker rendering</li>
 </ul>
 </li>
-<li><strong>Multi-platform support</strong> - Track usage across OpenCode, Claude Code, Codex CLI, Copilot CLI, Cursor IDE, Gemini CLI, Amp, Droid, OpenClaw, Hermes Agent, Pi, Kimi CLI, Qwen CLI, Roo Code, Kilo, Mux, Kilo CLI, Crush, and Synthetic</li>
+<li><strong>Multi-platform support</strong> - Track usage across OpenCode, Claude Code, Codex CLI, Copilot CLI, Cursor IDE, Gemini CLI, Amp, Codebuff, Droid, OpenClaw, Hermes Agent, Pi, Kimi CLI, Qwen CLI, Roo Code, Kilo, Mux, Kilo CLI, Crush, and Synthetic</li>
 <li><strong>Real-time pricing</strong> - Fetches current pricing from LiteLLM with 1-hour disk cache; automatic OpenRouter fallback and Cursor model pricing for newly released models</li>
 <li><strong>Detailed breakdowns</strong> - Input, output, cache read/write, and reasoning token tracking</li>
 <li><strong>Native Rust core</strong> - All parsing and aggregation done in Rust for 10x faster processing</li>
@@ -632,66 +638,29 @@ tokscale models --json &gt; report.json   # Save to file
 </tr>
 </tbody></table>
 <h4>Filtering by Platform</h4>
+<p>Use <code>--client</code> (short <code>-c</code>) to scope reports to one or more clients. The flag is repeatable, accepts comma-separated values, and works with every report command:</p>
 <pre><code class="language-bash"># Show only OpenCode usage
-tokscale --opencode
+tokscale --client opencode
 
-# Show only Claude Code usage
-tokscale --claude
+# Comma-separated: combine multiple clients
+tokscale --client opencode,claude
 
-# Show only Codex CLI usage
-tokscale --codex
+# Repeated: same effect, useful with shell aliases
+tokscale -c opencode -c claude
 
-# Show only Copilot CLI usage
-tokscale --copilot
+# Cursor IDE requires `tokscale cursor login` first
+tokscale --client cursor
 
-# Show only OpenClaw usage
-tokscale --openclaw
+# Synthetic (synthetic.new) is detected from other agent sessions
+tokscale --client synthetic
 
-# Show only Pi usage
-tokscale --pi
-
-# Show only Gemini CLI usage
-tokscale --gemini
-
-# Show only Cursor IDE usage (requires `tokscale cursor login` first)
-tokscale --cursor
-
-# Show only Amp usage
-tokscale --amp
-
-# Show only Droid usage
-tokscale --droid
-
-# Show only Hermes Agent usage
-tokscale --hermes
-
-# Show only Kimi CLI usage
-tokscale --kimi
-
-# Show only Qwen CLI usage
-tokscale --qwen
-
-# Show only Roo Code usage
-tokscale --roocode
-
-# Show only Kilo usage
-tokscale --kilocode
-
-# Show only Mux usage
-tokscale --mux
-
-# Show only Kilo CLI usage
-tokscale --kilo
-
-# Show only Crush usage
-tokscale --crush
-
-# Show only Synthetic (synthetic.new) usage
-tokscale --synthetic
-
-# Combine filters
-tokscale --opencode --claude
+# Combine with other filters
+tokscale --client opencode,claude --week --json
 </code></pre>
+<p>Possible values: <code>opencode</code>, <code>claude</code>, <code>codex</code>, <code>copilot</code>, <code>gemini</code>, <code>cursor</code>, <code>amp</code>, <code>codebuff</code>, <code>droid</code>, <code>openclaw</code>, <code>hermes</code>, <code>pi</code>, <code>kimi</code>, <code>qwen</code>, <code>roocode</code>, <code>kilocode</code>, <code>kilo</code>, <code>mux</code>, <code>crush</code>, <code>synthetic</code>.</p>
+<blockquote>
+<p><strong>Deprecation notice</strong>: The legacy single-client flags (<code>--opencode</code>, <code>--claude</code>, <code>--codex</code>, etc.) still work for backward compatibility but are hidden from <code>--help</code> and will be removed in the next major release. Migrate to <code>--client</code> whenever possible. Running tokscale in an interactive terminal will print a one-line warning when a legacy flag is used.</p>
+</blockquote>
 <h4>Date Filtering</h4>
 <p>Date filters work across all commands that generate reports (<code>tokscale</code>, <code>tokscale models</code>, <code>tokscale monthly</code>, <code>tokscale graph</code>):</p>
 <pre><code class="language-bash"># Quick date shortcuts
@@ -706,7 +675,7 @@ tokscale --since 2024-01-01 --until 2024-12-31
 tokscale --year 2024
 
 # Combine with other options
-tokscale models --week --claude --json
+tokscale models --week --client claude --json
 tokscale monthly --month --benchmark
 </code></pre>
 <blockquote>
@@ -776,7 +745,7 @@ tokscale whoami
 tokscale submit
 
 # Submit with filters
-tokscale submit --opencode --claude --since 2024-01-01
+tokscale submit --client opencode,claude --since 2024-01-01
 
 # Preview what would be submitted (dry run)
 tokscale submit --dry-run
@@ -834,6 +803,7 @@ tokscale cursor logout --all --purge-cache
 <pre><code class="language-json">{
   &quot;colorPalette&quot;: &quot;blue&quot;,
   &quot;includeUnusedModels&quot;: false,
+  &quot;defaultClients&quot;: [&quot;opencode&quot;, &quot;claude&quot;],
   &quot;scanner&quot;: {
     &quot;extraScanPaths&quot;: {
       &quot;codex&quot;: [
@@ -884,6 +854,12 @@ tokscale cursor logout --all --purge-cache
 <td>Maximum time for native subprocess processing (5000-3600000ms)</td>
 </tr>
 <tr>
+<td><code>defaultClients</code></td>
+<td>string[]</td>
+<td><code>[]</code></td>
+<td>Client filter applied when no <code>--client/-c</code> flag is passed. Accepts the same ids as <code>--client</code> (e.g. <code>[&quot;opencode&quot;, &quot;claude&quot;, &quot;synthetic&quot;]</code>). Unknown ids are silently dropped. CLI flags always override this list completely — no merging.</td>
+</tr>
+<tr>
 <td><code>scanner.extraScanPaths</code></td>
 <td>object</td>
 <td><code>{}</code></td>
@@ -891,6 +867,7 @@ tokscale cursor logout --all --purge-cache
 </tr>
 </tbody></table>
 <p>Use <code>scanner.extraScanPaths</code> for persistent extra roots such as project-level <code>.codex</code> directories or imported Gemini/OpenClaw histories. Tokscale merges these paths with the default scan roots on every run and deduplicates overlapping roots by canonical path.</p>
+<p>Use <code>defaultClients</code> to pin a personal default — for example, set it to <code>[&quot;opencode&quot;, &quot;claude&quot;]</code> if those are the only clients you use, and <code>tokscale</code> (with no flags) will scope every report to them automatically. Pass <code>--client</code> on the command line to override for a single run.</p>
 <h4>Environment Variables</h4>
 <p>Environment variables override config file values. For CI/CD or one-off use:</p>
 <table>
@@ -1192,7 +1169,7 @@ tokscale graph --since 2024-01-01 --until 2024-12-31
 tokscale graph --year 2024
 
 # Filter by platform
-tokscale graph --opencode --claude
+tokscale graph --client opencode,claude
 
 # Show processing time benchmark
 tokscale graph --output data.json --benchmark
@@ -1698,26 +1675,7 @@ $env:COPILOT_OTEL_FILE_EXPORTER_PATH = Join-Path $otelDir (&quot;copilot-otel-{0
 <li>Local: <code>~/.config/Code/User/globalStorage/kilocode.kilo-code/tasks/{TASK_ID}/ui_messages.json</code></li>
 <li>Server (best-effort): <code>~/.vscode-server/data/User/globalStorage/kilocode.kilo-code/tasks/{TASK_ID}/ui_messages.json</code></li>
 </ul>
-<p>Kilo uses the same task log shape as Roo Code. Tokscale applies the same rules:</p>
-<ul>
-<li>count only <code>say/api_req_started</code> events from <code>ui_messages.json</code></li>
-<li>parse <code>tokensIn</code>, <code>tokensOut</code>, <code>cacheReads</code>, <code>cacheWrites</code>, <code>cost</code>, and <code>apiProtocol</code> from <code>text</code> JSON</li>
-<li>enrich model/agent metadata from sibling <code>api_conversation_history.json</code> when available</li>
-</ul>
-<h4>Mux</h4>
-<p>Location:</p>
-<ul>
-<li><code>~/.mux/sessions/{WORKSPACE_ID}/session-usage.json</code></li>
-</ul>
-<p>Mux stores cumulative per-session token usage in <code>session-usage.json</code> files. Each file contains a <code>byModel</code> map with per-model token breakdowns:</p>
-<ul>
-<li><code>input</code>, <code>cached</code> (cache reads), <code>cacheCreate</code> (cache writes), <code>output</code>, <code>reasoning</code></li>
-<li>Model names use <code>provider:model</code> format (e.g., <code>anthropic:claude-opus-4-6</code>) — tokscale strips the provider prefix for model identification</li>
-<li>Sub-agent usage is automatically rolled up into parent sessions by Mux, so there is no double-counting</li>
-</ul>
-<h4>Kilo CLI</h4>
-<p>Location: <code>~/.local/share/kilo/kilo.db</code></p>
-<p>Kilo CLI stores session data in a SQLite database similar to OpenCode. Each message row contains per-message token breakdowns (input, output, cache read/write, reasoning) with model and provider at</p>
+<p>Kilo uses the same task log sh</p>
 <hr>
 <p><em>README truncated. <a href="https://github.com/junhoyeo/tokscale#readme">Continue reading on GitHub</a></em></p>
 
@@ -1732,11 +1690,11 @@ $env:COPILOT_OTEL_FILE_EXPORTER_PATH = Join-Path $otelDir (&quot;copilot-otel-{0
   <div>
     <div class="related-list">
       <a class="related-row" href="/projects/joeynyc/hermes-skins">
-        <div class="stars">★ 265</div>
+        <div class="stars">★ 270</div>
         <div class="name"><span class="org">joeynyc /</span> hermes-skins</div>
       </a>
       <a class="related-row" href="/projects/AlexAI-MCP/hermes-CCC">
-        <div class="stars">★ 89</div>
+        <div class="stars">★ 91</div>
         <div class="name"><span class="org">AlexAI-MCP /</span> hermes-CCC</div>
       </a>
       <a class="related-row" href="/projects/unmodeled-tyler/vessel-browser">
@@ -1756,7 +1714,7 @@ $env:COPILOT_OTEL_FILE_EXPORTER_PATH = Join-Path $otelDir (&quot;copilot-otel-{0
         <div class="name"><span class="org">0xNyk /</span> openclaw-to-hermes</div>
       </a>
       <a class="related-row" href="/projects/42-evey/evey-setup">
-        <div class="stars">★ 13</div>
+        <div class="stars">★ 14</div>
         <div class="name"><span class="org">42-evey /</span> evey-setup</div>
       </a>
     </div>

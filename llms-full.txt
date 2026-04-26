@@ -1,6 +1,6 @@
 # Hermes Atlas — Full Context Bundle
 
-> Complete content of hermesatlas.com as of 2026-04-25. Concatenated from guide pages, ecosystem overview, the quarterly report, and project summaries. Canonical URLs preserved throughout.
+> Complete content of hermesatlas.com as of 2026-04-26. Concatenated from guide pages, ecosystem overview, the quarterly report, and project summaries. Canonical URLs preserved throughout.
 
 This file is the companion to https://hermesatlas.com/llms.txt (the concise index).
 
@@ -1565,12 +1565,12 @@ Category: Memory & Context
 Stars: 8,857
 Garry's Opinionated OpenClaw/Hermes Agent Brain
 
-GBrain is an opinionated memory and context layer designed to give AI agents a persistent, self-wiring knowledge base. It utilizes a hybrid search system and a self-constructing knowledge graph to extract entities and create typed links between people, companies, and events without requiring LLM calls for graph construction. The system consolidates memory through overnight autonomous jobs that fix citations and enrich data from meetings, emails, and media. It integrates with Hermes Agent and OpenClaw, offering 29 specialized skills for automated workflow execution and information retrieval.
+GBrain is a memory and context management system designed to provide AI agents with long-term knowledge retention. It utilizes a self-wiring knowledge graph and hybrid search to extract entity references and create typed links between people, companies, and ideas. The system supports automated ingestion of meetings, emails, and media, allowing agents to enrich their own knowledge base through recurring background tasks. It is compatible with agent platforms like OpenClaw and Hermes Agent, and can be used as an MCP server for tools like Claude Code.
 
 Highlights:
-- Hybrid search combining vector retrieval with a self-wiring knowledge graph.
-- Automated entity extraction and typed relationship linking for structured memory.
-- Exposes 30+ MCP tools for integration with Claude Code and Cursor.
+- Self-wiring knowledge graph with zero LLM calls for entity linking
+- Automated ingestion of meetings, emails, tweets, and voice calls
+- Supports MCP server integration for Claude Code and Cursor
 
 ---
 
@@ -1668,12 +1668,12 @@ Category: Developer Tools
 Stars: 1,690
 CLI tool for tracking token usage from Claude Code, OpenClaw, Hermes, Codex, Gemini, and more
 
-Tokscale is a high-performance CLI tool and visualization dashboard designed to track token consumption and costs across various AI coding agents. It works by scanning local session databases and logs from supported clients to aggregate usage data into a native Rust TUI or a web-based 3D contribution graph. The tool integrates with LiteLLM pricing data to provide real-time cost calculations, including tiered pricing and cache discounts. It supports a wide range of agents including Hermes Agent, Claude Code, OpenClaw, and Cursor.
+Tokscale is a CLI tool and TUI dashboard designed to track token consumption and associated costs across various AI coding agents. It works by scanning local database files and session logs from supported clients to aggregate usage data into a centralized interface. The tool provides real-time pricing calculations using LiteLLM data and supports a wide range of agents including Hermes Agent, Claude Code, and GitHub Copilot CLI. Users can visualize their daily activity, model distribution, and historical stats through a native Rust terminal interface or a web-based dashboard.
 
 Highlights:
-- Tracks token usage across 20+ AI coding agents and CLIs
-- Provides real-time cost calculations using LiteLLM pricing data
-- Features a native Rust TUI and 3D visualization dashboard
+- Tracks token usage and costs across multiple AI coding agents
+- Native Rust TUI for real-time local data visualization
+- Integrates with Hermes Agent, Claude Code, Gemini, and Cursor
 
 ---
 
@@ -1928,12 +1928,12 @@ Category: Multi-Agent & Orchestration
 Stars: 285
 Build autonomous AI agent swarms with orchestration, skills, and multiple model providers
 
-SwarmClaw is a self-hosted runtime designed for orchestrating and managing autonomous AI agent swarms. It operates by providing a centralized environment for agent delegation, memory management, and runtime skill acquisition through an MCP-native architecture. The platform supports over 20 model providers and CLI backends, including Hermes, OpenClaw, and various local or cloud-based LLMs. Users can visualize agent hierarchies via an organizational chart and automate workflows using heartbeats and scheduled tasks.
+SwarmClaw is a self-hosted runtime designed for orchestrating and managing autonomous AI agent swarms. It operates as a multi-provider system that supports MCP-native tools, delegation, and scheduled tasks across various LLM backends and CLI-based agents. The platform enables users to visualize agent hierarchies through an organizational chart and implement conversation-to-skill learning. It integrates with over 20 providers, including OpenClaw, Hermes, and local models via Ollama.
 
 Highlights:
-- Supports 23 model providers including Hermes and OpenClaw
-- MCP-native architecture with runtime skill learning and memory
-- Visualizes agent teams and delegation via interactive org charts
+- Self-hosted runtime for autonomous agent orchestration and delegation
+- Supports 23 providers including Hermes, OpenClaw, and local Ollama
+- Features MCP-native skills, memory, and scheduled agent heartbeats
 
 ---
 
@@ -2506,12 +2506,12 @@ Category: Workspaces & GUIs
 Stars: 25
 Glassmorphic web interface for Hermes Agent — your self-hosted AI assistant
 
-Hermes UI is a glassmorphic web interface for the self-hosted Hermes Agent, providing a visual workspace for AI interaction and system management. It operates as a single-file React application served via a lightweight Python proxy, requiring no complex build steps or external dependencies. The interface surfaces advanced agent features such as real-time log streaming, MCP tool browsing, and a dedicated artifact panel for rendering HTML, SVG, and PDF outputs. Users can manage model providers, monitor system memory, and execute shell commands through an integrated terminal environment.
+Hermes UI is a glassmorphic web interface that serves as a centralized command center for the self-hosted Hermes Agent. It functions as a single-file React 18 application served via a lightweight Python proxy to provide real-time interaction with the agent's core services. The interface enables users to manage chat sessions, monitor live logs, browse local files, and configure MCP tools or cron jobs through a unified dashboard. It also features a dedicated artifact panel for rendering HTML, SVG, and PDF outputs generated by the agent during tasks.
 
 Highlights:
-- Single-file React architecture with no npm dependencies required
-- Real-time artifact panel for live HTML, SVG, and PDF previews
-- Integrated management for MCP tools, cron jobs, and memory files
+- Single-file React 18 architecture with real-time SSE streaming support
+- Integrated file browser and memory inspector for local agent data
+- Multi-tab terminal for Shell, Hermes, and Claude Code workflows
 
 ---
 
@@ -2608,12 +2608,12 @@ Category: Skills & Skill Registries
 Stars: 17
 Converts repos, docs, and developer discourse into agentskills.io-compliant skills
 
-Skill Forge is a development tool that converts source code, documentation, and developer discourse into verified instruction files for AI agents. It uses Abstract Syntax Tree (AST) extraction to map function signatures and types directly to specific file paths and line numbers, ensuring agents use real APIs instead of hallucinating parameters. The tool generates version-pinned skills compliant with the agentskills.io specification, allowing for immutable audit trails via a provenance map. It supports automated workflows for creating, testing, and exporting skills to platforms like Cursor, Claude, and Copilot.
+Skill Forge is a development tool that converts source code, documentation, and developer discussions into verified instruction files for AI agents. It uses Abstract Syntax Tree (AST) analysis to extract precise function signatures and types, ensuring agents use libraries correctly without hallucinating API details. Every generated instruction includes a provenance map linking back to specific file lines at pinned commits or documentation URLs. The project follows the agentskills.io specification, making the resulting skills compatible with platforms like Cursor, Claude, and GitHub Copilot.
 
 Highlights:
-- Maps AI instructions to specific source code file and line numbers
-- Generates agentskills.io-compliant markdown and JSON instruction sets
-- Supports version-pinned skill management for library updates and migrations
+- Generates version-pinned AI instructions from code and documentation
+- Provides verifiable audit trails with file-and-line level provenance
+- Complies with agentskills.io open standard for cross-platform agent compatibility
 
 ---
 
@@ -3101,12 +3101,12 @@ Category: Plugins & Extensions
 Stars: 4
 OTel Plugin for Hermes Agent
 
-hermes-otel is an observability plugin for the Hermes Agent that enables comprehensive monitoring of agentic workflows. It automatically captures and exports LLM tool calls, model invocations, and API requests as OpenTelemetry spans to any OTLP-compatible backend. The plugin provides deep visibility into session lifecycles, including parent-child span nesting and token usage aggregation. It supports a wide range of observability platforms including Phoenix, Langfuse, SigNoz, and Grafana for tracking traces, metrics, and logs.
+The hermes-otel plugin provides observability for Hermes Agent by automatically exporting execution data as OpenTelemetry spans. It captures LLM tool calls, model invocations, and API requests, sending them to OTLP-compatible backends for monitoring and debugging. The plugin supports multiple backends simultaneously, including Phoenix, Langfuse, and SigNoz, allowing for detailed tracing of session lifecycles and token usage. Users can configure these exports through environment variables or a dedicated configuration file to monitor agent performance across local and cloud environments.
 
 Highlights:
 - Exports LLM tool calls and model invocations as OTel spans
-- Supports multiple backends including Phoenix, Langfuse, and SigNoz
-- Aggregates token usage and session I/O metrics automatically
+- Supports multiple backends including Phoenix, Langfuse, and Jaeger
+- Aggregates session tokens and I/O metrics for performance tracking
 
 ---
 

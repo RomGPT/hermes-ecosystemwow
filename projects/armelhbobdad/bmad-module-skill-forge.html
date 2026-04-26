@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/armelhbobdad/bmad-module-skill-forge#software",
   "name": "bmad-module-skill-forge",
-  "description": "Skill Forge is a development tool that converts source code, documentation, and developer discourse into verified instruction files for AI agents. It uses Abstract Syntax Tree (AST) extraction to map function signatures and types directly to specific file paths and line numbers, ensuring agents use real APIs instead of hallucinating parameters. The tool generates version-pinned skills compliant with the agentskills.io specification, allowing for immutable audit trails via a provenance map. It su",
+  "description": "Skill Forge is a development tool that converts source code, documentation, and developer discussions into verified instruction files for AI agents. It uses Abstract Syntax Tree (AST) analysis to extract precise function signatures and types, ensuring agents use libraries correctly without hallucinating API details. Every generated instruction includes a provenance map linking back to specific file lines at pinned commits or documentation URLs. The project follows the agentskills.io specificatio",
   "url": "https://hermesatlas.com/projects/armelhbobdad/bmad-module-skill-forge",
   "codeRepository": "https://github.com/armelhbobdad/bmad-module-skill-forge",
   "applicationCategory": "DeveloperApplication",
@@ -46,13 +46,13 @@
     "name": "armelhbobdad",
     "url": "https://github.com/armelhbobdad"
   },
-  "dateModified": "2026-04-25T01:38:28.000Z",
+  "dateModified": "2026-04-26T06:57:11.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 29
+    "userInteractionCount": 30
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -107,11 +107,11 @@
   <p class="project-desc">A standalone BMAD module that transforms code repositories, documentation websites, and developer discourse into agentskills.io-compliant, version-pinned, provenance-backed agent skills.</p>
 
   <div class="meta-row">
-    <span class="stars">★ 29</span>
+    <span class="stars">★ 30</span>
     <span><span class="meta-label">lang</span>JavaScript</span>
     
     
-    <span><span class="meta-label">updated</span>2026-04-25</span>
+    <span><span class="meta-label">updated</span>2026-04-26</span>
   </div>
 
   <div class="actions">
@@ -126,11 +126,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Skill Forge is a development tool that converts source code, documentation, and developer discourse into verified instruction files for AI agents. It uses Abstract Syntax Tree (AST) extraction to map function signatures and types directly to specific file paths and line numbers, ensuring agents use real APIs instead of hallucinating parameters. The tool generates version-pinned skills compliant with the agentskills.io specification, allowing for immutable audit trails via a provenance map. It supports automated workflows for creating, testing, and exporting skills to platforms like Cursor, Claude, and Copilot.</p>
+    <p class="summary-text">Skill Forge is a development tool that converts source code, documentation, and developer discussions into verified instruction files for AI agents. It uses Abstract Syntax Tree (AST) analysis to extract precise function signatures and types, ensuring agents use libraries correctly without hallucinating API details. Every generated instruction includes a provenance map linking back to specific file lines at pinned commits or documentation URLs. The project follows the agentskills.io specification, making the resulting skills compatible with platforms like Cursor, Claude, and GitHub Copilot.</p>
     <ul class="summary-highlights">
-      <li>Maps AI instructions to specific source code file and line numbers</li>
-      <li>Generates agentskills.io-compliant markdown and JSON instruction sets</li>
-      <li>Supports version-pinned skill management for library updates and migrations</li>
+      <li>Generates version-pinned AI instructions from code and documentation</li>
+      <li>Provides verifiable audit trails with file-and-line level provenance</li>
+      <li>Complies with agentskills.io open standard for cross-platform agent compatibility</li>
     </ul>
   </div>
 </section>
@@ -153,7 +153,7 @@
 <a href="https://armelhbobdad.github.io/bmad-module-skill-forge/"><img src="https://img.shields.io/badge/docs-online-green" alt="Docs"></a>
 <a href="https://discord.gg/gk8jAdXWmj"><img src="https://img.shields.io/badge/Discord-Join%20Community-7289da?logo=discord&amp;logoColor=white" alt="Discord"></a>
 <a href="https://github.com/armelhbobdad/bmad-module-skill-forge/stargazers"><img src="https://img.shields.io/github/stars/armelhbobdad/bmad-module-skill-forge?style=social" alt="GitHub stars"></a></p>
-<p><em>Skill Forge analyzes your code repositories, documentation, and developer discourse to build verified instruction files for AI agents. Every instruction links back to a specific file and line in the source it was compiled from.</em></p>
+<p><em>Skill Forge analyzes your code repositories, documentation, and developer discourse to build verified instruction files for AI agents. Every instruction links back to its upstream — a specific <code>file:line</code> at a pinned commit when source is available, or a documentation URL when it isn&#39;t.</em></p>
 <p><strong>If SKF fixes your agent&#39;s API guesses, give it a ⭐ — it helps others find this tool.</strong>
 <strong>If it saved you an afternoon, <a href="https://buymeacoffee.com/armelhbobdad">grab me a coffee ☕</a> — it helps me keep forging.</strong></p>
 </div>
@@ -218,8 +218,8 @@ results = await cognee.search(
 </tr>
 </thead>
 <tbody><tr>
-<td>Reproducible from source</td>
-<td>AST extraction + pinned commit</td>
+<td>Reproducible from upstream</td>
+<td>AST + pinned commit (or pinned doc URL)</td>
 <td>varies; opaque</td>
 <td>whatever you wrote</td>
 <td>none</td>
@@ -272,13 +272,14 @@ results = await cognee.search(
 <p><strong>Every skill ships two files — <code>SKILL.md</code> (the full instruction set, loaded on trigger) and <code>context-snippet.md</code> (an 80–120 token always-on index injected into <code>CLAUDE.md</code> / <code>AGENTS.md</code> / <code>.cursorrules</code>). Why both?</strong> Per Vercel&#39;s agent evals, passive context achieves a <strong>100% pass rate vs. 79% for active skills loaded alone</strong> (see <a href="https://armelhbobdad.github.io/bmad-module-skill-forge/skill-model/#dual-output-strategy">Skill Model → Dual-Output Strategy</a>).</p>
 </blockquote>
 <h3>Verifying a Skill</h3>
-<p>You can falsify any AST citation in an SKF-compiled skill in under a minute:</p>
+<p>You can falsify any citation in an SKF-compiled skill in under a minute:</p>
 <ol>
 <li><strong>Open the skill&#39;s <code>provenance-map.json</code></strong> — find your symbol; read its <code>source_file</code> and <code>source_line</code>.</li>
 <li><strong>Open the skill&#39;s <code>metadata.json</code></strong> — read <code>source_commit</code> and <code>source_repo</code>.</li>
 <li><strong>Jump to the upstream repo at that commit</strong>, open that file, find that line. The signature in <code>SKILL.md</code> should match the one you&#39;re reading.</li>
 </ol>
-<p>If it doesn&#39;t, that&#39;s a bug — open an issue and SKF will republish with a new commit SHA and a new provenance map. Falsifiability isn&#39;t a feature; it&#39;s the whole deal.</p>
+<p>For docs-only skills, the audit shape is the same — <code>provenance-map.json</code> still lists every symbol — but entries cite <code>[EXT:{url}]</code> instead of <code>file:line@SHA</code>, and step 3 becomes &quot;open the doc URL and confirm the signature matches.&quot;</p>
+<p>If it doesn&#39;t, that&#39;s a bug — open an issue and SKF will republish the skill with a fresh provenance map (a new commit SHA for source skills, a fresh fetch for docs-only). Falsifiability isn&#39;t a feature; it&#39;s the whole deal.</p>
 <p><strong>Reference output: <a href="https://github.com/armelhbobdad/oh-my-skills">oh-my-skills</a></strong> — four Deep-tier skills compiled by SKF (cocoindex, cognee, Storybook v10, uitripled), each shipping its full audit trail in-repo. Scores range from 99.0% to 99.49%. Every claim walks to an upstream line in under 60 seconds. Serves as both the worked example for this section and ongoing proof that the pipeline does what it says.</p>
 <h3>Help SKF Improve</h3>
 <p>Workflows end with a health check that can file bug or friction reports as GitHub issues (auto-deduped by fingerprint — re-reporting is safe). <strong>Please let workflows run to completion</strong>, or <a href="https://github.com/armelhbobdad/bmad-module-skill-forge/issues/new/choose">open an issue</a> directly. <a href="https://armelhbobdad.github.io/bmad-module-skill-forge/workflows/#terminal-step-health-check">Full details →</a></p>
@@ -389,15 +390,15 @@ results = await cognee.search(
         <div class="name"><span class="org">conorbronsdon /</span> avoid-ai-writing</div>
       </a>
       <a class="related-row" href="/projects/wondelai/skills">
-        <div class="stars">★ 734</div>
+        <div class="stars">★ 739</div>
         <div class="name"><span class="org">wondelai /</span> skills</div>
       </a>
       <a class="related-row" href="/projects/DougTrajano/pydantic-ai-skills">
-        <div class="stars">★ 258</div>
+        <div class="stars">★ 260</div>
         <div class="name"><span class="org">DougTrajano /</span> pydantic-ai-skills</div>
       </a>
       <a class="related-row" href="/projects/Agents365-ai/drawio-skill">
-        <div class="stars">★ 588</div>
+        <div class="stars">★ 611</div>
         <div class="name"><span class="org">Agents365-ai /</span> drawio-skill</div>
       </a>
       <a class="related-row" href="/projects/smartcontractkit/chainlink-agent-skills">
