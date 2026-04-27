@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/ReinaMacCredy/maestro#software",
   "name": "maestro",
-  "description": "Maestro is a local-first conductor for multi-agent software engineering that enables persistent state management across separate agent sessions. It uses a CLI to store missions, features, and memory in a local .maestro directory, removing the need for external databases or servers. The tool allows human operators to coordinate multiple terminals by providing structured handoff briefs and cross-feature learning. This approach ensures that project context and agent progress remain disciplined and ",
+  "description": "Maestro is a local-first conductor for multi-agent software engineering that manages shared state across separate agent sessions. It uses a CLI to persist missions, features, and memory within a local .maestro directory, removing the need for external databases or background daemons. The tool enables a plan-approve-execute workflow where human operators coordinate agents through structured handoffs and markdown briefs. This approach ensures that project context and learning remain disciplined an",
   "url": "https://hermesatlas.com/projects/ReinaMacCredy/maestro",
   "codeRepository": "https://github.com/ReinaMacCredy/maestro",
   "applicationCategory": "DeveloperApplication",
@@ -46,13 +46,13 @@
     "name": "ReinaMacCredy",
     "url": "https://github.com/ReinaMacCredy"
   },
-  "dateModified": "2026-04-24T03:49:48.000Z",
+  "dateModified": "2026-04-27T05:28:25.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 95
+    "userInteractionCount": 101
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -107,11 +107,11 @@
   <p class="project-desc">Conductor for cross-agent coding workflows: structured memory, handoffs, plan-approve-execute coordination across external CLIs (Codex, Claude Code, Gemini).</p>
 
   <div class="meta-row">
-    <span class="stars">★ 95</span>
+    <span class="stars">★ 101</span>
     <span><span class="meta-label">lang</span>TypeScript</span>
     
     
-    <span><span class="meta-label">updated</span>2026-04-24</span>
+    <span><span class="meta-label">updated</span>2026-04-27</span>
   </div>
 
   <div class="actions">
@@ -126,11 +126,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Maestro is a local-first conductor for multi-agent software engineering that enables persistent state management across separate agent sessions. It uses a CLI to store missions, features, and memory in a local .maestro directory, removing the need for external databases or servers. The tool allows human operators to coordinate multiple terminals by providing structured handoff briefs and cross-feature learning. This approach ensures that project context and agent progress remain disciplined and inspectable through a dedicated Mission Control TUI.</p>
+    <p class="summary-text">Maestro is a local-first conductor for multi-agent software engineering that manages shared state across separate agent sessions. It uses a CLI to persist missions, features, and memory within a local .maestro directory, removing the need for external databases or background daemons. The tool enables a plan-approve-execute workflow where human operators coordinate agents through structured handoffs and markdown briefs. This approach ensures that project context and learning remain disciplined and inspectable across different model vendors and terminal tools.</p>
     <ul class="summary-highlights">
-      <li>Local-first state management using on-disk .maestro directory and JSON snapshots</li>
-      <li>Structured mission planning with milestones, features, and validation assertions</li>
-      <li>Native handoff launches that generate markdown briefs for fresh agent runs</li>
+      <li>Persists shared agent state locally in .maestro directory</li>
+      <li>Orchestrates work through missions, milestones, and validation assertions</li>
+      <li>Generates markdown briefs for fresh Codex or Claude handoffs</li>
     </ul>
   </div>
 </section>
@@ -463,6 +463,10 @@ maestro task create &quot;...&quot; --blocked-by &lt;ids&gt;
 </tr>
 </thead>
 <tbody><tr>
+<td><code>maestro task status</code></td>
+<td>Hybrid board: compact active/ready/blocked lists plus expanded dependency tracks.</td>
+</tr>
+<tr>
 <td><code>maestro task ready</code></td>
 <td>Pending, unblocked, unassigned tasks, <code>P0</code>/<code>P1</code> first.</td>
 </tr>
@@ -480,9 +484,84 @@ maestro task create &quot;...&quot; --blocked-by &lt;ids&gt;
 </tr>
 <tr>
 <td><code>maestro task list</code></td>
-<td>Full filter set: <code>--status</code>, <code>--priority</code>, <code>--type</code>, <code>--label</code>, <code>--parent</code>, <code>--assignee</code>, <code>--limit</code>.</td>
+<td>Full filter set: <code>--status</code>, <code>--priority</code>, <code>--type</code>, <code>--label</code>, <code>--parent</code>, <code>--assignee</code>, <code>--limit</code>. Add <code>--tracks</code> for headline-only output.</td>
 </tr>
 </tbody></table>
+<h4>Status view</h4>
+<p><code>maestro task status</code> renders a hybrid operator board. Simple one-task tracks render as compact rows under <code>ACTIVE</code>, <code>READY</code>, or <code>BLOCKED</code>. Multi-step tracks expand only when dependency structure matters: blocked steps or ready steps that unlock downstream work. If a ready task unlocks blocked downstream work, a one-line <code>next:</code> hint appears under the header.</p>
+<pre><code class="language-text">$ maestro task status
+tasks: 42 open | 13 active | 5 ready | 16 blocked | 5 blocked tracks
+next: epic/desktop-path-native-ghostty / Phase 0: verify env and stock paseo desktop dev flow (9 unblocks)
+
+ACTIVE
+  o chore/update-global-agents-md        Update global AGENTS.md guidance
+  o chore/check-maestro-task-dependency  Check maestro task dependency support against beads-rust
+  o chore/map-full-parallel-agent        Map full parallel-agent safety picture in maestro
+  o fix/fix-all-reviewed-regressions     Fix all reviewed regressions
+  + 9 more
+
+DEPENDENCY TRACKS
+
+epic/desktop-path-native-ghostty
+  · Phase 0: verify env and stock paseo desktop dev flow
+      ready, 9 unblocks
+  ! Phase 1: build pinned GhosttyKit xcframework
+      blocked by Phase 0: verify env and stock paseo desktop dev flow
+  ! Phase 2: scaffold ghostty-bridge N-API addon
+      blocked by Phase 1: build pinned GhosttyKit xcframework
+  + 7 more
+
+epic/test-batch-non-code
+  · Test batch: inspect ready queue
+      ready, 2 unblocks
+  · Test batch: inventory pending handoffs
+      ready, 2 unblocks
+  ! Test batch: draft cleanup notes
+      blocked by Test batch: inspect ready queue, Test batch: inventory pending handoffs
+  ! Test batch: close out temporary test set
+      blocked by Test batch: draft cleanup notes
+
+READY
+  · implement/review-last-four-commits      Review last four commits from 44d5f670 to e55384bf
+  · implement/implement-continuation-layer  Implement continuation layer
+
+BLOCKED
+  ! implement/investigate-regression            blocked by implement/scope-diff-history-feat
+  ! implement/inspect-changed-files-efficiency  blocked by implement/load-review-instructions-diff
+  ! implement/report-concise-findings-2         blocked by implement/inspect-changed-files-efficiency
+</code></pre>
+<p>Flags:</p>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>--all</code></td>
+<td>Include completed tasks (rendered with the <code>v</code> glyph).</td>
+</tr>
+<tr>
+<td><code>--track &lt;slug-or-id&gt;</code></td>
+<td>Restrict output to one track.</td>
+</tr>
+<tr>
+<td><code>--json</code></td>
+<td>Emit a structured projection (<code>{ header, tracks[], orphans[], tasksById }</code>) for tooling. <code>header</code> includes <code>open</code>, <code>active</code>, <code>ready</code>, <code>pending</code>, <code>blocked</code>, and <code>blockedTracks</code>.</td>
+</tr>
+</tbody></table>
+<p><strong>Render shape.</strong> The default view keeps solo/non-dependent work compact and expands only dependency tracks. <code>ACTIVE</code> shows at most four rows before <code>+ N more</code>; <code>READY</code>, <code>BLOCKED</code>, and dependency tracks are capped separately. Blocked rows render <code>blocked by &lt;slug-or-id&gt;</code> inline, while blocked steps inside dependency tracks render the blocker on the next line. Completed blockers are marked <code>(done)</code>.</p>
+<p>Color is auto-detected: <code>NO_COLOR=1</code> or a non-TTY pipe disables ANSI codes. Tracks (top-level tasks) carry a slug like <code>implement/&lt;kebab&gt;</code> (verbs: <code>implement | fix | chore | spike | epic</code>) which doubles as a human-friendly id — <code>task show implement/foo</code> and <code>task update implement/foo --status ...</code> work the same way <code>tsk-XXX</code> does.</p>
+<h5>Backfilling legacy tasks</h5>
+<p>Tasks created before slugs landed have no slug and render with their bare <code>tsk-&lt;id&gt;</code> as the header. To bulk-derive slugs from titles:</p>
+<pre><code class="language-bash">maestro task backfill-slugs                  # dry-run; prints what would change
+maestro task backfill-slugs --apply          # write the slugs
+maestro task backfill-slugs --apply --limit 20
+maestro task backfill-slugs --rederive --apply  # refresh auto-derived slugs after the algorithm changes
+</code></pre>
+<p>Derivation drops English stop-words (&quot;and&quot;, &quot;of&quot;, &quot;in&quot;, ...), drops pure-hex tokens (commit shas) and digit-only tokens, caps at 4 significant words, and never truncates mid-word — so the result is short and scannable.</p>
+<p>Backfill is display-only and bypasses the completion + ownership locks (slugs don&#39;t affect runtime state), so it works on completed and currently-claimed tasks. By default it refuses to overwrite an existing slug; <code>--rederive</code> opts in to overwriting (use it when the derivation algorithm has changed).</p>
 <h4>Ownership and claim</h4>
 <p>Claiming is exclusive and session-scoped. Session IDs come from the <code>sessionDetection</code> config (Claude Code out of the box) or <code>--session &lt;id&gt;</code> when scripting.</p>
 <pre><code class="language-bash">maestro task claim &lt;id&gt;
@@ -862,7 +941,7 @@ maestro mission-control --render-check --size 120x40
   <div>
     <div class="related-list">
       <a class="related-row" href="/projects/mukul975/Anthropic-Cybersecurity-Skills">
-        <div class="stars">★ 5.7K</div>
+        <div class="stars">★ 5.8K</div>
         <div class="name"><span class="org">mukul975 /</span> Anthropic-Cybersecurity-Skills</div>
       </a>
       <a class="related-row" href="/projects/conorbronsdon/avoid-ai-writing">
@@ -870,15 +949,15 @@ maestro mission-control --render-check --size 120x40
         <div class="name"><span class="org">conorbronsdon /</span> avoid-ai-writing</div>
       </a>
       <a class="related-row" href="/projects/wondelai/skills">
-        <div class="stars">★ 739</div>
+        <div class="stars">★ 752</div>
         <div class="name"><span class="org">wondelai /</span> skills</div>
       </a>
       <a class="related-row" href="/projects/DougTrajano/pydantic-ai-skills">
-        <div class="stars">★ 260</div>
+        <div class="stars">★ 261</div>
         <div class="name"><span class="org">DougTrajano /</span> pydantic-ai-skills</div>
       </a>
       <a class="related-row" href="/projects/Agents365-ai/drawio-skill">
-        <div class="stars">★ 611</div>
+        <div class="stars">★ 675</div>
         <div class="name"><span class="org">Agents365-ai /</span> drawio-skill</div>
       </a>
       <a class="related-row" href="/projects/smartcontractkit/chainlink-agent-skills">
@@ -886,11 +965,11 @@ maestro mission-control --render-check --size 120x40
         <div class="name"><span class="org">smartcontractkit /</span> chainlink-agent-skills</div>
       </a>
       <a class="related-row" href="/projects/tlehman/litprog-skill">
-        <div class="stars">★ 105</div>
+        <div class="stars">★ 108</div>
         <div class="name"><span class="org">tlehman /</span> litprog-skill</div>
       </a>
       <a class="related-row" href="/projects/esaradev/icarus-plugin">
-        <div class="stars">★ 101</div>
+        <div class="stars">★ 105</div>
         <div class="name"><span class="org">esaradev /</span> icarus-plugin</div>
       </a>
     </div>

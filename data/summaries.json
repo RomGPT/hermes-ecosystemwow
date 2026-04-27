@@ -282,14 +282,14 @@
     "auditedAt": "2026-04-20T08:40:53.315Z"
   },
   "ReinaMacCredy/maestro": {
-    "summary": "Maestro is a local-first conductor for multi-agent software engineering that enables persistent state management across separate agent sessions. It uses a CLI to store missions, features, and memory in a local .maestro directory, removing the need for external databases or servers. The tool allows human operators to coordinate multiple terminals by providing structured handoff briefs and cross-feature learning. This approach ensures that project context and agent progress remain disciplined and inspectable through a dedicated Mission Control TUI.",
+    "summary": "Maestro is a local-first conductor for multi-agent software engineering that manages shared state across separate agent sessions. It uses a CLI to persist missions, features, and memory within a local .maestro directory, removing the need for external databases or background daemons. The tool enables a plan-approve-execute workflow where human operators coordinate agents through structured handoffs and markdown briefs. This approach ensures that project context and learning remain disciplined and inspectable across different model vendors and terminal tools.",
     "highlights": [
-      "Local-first state management using on-disk .maestro directory and JSON snapshots",
-      "Structured mission planning with milestones, features, and validation assertions",
-      "Native handoff launches that generate markdown briefs for fresh agent runs"
+      "Persists shared agent state locally in .maestro directory",
+      "Orchestrates work through missions, milestones, and validation assertions",
+      "Generates markdown briefs for fresh Codex or Claude handoffs"
     ],
-    "readmeHash": "4822c6d0008a6daf935aca41b096667a62b30622cb7aa562ab22db7d62b1a6b0",
-    "generatedAt": "2026-04-23T19:36:37.051Z",
+    "readmeHash": "6b5d6205d79c6ada313fc36162c13d4e237bfb48048963ab9b5f1c700c33faa7",
+    "generatedAt": "2026-04-27T07:24:11.320Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -617,14 +617,14 @@
     "auditedAt": "2026-04-20T08:42:14.478Z"
   },
   "numtide/llm-agents.nix": {
-    "summary": "llm-agents.nix provides a collection of Nix packages designed to streamline the installation and management of AI coding agents and development tools. It offers a centralized repository of packages that are automatically updated on a daily basis. Users can easily deploy a variety of terminal-based agents, orchestrators, and proxy APIs for diverse AI providers. This ecosystem supports diverse workflows, ranging from local agent execution to multi-agent coordination.",
+    "summary": "llm-agents.nix is a collection of Nix packages designed to simplify the deployment and management of AI coding agents and development tools. The project provides a centralized repository that automatically updates daily, offering reproducible Nix expressions for a wide variety of CLI-based agents. Users can run these tools directly via Nix flakes without manual installation, ensuring consistent environments across different machines. The collection includes popular agents like Claude Code, Goose, and various orchestrators that manage parallel AI workflows.",
     "highlights": [
-      "Daily automatic updates for all included packages",
-      "Supports diverse AI agents like Claude Code and Goose",
-      "Includes multi-agent orchestrators and unified proxy APIs"
+      "Provides reproducible Nix packages for numerous AI coding agents",
+      "Automated daily updates ensure access to latest tool versions",
+      "Supports direct execution via Nix flakes for zero-install usage"
     ],
-    "readmeHash": "c03e779439c9516bcd4082ec3f66ef9cdefe36bc53c3a74b878680a2fa82bcdb",
-    "generatedAt": "2026-04-23T21:26:15.591Z",
+    "readmeHash": "4a9a20b83bd4e0859be0b07ecefa6274b715aa5a2fc98388231a2b0ccb366617",
+    "generatedAt": "2026-04-27T07:24:22.650Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -657,18 +657,17 @@
     "auditedAt": "2026-04-20T08:42:24.760Z"
   },
   "rookiemann/portable-hermes-agent": {
-    "summary": "Portable Hermes Agent is a Windows desktop implementation of the Hermes Agent designed for non-technical users to run AI agents without installation or admin rights. It utilizes a Tkinter GUI and an embedded Python environment to bridge local models via LM Studio or cloud providers like OpenRouter. The system features a workflow engine for automating multi-step pipelines and a dynamic tool maker for creating custom API wrappers at runtime. It also integrates portable servers for text-to-speech, music generation, and ComfyUI image generation.",
+    "summary": "Portable Hermes Agent is a Windows-native desktop application that provides a user-friendly interface for the Hermes Agent framework without requiring Docker or administrative rights. It operates through a Tkinter-based GUI or CLI, utilizing an embedded Python environment to connect with local models via LM Studio or cloud providers like OpenRouter. The agent features a library of 100 tools for tasks including music generation, text-to-speech, and ComfyUI image creation. Users can also build custom automation pipelines through a built-in workflow engine and a dynamic tool maker for wrapping REST APIs.",
     "highlights": [
-      "100 tools including local model management and GPU monitoring",
-      "No-install deployment requiring no admin rights or Docker",
-      "Integrated workflow engine for scheduled and conditional automation"
+      "Zero-install Windows agent with 100 built-in tools across 20 toolsets",
+      "Local model support via LM Studio and portable AI generation servers",
+      "Dynamic tool maker and workflow engine for custom automation pipelines"
     ],
-    "readmeHash": "d961610c302ed3b530678ccd3d585848dcd6a38d6fd4f523993a6f888c488a50",
-    "generatedAt": "2026-04-17T18:18:06.613Z",
+    "readmeHash": "062180b4de60b3df9f455524494ce847a23e548a544b085cebb76e3494ac6b78",
+    "generatedAt": "2026-04-27T07:24:27.725Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
-    "audit": "pass",
-    "auditedAt": "2026-04-20T08:42:27.168Z"
+    "audit": "pass"
   },
   "xmbshwll/hermes-agent-docker": {
     "summary": "This project provides a minimal Docker sandbox image designed to package and deploy Hermes Agent. It utilizes the official upstream installation script to set up the agent and includes mini-swe-agent within the container. The image supports multi-arch publishing and allows for persistent state management by mounting the agent's home directory. Users can easily build specific versions using build arguments to target different Hermes branches or tags.",
@@ -783,14 +782,14 @@
     "auditedAt": "2026-04-20T08:42:47.977Z"
   },
   "junhoyeo/tokscale": {
-    "summary": "Tokscale is a CLI tool and TUI dashboard designed to track token consumption and associated costs across various AI coding agents. It works by scanning local database files and session logs from supported clients to aggregate usage data into a centralized interface. The tool provides real-time pricing calculations using LiteLLM data and supports a wide range of agents including Hermes Agent, Claude Code, and GitHub Copilot CLI. Users can visualize their daily activity, model distribution, and historical stats through a native Rust terminal interface or a web-based dashboard.",
+    "summary": "Tokscale is a high-performance CLI tool designed to monitor and analyze token consumption and costs across various AI coding agents. It functions by scanning local database files and session logs from supported clients to aggregate usage data into a native Rust terminal user interface (TUI) or a web-based dashboard. The tool provides detailed daily summaries, model-specific breakdowns, and a 3D visualization of contribution history. It supports a wide range of integrations including Hermes Agent, Claude Code, Cursor, and GitHub Copilot CLI.",
     "highlights": [
       "Tracks token usage and costs across multiple AI coding agents",
-      "Native Rust TUI for real-time local data visualization",
-      "Integrates with Hermes Agent, Claude Code, Gemini, and Cursor"
+      "Features a native Rust TUI for local data visualization",
+      "Integrates with Hermes Agent, Claude Code, and Gemini CLI"
     ],
-    "readmeHash": "533b60ff1a54032ed8e505063d3c6f69ff826443e535176eb1bf656489399e37",
-    "generatedAt": "2026-04-26T07:06:57.718Z",
+    "readmeHash": "05aae1c2120e5e57f0e3c6ea62091939823070aac9a24a7d632a53eff22a6b70",
+    "generatedAt": "2026-04-27T07:24:34.231Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -850,14 +849,14 @@
     "auditedAt": "2026-04-20T08:43:15.493Z"
   },
   "roli-lpci/lintlang": {
-    "summary": "lintlang is a static analysis tool designed to identify language-level failures in AI agent configurations, system prompts, and tool definitions. It employs seven structural detectors to catch issues like ambiguous tool descriptions and missing termination conditions without making any LLM calls. By running locally or in CI pipelines, the tool provides immediate feedback and concrete fix suggestions to prevent agent loops and incorrect tool selection. It supports multiple file formats including YAML, JSON, and Markdown, ensuring prompt quality before runtime testing.",
+    "summary": "lintlang is a static analysis tool designed to identify language-level failures in AI agent configurations, system prompts, and tool definitions. It utilizes regex and structural heuristics to detect issues like vague tool descriptions and missing termination conditions without making LLM calls. This approach ensures deterministic, offline-capable scans that run in approximately 2ms per file. By catching structural flaws before runtime, it prevents common agent behaviors such as infinite loops and incorrect tool selection.",
     "highlights": [
-      "Identifies structural language bugs using seven specialized static detectors.",
-      "Operates with zero LLM calls, zero latency, and no API keys.",
-      "Provides automated quality gating for CI/CD pipelines with verdict-based exits."
+      "Detects structural flaws using seven specific H1–H7 pattern detectors",
+      "Performs deterministic scans without API keys or LLM costs",
+      "Provides concrete fix suggestions for identified language-level failures"
     ],
-    "readmeHash": "1a9220aa39f45388e8430e41bf1c10903e12acb53088701e99a2311ae610c2bb",
-    "generatedAt": "2026-04-23T07:09:34.329Z",
+    "readmeHash": "0bdd23c1ad3c7444bb37e8e784a58a14c6db1d7d1e4505377a91788f4b0e023f",
+    "generatedAt": "2026-04-27T07:24:39.951Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -1239,14 +1238,14 @@
     "audit": "pass"
   },
   "stephenschoettler/hermes-lcm": {
-    "summary": "Hermes-LCM is a Lossless Context Management plugin for Hermes Agent that prevents information loss during long-running conversations. It replaces standard lossy compression with a hierarchical Directed Acyclic Graph (DAG) that persists every message in an immutable-first SQLite store. When context limits are reached, the engine uses three levels of escalation—from detailed summaries to deterministic truncation—while providing the agent with specialized tools to retrieve original details. This architecture allows agents to maintain a bounded active context window without losing the ability to drill back into compacted history through structured retrieval.",
+    "summary": "Hermes-LCM is a context management plugin for Hermes Agent that prevents information loss during long-running conversations. It replaces standard lossy summarization with a hierarchical Directed Acyclic Graph (DAG) engine that persists every message in an immutable SQLite store. When context limits are reached, the system compacts history into multi-level summaries while providing the agent with specialized tools to retrieve original details. This approach ensures the agent maintains a direct, autonomous recall path for any previously compacted session data without relying on external search steps.",
     "highlights": [
-      "Hierarchical DAG summaries with three-level escalation for context compaction",
-      "Immutable-first SQLite storage ensures no message data is ever deleted",
-      "Agent tools for grep, description, and expansion of compacted history"
+      "Hierarchical DAG summaries with three-level escalation for guaranteed convergence",
+      "Immutable SQLite storage ensures no conversation history is ever deleted",
+      "Dedicated agent tools for searching and expanding compacted context nodes"
     ],
-    "readmeHash": "f777bc89d9301888455495a02c98eb4f76be36f7185725f55f5e32cdac19d617",
-    "generatedAt": "2026-04-23T07:09:51.874Z",
+    "readmeHash": "a90035dd99bd99281442ca83490ad2dc20bea3bd1714b8e02df3cf4fdc02f0a7",
+    "generatedAt": "2026-04-27T07:24:52.111Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -1317,14 +1316,14 @@
     "audit": "pass"
   },
   "AxDSan/mnemosyne": {
-    "summary": "Mnemosyne is a local-first memory system designed to provide persistent storage for Hermes Agents without relying on cloud services or external databases. It utilizes a SQLite backend with native vector search and full-text search to manage conversations, preferences, and knowledge in-process. The system implements a three-tier BEAM architecture that handles working memory, episodic memory, and temporary scratchpads while supporting automatic consolidation through sleep cycles. By operating entirely on-device, it eliminates network latency and API costs while ensuring data privacy and offline functionality.",
+    "summary": "Mnemosyne is a local-first memory system designed to provide persistent storage for Hermes Agents without relying on cloud services or external databases. It utilizes a SQLite backend with native vector search and full-text search to manage conversations, preferences, and knowledge graph triples. The system implements a three-tier BEAM architecture that automatically consolidates working memory into long-term episodic storage through scheduled sleep cycles. By running entirely in-process, it eliminates network latency and API costs while ensuring data privacy and offline functionality.",
     "highlights": [
-      "Sub-millisecond local retrieval using SQLite-vec and FTS5 hybrid search",
+      "Sub-millisecond read and write latency using SQLite-native vector search",
       "Three-tier BEAM architecture for working, episodic, and scratchpad memory",
-      "Zero-dependency installation with native Hermes Agent plugin integration"
+      "Zero-dependency local storage with no external API or network requirements"
     ],
-    "readmeHash": "72dfc3e739c312311a51199b7442a1ad7cf8cf11d3e04d09c5bb42652d234e9c",
-    "generatedAt": "2026-04-25T19:50:27.587Z",
+    "readmeHash": "6b723dcd9577eb53269b5630f498be7b735b18ab4e10cea77ac87f2444008961",
+    "generatedAt": "2026-04-27T07:24:58.191Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"

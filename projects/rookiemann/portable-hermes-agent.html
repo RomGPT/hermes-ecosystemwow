@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/rookiemann/portable-hermes-agent#software",
   "name": "portable-hermes-agent",
-  "description": "Portable Hermes Agent is a Windows desktop implementation of the Hermes Agent designed for non-technical users to run AI agents without installation or admin rights. It utilizes a Tkinter GUI and an embedded Python environment to bridge local models via LM Studio or cloud providers like OpenRouter. The system features a workflow engine for automating multi-step pipelines and a dynamic tool maker for creating custom API wrappers at runtime. It also integrates portable servers for text-to-speech, ",
+  "description": "Portable Hermes Agent is a Windows-native desktop application that provides a user-friendly interface for the Hermes Agent framework without requiring Docker or administrative rights. It operates through a Tkinter-based GUI or CLI, utilizing an embedded Python environment to connect with local models via LM Studio or cloud providers like OpenRouter. The agent features a library of 100 tools for tasks including music generation, text-to-speech, and ComfyUI image creation. Users can also build cus",
   "url": "https://hermesatlas.com/projects/rookiemann/portable-hermes-agent",
   "codeRepository": "https://github.com/rookiemann/portable-hermes-agent",
   "applicationCategory": "DeveloperApplication",
@@ -47,13 +47,13 @@
     "name": "rookiemann",
     "url": "https://github.com/rookiemann"
   },
-  "dateModified": "2026-03-23T07:15:58.000Z",
+  "dateModified": "2026-04-26T18:47:35.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 43
+    "userInteractionCount": 55
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -108,11 +108,11 @@
   <p class="project-desc">Hermes Agent made portable desktop for Windows — 100 tools, GUI, local models via LM Studio, TTS, Music, ComfyUI, workflows, tool maker. No install. No Docker. No admin rights.</p>
 
   <div class="meta-row">
-    <span class="stars">★ 43</span>
+    <span class="stars">★ 55</span>
     <span><span class="meta-label">lang</span>Python</span>
     <span><span class="meta-label">license</span>MIT</span>
     
-    <span><span class="meta-label">updated</span>2026-03-23</span>
+    <span><span class="meta-label">updated</span>2026-04-26</span>
   </div>
 
   <div class="actions">
@@ -127,11 +127,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Portable Hermes Agent is a Windows desktop implementation of the Hermes Agent designed for non-technical users to run AI agents without installation or admin rights. It utilizes a Tkinter GUI and an embedded Python environment to bridge local models via LM Studio or cloud providers like OpenRouter. The system features a workflow engine for automating multi-step pipelines and a dynamic tool maker for creating custom API wrappers at runtime. It also integrates portable servers for text-to-speech, music generation, and ComfyUI image generation.</p>
+    <p class="summary-text">Portable Hermes Agent is a Windows-native desktop application that provides a user-friendly interface for the Hermes Agent framework without requiring Docker or administrative rights. It operates through a Tkinter-based GUI or CLI, utilizing an embedded Python environment to connect with local models via LM Studio or cloud providers like OpenRouter. The agent features a library of 100 tools for tasks including music generation, text-to-speech, and ComfyUI image creation. Users can also build custom automation pipelines through a built-in workflow engine and a dynamic tool maker for wrapping REST APIs.</p>
     <ul class="summary-highlights">
-      <li>100 tools including local model management and GPU monitoring</li>
-      <li>No-install deployment requiring no admin rights or Docker</li>
-      <li>Integrated workflow engine for scheduled and conditional automation</li>
+      <li>Zero-install Windows agent with 100 built-in tools across 20 toolsets</li>
+      <li>Local model support via LM Studio and portable AI generation servers</li>
+      <li>Dynamic tool maker and workflow engine for custom automation pipelines</li>
     </ul>
   </div>
 </section>
@@ -219,7 +219,7 @@
 </tbody></table>
 <p>Plus all built-in hermes-agent tools: web search, file operations, browser automation, code execution, delegation, memory, skills, messaging, Home Assistant, and more.</p>
 <h4>Extension Modules</h4>
-<p>Three portable AI generation servers from <a href="https://github.com/rookiemann">rookiemann</a>:</p>
+<p>Three portable AI generation servers from <a href="https://github.com/aivrar">aivrar</a>:</p>
 <table>
 <thead>
 <tr>
@@ -230,19 +230,19 @@
 </tr>
 </thead>
 <tbody><tr>
-<td><strong><a href="https://github.com/rookiemann/portable-tts-server">TTS Server</a></strong></td>
+<td><strong><a href="https://github.com/aivrar/portable-tts-server">TTS Server</a></strong></td>
 <td>8200</td>
 <td>Kokoro, XTTS, Dia, Bark, Fish, + 5 more</td>
 <td>4 GB+</td>
 </tr>
 <tr>
-<td><strong><a href="https://github.com/rookiemann/portable-music-server">Music Server</a></strong></td>
+<td><strong><a href="https://github.com/aivrar/portable-music-server">Music Server</a></strong></td>
 <td>9150</td>
 <td>MusicGen, Stable Audio, ACE-Step, Riffusion</td>
 <td>4 GB+</td>
 </tr>
 <tr>
-<td><strong><a href="https://github.com/rookiemann/comfyui-portable-installer">ComfyUI</a></strong></td>
+<td><strong><a href="https://github.com/aivrar/comfyui-portable-installer">ComfyUI</a></strong></td>
 <td>5000</td>
 <td>SD 1.5, SDXL, Flux, 100+ registry models</td>
 <td>6 GB+</td>
@@ -289,7 +289,7 @@ hermes_gui.bat      :: GUI mode
 </ul>
 <hr>
 <h3>Documentation</h3>
-<p>A searchable user guide is built into the agent — ask it anything or use the <code>search_guide</code> tool. The <a href="https://github.com/rookiemann/portable-hermes-agent/releases/latest">PDF manual</a> is included in every release.</p>
+<p>A searchable user guide is built into the agent — ask it anything or use the <code>search_guide</code> tool. The <a href="https://github.com/aivrar/portable-hermes-agent/releases/latest">PDF manual</a> is included in every release.</p>
 <p>Key topics: getting started, API setup, the interface, permissions, LM Studio local models, extensions (TTS/Music/ComfyUI), all 100 tools, custom tool creation, workflows, and a glossary of AI terms.</p>
 <hr>
 <h3>Architecture</h3>
@@ -321,7 +321,7 @@ AIAgent (run_agent.py)
 <h3>Credits</h3>
 <ul>
 <li><strong>Base framework</strong>: <a href="https://github.com/NousResearch/hermes-agent">NousResearch/hermes-agent</a> (MIT License)</li>
-<li><strong>Extension modules</strong>: <a href="https://github.com/rookiemann">rookiemann</a> — portable-tts-server, portable-music-server, comfyui-portable-installer</li>
+<li><strong>Extension modules</strong>: <a href="https://github.com/aivrar">aivrar</a> — portable-tts-server, portable-music-server, comfyui-portable-installer</li>
 <li><strong>Custom tools, GUI, and integrations</strong>: Built with <a href="https://claude.ai/claude-code">Claude Code</a></li>
 </ul>
 <hr>

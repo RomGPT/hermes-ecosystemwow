@@ -1,6 +1,6 @@
 # Hermes Atlas — Full Context Bundle
 
-> Complete content of hermesatlas.com as of 2026-04-26. Concatenated from guide pages, ecosystem overview, the quarterly report, and project summaries. Canonical URLs preserved throughout.
+> Complete content of hermesatlas.com as of 2026-04-27. Concatenated from guide pages, ecosystem overview, the quarterly report, and project summaries. Canonical URLs preserved throughout.
 
 This file is the companion to https://hermesatlas.com/llms.txt (the concise index).
 
@@ -1668,12 +1668,12 @@ Category: Developer Tools
 Stars: 1,690
 CLI tool for tracking token usage from Claude Code, OpenClaw, Hermes, Codex, Gemini, and more
 
-Tokscale is a CLI tool and TUI dashboard designed to track token consumption and associated costs across various AI coding agents. It works by scanning local database files and session logs from supported clients to aggregate usage data into a centralized interface. The tool provides real-time pricing calculations using LiteLLM data and supports a wide range of agents including Hermes Agent, Claude Code, and GitHub Copilot CLI. Users can visualize their daily activity, model distribution, and historical stats through a native Rust terminal interface or a web-based dashboard.
+Tokscale is a high-performance CLI tool designed to monitor and analyze token consumption and costs across various AI coding agents. It functions by scanning local database files and session logs from supported clients to aggregate usage data into a native Rust terminal user interface (TUI) or a web-based dashboard. The tool provides detailed daily summaries, model-specific breakdowns, and a 3D visualization of contribution history. It supports a wide range of integrations including Hermes Agent, Claude Code, Cursor, and GitHub Copilot CLI.
 
 Highlights:
 - Tracks token usage and costs across multiple AI coding agents
-- Native Rust TUI for real-time local data visualization
-- Integrates with Hermes Agent, Claude Code, Gemini, and Cursor
+- Features a native Rust TUI for local data visualization
+- Integrates with Hermes Agent, Claude Code, and Gemini CLI
 
 ---
 
@@ -1721,12 +1721,12 @@ Category: Deployment & Infra
 Stars: 967
 Nix packages for AI coding agents including Hermes
 
-llm-agents.nix provides a collection of Nix packages designed to streamline the installation and management of AI coding agents and development tools. It offers a centralized repository of packages that are automatically updated on a daily basis. Users can easily deploy a variety of terminal-based agents, orchestrators, and proxy APIs for diverse AI providers. This ecosystem supports diverse workflows, ranging from local agent execution to multi-agent coordination.
+llm-agents.nix is a collection of Nix packages designed to simplify the deployment and management of AI coding agents and development tools. The project provides a centralized repository that automatically updates daily, offering reproducible Nix expressions for a wide variety of CLI-based agents. Users can run these tools directly via Nix flakes without manual installation, ensuring consistent environments across different machines. The collection includes popular agents like Claude Code, Goose, and various orchestrators that manage parallel AI workflows.
 
 Highlights:
-- Daily automatic updates for all included packages
-- Supports diverse AI agents like Claude Code and Goose
-- Includes multi-agent orchestrators and unified proxy APIs
+- Provides reproducible Nix packages for numerous AI coding agents
+- Automated daily updates ensure access to latest tool versions
+- Supports direct execution via Nix flakes for zero-install usage
 
 ---
 
@@ -2030,12 +2030,12 @@ Category: Memory & Context
 Stars: 178
 Lossless Context Management plugin for Hermes Agent — DAG-based context engine that never loses a message
 
-Hermes-LCM is a Lossless Context Management plugin for Hermes Agent that prevents information loss during long-running conversations. It replaces standard lossy compression with a hierarchical Directed Acyclic Graph (DAG) that persists every message in an immutable-first SQLite store. When context limits are reached, the engine uses three levels of escalation—from detailed summaries to deterministic truncation—while providing the agent with specialized tools to retrieve original details. This architecture allows agents to maintain a bounded active context window without losing the ability to drill back into compacted history through structured retrieval.
+Hermes-LCM is a context management plugin for Hermes Agent that prevents information loss during long-running conversations. It replaces standard lossy summarization with a hierarchical Directed Acyclic Graph (DAG) engine that persists every message in an immutable SQLite store. When context limits are reached, the system compacts history into multi-level summaries while providing the agent with specialized tools to retrieve original details. This approach ensures the agent maintains a direct, autonomous recall path for any previously compacted session data without relying on external search steps.
 
 Highlights:
-- Hierarchical DAG summaries with three-level escalation for context compaction
-- Immutable-first SQLite storage ensures no message data is ever deleted
-- Agent tools for grep, description, and expansion of compacted history
+- Hierarchical DAG summaries with three-level escalation for guaranteed convergence
+- Immutable SQLite storage ensures no conversation history is ever deleted
+- Dedicated agent tools for searching and expanding compacted context nodes
 
 ---
 
@@ -2421,12 +2421,12 @@ Category: Memory & Context
 Stars: 29
 The Zero-Dependency, Sub-Millisecond AI Memory System for Hermes Agents
 
-Mnemosyne is a local-first memory system designed to provide persistent storage for Hermes Agents without relying on cloud services or external databases. It utilizes a SQLite backend with native vector search and full-text search to manage conversations, preferences, and knowledge in-process. The system implements a three-tier BEAM architecture that handles working memory, episodic memory, and temporary scratchpads while supporting automatic consolidation through sleep cycles. By operating entirely on-device, it eliminates network latency and API costs while ensuring data privacy and offline functionality.
+Mnemosyne is a local-first memory system designed to provide persistent storage for Hermes Agents without relying on cloud services or external databases. It utilizes a SQLite backend with native vector search and full-text search to manage conversations, preferences, and knowledge graph triples. The system implements a three-tier BEAM architecture that automatically consolidates working memory into long-term episodic storage through scheduled sleep cycles. By running entirely in-process, it eliminates network latency and API costs while ensuring data privacy and offline functionality.
 
 Highlights:
-- Sub-millisecond local retrieval using SQLite-vec and FTS5 hybrid search
+- Sub-millisecond read and write latency using SQLite-native vector search
 - Three-tier BEAM architecture for working, episodic, and scratchpad memory
-- Zero-dependency installation with native Hermes Agent plugin integration
+- Zero-dependency local storage with no external API or network requirements
 
 ---
 
@@ -2472,12 +2472,12 @@ Category: Skills & Skill Registries
 Stars: 25
 Harness for long-running AI agents — structured memory, cross-feature learning, plan-approve-execute
 
-Maestro is a local-first conductor for multi-agent software engineering that enables persistent state management across separate agent sessions. It uses a CLI to store missions, features, and memory in a local .maestro directory, removing the need for external databases or servers. The tool allows human operators to coordinate multiple terminals by providing structured handoff briefs and cross-feature learning. This approach ensures that project context and agent progress remain disciplined and inspectable through a dedicated Mission Control TUI.
+Maestro is a local-first conductor for multi-agent software engineering that manages shared state across separate agent sessions. It uses a CLI to persist missions, features, and memory within a local .maestro directory, removing the need for external databases or background daemons. The tool enables a plan-approve-execute workflow where human operators coordinate agents through structured handoffs and markdown briefs. This approach ensures that project context and learning remain disciplined and inspectable across different model vendors and terminal tools.
 
 Highlights:
-- Local-first state management using on-disk .maestro directory and JSON snapshots
-- Structured mission planning with milestones, features, and validation assertions
-- Native handoff launches that generate markdown briefs for fresh agent runs
+- Persists shared agent state locally in .maestro directory
+- Orchestrates work through missions, milestones, and validation assertions
+- Generates markdown briefs for fresh Codex or Claude handoffs
 
 ---
 
@@ -2540,12 +2540,12 @@ Category: Developer Tools
 Stars: 24
 Static linter for AI agent configs, tool descriptions, and system prompts. HERM v1.1 scoring.
 
-lintlang is a static analysis tool designed to identify language-level failures in AI agent configurations, system prompts, and tool definitions. It employs seven structural detectors to catch issues like ambiguous tool descriptions and missing termination conditions without making any LLM calls. By running locally or in CI pipelines, the tool provides immediate feedback and concrete fix suggestions to prevent agent loops and incorrect tool selection. It supports multiple file formats including YAML, JSON, and Markdown, ensuring prompt quality before runtime testing.
+lintlang is a static analysis tool designed to identify language-level failures in AI agent configurations, system prompts, and tool definitions. It utilizes regex and structural heuristics to detect issues like vague tool descriptions and missing termination conditions without making LLM calls. This approach ensures deterministic, offline-capable scans that run in approximately 2ms per file. By catching structural flaws before runtime, it prevents common agent behaviors such as infinite loops and incorrect tool selection.
 
 Highlights:
-- Identifies structural language bugs using seven specialized static detectors.
-- Operates with zero LLM calls, zero latency, and no API keys.
-- Provides automated quality gating for CI/CD pipelines with verdict-based exits.
+- Detects structural flaws using seven specific H1–H7 pattern detectors
+- Performs deterministic scans without API keys or LLM costs
+- Provides concrete fix suggestions for identified language-level failures
 
 ---
 
@@ -2897,12 +2897,12 @@ Category: Deployment & Infra
 Stars: 7
 Windows desktop agent — 100 tools, GUI, local models, TTS, ComfyUI. No install, no Docker.
 
-Portable Hermes Agent is a Windows desktop implementation of the Hermes Agent designed for non-technical users to run AI agents without installation or admin rights. It utilizes a Tkinter GUI and an embedded Python environment to bridge local models via LM Studio or cloud providers like OpenRouter. The system features a workflow engine for automating multi-step pipelines and a dynamic tool maker for creating custom API wrappers at runtime. It also integrates portable servers for text-to-speech, music generation, and ComfyUI image generation.
+Portable Hermes Agent is a Windows-native desktop application that provides a user-friendly interface for the Hermes Agent framework without requiring Docker or administrative rights. It operates through a Tkinter-based GUI or CLI, utilizing an embedded Python environment to connect with local models via LM Studio or cloud providers like OpenRouter. The agent features a library of 100 tools for tasks including music generation, text-to-speech, and ComfyUI image creation. Users can also build custom automation pipelines through a built-in workflow engine and a dynamic tool maker for wrapping REST APIs.
 
 Highlights:
-- 100 tools including local model management and GPU monitoring
-- No-install deployment requiring no admin rights or Docker
-- Integrated workflow engine for scheduled and conditional automation
+- Zero-install Windows agent with 100 built-in tools across 20 toolsets
+- Local model support via LM Studio and portable AI generation servers
+- Dynamic tool maker and workflow engine for custom automation pipelines
 
 ---
 

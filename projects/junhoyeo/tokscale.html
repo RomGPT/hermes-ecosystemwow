@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/junhoyeo/tokscale#software",
   "name": "tokscale",
-  "description": "Tokscale is a CLI tool and TUI dashboard designed to track token consumption and associated costs across various AI coding agents. It works by scanning local database files and session logs from supported clients to aggregate usage data into a centralized interface. The tool provides real-time pricing calculations using LiteLLM data and supports a wide range of agents including Hermes Agent, Claude Code, and GitHub Copilot CLI. Users can visualize their daily activity, model distribution, and hi",
+  "description": "Tokscale is a high-performance CLI tool designed to monitor and analyze token consumption and costs across various AI coding agents. It functions by scanning local database files and session logs from supported clients to aggregate usage data into a native Rust terminal user interface (TUI) or a web-based dashboard. The tool provides detailed daily summaries, model-specific breakdowns, and a 3D visualization of contribution history. It supports a wide range of integrations including Hermes Agent",
   "url": "https://hermesatlas.com/projects/junhoyeo/tokscale",
   "codeRepository": "https://github.com/junhoyeo/tokscale",
   "applicationCategory": "DeveloperApplication",
@@ -47,13 +47,13 @@
     "name": "junhoyeo",
     "url": "https://github.com/junhoyeo"
   },
-  "dateModified": "2026-04-26T06:39:38.000Z",
+  "dateModified": "2026-04-27T05:19:09.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 2213
+    "userInteractionCount": 2261
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -108,11 +108,11 @@
   <p class="project-desc">🛰️ A CLI tool for tracking token usage from OpenCode, Claude Code, 🦞OpenClaw (Clawdbot/Moltbot), Pi, Codex, Gemini, Cursor, AmpCode, Factory Droid, Kimi, and more! • 🏅Global Leaderboard + 2D/3D Contributions Graph</p>
 
   <div class="meta-row">
-    <span class="stars">★ 2.2K</span>
+    <span class="stars">★ 2.3K</span>
     <span><span class="meta-label">lang</span>Rust</span>
     <span><span class="meta-label">license</span>MIT</span>
     
-    <span><span class="meta-label">updated</span>2026-04-26</span>
+    <span><span class="meta-label">updated</span>2026-04-27</span>
   </div>
 
   <div class="actions">
@@ -127,11 +127,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Tokscale is a CLI tool and TUI dashboard designed to track token consumption and associated costs across various AI coding agents. It works by scanning local database files and session logs from supported clients to aggregate usage data into a centralized interface. The tool provides real-time pricing calculations using LiteLLM data and supports a wide range of agents including Hermes Agent, Claude Code, and GitHub Copilot CLI. Users can visualize their daily activity, model distribution, and historical stats through a native Rust terminal interface or a web-based dashboard.</p>
+    <p class="summary-text">Tokscale is a high-performance CLI tool designed to monitor and analyze token consumption and costs across various AI coding agents. It functions by scanning local database files and session logs from supported clients to aggregate usage data into a native Rust terminal user interface (TUI) or a web-based dashboard. The tool provides detailed daily summaries, model-specific breakdowns, and a 3D visualization of contribution history. It supports a wide range of integrations including Hermes Agent, Claude Code, Cursor, and GitHub Copilot CLI.</p>
     <ul class="summary-highlights">
       <li>Tracks token usage and costs across multiple AI coding agents</li>
-      <li>Native Rust TUI for real-time local data visualization</li>
-      <li>Integrates with Hermes Agent, Claude Code, Gemini, and Cursor</li>
+      <li>Features a native Rust TUI for local data visualization</li>
+      <li>Integrates with Hermes Agent, Claude Code, and Gemini CLI</li>
     </ul>
   </div>
 </section>
@@ -329,21 +329,33 @@ I drop new open-source work every week. Don&#39;t miss the next one.</p>
 <td>✅ Yes</td>
 </tr>
 <tr>
-<td><img width="48px" src="https://raw.githubusercontent.com/junhoyeo/tokscale/main/.github/assets/client-mux.png" alt="Mux" /></td>
-<td><a href="https://github.com/coder/mux">Mux</a></td>
-<td><code>~/.mux/sessions/</code></td>
-<td>✅ Yes</td>
-</tr>
-<tr>
 <td><img width="48px" src="https://raw.githubusercontent.com/junhoyeo/tokscale/main/.github/assets/client-kilocode.png" alt="Kilo CLI" /></td>
 <td><a href="https://github.com/nicepkg/kilo">Kilo CLI</a></td>
 <td><code>~/.local/share/kilo/kilo.db</code></td>
 <td>✅ Yes</td>
 </tr>
 <tr>
+<td><img width="48px" src="https://raw.githubusercontent.com/junhoyeo/tokscale/main/.github/assets/client-mux.png" alt="Mux" /></td>
+<td><a href="https://github.com/coder/mux">Mux</a></td>
+<td><code>~/.mux/sessions/</code></td>
+<td>✅ Yes</td>
+</tr>
+<tr>
 <td><img width="48px" src="https://raw.githubusercontent.com/junhoyeo/tokscale/main/.github/assets/client-crush.png" alt="Crush" /></td>
 <td><a href="https://crush.ai/">Crush</a></td>
 <td><code>$XDG_DATA_HOME/crush/projects.json</code> (project registry; fallback: <code>~/.local/share/crush/projects.json</code>)</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td><img width="48px" src="https://raw.githubusercontent.com/junhoyeo/tokscale/main/.github/assets/client-goose.png" alt="Goose" /></td>
+<td><a href="https://github.com/aaif-goose/goose">Goose</a></td>
+<td><code>~/.local/share/goose/sessions/sessions.db</code> (+ macOS Application Support, legacy Block/goose paths; override via <code>GOOSE_PATH_ROOT</code>)</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td><img width="48px" src="https://raw.githubusercontent.com/junhoyeo/tokscale/main/.github/assets/client-antigravity.png" alt="Antigravity" /></td>
+<td><a href="https://antigravity.google/">Google Antigravity</a></td>
+<td>Cached via <code>tokscale antigravity sync</code> to <code>~/.config/tokscale/antigravity-cache/sessions/*.jsonl</code> (live RPC against the local language server)</td>
 <td>✅ Yes</td>
 </tr>
 <tr>
@@ -380,6 +392,7 @@ I drop new open-source work every week. Don&#39;t miss the next one.</p>
 <li><a href="#pricing-lookup">Pricing Lookup</a></li>
 <li><a href="#social">Social</a></li>
 <li><a href="#cursor-ide-commands">Cursor IDE Commands</a></li>
+<li><a href="#antigravity-commands">Antigravity Commands</a></li>
 <li><a href="#example-output---light-version">Example Output</a></li>
 <li><a href="#configuration">Configuration</a></li>
 <li><a href="#environment-variables">Environment Variables</a></li>
@@ -431,7 +444,7 @@ I drop new open-source work every week. Don&#39;t miss the next one.</p>
 <li>Zero flicker rendering</li>
 </ul>
 </li>
-<li><strong>Multi-platform support</strong> - Track usage across OpenCode, Claude Code, Codex CLI, Copilot CLI, Cursor IDE, Gemini CLI, Amp, Codebuff, Droid, OpenClaw, Hermes Agent, Pi, Kimi CLI, Qwen CLI, Roo Code, Kilo, Mux, Kilo CLI, Crush, and Synthetic</li>
+<li><strong>Multi-platform support</strong> - Track usage across OpenCode, Claude Code, Codex CLI, Copilot CLI, Cursor IDE, Gemini CLI, Amp, Codebuff, Droid, OpenClaw, Hermes Agent, Pi, Kimi CLI, Qwen CLI, Roo Code, Kilo, Mux, Kilo CLI, Crush, Goose, Antigravity, and Synthetic</li>
 <li><strong>Real-time pricing</strong> - Fetches current pricing from LiteLLM with 1-hour disk cache; automatic OpenRouter fallback and Cursor model pricing for newly released models</li>
 <li><strong>Detailed breakdowns</strong> - Input, output, cache read/write, and reasoning token tracking</li>
 <li><strong>Native Rust core</strong> - All parsing and aggregation done in Rust for 10x faster processing</li>
@@ -657,7 +670,7 @@ tokscale --client synthetic
 # Combine with other filters
 tokscale --client opencode,claude --week --json
 </code></pre>
-<p>Possible values: <code>opencode</code>, <code>claude</code>, <code>codex</code>, <code>copilot</code>, <code>gemini</code>, <code>cursor</code>, <code>amp</code>, <code>codebuff</code>, <code>droid</code>, <code>openclaw</code>, <code>hermes</code>, <code>pi</code>, <code>kimi</code>, <code>qwen</code>, <code>roocode</code>, <code>kilocode</code>, <code>kilo</code>, <code>mux</code>, <code>crush</code>, <code>synthetic</code>.</p>
+<p>Possible values: <code>opencode</code>, <code>claude</code>, <code>codex</code>, <code>copilot</code>, <code>gemini</code>, <code>cursor</code>, <code>amp</code>, <code>codebuff</code>, <code>droid</code>, <code>openclaw</code>, <code>hermes</code>, <code>pi</code>, <code>kimi</code>, <code>qwen</code>, <code>roocode</code>, <code>kilocode</code>, <code>kilo</code>, <code>mux</code>, <code>crush</code>, <code>goose</code>, <code>antigravity</code>, <code>synthetic</code>.</p>
 <blockquote>
 <p><strong>Deprecation notice</strong>: The legacy single-client flags (<code>--opencode</code>, <code>--claude</code>, <code>--codex</code>, etc.) still work for backward compatibility but are hidden from <code>--help</code> and will be removed in the next major release. Migrate to <code>--client</code> whenever possible. Running tokscale in an interactive terminal will print a one-line warning when a legacy flag is used.</p>
 </blockquote>
@@ -795,6 +808,19 @@ tokscale cursor logout --all --purge-cache
 <blockquote>
 <p>⚠️ <strong>Security Warning</strong>: Treat your session token like a password. Never share it publicly or commit it to version control. The token grants full access to your Cursor account.</p>
 </blockquote>
+<h4>Antigravity Commands</h4>
+<p>Antigravity sync only works while the Antigravity-enabled editor is running and its local language server is available. tokscale reads usage from that local language server and caches normalized artifacts locally.</p>
+<pre><code class="language-bash"># Check whether tokscale can see running Antigravity language servers
+tokscale antigravity status
+
+# Sync usage from local Antigravity language servers into tokscale&#39;s cache
+tokscale antigravity sync
+
+# Delete the cached Antigravity artifacts
+tokscale antigravity purge-cache
+</code></pre>
+<p><strong>Cache location</strong>: <code>~/.config/tokscale/antigravity-cache/</code></p>
+<p><strong>How it works</strong>: <code>tokscale antigravity sync</code> discovers local Antigravity session candidates, fetches confirmed usage data from the local language server RPC, and stores normalized JSONL artifacts for tokscale-core to parse later. Run sync before reports if you want the freshest Antigravity data.</p>
 <h4>Example Output (<code>--light</code> version)</h4>
 <img alt="CLI Light" src="https://raw.githubusercontent.com/junhoyeo/tokscale/main/.github/assets/cli-light.png" />
 
@@ -860,6 +886,12 @@ tokscale cursor logout --all --purge-cache
 <td>Client filter applied when no <code>--client/-c</code> flag is passed. Accepts the same ids as <code>--client</code> (e.g. <code>[&quot;opencode&quot;, &quot;claude&quot;, &quot;synthetic&quot;]</code>). Unknown ids are silently dropped. CLI flags always override this list completely — no merging.</td>
 </tr>
 <tr>
+<td><code>light.writeCache</code></td>
+<td>boolean</td>
+<td><code>false</code></td>
+<td>When true, <code>tokscale --light</code> overwrites the TUI cache atomically after rendering. CLI flags <code>--write-cache</code> / <code>--no-write-cache</code> override per-invocation.</td>
+</tr>
+<tr>
 <td><code>scanner.extraScanPaths</code></td>
 <td>object</td>
 <td><code>{}</code></td>
@@ -868,6 +900,16 @@ tokscale cursor logout --all --purge-cache
 </tbody></table>
 <p>Use <code>scanner.extraScanPaths</code> for persistent extra roots such as project-level <code>.codex</code> directories or imported Gemini/OpenClaw histories. Tokscale merges these paths with the default scan roots on every run and deduplicates overlapping roots by canonical path.</p>
 <p>Use <code>defaultClients</code> to pin a personal default — for example, set it to <code>[&quot;opencode&quot;, &quot;claude&quot;]</code> if those are the only clients you use, and <code>tokscale</code> (with no flags) will scope every report to them automatically. Pass <code>--client</code> on the command line to override for a single run.</p>
+<h5>Cache directory layout</h5>
+<p>All regenerable caches now live under <code>~/.config/tokscale/cache/</code> (or <code>${TOKSCALE_CONFIG_DIR}/cache/</code> when overridden):</p>
+<ul>
+<li><code>tui-data-cache.json</code> — TUI startup cache</li>
+<li><code>source-message-cache.bin</code> + <code>source-message-cache.lock</code> — source-message cache + lock file</li>
+<li><code>pricing-litellm.json</code> / <code>pricing-openrouter.json</code> — pricing caches</li>
+<li><code>opencode-migration.json</code> — OpenCode migration record</li>
+<li><code>fonts/</code> and <code>images/</code> — Wrapped asset caches</li>
+</ul>
+<p>It is safe to delete this directory. Tokscale will recreate and repopulate it on demand.</p>
 <h4>Environment Variables</h4>
 <p>Environment variables override config file values. For CI/CD or one-off use:</p>
 <table>
@@ -887,6 +929,11 @@ tokscale cursor logout --all --purge-cache
 <td><code>TOKSCALE_EXTRA_DIRS</code></td>
 <td>unset</td>
 <td>One-off extra session roots as <code>client:/abs/path,client:/abs/path</code></td>
+</tr>
+<tr>
+<td><code>TOKSCALE_CONFIG_DIR</code></td>
+<td>unset</td>
+<td>Overrides the config directory (where <code>settings.json</code>, <code>star-cache.json</code>, and all caches under <code>${TOKSCALE_CONFIG_DIR}/cache/</code> live). Absolute path recommended; relative paths resolve against the process CWD. Useful for CI sandboxes or pinning a non-default location. When set, tokscale will not fall back to the legacy macOS <code>~/Library/Application Support/tokscale/</code> path.</td>
 </tr>
 </tbody></table>
 <pre><code class="language-bash"># Example: Increase timeout for very large datasets
@@ -969,7 +1016,7 @@ tokscale sources --json
 <li><strong>Interactive tooltips</strong>: Hover for detailed daily breakdowns</li>
 <li><strong>Day breakdown panel</strong>: Click to see per-source and per-model details</li>
 <li><strong>Year filtering</strong>: Navigate between years</li>
-<li><strong>Source filtering</strong>: Filter by platform (OpenCode, Claude, Codex, Copilot, Cursor, Gemini, Amp, Droid, OpenClaw, Hermes Agent, Pi, Kimi, Qwen, Roo Code, Kilo, Mux, Kilo CLI, Crush, Synthetic)</li>
+<li><strong>Source filtering</strong>: Filter by platform (OpenCode, Claude, Codex, Copilot, Cursor, Gemini, Amp, Codebuff, Droid, OpenClaw, Hermes Agent, Pi, Kimi, Qwen, Roo Code, Kilo, Mux, Kilo CLI, Crush, Goose, Antigravity, Synthetic)</li>
 <li><strong>Stats panel</strong>: Total cost, tokens, active days, streaks</li>
 <li><strong>FOUC prevention</strong>: Theme applied before React hydrates (no flash)</li>
 </ul>
@@ -1406,6 +1453,12 @@ bunx tokscale@latest
 <td>Same path on all platforms</td>
 </tr>
 <tr>
+<td>Codebuff</td>
+<td><code>~/.config/manicode/projects/</code> (+ <code>manicode-dev</code>, <code>manicode-staging</code>)</td>
+<td><code>%USERPROFILE%\.config\manicode\projects\</code></td>
+<td>Override via <code>CODEBUFF_DATA_DIR</code> env var</td>
+</tr>
+<tr>
 <td>Kilo CLI</td>
 <td><code>~/.local/share/kilo/</code></td>
 <td><code>%USERPROFILE%\.local\share\kilo\</code></td>
@@ -1416,6 +1469,18 @@ bunx tokscale@latest
 <td><code>$XDG_DATA_HOME/crush/</code> (fallback: <code>~/.local/share/crush/</code>)</td>
 <td><code>%USERPROFILE%\.local\share\crush\</code> (or <code>%XDG_DATA_HOME%\crush\</code> if set)</td>
 <td>Uses XDG data directory with fallback</td>
+</tr>
+<tr>
+<td>Goose</td>
+<td><code>~/.local/share/goose/sessions/</code> (+ macOS Application Support, legacy Block paths)</td>
+<td><code>%USERPROFILE%\.local\share\goose\sessions\</code></td>
+<td>Configurable via <code>GOOSE_PATH_ROOT</code> env var</td>
+</tr>
+<tr>
+<td>Antigravity</td>
+<td><code>~/.config/tokscale/antigravity-cache/sessions/</code></td>
+<td><code>%USERPROFILE%\.config\tokscale\antigravity-cache\sessions\</code></td>
+<td>Populated by <code>tokscale antigravity sync</code> while editor runs</td>
 </tr>
 <tr>
 <td>Synthetic</td>
@@ -1430,9 +1495,11 @@ bunx tokscale@latest
 <h5>Windows-Specific Configuration</h5>
 <p>Tokscale stores its configuration in:</p>
 <ul>
-<li><strong>Config</strong>: <code>%USERPROFILE%\.config\tokscale\settings.json</code></li>
-<li><strong>Cache</strong>: <code>%USERPROFILE%\.cache\tokscale\</code></li>
+<li><strong>TUI settings</strong>: <code>%APPDATA%\tokscale\settings.json</code> (platform default; override with <code>TOKSCALE_CONFIG_DIR</code>)</li>
+<li><strong>Cache</strong>: <code>%APPDATA%\tokscale\cache\</code> (consolidated cache root)</li>
+<li><strong>Legacy cache paths</strong>: <code>%USERPROFILE%\.cache\tokscale\</code> and <code>%LOCALAPPDATA%\tokscale\cache\</code> equivalents from older releases may still exist until regenerated data is written to the new path</li>
 <li><strong>Cursor credentials</strong>: <code>%USERPROFILE%\.config\tokscale\cursor-credentials.json</code></li>
+<li><strong>Tokscale account credentials</strong>: <code>%USERPROFILE%\.config\tokscale\credentials.json</code></li>
 </ul>
 <h3>Session Data Retention</h3>
 <p>By default, some AI coding assistants automatically delete old session files. To preserve your usage history for accurate tracking, disable or extend the cleanup period.</p>
@@ -1608,74 +1675,7 @@ $env:COPILOT_OTEL_FILE_EXPORTER_PATH = Join-Path $otelDir (&quot;copilot-otel-{0
 }
 </code></pre>
 <h4>Cursor IDE</h4>
-<p>Location: <code>~/.config/tokscale/cursor-cache/</code> (synced via Cursor API)</p>
-<p>Cursor data is fetched from the Cursor API using your session token and cached locally. Run <code>tokscale cursor login</code> to authenticate. See <a href="#cursor-ide-commands">Cursor IDE Commands</a> for setup instructions.</p>
-<h4>OpenClaw</h4>
-<p>Location: <code>~/.openclaw/agents/*/sessions/sessions.json</code> (also scans legacy paths: <code>~/.clawdbot/</code>, <code>~/.moltbot/</code>, <code>~/.moldbot/</code>)</p>
-<p>Index file pointing to JSONL session files:</p>
-<pre><code class="language-json">{
-  &quot;agent:main:main&quot;: {
-    &quot;sessionId&quot;: &quot;uuid&quot;,
-    &quot;sessionFile&quot;: &quot;/path/to/session.jsonl&quot;
-  }
-}
-</code></pre>
-<p>Session JSONL format with model_change events and assistant messages:</p>
-<pre><code class="language-json">{&quot;type&quot;:&quot;model_change&quot;,&quot;provider&quot;:&quot;openai-codex&quot;,&quot;modelId&quot;:&quot;gpt-5.2&quot;}
-{&quot;type&quot;:&quot;message&quot;,&quot;message&quot;:{&quot;role&quot;:&quot;assistant&quot;,&quot;usage&quot;:{&quot;input&quot;:1660,&quot;output&quot;:55,&quot;cacheRead&quot;:108928,&quot;cost&quot;:{&quot;total&quot;:0.02}},&quot;timestamp&quot;:1769753935279}}
-</code></pre>
-<h4>Hermes Agent</h4>
-<p>Location: <code>$HERMES_HOME/state.db</code> (fallback: <code>~/.hermes/state.db</code>)</p>
-<p>Hermes stores session-level usage in a SQLite <code>sessions</code> table. Tokscale imports rows where <code>model</code> is present and token or cost totals are non-zero, uses <code>started_at</code> as the timestamp, preserves <code>message_count</code>, and prefers <code>actual_cost_usd</code> over <code>estimated_cost_usd</code>.</p>
-<h4>Pi</h4>
-<p>Location: <code>~/.pi/agent/sessions/&lt;encoded-cwd&gt;/*.jsonl</code> and <code>~/.omp/agent/sessions/&lt;encoded-cwd&gt;/*.jsonl</code> (<a href="https://github.com/can1357/oh-my-pi">Oh My Pi</a>)</p>
-<p>JSONL format with session header and message entries:</p>
-<pre><code class="language-json">{&quot;type&quot;:&quot;session&quot;,&quot;id&quot;:&quot;pi_ses_001&quot;,&quot;timestamp&quot;:&quot;2026-01-01T00:00:00.000Z&quot;,&quot;cwd&quot;:&quot;/tmp&quot;}
-{&quot;type&quot;:&quot;message&quot;,&quot;id&quot;:&quot;msg_001&quot;,&quot;timestamp&quot;:&quot;2026-01-01T00:00:01.000Z&quot;,&quot;message&quot;:{&quot;role&quot;:&quot;assistant&quot;,&quot;model&quot;:&quot;claude-3-5-sonnet&quot;,&quot;provider&quot;:&quot;anthropic&quot;,&quot;usage&quot;:{&quot;input&quot;:100,&quot;output&quot;:50,&quot;cacheRead&quot;:10,&quot;cacheWrite&quot;:5,&quot;totalTokens&quot;:165}}}
-</code></pre>
-<h4>Kimi CLI</h4>
-<p>Location: <code>~/.kimi/sessions/{GROUP_ID}/{SESSION_UUID}/wire.jsonl</code></p>
-<p>wire.jsonl format with StatusUpdate messages:</p>
-<pre><code class="language-json">{&quot;type&quot;: &quot;metadata&quot;, &quot;protocol_version&quot;: &quot;1.3&quot;}
-{&quot;timestamp&quot;: 1770983426.420942, &quot;message&quot;: {&quot;type&quot;: &quot;StatusUpdate&quot;, &quot;payload&quot;: {&quot;token_usage&quot;: {&quot;input_other&quot;: 1562, &quot;output&quot;: 2463, &quot;input_cache_read&quot;: 0, &quot;input_cache_creation&quot;: 0}, &quot;message_id&quot;: &quot;chatcmpl-xxx&quot;}}}
-</code></pre>
-<h4>Qwen CLI</h4>
-<p>Location: <code>~/.qwen/projects/{PROJECT_PATH}/chats/{CHAT_ID}.jsonl</code></p>
-<p>Format: JSONL — one JSON object per line, each with <code>type</code>, <code>model</code>, <code>timestamp</code>, <code>sessionId</code>, and <code>usageMetadata</code> fields.</p>
-<p>Token fields (from <code>usageMetadata</code>):</p>
-<ul>
-<li><code>promptTokenCount</code> → input tokens</li>
-<li><code>candidatesTokenCount</code> → output tokens</li>
-<li><code>thoughtsTokenCount</code> → reasoning/thinking tokens</li>
-<li><code>cachedContentTokenCount</code> → cached input tokens</li>
-</ul>
-<h4>Roo Code</h4>
-<p>Location:</p>
-<ul>
-<li>Local: <code>~/.config/Code/User/globalStorage/rooveterinaryinc.roo-cline/tasks/{TASK_ID}/ui_messages.json</code></li>
-<li>Server (best-effort): <code>~/.vscode-server/data/User/globalStorage/rooveterinaryinc.roo-cline/tasks/{TASK_ID}/ui_messages.json</code></li>
-</ul>
-<p>Each task directory may also include <code>api_conversation_history.json</code> with <code>&lt;environment_details&gt;</code> blocks used for model/agent metadata.</p>
-<p><code>ui_messages.json</code> is an array of UI events. Tokscale counts only:</p>
-<ul>
-<li><code>type == &quot;say&quot;</code></li>
-<li><code>say == &quot;api_req_started&quot;</code></li>
-</ul>
-<p>The <code>text</code> field is JSON containing token/cost metadata:</p>
-<pre><code class="language-json">{
-  &quot;type&quot;: &quot;say&quot;,
-  &quot;say&quot;: &quot;api_req_started&quot;,
-  &quot;ts&quot;: &quot;2026-02-18T12:00:00Z&quot;,
-  &quot;text&quot;: &quot;{\&quot;cost\&quot;:0.12,\&quot;tokensIn\&quot;:100,\&quot;tokensOut\&quot;:50,\&quot;cacheReads\&quot;:20,\&quot;cacheWrites\&quot;:5,\&quot;apiProtocol\&quot;:\&quot;anthropic\&quot;}&quot;
-}
-</code></pre>
-<h4>Kilo</h4>
-<p>Location:</p>
-<ul>
-<li>Local: <code>~/.config/Code/User/globalStorage/kilocode.kilo-code/tasks/{TASK_ID}/ui_messages.json</code></li>
-<li>Server (best-effort): <code>~/.vscode-server/data/User/globalStorage/kilocode.kilo-code/tasks/{TASK_ID}/ui_messages.json</code></li>
-</ul>
-<p>Kilo uses the same task log sh</p>
+<p>Location: `~/.config/tokscale/cursor-cach</p>
 <hr>
 <p><em>README truncated. <a href="https://github.com/junhoyeo/tokscale#readme">Continue reading on GitHub</a></em></p>
 
@@ -1690,11 +1690,11 @@ $env:COPILOT_OTEL_FILE_EXPORTER_PATH = Join-Path $otelDir (&quot;copilot-otel-{0
   <div>
     <div class="related-list">
       <a class="related-row" href="/projects/joeynyc/hermes-skins">
-        <div class="stars">★ 270</div>
+        <div class="stars">★ 275</div>
         <div class="name"><span class="org">joeynyc /</span> hermes-skins</div>
       </a>
       <a class="related-row" href="/projects/AlexAI-MCP/hermes-CCC">
-        <div class="stars">★ 91</div>
+        <div class="stars">★ 92</div>
         <div class="name"><span class="org">AlexAI-MCP /</span> hermes-CCC</div>
       </a>
       <a class="related-row" href="/projects/unmodeled-tyler/vessel-browser">
@@ -1702,7 +1702,7 @@ $env:COPILOT_OTEL_FILE_EXPORTER_PATH = Join-Path $otelDir (&quot;copilot-otel-{0
         <div class="name"><span class="org">unmodeled-tyler /</span> vessel-browser</div>
       </a>
       <a class="related-row" href="/projects/Abruptive/Ankh.md">
-        <div class="stars">★ 38</div>
+        <div class="stars">★ 39</div>
         <div class="name"><span class="org">Abruptive /</span> Ankh.md</div>
       </a>
       <a class="related-row" href="/projects/roli-lpci/lintlang">
@@ -1714,7 +1714,7 @@ $env:COPILOT_OTEL_FILE_EXPORTER_PATH = Join-Path $otelDir (&quot;copilot-otel-{0
         <div class="name"><span class="org">0xNyk /</span> openclaw-to-hermes</div>
       </a>
       <a class="related-row" href="/projects/42-evey/evey-setup">
-        <div class="stars">★ 14</div>
+        <div class="stars">★ 15</div>
         <div class="name"><span class="org">42-evey /</span> evey-setup</div>
       </a>
     </div>
