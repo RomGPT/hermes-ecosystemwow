@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/briancaffey/hermes-otel#software",
   "name": "hermes-otel",
-  "description": "hermes-otel is an observability plugin for the Hermes Agent that enables comprehensive monitoring of agentic workflows. It automatically captures and exports LLM tool calls, model invocations, and API requests as OpenTelemetry spans to any OTLP-compatible backend. The plugin provides deep visibility into session lifecycles, including parent-child span nesting and token usage aggregation. It supports a wide range of observability platforms including Phoenix, Langfuse, SigNoz, and Grafana for trac",
+  "description": "The hermes-otel plugin provides observability for Hermes Agent by automatically exporting execution data as OpenTelemetry spans. It captures LLM tool calls, model invocations, and API requests, sending them to OTLP-compatible backends for monitoring and debugging. The plugin supports multiple backends simultaneously, including Phoenix, Langfuse, and SigNoz, allowing for detailed tracing of session lifecycles and token usage. Users can configure these exports through environment variables or a de",
   "url": "https://hermesatlas.com/projects/briancaffey/hermes-otel",
   "codeRepository": "https://github.com/briancaffey/hermes-otel",
   "applicationCategory": "BrowserApplication",
@@ -47,13 +47,13 @@
     "name": "briancaffey",
     "url": "https://github.com/briancaffey"
   },
-  "dateModified": "2026-04-24T01:50:52.000Z",
+  "dateModified": "2026-04-26T03:42:38.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 5
+    "userInteractionCount": 6
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -108,11 +108,11 @@
   <p class="project-desc">OTel Plugin for Hermes Agent</p>
 
   <div class="meta-row">
-    <span class="stars">★ 5</span>
+    <span class="stars">★ 6</span>
     <span><span class="meta-label">lang</span>Python</span>
     <span><span class="meta-label">license</span>Apache-2.0</span>
     
-    <span><span class="meta-label">updated</span>2026-04-24</span>
+    <span><span class="meta-label">updated</span>2026-04-26</span>
   </div>
 
   <div class="actions">
@@ -127,11 +127,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">hermes-otel is an observability plugin for the Hermes Agent that enables comprehensive monitoring of agentic workflows. It automatically captures and exports LLM tool calls, model invocations, and API requests as OpenTelemetry spans to any OTLP-compatible backend. The plugin provides deep visibility into session lifecycles, including parent-child span nesting and token usage aggregation. It supports a wide range of observability platforms including Phoenix, Langfuse, SigNoz, and Grafana for tracking traces, metrics, and logs.</p>
+    <p class="summary-text">The hermes-otel plugin provides observability for Hermes Agent by automatically exporting execution data as OpenTelemetry spans. It captures LLM tool calls, model invocations, and API requests, sending them to OTLP-compatible backends for monitoring and debugging. The plugin supports multiple backends simultaneously, including Phoenix, Langfuse, and SigNoz, allowing for detailed tracing of session lifecycles and token usage. Users can configure these exports through environment variables or a dedicated configuration file to monitor agent performance across local and cloud environments.</p>
     <ul class="summary-highlights">
       <li>Exports LLM tool calls and model invocations as OTel spans</li>
-      <li>Supports multiple backends including Phoenix, Langfuse, and SigNoz</li>
-      <li>Aggregates token usage and session I/O metrics automatically</li>
+      <li>Supports multiple backends including Phoenix, Langfuse, and Jaeger</li>
+      <li>Aggregates session tokens and I/O metrics for performance tracking</li>
     </ul>
   </div>
 </section>
@@ -439,6 +439,7 @@ root_span_ttl_ms: 600000        # orphan-sweep threshold (10 min default)
 flush_interval_ms: 60000        # metrics export cadence
 preview_max_chars: 1200         # clip_preview truncation limit
 capture_previews: true          # false = suppress all input.value / output.value
+capture_sender_id: false        # true = add platform-prefixed user.id to spans
 project_name: hermes-prod       # supersedes OTEL_PROJECT_NAME
 global_tags:
   team: platform
@@ -481,6 +482,10 @@ headers:                        # merged onto outgoing OTLP requests
 <td><code>HERMES_OTEL_CAPTURE_PREVIEWS</code></td>
 </tr>
 <tr>
+<td><code>capture_sender_id</code></td>
+<td><code>HERMES_OTEL_CAPTURE_SENDER_ID</code></td>
+</tr>
+<tr>
 <td><code>project_name</code></td>
 <td><code>HERMES_OTEL_PROJECT_NAME</code></td>
 </tr>
@@ -508,6 +513,7 @@ headers:                        # merged onto outgoing OTLP requests
 <p><code>pyyaml</code> is optional — if not installed, the YAML file is silently skipped and only env vars + defaults apply. Malformed YAML logs a single warning and falls back to defaults.</p>
 <h5>Privacy mode</h5>
 <p>Set <code>capture_previews: false</code> (or <code>HERMES_OTEL_CAPTURE_PREVIEWS=false</code>) to suppress every <code>input.value</code> / <code>output.value</code> attribute. Useful for shared deployments where message content can&#39;t leave the process. A one-line startup banner confirms the mode is active.</p>
+<p>Set <code>capture_sender_id: true</code> (or <code>HERMES_OTEL_CAPTURE_SENDER_ID=true</code>) to attach gateway sender identity to spans. The plugin emits the raw platform ID as <code>hermes.sender.id</code> and the backend-neutral user key as <code>user.id={platform}:{sender_id}</code>. For example, Slack user <code>U0B074344DP</code> becomes <code>user.id=slack:U0B074344DP</code>. The platform is already available on LLM spans as <code>llm.provider</code>. This is opt-in because IDs from Discord, Telegram, Slack, email, SMS, and similar platforms can identify users. CLI sessions usually omit it.</p>
 <h4>Per-turn summary attributes</h4>
 <p>On <code>on_session_end</code>, the root session/agent span is enriched with a summary of what happened in the turn — so dashboards don&#39;t need to JOIN across spans.</p>
 <table>
@@ -845,15 +851,15 @@ headers:                        # merged onto outgoing OTLP requests
   <div>
     <div class="related-list">
       <a class="related-row" href="/projects/robbyczgw-cla/hermes-web-search-plus">
-        <div class="stars">★ 78</div>
+        <div class="stars">★ 95</div>
         <div class="name"><span class="org">robbyczgw-cla /</span> hermes-web-search-plus</div>
       </a>
       <a class="related-row" href="/projects/42-evey/hermes-plugins">
-        <div class="stars">★ 47</div>
+        <div class="stars">★ 49</div>
         <div class="name"><span class="org">42-evey /</span> hermes-plugins</div>
       </a>
       <a class="related-row" href="/projects/FahrenheitResearch/hermes-weather-plugin">
-        <div class="stars">★ 11</div>
+        <div class="stars">★ 13</div>
         <div class="name"><span class="org">FahrenheitResearch /</span> hermes-weather-plugin</div>
       </a>
       <a class="related-row" href="/projects/42-evey/evey-bridge-plugin">
@@ -861,15 +867,15 @@ headers:                        # merged onto outgoing OTLP requests
         <div class="name"><span class="org">42-evey /</span> evey-bridge-plugin</div>
       </a>
       <a class="related-row" href="/projects/nativ3ai/hermes-payguard">
-        <div class="stars">★ 5</div>
+        <div class="stars">★ 6</div>
         <div class="name"><span class="org">nativ3ai /</span> hermes-payguard</div>
       </a>
       <a class="related-row" href="/projects/raulvidis/hermes-cloudflare">
-        <div class="stars">★ 8</div>
+        <div class="stars">★ 9</div>
         <div class="name"><span class="org">raulvidis /</span> hermes-cloudflare</div>
       </a>
       <a class="related-row" href="/projects/clawshell/clawshell">
-        <div class="stars">★ 270</div>
+        <div class="stars">★ 274</div>
         <div class="name"><span class="org">clawshell /</span> clawshell</div>
       </a>
     </div>
