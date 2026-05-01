@@ -1,0 +1,126 @@
+name: Audit Repos
+
+# Weekly cron that pings each repo in data/repos.json against the
+# GitHub API and detects entries that are dead (deleted or owner
+# account gone), archived, or disabled. If any are found, opens or
+# updates a single tracking issue listing them.
+#
+# Why this exists: PR #107 made lib/github.js fail-loud on GraphQL
+# NOT_FOUND so build-pages no longer commits empty pages — but as a
+# side effect, a single deleted third-party repo blocks the entire
+# build pipeline. Without a proactive detector we only learn about
+# dead repos when the daily build-pages cron starts failing
+# (Web3CZ/Web3Hermes silently broke 2 days of rebuilds before
+# 2026-05-01 triage caught it). This audit surfaces dead entries
+# proactively so a maintainer can remove them before the next build
+# breaks.
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'  # Mondays 09:00 UTC (1h after audit-summaries)
+  workflow_dispatch: {}
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Audit repos
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const repos = JSON.parse(fs.readFileSync('data/repos.json', 'utf-8'));
+            console.log(`Auditing ${repos.length} repos...`);
+
+            const dead = [];
+            const archived = [];
+            const disabled = [];
+
+            for (const r of repos) {
+              try {
+                const { data } = await github.rest.repos.get({
+                  owner: r.owner,
+                  repo: r.repo
+                });
+                if (data.archived) {
+                  archived.push(`${r.owner}/${r.repo}`);
+                } else if (data.disabled) {
+                  disabled.push(`${r.owner}/${r.repo}`);
+                }
+              } catch (e) {
+                if (e.status === 404) {
+                  dead.push(`${r.owner}/${r.repo}`);
+                } else {
+                  // Transient errors (rate limit, 5xx) — log but don't
+                  // mistake for "dead". A retry next week will pick it
+                  // up if persistent.
+                  console.log(`  ! ${r.owner}/${r.repo}: ${e.status} ${e.message}`);
+                }
+              }
+            }
+
+            console.log(`Dead: ${dead.length}, Archived: ${archived.length}, Disabled: ${disabled.length}`);
+
+            const total = dead.length + archived.length + disabled.length;
+            if (total === 0) {
+              console.log('All repos OK — nothing to report.');
+              return;
+            }
+
+            // Build issue body
+            const today = new Date().toISOString().slice(0, 10);
+            const sections = [];
+            if (dead.length) {
+              sections.push(`### Dead (HTTP 404 — owner or repo deleted)\n\n${dead.map(s => `- \`${s}\``).join('\n')}`);
+            }
+            if (archived.length) {
+              sections.push(`### Archived\n\n${archived.map(s => `- \`${s}\``).join('\n')}`);
+            }
+            if (disabled.length) {
+              sections.push(`### Disabled\n\n${disabled.map(s => `- \`${s}\``).join('\n')}`);
+            }
+            const body = [
+              `Weekly audit (${today}) found ${total} entr${total === 1 ? 'y' : 'ies'} in \`data/repos.json\` that need attention.`,
+              '',
+              ...sections,
+              '',
+              '**Action**: dead entries should be removed from `data/repos.json` to prevent `build-pages` from failing. Archived/disabled are judgment calls — keep with a note, or remove if the project is clearly abandoned.',
+              '',
+              `_This issue is auto-managed by \`.github/workflows/audit-repos.yml\` — re-runs weekly and updates the body if the set of dead/archived/disabled repos changes._`
+            ].join('\n');
+
+            // Reuse an existing open audit issue if one is open (idempotency).
+            const { data: openIssues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: 'repo-audit',
+              state: 'open',
+              per_page: 5
+            });
+
+            if (openIssues.length > 0) {
+              const existing = openIssues[0];
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                title: `[Audit] ${total} repo${total === 1 ? '' : 's'} need attention (${today})`,
+                body
+              });
+              console.log(`Updated existing audit issue #${existing.number}`);
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `[Audit] ${total} repo${total === 1 ? '' : 's'} need attention (${today})`,
+                body,
+                labels: ['repo-audit']
+              });
+              console.log('Created new audit issue');
+            }
