@@ -1098,5 +1098,25 @@
     "url": "https://github.com/jpalmae/hermeshq",
     "official": false,
     "category": "Deployment & Infra"
+  },
+  {
+    "owner": "plastic-labs",
+    "repo": "honcho",
+    "name": "honcho",
+    "description": "Memory library for building stateful agents — the upstream library that the elkimek/honcho-self-hosted Hermes wrapper builds on.",
+    "stars": 3143,
+    "url": "https://github.com/plastic-labs/honcho",
+    "official": true,
+    "category": "Memory & Context"
+  },
+  {
+    "owner": "adnw-vinc",
+    "repo": "hermes-nextcloud",
+    "name": "hermes-nextcloud",
+    "description": "Hermes Agent skill for Nextcloud — manage files, notes, calendar, tasks, and contacts via WebDAV and CalDAV.",
+    "stars": 1,
+    "url": "https://github.com/adnw-vinc/hermes-nextcloud",
+    "official": false,
+    "category": "Skills & Skill Registries"
   }
 ]
