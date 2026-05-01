@@ -225,6 +225,30 @@ jobs:
 
             console.log(`PR #${pr.number} created for ${tag}`);
 
+            // Enable native auto-merge so the PR lands without a manual click.
+            // Content is copied verbatim from upstream RELEASE_v*.md (or the
+            // GitHub release body) — not LLM-generated — so the human review
+            // checkpoint here was guarding against zero hallucination risk.
+            // With no required checks today this merges immediately; if a CI
+            // gate is ever added, auto-merge waits for it. Falls back to a
+            // manual-merge PR if the mutation fails for any reason.
+            try {
+              await github.graphql(
+                `mutation($pullRequestId: ID!) {
+                  enablePullRequestAutoMerge(input: {
+                    pullRequestId: $pullRequestId,
+                    mergeMethod: MERGE
+                  }) {
+                    pullRequest { autoMergeRequest { enabledAt } }
+                  }
+                }`,
+                { pullRequestId: pr.node_id }
+              );
+              console.log(`Auto-merge enabled on PR #${pr.number}`);
+            } catch (e) {
+              core.warning(`Could not enable auto-merge on PR #${pr.number}: ${e.message}. PR remains open for manual merge.`);
+            }
+
       - name: Bust stars API cache so site shows new version immediately
         if: steps.check.outputs.new_release == 'true'
         env:
