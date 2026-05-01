@@ -14,3 +14,5 @@ skills-lock.json
 # Covers: roadmaps, launch playbooks, analytics setup plans, status/todo docs
 tasks/
 notes/
+.vercel
+.env*.local

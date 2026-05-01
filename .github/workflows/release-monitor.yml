@@ -303,28 +303,56 @@ jobs:
         with:
           script: |
             const msg = '${{ steps.docs_check.outputs.commit_msg }}';
+            const today = new Date().toISOString().slice(0, 10);
 
-            // Check if we already have an open issue for docs updates today
-            const { data: issues } = await github.rest.issues.listForRepo({
+            // Get all open docs-update issues. These are informational only —
+            // a fresh one each day used to pile up (8 stale ones bulk-closed
+            // during 2026-05-01 triage). Now we close prior ones when we
+            // create today's, so at most one is open at a time.
+            const { data: openIssues } = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
               repo: context.repo.repo,
               labels: 'docs-update',
               state: 'open',
-              per_page: 5
+              per_page: 100
             });
 
-            const today = new Date().toISOString().slice(0, 10);
-            const alreadyOpen = issues.some(i => i.title.includes(today));
-
-            if (!alreadyOpen) {
-              await github.rest.issues.create({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                title: `[Docs] Official documentation updated (${today})`,
-                body: `The Hermes Agent official documentation was updated in the last 24 hours.\n\nLatest commit: "${msg}"\n\n**Action needed:** Review the changes at https://hermes-agent.nousresearch.com/docs and update the relevant research files if the changes are significant.\n\nSource: https://github.com/NousResearch/hermes-agent/tree/main/website/docs`,
-                labels: ['docs-update']
-              });
-              console.log('Created docs update issue');
-            } else {
-              console.log('Docs update issue already exists for today');
+            // If today's already exists, leave it alone.
+            const todaysExists = openIssues.find(i => i.title.includes(today));
+            if (todaysExists) {
+              console.log(`Docs update issue already exists for today: #${todaysExists.number}`);
+              return;
             }
+
+            // Close any prior open docs-update issues — this prevents the
+            // every-day pileup. Best-effort: a single close failure shouldn't
+            // block creating today's issue.
+            for (const issue of openIssues) {
+              try {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  body: `Auto-closed — superseded by today's docs-update check. Daily docs-update issues are informational only.`
+                });
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  state: 'closed',
+                  state_reason: 'not_planned'
+                });
+                console.log(`Auto-closed prior docs-update issue #${issue.number}`);
+              } catch (e) {
+                console.log(`Could not close #${issue.number}: ${e.message}`);
+              }
+            }
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[Docs] Official documentation updated (${today})`,
+              body: `The Hermes Agent official documentation was updated in the last 24 hours.\n\nLatest commit: "${msg}"\n\n**Action needed:** Review the changes at https://hermes-agent.nousresearch.com/docs and update the relevant research files if the changes are significant.\n\nSource: https://github.com/NousResearch/hermes-agent/tree/main/website/docs`,
+              labels: ['docs-update']
+            });
+            console.log('Created docs update issue');
