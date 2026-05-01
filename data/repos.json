@@ -1008,5 +1008,95 @@
     "url": "https://github.com/AxDSan/mnemosyne",
     "official": false,
     "category": "Memory & Context"
+  },
+  {
+    "owner": "AMAP-ML",
+    "repo": "SkillClaw",
+    "name": "SkillClaw",
+    "description": "Let Skills Evolve Collectively with Agentic Evolver",
+    "stars": 1103,
+    "url": "https://github.com/AMAP-ML/SkillClaw",
+    "official": false,
+    "category": "Skills & Skill Registries"
+  },
+  {
+    "owner": "aivrar",
+    "repo": "portable-hermes-agent",
+    "name": "portable-hermes-agent",
+    "description": "Hermes Agent made portable desktop for Windows — 100 tools, GUI, local models via LM Studio, TTS, Music, ComfyUI, workflows, tool maker. No install. No Docker. No admin rights.",
+    "stars": 81,
+    "url": "https://github.com/aivrar/portable-hermes-agent",
+    "official": false,
+    "category": "Workspaces & GUIs"
+  },
+  {
+    "owner": "iamagenius00",
+    "repo": "hermes-a2a",
+    "name": "hermes-a2a",
+    "description": "A2A (Agent-to-Agent) protocol plugin for Hermes Agent — zero-patch, instant wake, session injection",
+    "stars": 110,
+    "url": "https://github.com/iamagenius00/hermes-a2a",
+    "official": false,
+    "category": "Plugins & Extensions"
+  },
+  {
+    "owner": "Cranot",
+    "repo": "super-hermes",
+    "name": "super-hermes",
+    "description": "Skills that teach Hermes Agent to write its own analytical prompts",
+    "stars": 122,
+    "url": "https://github.com/Cranot/super-hermes",
+    "official": false,
+    "category": "Skills & Skill Registries"
+  },
+  {
+    "owner": "EfficientContext",
+    "repo": "ContextPilot",
+    "name": "ContextPilot",
+    "description": "Accelerating Long Context LLM Inference with Accuracy-Preserving Context Optimization in SGLang, vLLM, llama.cpp, OpenClaw, RAG, and Agentic AI.",
+    "stars": 82,
+    "url": "https://github.com/EfficientContext/ContextPilot",
+    "official": false,
+    "category": "Memory & Context"
+  },
+  {
+    "owner": "335234131",
+    "repo": "agent-browser-mcp",
+    "name": "agent-browser-mcp",
+    "description": "让 Agent 直接操作真实 Chrome 的 MCP 服务，支持页面扫描、CDP、截图与物理输入",
+    "stars": 167,
+    "url": "https://github.com/335234131/agent-browser-mcp",
+    "official": false,
+    "category": "Plugins & Extensions"
+  },
+  {
+    "owner": "jwangkun",
+    "repo": "hermes-agent-guide",
+    "name": "hermes-agent-guide",
+    "description": "A systematic Chinese-language guide to Hermes Agent — 16 books, 300K+ words, covering installation, advanced development, single- and multi-agent orchestration.",
+    "stars": 130,
+    "url": "https://github.com/jwangkun/hermes-agent-guide",
+    "official": false,
+    "category": "Guides & Docs"
+  },
+  {
+    "owner": "longyunfeigu",
+    "repo": "learn-hermes-agent",
+    "name": "learn-hermes-agent",
+    "description": "A 27-chapter hands-on tutorial for building an autonomous AI agent from zero in Python — agent loop, tool system, memory, skills, MCP, multi-platform gateway, and self-evolution.",
+    "stars": 73,
+    "url": "https://github.com/longyunfeigu/learn-hermes-agent",
+    "official": false,
+    "category": "Guides & Docs"
+  },
+  {
+    "owner": "jpalmae",
+    "repo": "hermeshq",
+    "name": "hermeshq",
+    "description": "HermesHQ is a Docker-first control plane for running and operating multiple Hermes Agent instances from one web application.",
+    "stars": 5,
+    "url": "https://github.com/jpalmae/hermeshq",
+    "official": false,
+    "category": "Deployment & Infra"
   }
 ]
