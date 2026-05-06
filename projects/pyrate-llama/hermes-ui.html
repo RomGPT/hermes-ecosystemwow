@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>hermes-ui — Hermes Agent Workspaces &amp; GUIs | Hermes Atlas</title>
-<meta name="description" content="Glassmorphic web interface for Hermes Agent — your self-hosted AI assistant">
+<meta name="description" content="The command center for Hermes Agent — chat, steer, browse files, manage skills, and monitor everything from a single glassmorphic HTML app.">
 <link rel="canonical" href="https://hermesatlas.com/projects/pyrate-llama/hermes-ui">
 <meta property="og:title" content="hermes-ui — Hermes Atlas">
-<meta property="og:description" content="Glassmorphic web interface for Hermes Agent — your self-hosted AI assistant">
+<meta property="og:description" content="The command center for Hermes Agent — chat, steer, browse files, manage skills, and monitor everything from a single glassmorphic HTML app.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hermesatlas.com/projects/pyrate-llama/hermes-ui">
 <meta property="og:site_name" content="Hermes Atlas">
-<meta property="og:image" content="https://hermesatlas.com/api/og?title=hermes-ui&amp;subtitle=Glassmorphic+web+interface+for+Hermes+Agent+%E2%80%94+your+self-hosted+AI+assistant&amp;kind=project+%C2%B7+workspaces">
+<meta property="og:image" content="https://hermesatlas.com/api/og?title=hermes-ui&amp;subtitle=The+command+center+for+Hermes+Agent+%E2%80%94+chat%2C+steer%2C+browse+files%2C+manage+skills%2C+and+monitor+everything+from+a+single+glassmorphic+HTML+app.&amp;kind=project+%C2%B7+workspaces">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="hermes-ui — Hermes Atlas">
-<meta name="twitter:description" content="Glassmorphic web interface for Hermes Agent — your self-hosted AI assistant">
-<meta name="twitter:image" content="https://hermesatlas.com/api/og?title=hermes-ui&amp;subtitle=Glassmorphic+web+interface+for+Hermes+Agent+%E2%80%94+your+self-hosted+AI+assistant&amp;kind=project+%C2%B7+workspaces">
+<meta name="twitter:description" content="The command center for Hermes Agent — chat, steer, browse files, manage skills, and monitor everything from a single glassmorphic HTML app.">
+<meta name="twitter:image" content="https://hermesatlas.com/api/og?title=hermes-ui&amp;subtitle=The+command+center+for+Hermes+Agent+%E2%80%94+chat%2C+steer%2C+browse+files%2C+manage+skills%2C+and+monitor+everything+from+a+single+glassmorphic+HTML+app.&amp;kind=project+%C2%B7+workspaces">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -40,17 +40,20 @@
   "codeRepository": "https://github.com/pyrate-llama/hermes-ui",
   "applicationCategory": "DesktopEnhancementApplication",
   "operatingSystem": "Cross-platform",
+  "programmingLanguage": "HTML",
+  "license": "https://spdx.org/licenses/MIT.html",
   "author": {
     "@type": "Organization",
     "name": "pyrate-llama",
     "url": "https://github.com/pyrate-llama"
   },
+  "dateModified": "2026-05-06T09:21:20.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 25
+    "userInteractionCount": 100
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -106,14 +109,14 @@
   <h1 class="project-name">
     <span class="org">pyrate-llama</span><span class="slash">/</span>hermes-ui
   </h1>
-  <p class="project-desc">Glassmorphic web interface for Hermes Agent — your self-hosted AI assistant</p>
+  <p class="project-desc">The command center for Hermes Agent — chat, steer, browse files, manage skills, and monitor everything from a single glassmorphic HTML app.</p>
 
   <div class="meta-row">
-    <span class="stars">★ 25</span>
+    <span class="stars">★ 100</span>
+    <span><span class="meta-label">lang</span>HTML</span>
+    <span><span class="meta-label">license</span>MIT</span>
     
-    
-    
-    
+    <span><span class="meta-label">updated</span>2026-05-06</span>
   </div>
 
   <div class="actions">
@@ -140,30 +143,86 @@
 <details class="readme-details">
   <summary class="readme-toggle">full readme from github</summary>
   <section class="readme" data-nosnippet>
-    <h4>Hermes UI</h4>
+    <h2>Hermes UI</h2>
 <p><strong>English</strong> · <a href="https://github.com/pyrate-llama/hermes-ui/blob/main/README.zh-CN.md">简体中文</a></p>
 <p>The command center for <a href="https://github.com/pyrate-llama/hermes-agent">Hermes Agent</a> — chat, steer, browse files, manage skills, and monitor everything from a single glassmorphic HTML app.</p>
 <p>Built as a single-file HTML application with React 18, Hermes UI provides a full-featured chat interface, real-time log streaming, file browsing, memory inspection, and more — all through a lightweight Python proxy server.</p>
-<p><img src="https://img.shields.io/badge/version-3.1-ef4444?style=for-the-badge" alt="v3.1">
+<p><img src="https://img.shields.io/badge/version-3.3.1-ef4444?style=for-the-badge" alt="v3.3.1">
 <img src="https://img.shields.io/badge/architecture-single_file-44d88a?style=for-the-badge" alt="Single file HTML">
 <img src="https://img.shields.io/badge/react-18.2-61dafb?style=for-the-badge" alt="React 18"></p>
-<h6>Chat</h6>
+<h4>Chat</h4>
 <p><img src="https://raw.githubusercontent.com/pyrate-llama/hermes-ui/main/screenshots/chat.png" alt="Chat with inline image generation and live terminal panel">
 <img src="https://raw.githubusercontent.com/pyrate-llama/hermes-ui/main/screenshots/chat-logs.png" alt="Chat with split log panel and streaming response visibility"></p>
-<h6>Dashboard</h6>
+<h4>Dashboard</h4>
 <p><img src="https://raw.githubusercontent.com/pyrate-llama/hermes-ui/main/screenshots/dashboard.png" alt="Dashboard with live stats, recent activity, and installed skills"></p>
-<h6>Skills Browser</h6>
+<h4>Skills Browser</h4>
 <p><img src="https://raw.githubusercontent.com/pyrate-llama/hermes-ui/main/screenshots/skills.png" alt="Browse and manage installed Hermes skills"></p>
-<h6>Cron Jobs</h6>
+<h4>Cron Jobs</h4>
 <p><img src="https://raw.githubusercontent.com/pyrate-llama/hermes-ui/main/screenshots/cron-jobs.png" alt="Scheduled cron jobs with edit, pause, and run-now controls"></p>
-<h6>MCP Tools</h6>
+<h4>MCP Tools</h4>
 <p><img src="https://raw.githubusercontent.com/pyrate-llama/hermes-ui/main/screenshots/mcp-tools.png" alt="Connected MCP servers grouped by category"></p>
-<h6>File Browser</h6>
+<h4>File Browser</h4>
 <p><img src="https://raw.githubusercontent.com/pyrate-llama/hermes-ui/main/screenshots/files.png" alt="Live file browser for the active workspace with inline preview"></p>
-<h6>Terminal</h6>
+<h4>Terminal</h4>
 <p><img src="https://raw.githubusercontent.com/pyrate-llama/hermes-ui/main/screenshots/terminal.png" alt="Built-in terminal area with Hermes and Claude Code tabs"></p>
 <hr>
-<h5>What&#39;s new in v3.1</h5>
+<h3>What&#39;s new in v3.3.1</h3>
+<p>Hermes UI 3.3.1 is a session-memory hotfix. It aligns the chat stream lifecycle more closely with Nesquena/Hermes WebUI so context compression and session rotation do not leave the visible UI chat attached to a stale shorter backend session.</p>
+<p><strong>Session durability hotfix</strong></p>
+<ul>
+<li><strong>Compression session aliases</strong> — when Hermes rotates a session after context compression, the UI proxy now remembers the old ID points to the new canonical ID, even across proxy restarts</li>
+<li><strong>Frontend session handoff</strong> — the stream handshake now carries the canonical session ID through compression, cancel/error, approval, and done events</li>
+<li><strong>History drift repair</strong> — if the visible UI transcript is clearly longer than the server session file, the server repairs from the frontend transcript instead of answering from missing context</li>
+</ul>
+<h3>What&#39;s new in v3.3</h3>
+<p>Hermes UI 3.3 is a polish and durability release. It makes the app easier to read at a glance, steadier on long-running work, and better at showing you what Hermes is doing without turning the interface into clutter.</p>
+<p><strong>Health + operational visibility</strong></p>
+<ul>
+<li><strong>Health screen</strong> — consolidated Hermes heartbeat, agent/model/provider status, Scrapling/web extraction status, and redacted recent log snippets</li>
+<li><strong>Recent log safety</strong> — logs shown in the UI are allowlisted and redacted so tokens and API keys do not leak into the app surface</li>
+<li><strong>Version/update awareness</strong> — Hermes UI and Hermes Agent update status stay visible in-app without taking over the main workspace</li>
+</ul>
+<p><strong>Chat performance + usability</strong></p>
+<ul>
+<li><strong>Long-chat smoothing</strong> — very large conversations render the newest messages first with a load-older control to reduce browser memory pressure</li>
+<li><strong>Improved conversation ordering</strong> — recent chats stay easier to scan and recover during active work</li>
+<li><strong>Pinned chat cleanup</strong> — pinned sessions keep a clear single-star indicator instead of duplicate pin markers</li>
+</ul>
+<p><strong>UI cleanup + branding</strong></p>
+<ul>
+<li><strong>Focused sidebar</strong> — the left rail defaults to core work areas first, with secondary tools tucked behind a clearer expander</li>
+<li><strong>Cleaner composer/footer</strong> — bottom controls are condensed so the message box gets more space</li>
+<li><strong>Space/profile cleanup</strong> — duplicate workspace controls were removed and the active space now lives in a more sensible spot</li>
+<li><strong>Hermes Agent branding</strong> — refreshed wordmark/avatar treatment gives the app a more intentional identity</li>
+</ul>
+<h3>What&#39;s new in v3.2</h3>
+<p>Hermes UI 3.2 turns the project into a stronger multi-work command center, pairing the v3.1 workspace foundation with live task tracking, GitHub workflow polish, and Hermes Agent 0.12 validation.</p>
+<p><strong>Tasks / Kanban board</strong></p>
+<ul>
+<li><strong>Tasks screen</strong> — live Kanban-style board with Backlog, Active, Blocked, and Done columns</li>
+<li><strong>Automatic task detection</strong> — board cards are derived from Hermes todos, delegated subagent work, and active chat state</li>
+<li><strong>Source chat jump-back</strong> — click any task card to return to the chat where that work came from</li>
+<li><strong>Board filtering</strong> — quickly narrow visible work by task text, source chat, kind, or status</li>
+<li><strong><code>/tasks</code> slash command</strong> — open the Tasks board from the composer</li>
+<li><strong>Hermes Agent 0.12 validation</strong> — tested against official Hermes Agent v0.12.0 while keeping the board independent of unreleased upstream Kanban APIs</li>
+</ul>
+<p><strong>GitHub / release workflow</strong></p>
+<ul>
+<li><strong>GitHub issue shortcuts</strong> — status-bar feedback links open bug reports and feature requests directly</li>
+<li><strong>Issue templates</strong> — GitHub now has dedicated bug report and feature request templates</li>
+<li><strong>Version/update health</strong> — Hermes UI and Hermes Agent update status are surfaced in-app</li>
+</ul>
+<p><strong>Operations + performance follow-up</strong></p>
+<ul>
+<li><strong>Health screen</strong> — consolidated Hermes heartbeat, agent/model/provider status, Scrapling/web extraction status, and redacted recent log snippets</li>
+<li><strong>Long-chat smoothing</strong> — very large conversations render the newest messages first with a load-older control to reduce browser memory pressure</li>
+</ul>
+<p><strong>Deployment safety</strong></p>
+<ul>
+<li><strong>Optional LAN password auth</strong> — set <code>HERMES_UI_PASSWORD</code> before exposing Hermes UI beyond localhost</li>
+<li><strong>Local artifact protection</strong> — personal launchers and local agent state stay out of releases</li>
+</ul>
+<h3>What&#39;s new in v3.1</h3>
 <p>Hermes UI 3.1 is a workflow release: it makes the app feel more like a daily command center for real projects instead of a single chat surface.</p>
 <p><strong>Spaces / workspaces</strong></p>
 <ul>
@@ -177,6 +236,7 @@
 <ul>
 <li><strong>Slash command menu</strong> — quick access to common chat actions from the composer</li>
 <li><strong>Chat profiles</strong> — switch response styles and have the selected profile apply to outgoing messages</li>
+<li><strong>Per-message model switching</strong> — pick a different chat model from the composer without losing the current conversation context</li>
 <li><strong>Mermaid rendering</strong> — diagrams render directly in chat messages</li>
 <li><strong>Helper model controls</strong> — configure helper behavior for image handling and related fallback flows</li>
 <li><strong>Context meter fix</strong> — context pressure now estimates current visible messages instead of cumulative session counters</li>
@@ -184,6 +244,7 @@
 <p><strong>Operations and visibility</strong></p>
 <ul>
 <li><strong>Restart tab</strong> — restart, pull, and update controls now live in a dedicated settings area</li>
+<li><strong>Version + feedback shortcuts</strong> — the status bar shows the running Hermes UI version and links directly to GitHub bug/feature reports</li>
 <li><strong>Startup interpreter recovery</strong> — <code>serve_lite.py</code> detects the wrong Python and relaunches with the Hermes venv when possible</li>
 <li><strong>Subagent/delegation cards</strong> — delegated work and batch delegation calls are easier to follow in the chat stream</li>
 <li><strong>Live todo panel polish</strong> — todo panels update more reliably and no longer resurface stale state</li>
@@ -195,16 +256,18 @@
 <li>Session search, retry/redo, resizable layout, artifact panel, MCP Tools browser, terminal tabs, memory tools, cron jobs, skills browser, themes, and mobile layout support</li>
 </ul>
 <hr>
-<h5>Features</h5>
+<h3>Features</h3>
 <p><strong>Chat Interface</strong></p>
 <ul>
 <li>SSE streaming with incremental markdown rendering</li>
 <li>Tool call visualization with expandable results</li>
 <li>Message editing and re-sending</li>
 <li>Composer slash commands for common actions</li>
+<li><code>/tasks</code> command for opening the live task board</li>
 <li>Retry / redo from older prompts without deleting later messages</li>
 <li>Session search across titles and message content</li>
 <li>Image paste/drop with native vision passthrough for supported models, plus Gemini fallback when needed</li>
+<li>Switch the chat model from the composer for the next reply while keeping the same conversation context</li>
 <li>Document upload in the composer (.txt, .md, .pdf, .json, .csv, .py, .js, .ts) — RTF auto-converts to plain text</li>
 <li>Pause, steer, and stop controls mid-stream</li>
 <li>Reasoning effort selector in the composer</li>
@@ -221,12 +284,25 @@
 <li>System info panel (model, provider, uptime, capabilities)</li>
 <li>Hermes configuration overview</li>
 </ul>
+<p><strong>Health</strong></p>
+<ul>
+<li>One-screen status for Hermes UI, Hermes Agent, configured model/provider, Scrapling/web extraction, and recent local logs</li>
+<li>Recent log snippets are served from an allowlist and redacted before they reach the browser</li>
+<li>Quick links back to Terminal logs and MCP Tools for deeper inspection</li>
+</ul>
 <p><strong>Spaces / Workspaces</strong></p>
 <ul>
 <li>Save multiple workspace roots and switch between them from the sidebar or Spaces screen</li>
 <li>Add spaces with a cross-platform folder picker instead of typing paths manually</li>
 <li>New chats, side questions, and Files view inherit the active workspace</li>
 <li><code>/workspace [name or path]</code> command for fast switching</li>
+</ul>
+<p><strong>Tasks / Kanban</strong></p>
+<ul>
+<li>Live board generated from existing Hermes chat signals, not a separate manual task database</li>
+<li>Tracks todos, delegated subagent work, active agent turns, blocked items, and completed work</li>
+<li>Opens source chats from task cards so users can continue the original work</li>
+<li>Works with Hermes Agent v0.12.0 without depending on the upstream Kanban experiment that was reverted before the 0.12 stable release</li>
 </ul>
 <p><strong>Artifact Panel</strong></p>
 <ul>
@@ -282,6 +358,7 @@
 <ul>
 <li>Browse all connected MCP servers and their tools</li>
 <li>View tool descriptions and status</li>
+<li>Web Extract/Scrapling status appears inside MCP Tools when Hermes exposes <code>web_extract</code> or an optional Scrapling-backed extractor</li>
 </ul>
 <p><strong>UI/UX</strong></p>
 <ul>
@@ -290,6 +367,7 @@
 <li>Resizable left and right columns</li>
 <li>Active space selector in the sidebar and chat header</li>
 <li>System status bar with connection, model, capability pills, memory count, sessions, and context pressure</li>
+<li>Version badge and GitHub feedback menu in the bottom-right status bar</li>
 <li>Sidebar activity indicators for streaming, unread, and recent chats</li>
 <li>Inter + JetBrains Mono typography</li>
 <li>Keyboard shortcuts</li>
@@ -299,14 +377,14 @@
 <li>Touch-optimized targets and safe-area inset support for notched devices</li>
 </ul>
 <hr>
-<h5>Quick Start</h5>
-<h6>Prerequisites</h6>
+<h3>Quick Start</h3>
+<h4>Prerequisites</h4>
 <ul>
 <li>Python 3.8+</li>
 <li>A running <a href="https://github.com/pyrate-llama/hermes-agent">Hermes Agent</a> instance on <code>localhost:8642</code></li>
 <li>(Optional) <a href="https://docs.anthropic.com/en/docs/claude-code">Claude Code CLI</a> for the Claude terminal tab</li>
 </ul>
-<h6>Install &amp; Run</h6>
+<h4>Install &amp; Run</h4>
 <pre><code class="language-bash"># Clone the repo
 git clone https://github.com/pyrate-llama/hermes-ui.git
 cd hermes-ui
@@ -323,15 +401,26 @@ cd hermes-ui
 </blockquote>
 <p>Open <strong><a href="http://localhost:3333/hermes-ui.html">http://localhost:3333/hermes-ui.html</a></strong> in your browser.</p>
 <p>That&#39;s it — no <code>npm install</code>, no build step, no dependencies beyond Python&#39;s standard library.</p>
-<h6>Configuration</h6>
+<h4>Configuration</h4>
 <p>The proxy server connects to Hermes at <code>http://127.0.0.1:8642</code> by default. To change this, edit the <code>HERMES</code> variable at the top of <code>serve_lite.py</code>.</p>
 <p>Provider keys can be managed directly in <strong>Settings</strong>, including local API-key storage for supported providers. For image analysis fallback on non-vision setups, add your Gemini API key there as well.</p>
-<h6>Optional Password Protection</h6>
+<h4>Optional Password Protection</h4>
 <p>Hermes UI is local-first by default. If you expose it on a LAN, Tailscale network, or shared machine, set <code>HERMES_UI_PASSWORD</code> before starting the server:</p>
 <pre><code class="language-bash">HERMES_UI_PASSWORD=&quot;choose-a-strong-password&quot; ~/.hermes/hermes-agent/venv/bin/python3 serve_lite.py
 </code></pre>
 <p>When this is set, browser API calls require a local login cookie. Leave it unset for the normal no-login localhost experience.</p>
-<h6>Using OpenRouter or Custom Inference Endpoints</h6>
+<h4>Optional Chat Model Shortcuts</h4>
+<p>The composer model picker always includes the active configured model, and you can type a custom model id directly in the picker. To show a reusable quick-pick list for everyone using the UI, set one of these environment variables before starting the server:</p>
+<pre><code class="language-bash">HERMES_UI_MODELS=&quot;MiniMax-M2.7,openai/gpt-4o-mini,anthropic/claude-sonnet-4-20250514&quot; ~/.hermes/hermes-agent/venv/bin/python3 serve_lite.py
+</code></pre>
+<p><code>HERMES_MODEL_OPTIONS</code> and <code>HERMES_MODELS</code> are accepted aliases. The selected model applies to the next chat message and preserves the existing conversation.</p>
+<h4>Optional Web Extract / Scrapling</h4>
+<p>Hermes UI can surface Web Extract when Hermes exposes <code>web_extract</code> through MCP tools. <a href="https://github.com/D4Vinci/Scrapling">Scrapling</a> is the preferred extraction backend when connected, but Hermes UI keeps the generic Hermes <code>web_extract</code> fallback visible so the app still works for everyone without requiring heavier scraping/browser dependencies.</p>
+<p>If web extraction is connected, Hermes UI highlights it inside <strong>MCP Tools</strong>. The status card distinguishes <strong>Scrapling Active</strong> from <strong>Hermes Fallback</strong> so users can tell whether Scrapling is actually being used without adding another permanent sidebar tab. If you want to add Scrapling specifically, a common MCP launch command is:</p>
+<pre><code class="language-bash">uvx scrapling mcp
+</code></pre>
+<p>After enabling web extraction in Hermes tool configuration, restart or refresh Hermes tool discovery, then ask Hermes from chat to extract, summarize, monitor, or gather structured data from a URL.</p>
+<h4>Using OpenRouter or Custom Inference Endpoints</h4>
 <p>Hermes supports any OpenAI-compatible API endpoint, which means you can use <a href="https://openrouter.ai">OpenRouter</a> to access Claude, GPT-4, Llama, Mistral, and dozens of other models through a single API key.</p>
 <p>In your <code>~/.hermes/config.yaml</code>, set your inference endpoint and API key:</p>
 <pre><code class="language-yaml">inference:
@@ -341,7 +430,7 @@ cd hermes-ui
 </code></pre>
 <p>This also works with other compatible providers like <a href="https://github.com/BerriAI/litellm">LiteLLM</a> (self-hosted proxy), <a href="https://ollama.ai">Ollama</a> (<code>http://localhost:11434/v1</code>), or any endpoint that speaks the OpenAI chat completions format.</p>
 <hr>
-<h5>Remote Access (Tailscale)</h5>
+<h3>Remote Access (Tailscale)</h3>
 <p>Access Hermes UI from your phone, tablet, or any device using <a href="https://tailscale.com">Tailscale</a> — a zero-config mesh VPN built on WireGuard. No ports exposed to the internet, no DNS to configure, all traffic encrypted end-to-end.</p>
 <ol>
 <li><p><strong>Install Tailscale on your server</strong> (the machine running Hermes):</p>
@@ -364,7 +453,7 @@ tailscale up
 </ol>
 <p>A built-in setup guide is also available in the app under <strong>Settings &gt; Remote Access</strong>.</p>
 <hr>
-<h5>Architecture</h5>
+<h3>Architecture</h3>
 <pre><code>┌─────────────┐    ┌────────────────┐    ┌──────────────────┐
 │  Browser     │───▶│  serve_lite.py │───▶│  Hermes Agent    │
 │  (React 18)  │    │  port 3333     │    │  port 8642       │
@@ -377,7 +466,7 @@ tailscale up
 <li><strong><code>serve_lite.py</code></strong> — A lightweight Python proxy (stdlib only, no pip dependencies) that serves static files, proxies the <code>/api/chat/*</code> two-step SSE flow to the Hermes agent, streams logs via SSE, provides shell/Claude CLI execution, and enables file browsing/editing within <code>~/.hermes</code>. This is the canonical server.</li>
 <li><strong><code>serve.py</code></strong> — Backwards-compatibility shim. Prints a deprecation notice and execs <code>serve_lite.py</code>. Kept so existing systemd units and launchers don&#39;t break.</li>
 </ul>
-<h6>CDN Dependencies</h6>
+<h4>CDN Dependencies</h4>
 <p>All loaded from cdnjs.cloudflare.com at runtime:</p>
 <table>
 <thead>
@@ -424,7 +513,7 @@ tailscale up
 </tr>
 </tbody></table>
 <hr>
-<h5>Keyboard Shortcuts</h5>
+<h3>Keyboard Shortcuts</h3>
 <table>
 <thead>
 <tr>
@@ -466,7 +555,7 @@ tailscale up
 </tr>
 </tbody></table>
 <hr>
-<h5>Themes</h5>
+<h3>Themes</h3>
 <p>Hermes UI ships with three built-in themes, accessible via the theme switcher in the header:</p>
 <ul>
 <li><strong>Midnight</strong> (default) — Deep indigo/purple glassmorphism with ambient purple and green glow</li>
@@ -474,7 +563,7 @@ tailscale up
 <li><strong>Dawn</strong> — Soft light theme with blue-gray tones for daytime use</li>
 </ul>
 <hr>
-<h5>Troubleshooting</h5>
+<h3>Troubleshooting</h3>
 <p><strong>Hermes stops responding / hangs after a few messages</strong></p>
 <p>If Hermes responds once or twice then goes silent, check your <code>~/.hermes/config.yaml</code> for this bug in the context compression config:</p>
 <pre><code class="language-yaml">compression:
@@ -498,12 +587,13 @@ tailscale up
 </ol>
 <p>If you still see silent hangs, open the browser console — the client now surfaces SSE errors as visible chat messages rather than stalling.</p>
 <hr>
-<h5>License</h5>
+<h3>License</h3>
 <p>MIT — see <a href="LICENSE">LICENSE</a>.</p>
 <hr>
-<h5>Credits</h5>
+<h3>Credits</h3>
 <p>Built by <a href="https://pyrate-llama.com">Pyrate Llama</a> with help from Claude (Anthropic).</p>
 <p>Powered by <a href="https://github.com/pyrate-llama/hermes-agent">Hermes Agent</a>.</p>
+
   </section>
 </details>
 
@@ -515,35 +605,35 @@ tailscale up
   <div>
     <div class="related-list">
       <a class="related-row" href="/projects/outsourc-e/hermes-workspace">
-        <div class="stars">★ 830</div>
+        <div class="stars">★ 3.4K</div>
         <div class="name"><span class="org">outsourc-e /</span> hermes-workspace</div>
       </a>
       <a class="related-row" href="/projects/fathah/hermes-desktop">
-        <div class="stars">★ 65</div>
+        <div class="stars">★ 1.2K</div>
         <div class="name"><span class="org">fathah /</span> hermes-desktop</div>
       </a>
       <a class="related-row" href="/projects/sanchomuzax/hermes-webui">
-        <div class="stars">★ 57</div>
+        <div class="stars">★ 92</div>
         <div class="name"><span class="org">sanchomuzax /</span> hermes-webui</div>
       </a>
       <a class="related-row" href="/projects/Euraika-Labs/pan-ui">
-        <div class="stars">★ 27</div>
+        <div class="stars">★ 61</div>
         <div class="name"><span class="org">Euraika-Labs /</span> pan-ui</div>
       </a>
       <a class="related-row" href="/projects/xaspx/hermes-control-interface">
-        <div class="stars">★ 323</div>
+        <div class="stars">★ 595</div>
         <div class="name"><span class="org">xaspx /</span> hermes-control-interface</div>
       </a>
       <a class="related-row" href="/projects/dodo-reach/hermes-desktop">
-        <div class="stars">★ 313</div>
+        <div class="stars">★ 1.0K</div>
         <div class="name"><span class="org">dodo-reach /</span> hermes-desktop</div>
       </a>
       <a class="related-row" href="/projects/nesquena/hermes-webui">
-        <div class="stars">★ 2.5K</div>
+        <div class="stars">★ 5.8K</div>
         <div class="name"><span class="org">nesquena /</span> hermes-webui</div>
       </a>
       <a class="related-row" href="/projects/clawvader-tech/hermes-telegram-miniapp">
-        <div class="stars">★ 194</div>
+        <div class="stars">★ 214</div>
         <div class="name"><span class="org">clawvader-tech /</span> hermes-telegram-miniapp</div>
       </a>
     </div>

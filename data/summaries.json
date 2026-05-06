@@ -187,14 +187,14 @@
     "audit": "pass"
   },
   "Agents365-ai/drawio-skill": {
-    "summary": "drawio-skill is a tool for generating professional diagrams from natural language descriptions using the Agent Skills format. It converts text into .drawio XML files and utilizes the native draw.io desktop CLI to export them into formats like PNG, SVG, and PDF. The skill includes six specialized presets for architecture, machine learning, and UML, featuring grid-aligned layouts and automated self-correction loops. It is designed to integrate with major AI coding agents like Claude Code and Hermes Agent to provide an iterative design workflow.",
+    "summary": "drawio-skill is an agentic skill designed to transform natural language descriptions into professional .drawio XML files and exported image formats. It utilizes the draw.io desktop CLI to generate diagrams with production-grade layouts, including grid alignment and semantic color coding. The tool features an iterative review loop and automated self-checking to ensure visual accuracy and supports specialized presets for architecture, UML, and machine learning models.",
     "highlights": [
-      "Generates .drawio XML and exports to PNG, SVG, or PDF",
-      "Six diagram presets including ML models with tensor shape annotations",
-      "Automated self-check loop reads and auto-fixes visual layout issues"
+      "Six specialized presets including ML/Deep Learning and Architecture",
+      "Automated self-checking and iterative refinement loops",
+      "Supports tensor shape annotations and animated connectors"
     ],
-    "readmeHash": "36405ae89808e8cb7beb6041b7769ac5971bfcf9148bcee4561dadc5280a5a48",
-    "generatedAt": "2026-05-06T07:23:26.036Z",
+    "readmeHash": "642ad01717beb5f0a8b5997c84b06b30eb4a09e47c41166a50d1911c7f4eb27f",
+    "generatedAt": "2026-05-06T10:55:04.279Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -364,14 +364,14 @@
     "audit": "pass"
   },
   "mem0ai/mem0": {
-    "summary": "Mem0 is a persistent memory layer for AI agents that enables long-term personalization by retaining user preferences and session context. It utilizes a single-pass extraction algorithm that accumulates facts, links entities, and employs multi-signal retrieval combining semantic, keyword, and entity matching. This architecture allows agents to continuously learn from interactions without overwriting previous data, making it suitable for customer support, healthcare, and autonomous systems. The project provides a flexible deployment model through a Python/Node.js library, a self-hosted Docker stack, or a managed cloud service.",
+    "summary": "Mem0 is an intelligent memory layer designed to provide AI agents and assistants with long-term context and personalization. It utilizes a multi-signal retrieval system that fuses semantic search, BM25 keyword matching, and entity linking to recall user preferences and session history. The system employs a single-pass extraction algorithm that accumulates facts without overwriting previous data, ensuring high recall across large token windows. It is available as an Apache-2.0 self-hosted library, a Docker-based server, or a managed cloud platform.",
     "highlights": [
-      "Multi-level memory tracking for users, sessions, and agent states.",
-      "Hybrid retrieval fusing semantic, BM25 keyword, and entity matching signals.",
-      "Single-pass fact extraction reduces latency and prevents data loss."
+      "Multi-level memory retaining user, session, and agent state",
+      "Hybrid retrieval fusing semantic, keyword, and entity-linked signals",
+      "Single-pass ADD-only extraction algorithm for token-efficient fact storage"
     ],
-    "readmeHash": "ec6c8fbd859b5830c83f0ec8b979dbd3fd223136513718b270ab3b002eca773c",
-    "generatedAt": "2026-05-04T11:33:16.176Z",
+    "readmeHash": "ac63b90d1168330ef1fc0c3f85a7b8635f6df7612942084799e4b2156b4ae36e",
+    "generatedAt": "2026-05-06T10:55:10.982Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -554,14 +554,14 @@
     "auditedAt": "2026-05-04T08:48:03.169Z"
   },
   "swarmclawai/swarmclaw": {
-    "summary": "SwarmClaw is a self-hosted AI agent runtime and multi-agent framework designed to orchestrate autonomous swarms. It operates by providing a centralized dashboard for managing agent heartbeats, schedules, and delegation across more than 23 LLM providers. The platform features durable agent memory and a conversation-to-skill learning system that allows agents to acquire new capabilities through reviewed interactions. It supports various deployment methods including a desktop application, Docker containers, and cloud-hosted environments.",
+    "summary": "SwarmClaw is a self-hosted AI agent runtime and multi-agent framework designed for managing autonomous agent swarms. It utilizes an orchestration layer featuring heartbeats, schedules, and delegation to coordinate agent activities. The platform supports durable agent memory, MCP tools, and a conversation-to-skill learning system. It integrates with over 23 LLM providers, including Claude, GPT, Gemini, and Ollama.",
     "highlights": [
-      "Supports orchestration across 23+ LLM providers including Hermes and Ollama",
-      "Features durable agent memory and conversation-to-skill learning capabilities",
-      "Integrates with MCP tools and delegated CLI backends like Claude Code"
+      "Self-hosted runtime with durable agent memory and schedules",
+      "Supports 23+ LLM providers and MCP tools",
+      "Visual orchestration via org charts and delegation workflows"
     ],
-    "readmeHash": "2a590432308b6254b125609f55821ea705e1158a00d835ef505ed600e45c1bd9",
-    "generatedAt": "2026-05-06T07:23:42.166Z",
+    "readmeHash": "b306bb654a31ca5e48801b2d7ffd292e97f4451286577f29023f130f0a857dcf",
+    "generatedAt": "2026-05-06T10:55:20.891Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -1260,14 +1260,14 @@
     "audit": "pass"
   },
   "stephenschoettler/hermes-lcm": {
-    "summary": "Hermes-LCM is a context management plugin for the Hermes Agent that implements a Directed Acyclic Graph (DAG) based engine to prevent information loss during conversation compaction. Instead of replacing old messages with flat summaries, it organizes history into a hierarchical summary DAG and stores raw messages in a local SQLite database. This structure allows the agent to use specialized tools to drill back into specific details or expand compacted sections without flooding the active context window. It provides source-aware retrieval and session-level controls to maintain high-fidelity memory across long-running interactions.",
+    "summary": "Hermes-LCM is a context management plugin for Hermes Agent that prevents information loss during long-running conversations. It replaces standard flat summarization with a hierarchical Directed Acyclic Graph (DAG) that compacts older messages into depth-aware summary nodes while persisting raw data in a SQLite store. This architecture allows the agent to maintain a bounded active context window without permanently discarding details, as it can use specialized tools to drill back into specific historical material. The system includes session-aware retrieval, source-lineage filtering, and controls for managing oversized tool outputs.",
     "highlights": [
-      "Hierarchical summary DAG for depth-aware context compaction",
-      "SQLite message store preserves raw history for precise retrieval",
-      "Agent tools for grepping, describing, and expanding compacted context"
+      "Hierarchical DAG structure for depth-aware context compaction",
+      "SQLite message store for lossless persistence of raw conversation history",
+      "Agent tools for searching, describing, and expanding compacted context nodes"
     ],
-    "readmeHash": "341d33214492ee62cd9339936b1fbb76404153b4f752db5175c23d9311907ba3",
-    "generatedAt": "2026-05-05T07:17:28.993Z",
+    "readmeHash": "b5e56c9127177797cfc6cc2f9d88c536247108ee6cc4d73a069bccef72e1cf4d",
+    "generatedAt": "2026-05-06T10:55:37.504Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -1340,14 +1340,14 @@
     "auditedAt": "2026-04-27T08:50:53.111Z"
   },
   "AxDSan/mnemosyne": {
-    "summary": "Mnemosyne is a local-first memory system designed to provide private, high-speed context for Hermes Agents without relying on cloud services. It utilizes a SQLite backend with native vector search and full-text search to store conversations, preferences, and knowledge locally. The system implements a three-tier BEAM architecture that manages working, episodic, and scratchpad memory through automatic consolidation and sleep cycles. This approach enables sub-millisecond retrieval and offline operation while maintaining data ownership on the user's machine.",
+    "summary": "Mnemosyne is a local-first memory system for Hermes Agents that provides persistent storage for conversations and knowledge without external dependencies. It utilizes a SQLite-backed architecture featuring native vector search via sqlite-vec and full-text search through FTS5 to eliminate network latency and API costs. The system implements a three-tier memory structure—working, episodic, and scratchpad—to manage long-term context and information extraction. It is designed for developers who require high-speed, private memory that remains fully functional in offline environments.",
     "highlights": [
-      "SQLite-backed storage with native vector and full-text search",
-      "Three-tier BEAM architecture for working, episodic, and scratchpad memory",
-      "Automatic conversation consolidation via episodic compression and sleep cycles"
+      "Sub-millisecond latency for local read, write, and search operations",
+      "Zero-dependency SQLite backend with native vector and full-text search",
+      "Privacy-focused design with 100% local data storage and no telemetry"
     ],
-    "readmeHash": "4eefcebefe7a0ab69e5d7c188a26219916f266f5f6768a70711d3b4915ca244e",
-    "generatedAt": "2026-05-06T07:24:37.168Z",
+    "readmeHash": "594fa98d673758d1ed83302ff22e3102561470fa09646dc9da50060a6627f950",
+    "generatedAt": "2026-05-06T10:55:43.140Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"

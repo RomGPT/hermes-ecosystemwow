@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>hermes-web-search-plus — Hermes Agent Plugins &amp; Extensions | Hermes Atlas</title>
-<meta name="description" content="Multi-provider web search (Serper, Tavily, Exa, Querit, Perplexity) with auto-routing">
+<meta name="description" content="Hermes Agent plugin for multi-provider web search and extraction with intelligent routing, quality reports, and research mode.">
 <link rel="canonical" href="https://hermesatlas.com/projects/robbyczgw-cla/hermes-web-search-plus">
 <meta property="og:title" content="hermes-web-search-plus — Hermes Atlas">
-<meta property="og:description" content="Multi-provider web search (Serper, Tavily, Exa, Querit, Perplexity) with auto-routing">
+<meta property="og:description" content="Hermes Agent plugin for multi-provider web search and extraction with intelligent routing, quality reports, and research mode.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hermesatlas.com/projects/robbyczgw-cla/hermes-web-search-plus">
 <meta property="og:site_name" content="Hermes Atlas">
-<meta property="og:image" content="https://hermesatlas.com/api/og?title=hermes-web-search-plus&amp;subtitle=Multi-provider+web+search+%28Serper%2C+Tavily%2C+Exa%2C+Querit%2C+Perplexity%29+with+auto-routing&amp;kind=project+%C2%B7+plugins">
+<meta property="og:image" content="https://hermesatlas.com/api/og?title=hermes-web-search-plus&amp;subtitle=Hermes+Agent+plugin+for+multi-provider+web+search+and+extraction+with+intelligent+routing%2C+quality+reports%2C+and+research+mode.&amp;kind=project+%C2%B7+plugins">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="hermes-web-search-plus — Hermes Atlas">
-<meta name="twitter:description" content="Multi-provider web search (Serper, Tavily, Exa, Querit, Perplexity) with auto-routing">
-<meta name="twitter:image" content="https://hermesatlas.com/api/og?title=hermes-web-search-plus&amp;subtitle=Multi-provider+web+search+%28Serper%2C+Tavily%2C+Exa%2C+Querit%2C+Perplexity%29+with+auto-routing&amp;kind=project+%C2%B7+plugins">
+<meta name="twitter:description" content="Hermes Agent plugin for multi-provider web search and extraction with intelligent routing, quality reports, and research mode.">
+<meta name="twitter:image" content="https://hermesatlas.com/api/og?title=hermes-web-search-plus&amp;subtitle=Hermes+Agent+plugin+for+multi-provider+web+search+and+extraction+with+intelligent+routing%2C+quality+reports%2C+and+research+mode.&amp;kind=project+%C2%B7+plugins">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -40,17 +40,20 @@
   "codeRepository": "https://github.com/robbyczgw-cla/hermes-web-search-plus",
   "applicationCategory": "BrowserApplication",
   "operatingSystem": "Cross-platform",
+  "programmingLanguage": "Python",
+  "license": "https://spdx.org/licenses/MIT.html",
   "author": {
     "@type": "Organization",
     "name": "robbyczgw-cla",
     "url": "https://github.com/robbyczgw-cla"
   },
+  "dateModified": "2026-05-04T19:50:59.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 21
+    "userInteractionCount": 144
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -106,14 +109,14 @@
   <h1 class="project-name">
     <span class="org">robbyczgw-cla</span><span class="slash">/</span>hermes-web-search-plus
   </h1>
-  <p class="project-desc">Multi-provider web search (Serper, Tavily, Exa, Querit, Perplexity) with auto-routing</p>
+  <p class="project-desc">Hermes Agent plugin for multi-provider web search and extraction with intelligent routing, quality reports, and research mode.</p>
 
   <div class="meta-row">
-    <span class="stars">★ 21</span>
+    <span class="stars">★ 144</span>
+    <span><span class="meta-label">lang</span>Python</span>
+    <span><span class="meta-label">license</span>MIT</span>
     
-    
-    
-    
+    <span><span class="meta-label">updated</span>2026-05-04</span>
   </div>
 
   <div class="actions">
@@ -140,13 +143,13 @@
 <details class="readme-details">
   <summary class="readme-toggle">full readme from github</summary>
   <section class="readme" data-nosnippet>
-    <h4>web-search-plus — Hermes Plugin</h4>
+    <h2>web-search-plus — Hermes Plugin</h2>
 <p>Multi-provider web search, URL extraction, quality reports, and opt-in research mode for <a href="https://github.com/NousResearch/hermes-agent">Hermes Agent</a>.</p>
 <blockquote>
 <p>Ported from <a href="https://github.com/robbyczgw-cla/web-search-plus-plugin">web-search-plus-plugin</a> (OpenClaw) to the Hermes Plugin API.</p>
 </blockquote>
 <hr>
-<h5>Quick Start</h5>
+<h3>Quick Start</h3>
 <pre><code class="language-bash"># 1) Install + enable the Hermes plugin
 hermes plugins install robbyczgw-cla/hermes-web-search-plus --enable
 
@@ -181,7 +184,7 @@ python3 search.py --query &quot;Hermes Agent latest release&quot; --provider aut
 </ul>
 <p>Both tools are exposed by the <code>web-search-plus</code> toolset; enabling <code>web-search-plus</code> enables both.</p>
 <hr>
-<h5>Features</h5>
+<h3>Features</h3>
 <ul>
 <li><strong>Intelligent auto-routing</strong> — picks the best provider based on query intent</li>
 <li><strong>10 providers</strong> — Serper, Brave, Tavily, Exa, Querit, Linkup, Firecrawl, Perplexity, You.com, SearXNG</li>
@@ -195,7 +198,7 @@ python3 search.py --query &quot;Hermes Agent latest release&quot; --provider aut
 <li><strong>Local caching</strong> — avoids duplicate API calls (1h TTL)</li>
 </ul>
 <hr>
-<h5>Provider Routing</h5>
+<h3>Provider Routing</h3>
 <table>
 <thead>
 <tr>
@@ -257,8 +260,8 @@ python3 search.py --query &quot;Hermes Agent latest release&quot; --provider aut
 </tbody></table>
 <p>Auto-routing scores providers based on query signals (keywords, intent, linguistic patterns). Brave and Serper share generic web-search intents; when they tie, the router uses deterministic per-query tie-breaking so the same query stays reproducible while ties are distributed across both providers. Override anytime with <code>provider=&quot;serper&quot;</code>, <code>provider=&quot;brave&quot;</code>, etc.</p>
 <hr>
-<h5>Installation</h5>
-<h6>API Keys</h6>
+<h3>Installation</h3>
+<h4>API Keys</h4>
 <pre><code class="language-bash"># Required (at least one)
 SERPER_API_KEY=***        # https://serper.dev — 2,500 free/mo
 BRAVE_API_KEY=***         # https://brave.com/search/api/ — $5.00/mo in free credits; you won&#39;t be charged
@@ -270,16 +273,16 @@ QUERIT_API_KEY=***        # https://querit.ai
 LINKUP_API_KEY=***        # https://linkup.so — source-backed search + fetch
 FIRECRAWL_API_KEY=***     # https://firecrawl.dev — search + scrape/extract
 PERPLEXITY_API_KEY=***    # https://perplexity.ai/settings/api
-KILOCODE_API_KEY=your-key      # Perplexity via Kilo Gateway fallback
-YOU_API_KEY=your-key           # https://api.you.com
+KILOCODE_API_KEY=***      # Alternate credential path for the `perplexity` provider via Kilo Gateway
+YOU_API_KEY=***           # https://api.you.com
 SEARXNG_INSTANCE_URL=https://your-instance.example.com
 </code></pre>
 <blockquote>
-<p>Python 3.8+ required. For Exa deep research: <code>pip install httpx</code> (optional).</p>
+<p>Python 3.8+ required. The normal Hermes plugin install handles dependencies. For manual/local development, install the pinned runtime deps with <code>python3 -m pip install -r requirements.txt</code> inside the Hermes/plugin environment.</p>
 </blockquote>
 <hr>
-<h5>Usage</h5>
-<h6>Parameters</h6>
+<h3>Usage</h3>
+<h4>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -350,10 +353,10 @@ SEARXNG_INSTANCE_URL=https://your-instance.example.com
 <td>Best-effort seconds budget for research mode provider/extraction work</td>
 </tr>
 </tbody></table>
-<h6>Quality report and research mode</h6>
+<h4>Quality report and research mode</h4>
 <p><code>quality_report=True</code> adds diagnostic metadata without changing provider selection. Use it when tuning routing, comparing providers, or debugging weak result sets.</p>
 <p><code>mode=&quot;research&quot;</code> is intentionally opt-in: it can query multiple providers and extract selected result URLs, so it is slower and may spend more API credits than normal search. The default <code>research_time_budget=55.0</code> keeps the run bounded; when the budget is exhausted, remaining providers or extraction steps are skipped and reported in routing metadata instead of hanging or failing the whole response. Search results already collected are preserved even if extraction fails.</p>
-<h6><code>web_extract_plus</code></h6>
+<h4><code>web_extract_plus</code></h4>
 <p>Extract content from specific URLs using provider-specific extraction backends.</p>
 <table>
 <thead>
@@ -439,7 +442,7 @@ web_extract_plus(urls=[&quot;https://docs.linkup.so&quot;], provider=&quot;linku
 web_search_plus(query=&quot;LoRA fine-tuning&quot;, include_domains=[&quot;arxiv.org&quot;])
 # → arxiv only
 </code></pre>
-<h6>CLI testing</h6>
+<h4>CLI testing</h4>
 <pre><code class="language-bash">cd ~/.hermes/hermes-agent
 source venv/bin/activate
 python ~/.hermes/plugins/web-search-plus/search.py \
@@ -450,7 +453,7 @@ python ~/.hermes/plugins/web-search-plus/search.py \
   --mode research --quality-report --research-time-budget 45 --compact
 </code></pre>
 <hr>
-<h5>Architecture</h5>
+<h3>Architecture</h3>
 <pre><code>__init__.py      — Hermes plugin entry, tool schema, handler
 search.py        — Core engine: providers, routing, caching, fallback
 scripts/         — Golden query evaluator and support scripts
@@ -460,11 +463,12 @@ CHANGELOG.md     — Version history
 </code></pre>
 <p>The plugin runs <code>search.py</code> as a subprocess with a 75s timeout (for Exa deep-reasoning queries).</p>
 <hr>
-<h5>Related</h5>
+<h3>Related</h3>
 <ul>
 <li><a href="https://github.com/robbyczgw-cla/web-search-plus-plugin">web-search-plus-plugin</a> — TypeScript version for OpenClaw</li>
 <li><a href="https://github.com/NousResearch/hermes-agent">Hermes Agent</a> — the agent this plugin runs on</li>
 </ul>
+
   </section>
 </details>
 
@@ -476,35 +480,35 @@ CHANGELOG.md     — Version history
   <div>
     <div class="related-list">
       <a class="related-row" href="/projects/42-evey/hermes-plugins">
-        <div class="stars">★ 16</div>
+        <div class="stars">★ 88</div>
         <div class="name"><span class="org">42-evey /</span> hermes-plugins</div>
       </a>
       <a class="related-row" href="/projects/FahrenheitResearch/hermes-weather-plugin">
-        <div class="stars">★ 7</div>
+        <div class="stars">★ 14</div>
         <div class="name"><span class="org">FahrenheitResearch /</span> hermes-weather-plugin</div>
       </a>
       <a class="related-row" href="/projects/42-evey/evey-bridge-plugin">
-        <div class="stars">★ 4</div>
+        <div class="stars">★ 9</div>
         <div class="name"><span class="org">42-evey /</span> evey-bridge-plugin</div>
       </a>
       <a class="related-row" href="/projects/nativ3ai/hermes-payguard">
-        <div class="stars">★ 4</div>
+        <div class="stars">★ 6</div>
         <div class="name"><span class="org">nativ3ai /</span> hermes-payguard</div>
       </a>
       <a class="related-row" href="/projects/raulvidis/hermes-cloudflare">
-        <div class="stars">★ 1</div>
+        <div class="stars">★ 12</div>
         <div class="name"><span class="org">raulvidis /</span> hermes-cloudflare</div>
       </a>
       <a class="related-row" href="/projects/clawshell/clawshell">
-        <div class="stars">★ 255</div>
+        <div class="stars">★ 282</div>
         <div class="name"><span class="org">clawshell /</span> clawshell</div>
       </a>
       <a class="related-row" href="/projects/briancaffey/hermes-otel">
-        <div class="stars">★ 4</div>
+        <div class="stars">★ 10</div>
         <div class="name"><span class="org">briancaffey /</span> hermes-otel</div>
       </a>
       <a class="related-row" href="/projects/335234131/agent-browser-mcp">
-        <div class="stars">★ 167</div>
+        <div class="stars">★ 174</div>
         <div class="name"><span class="org">335234131 /</span> agent-browser-mcp</div>
       </a>
     </div>

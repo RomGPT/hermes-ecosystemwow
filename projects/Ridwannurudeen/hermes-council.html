@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>hermes-council — Hermes Agent Integrations &amp; Bridges | Hermes Atlas</title>
-<meta name="description" content="Adversarial multi-perspective council MCP server for decision-making">
+<meta name="description" content="Adversarial multi-perspective council MCP server for hermes-agent">
 <link rel="canonical" href="https://hermesatlas.com/projects/Ridwannurudeen/hermes-council">
 <meta property="og:title" content="hermes-council — Hermes Atlas">
-<meta property="og:description" content="Adversarial multi-perspective council MCP server for decision-making">
+<meta property="og:description" content="Adversarial multi-perspective council MCP server for hermes-agent">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hermesatlas.com/projects/Ridwannurudeen/hermes-council">
 <meta property="og:site_name" content="Hermes Atlas">
-<meta property="og:image" content="https://hermesatlas.com/api/og?title=hermes-council&amp;subtitle=Adversarial+multi-perspective+council+MCP+server+for+decision-making&amp;kind=project+%C2%B7+integrations">
+<meta property="og:image" content="https://hermesatlas.com/api/og?title=hermes-council&amp;subtitle=Adversarial+multi-perspective+council+MCP+server+for+hermes-agent&amp;kind=project+%C2%B7+integrations">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="hermes-council — Hermes Atlas">
-<meta name="twitter:description" content="Adversarial multi-perspective council MCP server for decision-making">
-<meta name="twitter:image" content="https://hermesatlas.com/api/og?title=hermes-council&amp;subtitle=Adversarial+multi-perspective+council+MCP+server+for+decision-making&amp;kind=project+%C2%B7+integrations">
+<meta name="twitter:description" content="Adversarial multi-perspective council MCP server for hermes-agent">
+<meta name="twitter:image" content="https://hermesatlas.com/api/og?title=hermes-council&amp;subtitle=Adversarial+multi-perspective+council+MCP+server+for+hermes-agent&amp;kind=project+%C2%B7+integrations">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -40,17 +40,20 @@
   "codeRepository": "https://github.com/Ridwannurudeen/hermes-council",
   "applicationCategory": "CommunicationApplication",
   "operatingSystem": "Cross-platform",
+  "programmingLanguage": "Python",
+  "license": "https://spdx.org/licenses/MIT.html",
   "author": {
     "@type": "Organization",
     "name": "Ridwannurudeen",
     "url": "https://github.com/Ridwannurudeen"
   },
+  "dateModified": "2026-05-05T14:07:59.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 6
+    "userInteractionCount": 19
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -106,14 +109,14 @@
   <h1 class="project-name">
     <span class="org">Ridwannurudeen</span><span class="slash">/</span>hermes-council
   </h1>
-  <p class="project-desc">Adversarial multi-perspective council MCP server for decision-making</p>
+  <p class="project-desc">Adversarial multi-perspective council MCP server for hermes-agent</p>
 
   <div class="meta-row">
-    <span class="stars">★ 6</span>
+    <span class="stars">★ 19</span>
+    <span><span class="meta-label">lang</span>Python</span>
+    <span><span class="meta-label">license</span>MIT</span>
     
-    
-    
-    
+    <span><span class="meta-label">updated</span>2026-05-05</span>
   </div>
 
   <div class="actions">
@@ -140,56 +143,279 @@
 <details class="readme-details">
   <summary class="readme-toggle">full readme from github</summary>
   <section class="readme" data-nosnippet>
-    <p><a href="https://github.com/Ridwannurudeen/hermes-council/actions/workflows/ci.yml"><img src="https://github.com/Ridwannurudeen/hermes-council/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
-<a href="https://github.com/Ridwannurudeen/hermes-council/actions/workflows/ci.yml"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Ridwannurudeen/316e2a72a4089fdb4fddc9980ed1c28b/raw/coverage.json" alt="Coverage"></a></p>
-<h4>hermes-council</h4>
-<p>Adversarial multi-perspective council MCP server for <a href="https://github.com/NousResearch/hermes-agent">hermes-agent</a>.</p>
-<p>Five personas from distinct intellectual traditions debate questions through structured adversarial deliberation, producing calibrated verdicts with confidence scores, evidence links, and DPO preference pairs for RL training.</p>
-<blockquote>
-<p><strong>Origin</strong>: This project was built in response to feedback on <a href="https://github.com/NousResearch/hermes-agent/pull/848">hermes-agent PR #848</a>, where the adversarial council concept was proposed as a core subsystem. The recommendation was to rebuild it as an external MCP server to avoid core tool injection, provider bypass, hidden LLM costs, and brittle parsing. Integration PR: <a href="https://github.com/NousResearch/hermes-agent/pull/1972">#1972</a>.</p>
-</blockquote>
-<h5>Install</h5>
-<pre><code class="language-bash">pip install git+https://github.com/Ridwannurudeen/hermes-council.git
+    <div align="center">
+  <h1>hermes-council</h1>
+
+  <p><strong>Adversarial preflight and decision review for Hermes Agent.</strong></p>
+
+  <p>
+    Hermes Council is an MCP server that lets
+    <a href="https://github.com/NousResearch/hermes-agent">Hermes Agent</a>
+    stress-test plans, diffs, claims, decisions, and risky actions before it acts.
+    It returns structured verdicts, verified evidence snippets, required checks,
+    and DPO preference pairs for evaluator and RL workflows.
+  </p>
+
+  <p>
+    <a href="https://github.com/Ridwannurudeen/hermes-council/actions/workflows/ci.yml">
+      <img alt="CI" src="https://github.com/Ridwannurudeen/hermes-council/actions/workflows/ci.yml/badge.svg">
+    </a>
+    <a href="https://github.com/Ridwannurudeen/hermes-council/actions/workflows/ci.yml">
+      <img alt="Coverage" src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Ridwannurudeen/316e2a72a4089fdb4fddc9980ed1c28b/raw/coverage.json">
+    </a>
+    <img alt="Python" src="https://img.shields.io/badge/python-3.11%2B-3776AB?logo=python&logoColor=white">
+    <img alt="MCP" src="https://img.shields.io/badge/MCP-stdio-10B981">
+    <a href="LICENSE">
+      <img alt="License" src="https://img.shields.io/badge/license-MIT-111827">
+    </a>
+  </p>
+
+  <p>
+    <a href="#why-it-exists">Why</a> |
+    <a href="#what-it-does">What it does</a> |
+    <a href="#quickstart">Quickstart</a> |
+    <a href="#tools">Tools</a> |
+    <a href="#architecture">Architecture</a> |
+    <a href="#development">Development</a>
+  </p>
+</div>
+
+<h3>Why It Exists</h3>
+<p>Autonomous agents are useful because they act. That is also where they fail.
+The failure mode is not usually a syntax error; it is an overconfident plan, a
+weak claim, an unsafe command, a diff that looks plausible but breaks a boundary,
+or a deployment that should have been stopped by one more adversarial review.</p>
+<p>Hermes Council gives Hermes Agent a dedicated judgment layer. Before the agent
+ships a plan, changes code, accepts a claim, or takes a risky action, it can call
+a council that forces multiple intellectual traditions to argue, dissent, and
+produce a structured final verdict.</p>
+<p>The result is not another long chain-of-thought prompt. It is an MCP toolset with
+explicit verdict fields: <code>allow</code>, <code>allow_with_conditions</code>, <code>deny</code>, <code>top_risks</code>,
+<code>required_checks</code>, <code>missing_evidence</code>, <code>verified_sources</code>, and <code>next_actions</code>.</p>
+<h3>What It Does</h3>
+<table>
+  <tr>
+    <td><strong>Preflight risky actions</strong><br>Review deploys, migrations, file operations, public messages, and other high-stakes actions before execution. Returns a verdict, blocking risks, required checks, and safer alternatives.</td>
+    <td><strong>Review plans and diffs</strong><br>Stress-test implementation plans and code diffs for bugs, missing tests, integration failures, security regressions, and weak assumptions.</td>
+  </tr>
+  <tr>
+    <td><strong>Fact-check claims with evidence</strong><br>Fetch supplied URLs, optionally search the web, pass source snippets to the council, and separate `verified_sources` from model-cited `sources`.</td>
+    <td><strong>Compare decisions</strong><br>Evaluate multiple options against explicit criteria and return one recommended path with risks, evidence gaps, and next actions.</td>
+  </tr>
+  <tr>
+    <td><strong>Run adversarial deliberation</strong><br>Use Advocate, Skeptic, Oracle, Contrarian, and Arbiter personas to expose disagreement and synthesize a calibrated verdict.</td>
+    <td><strong>Produce RL signals</strong><br>Extract DPO preference pairs and normalized rewards from council verdicts for evaluator and training workflows.</td>
+  </tr>
+</table>
+
+<p>Supporting features: custom personas, fast/standard/deep modes, optional audit
+logs, packaged Hermes skills, OpenAI-compatible provider support, and stdio MCP
+transport.</p>
+<h3>Quickstart</h3>
+<h4>Install</h4>
+<pre><code class="language-bash">pip install &quot;hermes-council @ git+https://github.com/Ridwannurudeen/hermes-council.git&quot;
 </code></pre>
-<p>For RL components:</p>
+<p>For RL/evaluator usage:</p>
 <pre><code class="language-bash">pip install &quot;hermes-council[rl] @ git+https://github.com/Ridwannurudeen/hermes-council.git&quot;
 </code></pre>
-<h5>Quick Start</h5>
-<p>Add to your hermes-agent config (<code>~/.hermes/config.yaml</code>):</p>
+<h4>Configure Hermes Agent</h4>
+<p>Add the MCP server to <code>~/.hermes/config.yaml</code>:</p>
 <pre><code class="language-yaml">mcp_servers:
   council:
-    command: hermes-council-server
+    command: python
+    args: [&quot;-m&quot;, &quot;hermes_council.server&quot;]
 </code></pre>
-<p>Set your API key:</p>
+<p><code>hermes-council-server</code> is also installed as a console script. The <code>python -m</code>
+form is recommended because it works even when the Python user scripts directory
+is not on <code>PATH</code>.</p>
+<p>Set one provider key:</p>
 <pre><code class="language-bash">export OPENROUTER_API_KEY=your-key-here
 </code></pre>
-<h5>Tools</h5>
+<p>PowerShell:</p>
+<pre><code class="language-powershell">$env:OPENROUTER_API_KEY = &quot;your-key-here&quot;
+</code></pre>
+<p>Then restart Hermes Agent or run <code>/reload-mcp</code>.</p>
+<h4>Install Hermes Skills</h4>
+<pre><code class="language-bash">hermes-council install-skills
+</code></pre>
+<p>This copies skill definitions to <code>~/.hermes/skills/council/</code>.</p>
+<h4>Smoke Test Without Hermes Agent</h4>
+<pre><code class="language-bash">python -m hermes_council.server
+</code></pre>
+<p>The server speaks MCP over stdio, so it waits for JSON-RPC messages. Use this
+mainly to verify that the module entrypoint imports cleanly.</p>
+<h4>Use The Evaluator Directly</h4>
+<pre><code class="language-python">import asyncio
+from hermes_council.rl.evaluator import CouncilEvaluator
+
+
+async def main():
+    evaluator = CouncilEvaluator(model=&quot;nousresearch/hermes-3-llama-3.1-70b&quot;)
+    verdict = await evaluator.evaluate(
+        content=&quot;Ship the migration after tests pass.&quot;,
+        question=&quot;Is this deployment plan safe enough?&quot;,
+        criteria=[&quot;safety&quot;, &quot;rollback&quot;, &quot;evidence&quot;],
+    )
+    print(verdict.confidence_score)
+    print(evaluator.normalized_reward(verdict))
+
+
+asyncio.run(main())
+</code></pre>
+<h3>Tools</h3>
+<p>Hermes Agent exposes MCP tools with a server prefix. With the config above, the
+runtime names are <code>mcp_council_council_query</code>,
+<code>mcp_council_council_gate</code>, and so on.</p>
 <table>
 <thead>
 <tr>
 <th>Tool</th>
-<th>Description</th>
-<th>Personas</th>
+<th>Purpose</th>
+<th>Best Use</th>
 </tr>
 </thead>
 <tbody><tr>
 <td><code>council_query</code></td>
-<td>Full 5-persona adversarial deliberation on complex questions</td>
-<td>All 5</td>
+<td>General adversarial deliberation</td>
+<td>Complex questions with no obvious answer</td>
 </tr>
 <tr>
 <td><code>council_evaluate</code></td>
-<td>Evaluate content quality through adversarial critique</td>
-<td>All 5</td>
+<td>Content quality critique</td>
+<td>Research, summaries, specs, and generated answers</td>
 </tr>
 <tr>
 <td><code>council_gate</code></td>
-<td>Quick safety review before high-stakes actions</td>
-<td>Skeptic + Oracle + Arbiter</td>
+<td>Safety decision</td>
+<td><code>allow</code>, <code>allow_with_conditions</code>, or <code>deny</code> before action</td>
+</tr>
+<tr>
+<td><code>council_preflight</code></td>
+<td>Gate with explicit checks</td>
+<td>Deployment, migration, irreversible command, public send</td>
+</tr>
+<tr>
+<td><code>council_review_plan</code></td>
+<td>Plan review</td>
+<td>Implementation plan before coding</td>
+</tr>
+<tr>
+<td><code>council_review_diff</code></td>
+<td>Diff review</td>
+<td>Code changes before commit or PR</td>
+</tr>
+<tr>
+<td><code>council_review_claim</code></td>
+<td>Claim review</td>
+<td>Fact-checking with optional evidence retrieval</td>
+</tr>
+<tr>
+<td><code>council_decision</code></td>
+<td>Option comparison</td>
+<td>Pick one path from two or more options</td>
 </tr>
 </tbody></table>
-<h5>Configuration</h5>
-<p>All configuration is via environment variables:</p>
+<h4>Gate Output</h4>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;verdict&quot;: &quot;allow_with_conditions&quot;,
+  &quot;allowed&quot;: true,
+  &quot;can_proceed_now&quot;: false,
+  &quot;required_checks&quot;: [&quot;verify rollback&quot;, &quot;run dry-run&quot;],
+  &quot;blocking_risks&quot;: [&quot;rollback untested&quot;],
+  &quot;safe_alternative&quot;: &quot;stage the action first&quot;,
+  &quot;action_summary&quot;: {
+    &quot;recommendation&quot;: &quot;Proceed after verifying rollback and dry-run output.&quot;,
+    &quot;top_risks&quot;: [&quot;rollback untested&quot;],
+    &quot;missing_evidence&quot;: [&quot;dry-run output&quot;],
+    &quot;next_actions&quot;: [&quot;run dry-run&quot;, &quot;verify rollback&quot;]
+  }
+}
+</code></pre>
+<h3>Council Modes</h3>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Calls</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>fast</code></td>
+<td>Skeptic + Arbiter</td>
+<td>Cheap pre-checks</td>
+</tr>
+<tr>
+<td><code>standard</code></td>
+<td>Advocate + Skeptic + Oracle + Contrarian + Arbiter</td>
+<td>Normal review</td>
+</tr>
+<tr>
+<td><code>deep</code></td>
+<td>Standard + second Arbiter pass</td>
+<td>High-stakes or contentious decisions</td>
+</tr>
+</tbody></table>
+<h3>Architecture</h3>
+<pre><code class="language-text">Hermes Agent
+    |
+    | MCP stdio tool call
+    v
+hermes-council server
+    |
+    +--&gt; optional evidence retrieval
+    |       - fetch supplied URLs
+    |       - optional DuckDuckGo HTML search
+    |       - block localhost/private IP targets
+    |
+    +--&gt; parallel deliberators
+    |       - Advocate: steel-man the proposal
+    |       - Skeptic: find falsifiers and failure modes
+    |       - Oracle: base rates and empirical grounding
+    |       - Contrarian: challenge the framing
+    |
+    +--&gt; Arbiter
+            - synthesize disagreement
+            - emit structured JSON verdict
+            - produce risks, checks, actions, DPO pairs
+</code></pre>
+<p>The server uses an OpenAI-compatible async client. It tries JSON mode first and
+falls back to text parsing when a provider rejects <code>response_format</code>.</p>
+<h3>Evidence Model</h3>
+<p><code>evidence_search=true</code> runs retrieval before persona calls.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>verified_sources</code></td>
+<td>URLs actually fetched and summarized by Hermes Council</td>
+</tr>
+<tr>
+<td><code>sources</code></td>
+<td>URLs cited by model outputs</td>
+</tr>
+<tr>
+<td><code>evidence_errors</code></td>
+<td>Non-fatal retrieval errors from the evidence layer</td>
+</tr>
+</tbody></table>
+<p>Security boundaries:</p>
+<ul>
+<li>Only <code>http</code> and <code>https</code> URLs are fetched.</li>
+<li>Localhost, private IPs, link-local IPs, multicast, reserved, and unspecified
+IPs are blocked before fetch.</li>
+<li>Set <code>COUNCIL_EVIDENCE_SEARCH=0</code> to disable DuckDuckGo search while still
+allowing supplied public URLs to be fetched.</li>
+</ul>
+<h3>Configuration</h3>
+<p>API key priority is:</p>
+<pre><code class="language-text">COUNCIL_API_KEY &gt; OPENROUTER_API_KEY &gt; NOUS_API_KEY &gt; OPENAI_API_KEY
+</code></pre>
 <table>
 <thead>
 <tr>
@@ -200,46 +426,106 @@
 </thead>
 <tbody><tr>
 <td><code>COUNCIL_API_KEY</code></td>
-<td>API key (highest priority)</td>
-<td>—</td>
+<td>Council-specific API key</td>
+<td>unset</td>
 </tr>
 <tr>
 <td><code>OPENROUTER_API_KEY</code></td>
 <td>OpenRouter API key</td>
-<td>—</td>
+<td>unset</td>
 </tr>
 <tr>
 <td><code>NOUS_API_KEY</code></td>
 <td>Nous API key</td>
-<td>—</td>
+<td>unset</td>
 </tr>
 <tr>
 <td><code>OPENAI_API_KEY</code></td>
-<td>OpenAI API key (lowest priority)</td>
-<td>—</td>
+<td>OpenAI API key</td>
+<td>unset</td>
 </tr>
 <tr>
 <td><code>COUNCIL_BASE_URL</code></td>
-<td>API base URL</td>
+<td>Base URL when <code>COUNCIL_API_KEY</code> is used</td>
 <td><code>https://openrouter.ai/api/v1</code></td>
 </tr>
 <tr>
+<td><code>OPENAI_BASE_URL</code></td>
+<td>Base URL when <code>OPENAI_API_KEY</code> is used</td>
+<td><code>https://api.openai.com/v1</code></td>
+</tr>
+<tr>
 <td><code>COUNCIL_MODEL</code></td>
-<td>Model to use</td>
+<td>Model for persona calls</td>
 <td><code>nousresearch/hermes-3-llama-3.1-70b</code></td>
 </tr>
 <tr>
 <td><code>COUNCIL_TIMEOUT</code></td>
-<td>Request timeout (seconds)</td>
+<td>LLM request timeout in seconds</td>
 <td><code>60</code></td>
 </tr>
 <tr>
 <td><code>COUNCIL_CONFIG</code></td>
-<td>Path to custom config YAML</td>
+<td>Custom persona config path</td>
 <td><code>~/.hermes-council/config.yaml</code></td>
 </tr>
+<tr>
+<td><code>COUNCIL_EVIDENCE_SEARCH</code></td>
+<td>Enable web search evidence retrieval</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>COUNCIL_EVIDENCE_TIMEOUT</code></td>
+<td>Evidence fetch timeout in seconds</td>
+<td><code>8</code></td>
+</tr>
+<tr>
+<td><code>COUNCIL_AUDIT_LOG</code></td>
+<td>Write local JSON audit records</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>COUNCIL_AUDIT_DIR</code></td>
+<td>Audit record directory</td>
+<td><code>~/.hermes-council/audit</code></td>
+</tr>
 </tbody></table>
-<h5>Custom Personas</h5>
+<h3>Personas</h3>
+<table>
+<thead>
+<tr>
+<th>Persona</th>
+<th>Tradition</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Advocate</td>
+<td>Steel-manning</td>
+<td>Builds the strongest case for the proposal</td>
+</tr>
+<tr>
+<td>Skeptic</td>
+<td>Popperian falsificationism</td>
+<td>Finds the observation that would kill the claim</td>
+</tr>
+<tr>
+<td>Oracle</td>
+<td>Empirical base-rate reasoning</td>
+<td>Grounds the debate in history and data</td>
+</tr>
+<tr>
+<td>Contrarian</td>
+<td>Kuhnian paradigm critique</td>
+<td>Rejects the framing and proposes alternatives</td>
+</tr>
+<tr>
+<td>Arbiter</td>
+<td>Bayesian synthesis</td>
+<td>Updates on all arguments and emits the final verdict</td>
+</tr>
+</tbody></table>
+<h4>Custom Personas</h4>
 <p>Create <code>~/.hermes-council/config.yaml</code>:</p>
 <pre><code class="language-yaml">personas:
   security_analyst:
@@ -251,85 +537,90 @@
       rigor: 0.3
     tags: [&quot;security&quot;, &quot;adversarial&quot;]
 </code></pre>
-<p>Custom personas merge with the 5 defaults. Use the same name to override a default.</p>
-<h5>The Five Personas</h5>
-<table>
-<thead>
-<tr>
-<th>Persona</th>
-<th>Tradition</th>
-<th>Role</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>Advocate</strong></td>
-<td>Steel-manning</td>
-<td>Builds the strongest case FOR the position</td>
-</tr>
-<tr>
-<td><strong>Skeptic</strong></td>
-<td>Popperian falsificationism</td>
-<td>Finds the observation that kills the claim</td>
-</tr>
-<tr>
-<td><strong>Oracle</strong></td>
-<td>Empirical base-rate reasoning</td>
-<td>Grounds debate in historical data and statistics</td>
-</tr>
-<tr>
-<td><strong>Contrarian</strong></td>
-<td>Kuhnian paradigm critique</td>
-<td>Rejects the framing, proposes alternative paradigms</td>
-</tr>
-<tr>
-<td><strong>Arbiter</strong></td>
-<td>Bayesian synthesis</td>
-<td>Synthesizes all views with explicit prior/posterior updates</td>
-</tr>
-</tbody></table>
-<h5>Skills</h5>
-<p>Install council skills for hermes-agent:</p>
-<pre><code class="language-bash">hermes-council install-skills
+<p>Custom personas merge with the defaults. Use the same name to override a default.</p>
+<h3>Project Layout</h3>
+<pre><code class="language-text">hermes-council/
+  src/hermes_council/
+    server.py          # FastMCP stdio server and public tool handlers
+    deliberation.py    # persona orchestration, modes, JSON negotiation, DPO pairs
+    evidence.py        # URL/search evidence retrieval and SSRF guards
+    audit.py           # optional local JSON verdict logs
+    client.py          # provider config and AsyncOpenAI singleton
+    personas.py        # default and custom persona definitions
+    schemas.py         # Pydantic models for structured model output
+    parsing.py         # fallback text parsers for non-JSON providers
+    cli.py             # skill installer
+    rl/evaluator.py    # direct evaluator API for reward and DPO workflows
+  skills/council/      # packaged Hermes skill definitions
+  examples/            # Atropos/Ouroboros evaluator example
+  tests/               # unit, integration, packaging, and MCP runtime tests
+  docs/plans/          # original design and implementation notes
 </code></pre>
-<p>This copies skill definitions to <code>~/.hermes/skills/council/</code>:</p>
-<ul>
-<li><code>multi-perspective-analysis</code> — Full council deliberation workflow</li>
-<li><code>bayesian-synthesis</code> — Bayesian reasoning and evidence synthesis</li>
-<li><code>adversarial-critique</code> — Stress-testing and safety gating</li>
-</ul>
-<h5>RL Integration</h5>
-<h6>CouncilEvaluator</h6>
-<p>Use the council as a reward signal for RL training:</p>
-<pre><code class="language-python">from hermes_council.rl.evaluator import CouncilEvaluator
-
-evaluator = CouncilEvaluator(model=&quot;nousresearch/hermes-3-llama-3.1-70b&quot;)
-
-# Evaluate agent output
-verdict = await evaluator.evaluate(
-    content=agent_output,
-    question=&quot;Research question here&quot;,
-    criteria=[&quot;accuracy&quot;, &quot;depth&quot;, &quot;evidence&quot;, &quot;falsifiability&quot;],
-)
-
-# Get normalized reward (0.0-1.0)
-reward = evaluator.normalized_reward(verdict)
-
-# Extract DPO preference pairs
-dpo_pairs = evaluator.extract_dpo_pairs(verdict)
-</code></pre>
-<h6>OuroborosEnv</h6>
-<p>An example Atropos RL environment is provided in <code>examples/ouroboros_env.py</code>. Copy it into your hermes-agent installation:</p>
-<pre><code class="language-bash">cp examples/ouroboros_env.py /path/to/hermes-agent/environments/
-cp examples/ouroboros.yaml /path/to/hermes-agent/datagen-config-examples/
-</code></pre>
-<h5>Development</h5>
+<h3>Development</h3>
 <pre><code class="language-bash">git clone https://github.com/Ridwannurudeen/hermes-council.git
 cd hermes-council
 pip install -e &quot;.[dev]&quot;
-pytest
+python -m pytest -q
 </code></pre>
-<h5>License</h5>
-<p>MIT</p>
+<p>Useful checks:</p>
+<pre><code class="language-bash">python -m pytest -q
+python -m ruff check src tests
+python -m pytest --cov=hermes_council --cov-report=term-missing -q
+python -m pip wheel --no-deps . -w dist
+</code></pre>
+<h3>Verification</h3>
+<p>The test suite covers:</p>
+<ul>
+<li>MCP stdio server startup via <code>python -m hermes_council.server</code></li>
+<li>tool discovery for all council tools</li>
+<li>Hermes-compatible no-key failure behavior</li>
+<li>gate verdict semantics</li>
+<li>evidence retrieval and private-network URL blocking</li>
+<li>packaged skill installation from a wheel</li>
+<li>audit log writing</li>
+<li>custom persona loading</li>
+<li>JSON-mode and fallback parsing paths</li>
+</ul>
+<h3>Honest Limitations</h3>
+<ul>
+<li>A real provider key is required for actual model-backed verdicts.</li>
+<li>DuckDuckGo HTML search can change; supplied URLs are more reliable than search
+results.</li>
+<li><code>verified_sources</code> proves retrieval, not truth. The Arbiter still weighs the
+evidence.</li>
+<li>The server is stdio MCP only. There is no hosted HTTP service in this repo.</li>
+<li>The council adds latency and token cost. Use <code>fast</code> mode for routine preflight.</li>
+<li>Model compliance with JSON fields depends on provider/model behavior, though
+fallback parsing is implemented.</li>
+</ul>
+<h3>Roadmap</h3>
+<ul>
+<li><input disabled="" type="checkbox"> Add a live-provider smoke workflow that runs only when a CI secret is present.</li>
+<li><input disabled="" type="checkbox"> Add source ranking and citation-quality scoring for evidence snippets.</li>
+<li><input disabled="" type="checkbox"> Add a compact verdict-only mode for very low-latency gates.</li>
+<li><input disabled="" type="checkbox"> Add optional HTTP/streamable MCP transport.</li>
+<li><input disabled="" type="checkbox"> Add first-class examples for Hermes Agent plan review and diff review sessions.</li>
+<li><input disabled="" type="checkbox"> Add benchmark fixtures comparing council review against single-model critique.</li>
+</ul>
+<h3>Origin</h3>
+<p>This project was built in response to feedback on
+<a href="https://github.com/NousResearch/hermes-agent/pull/848">hermes-agent PR #848</a>,
+where the adversarial council concept was proposed as a core subsystem. The
+recommendation was to rebuild it as an external MCP server to avoid core tool
+injection, provider bypass, hidden LLM costs, and brittle parsing.</p>
+<p>Related integration PR:
+<a href="https://github.com/NousResearch/hermes-agent/pull/1972">NousResearch/hermes-agent#1972</a>.</p>
+<h3>Contributing</h3>
+<ul>
+<li>Keep MCP tool outputs structured and backward-compatible where possible.</li>
+<li>Add tests for every new tool field or runtime boundary.</li>
+<li>Use <code>python -m hermes_council.server</code> in docs and integration examples.</li>
+<li>Keep provider-specific behavior behind OpenAI-compatible client settings.</li>
+<li>Run tests, lint, coverage, and wheel packaging checks before opening a PR.</li>
+</ul>
+<h3>License</h3>
+<p>MIT. See <a href="LICENSE">LICENSE</a>.</p>
+
   </section>
 </details>
 
@@ -341,19 +632,19 @@ pytest
   <div>
     <div class="related-list">
       <a class="related-row" href="/projects/raulvidis/hermes-android">
-        <div class="stars">★ 38</div>
+        <div class="stars">★ 132</div>
         <div class="name"><span class="org">raulvidis /</span> hermes-android</div>
       </a>
       <a class="related-row" href="/projects/teknium1/hermes-miniverse">
-        <div class="stars">★ 8</div>
+        <div class="stars">★ 23</div>
         <div class="name"><span class="org">teknium1 /</span> hermes-miniverse</div>
       </a>
       <a class="related-row" href="/projects/marlandoj/zouroboros-swarm-executors">
-        <div class="stars">★ 4</div>
+        <div class="stars">★ 6</div>
         <div class="name"><span class="org">marlandoj /</span> zouroboros-swarm-executors</div>
       </a>
       <a class="related-row" href="/projects/gizdusum/hermes-blockchain-oracle">
-        <div class="stars">★ 3</div>
+        <div class="stars">★ 4</div>
         <div class="name"><span class="org">gizdusum /</span> hermes-blockchain-oracle</div>
       </a>
       <a class="related-row" href="/projects/kevinmarmstrong/hermes-claude-code-rc">
@@ -361,11 +652,11 @@ pytest
         <div class="name"><span class="org">kevinmarmstrong /</span> hermes-claude-code-rc</div>
       </a>
       <a class="related-row" href="/projects/AaronWong1999/hermesclaw">
-        <div class="stars">★ 112</div>
+        <div class="stars">★ 327</div>
         <div class="name"><span class="org">AaronWong1999 /</span> hermesclaw</div>
       </a>
       <a class="related-row" href="/projects/Codename-11/hermes-relay">
-        <div class="stars">★ 10</div>
+        <div class="stars">★ 21</div>
         <div class="name"><span class="org">Codename-11 /</span> hermes-relay</div>
       </a>
     </div>
