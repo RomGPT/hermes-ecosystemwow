@@ -6,13 +6,13 @@
     <atom:link href="https://hermesatlas.com/rss.xml" rel="self" type="application/rss+xml" />
     <description>Newly added community-built tools, skills, plugins, and integrations for Nous Research's Hermes Agent. Updated daily.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 07 May 2026 07:31:11 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2026 10:11:34 GMT</lastBuildDate>
     <generator>hermesatlas.com/scripts/build-pages.js</generator>
     <item>
       <title>hermes-nextcloud (Skills &amp; Skill Registries)</title>
       <link>https://hermesatlas.com/projects/adnw-vinc/hermes-nextcloud</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/adnw-vinc/hermes-nextcloud</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Skills &amp; Skill Registries</category>
       <description>This project is a Hermes Agent skill that enables direct interaction with self-hosted Nextcloud instances for personal data management. It interfaces with Nextcloud using WebDAV, CalDAV, CardDAV, and the Notes API to perform operations without requiring a browser or third-party sync services. Users can manage files, edit notes, schedule calendar events, track tasks, and search contacts through a command-line interface. The skill prioritizes security by utilizing Nextcloud App Passwords and stori</description>
     </item>
@@ -20,7 +20,7 @@
       <title>honcho (Memory &amp; Context)</title>
       <link>https://hermesatlas.com/projects/plastic-labs/honcho</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/plastic-labs/honcho</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Memory &amp; Context</category>
       <description>Honcho is an open-source memory library and managed service designed to build stateful agents that maintain long-term context about users, groups, and ideas. It functions as a continual learning system that captures interaction history and applies reasoning to derive insights about entities as they evolve over time. The system provides tools for session management, natural language querying of user state, and automatic conversion of context into model-ready formats like OpenAI's message schema. </description>
     </item>
@@ -28,7 +28,7 @@
       <title>hermeshq (Deployment &amp; Infra)</title>
       <link>https://hermesatlas.com/projects/jpalmae/hermeshq</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/jpalmae/hermeshq</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Deployment &amp; Infra</category>
       <description>HermesHQ is a Docker-first control plane designed to orchestrate and manage multiple Hermes Agent instances from a single web application. It acts as an operational layer over the Hermes execution engine, providing a centralized interface for task dispatching, scheduling, and multi-agent delegation. The platform includes a secrets vault, RBAC, and a runtime ledger to track activity across separate agent workspaces. It also supports managed integrations for AWS Bedrock, OpenAI-compatible endpoint</description>
     </item>
@@ -36,7 +36,7 @@
       <title>learn-hermes-agent (Guides &amp; Docs)</title>
       <link>https://hermesatlas.com/projects/longyunfeigu/learn-hermes-agent</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/longyunfeigu/learn-hermes-agent</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Guides &amp; Docs</category>
       <description>Learn Hermes Agent is a 27-chapter hands-on tutorial for building production-grade autonomous AI agents from scratch using Python. The curriculum guides developers through implementing a core agent loop, tool registration, session persistence with SQLite, and context compression. It covers advanced infrastructure including multi-platform gateways for Telegram and Discord, Model Context Protocol (MCP) integration, and RL-based self-evolution. The project provides runnable reference implementation</description>
     </item>
@@ -44,7 +44,7 @@
       <title>hermes-agent-guide (Guides &amp; Docs)</title>
       <link>https://hermesatlas.com/projects/jwangkun/hermes-agent-guide</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/jwangkun/hermes-agent-guide</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Guides &amp; Docs</category>
       <description>The Hermes Agent Guide is a comprehensive Chinese-language documentation project designed to bridge the gap between fragmented information and practical implementation of the Hermes Agent framework. It provides a structured 16-book knowledge map covering the system's five-layer architecture, three-tier memory systems, and the integration of over 47 built-in tools. The guide details technical workflows for local and cloud deployment, MCP protocol automation, and multi-platform connectivity with s</description>
     </item>
@@ -52,7 +52,7 @@
       <title>agent-browser-mcp (Plugins &amp; Extensions)</title>
       <link>https://hermesatlas.com/projects/335234131/agent-browser-mcp</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/335234131/agent-browser-mcp</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Plugins &amp; Extensions</category>
       <description>Agent-browser-mcp is a Model Context Protocol server that enables AI agents to interact directly with a user's active Chrome browser session rather than a sandboxed environment. It works through a local bridge and a Chrome extension to maintain existing login states, cookies, and open tabs while providing low-level control. The project allows agents to perform page scanning, execute JavaScript, and issue Chrome DevTools Protocol (CDP) commands. It also supports physical hardware interaction, inc</description>
     </item>
@@ -60,7 +60,7 @@
       <title>ContextPilot (Memory &amp; Context)</title>
       <link>https://hermesatlas.com/projects/EfficientContext/ContextPilot</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/EfficientContext/ContextPilot</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Memory &amp; Context</category>
       <description>ContextPilot is an inference optimization layer designed to accelerate long-context LLM workloads by maximizing KV cache reuse. It utilizes a Context Index to identify overlapping data across requests, reordering and deduplicating context blocks to align shared content into common prefixes. This approach reduces redundant computation and token usage without compromising reasoning quality. The system integrates as a drop-in solution for vLLM, SGLang, llama.cpp, and various agentic frameworks like</description>
     </item>
@@ -68,7 +68,7 @@
       <title>super-hermes (Skills &amp; Skill Registries)</title>
       <link>https://hermesatlas.com/projects/Cranot/super-hermes</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/Cranot/super-hermes</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Skills &amp; Skill Registries</category>
       <description>Super Hermes is a skill registry for the Hermes Agent that enables models to generate their own analytical frameworks, or prisms, for deep code and document inspection. It works by instructing the agent to write specific thinking instructions before execution, allowing it to derive structural trade-offs and conservation laws rather than just identifying surface-level bugs. The system includes specialized commands like /prism-reflect, which provide a constraint report detailing what the analysis </description>
     </item>
@@ -76,7 +76,7 @@
       <title>portable-hermes-agent (Workspaces &amp; GUIs)</title>
       <link>https://hermesatlas.com/projects/aivrar/portable-hermes-agent</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/aivrar/portable-hermes-agent</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Workspaces &amp; GUIs</category>
       <description>Portable Hermes Agent is a standalone Windows desktop application that provides a graphical interface for the Hermes Agent framework without requiring Docker, administrator rights, or system-wide installations. It operates through an embedded Python environment and connects to local models via LM Studio or cloud providers like OpenRouter. The platform integrates over 100 tools for tasks including music generation, text-to-speech, and ComfyUI image creation. Users can also build custom API wrappe</description>
     </item>
@@ -84,7 +84,7 @@
       <title>SkillClaw (Skills &amp; Skill Registries)</title>
       <link>https://hermesatlas.com/projects/AMAP-ML/SkillClaw</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/AMAP-ML/SkillClaw</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Skills &amp; Skill Registries</category>
       <description>SkillClaw is an agentic skill evolution framework that automates the refinement and management of AI agent capabilities based on real-world interactions. It operates as a background process that deduplicates, improves, and merges skills across multiple sessions, devices, and users to create a unified library. The system allows different agents to cross-pollinate knowledge, ensuring that experience gained in one context—such as a specific coding task—benefits all connected instances. It natively </description>
     </item>
@@ -92,7 +92,7 @@
       <title>mnemosyne (Memory &amp; Context)</title>
       <link>https://hermesatlas.com/projects/AxDSan/mnemosyne</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/AxDSan/mnemosyne</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Memory &amp; Context</category>
       <description>Mnemosyne is a local-first memory system for the Hermes Agent framework that provides private, zero-dependency storage for conversations and knowledge. It utilizes SQLite with native vector search and FTS5 to eliminate the need for external databases, API keys, or network calls. The system implements a three-tier architecture consisting of working, episodic, and scratchpad memory to manage long-term context. By running in-process, it achieves sub-millisecond latency for read and write operations</description>
     </item>
@@ -100,7 +100,7 @@
       <title>keep (Memory &amp; Context)</title>
       <link>https://hermesatlas.com/projects/keepnotes-ai/keep</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/keepnotes-ai/keep</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Memory &amp; Context</category>
       <description>Keep is a reflective memory system for AI agents that enables long-term learning and contextual awareness. It processes diverse inputs—including URLs, codebases, and media files—by summarizing, embedding, and organizing them into a navigable graph of &quot;edge tags.&quot; The system automatically surfaces relevant past learnings and commitments during agent sessions to improve decision-making. It supports fully local operation via Ollama or MLX, as well as cloud-hosted and API-based configurations.</description>
     </item>
@@ -108,7 +108,7 @@
       <title>hermes-web-ui (Workspaces &amp; GUIs)</title>
       <link>https://hermesatlas.com/projects/EKKOLearnAI/hermes-web-ui</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/EKKOLearnAI/hermes-web-ui</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Workspaces &amp; GUIs</category>
       <description>Hermes Web UI is a comprehensive management dashboard for the Hermes Agent ecosystem that provides a graphical interface for AI interaction and system administration. It centralizes multi-platform channel configuration, session management, and usage analytics into a single responsive web environment. Users can monitor token costs, schedule cron jobs, and manage files across local or remote backends like Docker and SSH. The interface also includes specialized tools for group chat orchestration, m</description>
     </item>
@@ -116,7 +116,7 @@
       <title>hermes-otel (Plugins &amp; Extensions)</title>
       <link>https://hermesatlas.com/projects/briancaffey/hermes-otel</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/briancaffey/hermes-otel</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Plugins &amp; Extensions</category>
       <description>hermes-otel is an OpenTelemetry plugin for the Hermes Agent that enables comprehensive observability for LLM workflows. It automatically captures and exports model invocations, tool calls, and API requests as OTel spans to any OTLP-compatible backend. The plugin supports a wide range of observability platforms including Phoenix, Langfuse, and SigNoz, allowing developers to monitor traces, metrics, and logs. It features a flexible configuration system that supports both single-backend environment</description>
     </item>
@@ -124,7 +124,7 @@
       <title>hermes-telegram-miniapp (Workspaces &amp; GUIs)</title>
       <link>https://hermesatlas.com/projects/clawvader-tech/hermes-telegram-miniapp</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/clawvader-tech/hermes-telegram-miniapp</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Workspaces &amp; GUIs</category>
       <description>Hermes Telegram Mini App is a React-based terminal interface that allows users to manage and interact with Hermes agents directly within the Telegram ecosystem. It establishes a mobile-first workspace for executing slash commands, streaming chat responses, and monitoring system health through a dark-mode dashboard. The application integrates advanced features like background agent spawning, automated OCR for file attachments, and a cron job management system. Security is handled via dual HMAC-SH</description>
     </item>
@@ -132,7 +132,7 @@
       <title>hermes-relay (Integrations &amp; Bridges)</title>
       <link>https://hermesatlas.com/projects/Codename-11/hermes-relay</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/Codename-11/hermes-relay</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Integrations &amp; Bridges</category>
       <description>Hermes-Relay is a companion suite that enables remote interaction with a server-deployed Hermes agent via Android and desktop interfaces. It uses a WebSocket Secure (WSS) relay and a server-side plugin to facilitate communication between the remote agent and local devices. The Android app allows for mobile chat and device control, including screen reading and automated actions like swiping or typing. The desktop CLI provides a local-feeling terminal experience, allowing the remote agent to execu</description>
     </item>
@@ -140,7 +140,7 @@
       <title>hermes-lcm (Memory &amp; Context)</title>
       <link>https://hermesatlas.com/projects/stephenschoettler/hermes-lcm</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/stephenschoettler/hermes-lcm</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Memory &amp; Context</category>
       <description>Hermes-LCM is a context management plugin for Hermes Agent that prevents information loss during long-running conversations. It replaces standard flat summarization with a hierarchical Directed Acyclic Graph (DAG) that compacts old messages into depth-aware summary nodes. This architecture allows the agent to maintain a bounded active context while using specialized tools to drill back into raw message data stored in a local SQLite database. By integrating recall directly into the context engine</description>
     </item>
@@ -148,7 +148,7 @@
       <title>hermesclaw (Integrations &amp; Bridges)</title>
       <link>https://hermesatlas.com/projects/AaronWong1999/hermesclaw</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/AaronWong1999/hermesclaw</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Integrations &amp; Bridges</category>
       <description>HermesClaw is an integration bridge that allows Hermes Agent, OpenClaw, and OpenCode to operate simultaneously on a single WeChat account. It acts as a central iLink poller and routes messages through local proxy servers to prevent the 403 errors and connection drops caused by multiple gateways competing for the same API token. This architecture enables users to switch between different AI assistants or trigger them concurrently using commands like /hermes, /openclaw, or /three. The tool also fa</description>
     </item>
@@ -156,7 +156,7 @@
       <title>hermes-claude-code-rc (Integrations &amp; Bridges)</title>
       <link>https://hermesatlas.com/projects/kevinmarmstrong/hermes-claude-code-rc</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/kevinmarmstrong/hermes-claude-code-rc</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Integrations &amp; Bridges</category>
       <description>This Hermes Agent plugin enables remote management of Claude Code sessions through a Telegram interface. It bridges the gap between mobile devices and local filesystems by allowing users to initiate authenticated remote control sessions on their host machine via slash commands. The plugin captures the resulting session URL and returns it to the user, enabling full access to local tools and databases from the Claude mobile app. Beyond session management, it supports headless command execution and</description>
     </item>
@@ -164,7 +164,7 @@
       <title>hermes-ui (Workspaces &amp; GUIs)</title>
       <link>https://hermesatlas.com/projects/pyrate-llama/hermes-ui</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/pyrate-llama/hermes-ui</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Workspaces &amp; GUIs</category>
       <description>Hermes UI is a glassmorphic web interface that serves as a centralized command center for managing the self-hosted Hermes Agent. Built as a single-file React 18 application, it communicates with the agent via a lightweight Python proxy server to provide real-time operational visibility. The interface includes a Kanban-style task board, a workspace-aware file browser, and a chat system capable of rendering Mermaid diagrams and streaming logs. Users can manage skills, monitor system health, and ex</description>
     </item>
@@ -172,7 +172,7 @@
       <title>gbrain (Memory &amp; Context)</title>
       <link>https://hermesatlas.com/projects/garrytan/gbrain</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/garrytan/gbrain</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Memory &amp; Context</category>
       <description>GBrain is a persistent memory and knowledge graph system designed to prevent AI agents from losing context over time. It utilizes a self-wiring graph architecture that automatically extracts entity references and typed links from ingested data without requiring additional LLM calls. The system features hybrid search, backlink-boosted ranking, and a structured timeline to manage thousands of pages, people, and companies. It integrates with agent platforms like Hermes Agent and OpenClaw via MCP, p</description>
     </item>
@@ -180,7 +180,7 @@
       <title>hermes-webui (Workspaces &amp; GUIs)</title>
       <link>https://hermesatlas.com/projects/nesquena/hermes-webui</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/nesquena/hermes-webui</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Workspaces &amp; GUIs</category>
       <description>Hermes WebUI is a lightweight browser interface for the Hermes Agent that provides a graphical alternative to the terminal. It is built using Python and vanilla JavaScript without the need for a build step, framework, or bundler. The interface features a three-panel layout for managing sessions, chat, and workspace files with full parity to the CLI experience. It integrates directly with existing Hermes agent setups and models, allowing secure access via SSH tunnels.</description>
     </item>
@@ -188,7 +188,7 @@
       <title>clawshell (Plugins &amp; Extensions)</title>
       <link>https://hermesatlas.com/projects/clawshell/clawshell</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/clawshell/clawshell</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Plugins &amp; Extensions</category>
       <description>ClawShell is a security-privileged process that acts as a safety harness for the Hermes Agent ecosystem by protecting sensitive credentials and PII. It functions as a proxy between the agent and upstream LLM providers, swapping virtual keys for real ones stored in a restricted directory to ensure the agent never has direct access to credentials. The system performs Data Loss Prevention (DLP) scanning to redact or block sensitive information in request and response bodies. Additionally, it provid</description>
     </item>
@@ -196,7 +196,7 @@
       <title>hermes-desktop (Workspaces &amp; GUIs)</title>
       <link>https://hermesatlas.com/projects/dodo-reach/hermes-desktop</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/dodo-reach/hermes-desktop</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Workspaces &amp; GUIs</category>
       <description>Hermes Desktop is a native macOS workspace designed to provide a focused interface for managing Hermes Agent via SSH. It functions by connecting directly to remote hosts without using a gateway API, local mirrors, or additional daemon services on the host. This approach ensures the remote machine remains the single source of truth for all session data, files, and configurations. Users can manage Kanban boards, edit remote files, and interact with a built-in terminal within a single, profile-awar</description>
     </item>
@@ -204,7 +204,7 @@
       <title>hermes-ecosystem (Guides &amp; Docs)</title>
       <link>https://hermesatlas.com/projects/ksimback/hermes-ecosystem</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/ksimback/hermes-ecosystem</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Guides &amp; Docs</category>
       <description>Hermes Atlas is a community-curated directory and ecosystem map for the Hermes Agent by Nous Research. It aggregates over 80 quality-filtered repositories, including skills, plugins, and deployment templates, using a vanilla JavaScript frontend and Vercel serverless functions. The platform features a RAG-powered chatbot that answers technical questions grounded in 27 research files using hybrid retrieval and OpenRouter LLMs. Users can search and filter the ecosystem while viewing live GitHub sta</description>
     </item>
@@ -212,7 +212,7 @@
       <title>hermes-control-interface (Workspaces &amp; GUIs)</title>
       <link>https://hermesatlas.com/projects/xaspx/hermes-control-interface</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/xaspx/hermes-control-interface</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Workspaces &amp; GUIs</category>
       <description>The Hermes Control Interface is a self-hosted web dashboard designed to manage the Hermes AI agent stack through a centralized graphical interface. It utilizes a Node.js and Express backend with WebSockets to provide real-time terminal access, multi-agent gateway management, and live log streaming. Users can configure over 80 agent settings, monitor token usage analytics, and manage scheduled cron jobs across multiple profiles. The platform also includes a secure file explorer, a revamped chat i</description>
     </item>
@@ -220,7 +220,7 @@
       <title>hermes-skill-distillation (Forks &amp; Derivatives)</title>
       <link>https://hermesatlas.com/projects/beardthelion/hermes-skill-distillation</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/beardthelion/hermes-skill-distillation</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Forks &amp; Derivatives</category>
       <description>This project provides a skill distillation pipeline designed to fine-tune Hermes 4 models using real-world agentic trajectories. It captures tool-use sessions from the Hermes agent and converts them into high-quality training data through a specialized environment and automated scoring system. The pipeline supports both SFT-ready JSONL exports and live reinforcement learning via integration with the Atropos training framework. By focusing on grounded tasks like coding, web research, and system a</description>
     </item>
@@ -228,7 +228,7 @@
       <title>hermes-alpha (Forks &amp; Derivatives)</title>
       <link>https://hermesatlas.com/projects/kaminocorp/hermes-alpha</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/kaminocorp/hermes-alpha</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Forks &amp; Derivatives</category>
       <description>Hermes Alpha is an experimental framework designed to test if a stock AI agent can autonomously bootstrap and manage a bug bounty system from first principles. The architecture utilizes a two-agent loop where a persistent 'Overseer' agent builds, deploys, and refines an ephemeral 'Hunter' agent tasked with finding software vulnerabilities. By providing the agent with only a Linux terminal and an identity document rather than custom tools, the project evaluates the self-improvement capabilities o</description>
     </item>
@@ -236,7 +236,7 @@
       <title>hermes-agent-camel (Forks &amp; Derivatives)</title>
       <link>https://hermesatlas.com/projects/nativ3ai/hermes-agent-camel</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/nativ3ai/hermes-agent-camel</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Forks &amp; Derivatives</category>
       <description>This project is a derivative of Hermes Agent that integrates CaMeL trust boundaries to mitigate risks from indirect prompt injection during autonomous execution. It implements an opt-in runtime guard that monitors or enforces security policies by gating sensitive tool side effects against verified user intent. The system maintains the core Hermes features, including a self-improving learning loop, cross-platform messaging support, and a built-in cron scheduler for automated tasks. Users can togg</description>
     </item>
@@ -244,7 +244,7 @@
       <title>HermesWiki (Guides &amp; Docs)</title>
       <link>https://hermesatlas.com/projects/martymcenroe/HermesWiki</link>
       <guid isPermaLink="true">https://hermesatlas.com/projects/martymcenroe/HermesWiki</guid>
-      <pubDate>Wed, 06 May 2026 10:56:54 GMT</pubDate>
+      <pubDate>Thu, 07 May 2026 10:09:48 GMT</pubDate>
       <category>Guides &amp; Docs</category>
       <description>HermesWiki is a centralized documentation repository designed to support users of the Hermes autonomous AI email agent. It serves as a knowledge base that provides structured guidance on implementing and managing the agent's core functionalities. The resource offers specific deployment patterns and practical recipes to help users configure the system for their specific needs. By consolidating these technical instructions, the project ensures that developers have a reliable reference for optimizi</description>
     </item>

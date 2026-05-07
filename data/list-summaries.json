@@ -60,15 +60,15 @@
   },
   "multi-agent-frameworks": {
     "entries": {
-      "builderz-labs/mission-control": "This self-hosted orchestration platform manages multi-agent workflows across frameworks like CrewAI and LangGraph using a zero-dependency SQLite backend. It is essential for Hermes users who require cost monitoring and a human-in-the-loop 'Aegis' system for manual task sign-off.",
-      "swarmclawai/swarmclaw": "Swarmclaw enables the creation of autonomous agent swarms that utilize durable memory and hierarchical delegation across over 23 LLM providers. It stands out by offering deterministic cron scheduling, allowing Hermes-powered agents to execute recurring tasks autonomously.",
-      "howdymary/hermes-agent-metaharness": "This framework focuses on meta-optimization by using an automated outer-loop search to evolve and improve harness code for Hermes Agent. It orchestrates complex benchmark evaluations, such as TBLite, while tracking performance frontiers through structured candidate mutation.",
-      "runtimenoteslabs/gladiator": "Gladiator creates a competitive arena where two autonomous AI companies, powered by Hermes and Paperclip, compete for GitHub stars. The system orchestrates nine specialized agents and provides a real-time dashboard to visualize task execution and scoreboard metrics.",
-      "1ilkhamov/opencode-hermes-multiagent": "This project coordinates a massive pipeline of 17 specialized agents to handle complex software lifecycles from research to infrastructure. It distinguishes itself through mandatory quality gates, where dedicated reviewer and tester agents must approve work before it proceeds.",
-      "supermodeltools/bigiron": "Bigiron implements an AI-native SDLC by providing Hermes with structural code graphs via the Supermodel MCP. It enforces architectural integrity across an eight-phase autonomous workflow by using automated graph-diff gates to validate every code change.",
-      "Rainhoole/hermes-agent-acp-skill": "This utility implements ACP-style delegation to route tasks between Hermes, Codex, and Claude Code while preventing context pollution. It prioritizes safety and efficiency by enforcing configurable timeouts and character limits on isolated subagent workflows."
+      "builderz-labs/mission-control": "A self-hosted orchestration platform that manages multi-agent workflows across frameworks like CrewAI and AutoGen using a zero-dependency SQLite backend. It integrates the Aegis review system to provide human-in-the-loop oversight and spend monitoring for complex task dispatching.",
+      "swarmclawai/swarmclaw": "This framework enables the creation of autonomous agent swarms with visual organizational charts and durable memory across 23+ providers, including Hermes and Ollama. It distinguishes itself by allowing agents to learn new skills directly from conversation history while managing delegation within the swarm.",
+      "howdymary/hermes-agent-metaharness": "A specialized meta-optimization tool that uses an automated outer-loop search to evolve and improve harness code for Hermes Agent. It orchestrates TBLite and TB2 benchmark evaluations, tracking performance frontiers through structured candidate mutation and comparison.",
+      "runtimenoteslabs/gladiator": "An agent-vs-agent arena where two competing AI companies, powered by Hermes Agent, battle for GitHub stars. The platform features a real-time dashboard to visualize task execution and scoreboard metrics as nine autonomous agents execute code and learning cycles.",
+      "1ilkhamov/opencode-hermes-multiagent": "A comprehensive pipeline that coordinates 17 specialized agents through a master orchestrator to handle research, implementation, and infrastructure tasks. It enforces strict quality control by requiring mandatory sign-offs from dedicated reviewer and tester agents at every stage.",
+      "supermodeltools/bigiron": "An AI-native software development lifecycle (SDLC) framework that provides Hermes with structural code graphs via the Supermodel MCP. It automates an eight-phase workflow, using graph-diff gates to ensure architectural integrity from initial planning to final health checks.",
+      "Rainhoole/hermes-agent-acp-skill": "A delegation-focused framework that routes tasks between Hermes, Codex, and Claude Code while preventing context pollution through isolated workflows. It prioritizes operational safety by enforcing configurable timeouts and strict output character limits during agent handoffs."
     },
-    "generatedAt": "2026-05-07T07:29:59.846Z",
+    "generatedAt": "2026-05-07T10:10:51.253Z",
     "version": 1
   },
   "developer-tools": {

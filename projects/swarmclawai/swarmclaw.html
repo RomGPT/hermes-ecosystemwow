@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/swarmclawai/swarmclaw#software",
   "name": "swarmclaw",
-  "description": "SwarmClaw is an open-source, self-hosted runtime and framework designed for orchestrating autonomous AI agent swarms. It operates as a centralized dashboard where users can manage agent memory, runtime skills, and delegation across more than 23 LLM providers. The platform supports complex workflows through scheduled tasks, heartbeats, and a conversation-to-skill learning system. It integrates with various tools including MCP, Docker sandboxes for browser execution, and specialized CLI backends l",
+  "description": "SwarmClaw is a self-hosted runtime and framework designed for orchestrating autonomous AI agent swarms. It functions as a multi-agent dashboard where users can manage delegation, durable memory, and scheduled tasks across more than 23 LLM providers. The platform enables agents to learn new skills from conversation history and integrates with external tools via the Model Context Protocol (MCP). It supports diverse execution environments including local CLI backends, Docker sandboxes, and OpenClaw",
   "url": "https://hermesatlas.com/projects/swarmclawai/swarmclaw",
   "codeRepository": "https://github.com/swarmclawai/swarmclaw",
   "applicationCategory": "DeveloperApplication",
@@ -47,13 +47,13 @@
     "name": "swarmclawai",
     "url": "https://github.com/swarmclawai"
   },
-  "dateModified": "2026-05-06T19:50:12.000Z",
+  "dateModified": "2026-05-07T09:17:54.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 463
+    "userInteractionCount": 464
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -112,11 +112,11 @@
   <p class="project-desc">Open-source self-hosted AI agent runtime and multi-agent framework for autonomous agent swarms. Agent memory, MCP tools, schedules, delegation, and 23+ LLM providers (Claude, GPT, Gemini, OpenRouter, Ollama). A practical Claude Code and LangChain alternative.</p>
 
   <div class="meta-row">
-    <span class="stars">★ 463</span>
+    <span class="stars">★ 464</span>
     <span><span class="meta-label">lang</span>TypeScript</span>
     <span><span class="meta-label">license</span>MIT</span>
     
-    <span><span class="meta-label">updated</span>2026-05-06</span>
+    <span><span class="meta-label">updated</span>2026-05-07</span>
   </div>
 
   <div class="actions">
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">SwarmClaw is an open-source, self-hosted runtime and framework designed for orchestrating autonomous AI agent swarms. It operates as a centralized dashboard where users can manage agent memory, runtime skills, and delegation across more than 23 LLM providers. The platform supports complex workflows through scheduled tasks, heartbeats, and a conversation-to-skill learning system. It integrates with various tools including MCP, Docker sandboxes for browser execution, and specialized CLI backends like Claude Code and Hermes.</p>
+    <p class="summary-text">SwarmClaw is a self-hosted runtime and framework designed for orchestrating autonomous AI agent swarms. It functions as a multi-agent dashboard where users can manage delegation, durable memory, and scheduled tasks across more than 23 LLM providers. The platform enables agents to learn new skills from conversation history and integrates with external tools via the Model Context Protocol (MCP). It supports diverse execution environments including local CLI backends, Docker sandboxes, and OpenClaw gateways.</p>
     <ul class="summary-highlights">
-      <li>Orchestrates multi-agent swarms with durable memory and delegation</li>
-      <li>Supports 23+ LLM providers including Ollama, OpenAI, and Hermes</li>
-      <li>Features deterministic cron scheduling for autonomous recurring agent tasks</li>
+      <li>Orchestrates multi-agent swarms with delegation and visual org charts</li>
+      <li>Supports 23+ providers including Hermes, Ollama, and OpenRouter</li>
+      <li>Features durable agent memory and conversation-to-skill learning</li>
     </ul>
   </div>
 </section>
@@ -260,12 +260,13 @@ docker compose up -d --build
 <pre><code class="language-bash">clawhub install swarmclaw
 </code></pre>
 <p><a href="https://clawhub.ai/skills/swarmclaw">Browse on ClawHub</a></p>
-<h3>v1.9.23 Highlights</h3>
-<p>Schedule reliability is now more deterministic for recurring autonomous work, especially after restarts or stale stored timing state.</p>
+<h3>v1.9.25 Highlights</h3>
+<p>Gateway lifecycle controls and Slack peer-agent collaboration are now safer for multi-agent operations.</p>
 <ul>
-<li><strong>Cron drift repair.</strong> Active schedules repair stale future cron slots before they skip the nearest run.</li>
-<li><strong>Stable stagger.</strong> Staggered schedules keep a deterministic per-schedule offset.</li>
-<li><strong>Mission continuity.</strong> Schedule-created board tasks keep a persistent mission link across recurring runs.</li>
+<li><strong>Gateway lifecycle controls.</strong> Providers can activate, drain, cordon, or request restart for saved OpenClaw gateways.</li>
+<li><strong>Routing guardrails.</strong> New OpenClaw work skips draining or cordoned gateway profiles, and Operations Pulse flags unavailable gateways.</li>
+<li><strong>CLI lifecycle access.</strong> <code>swarmclaw gateways activate</code>, <code>drain</code>, <code>cordon</code>, and <code>restart</code> now reach the same lifecycle control endpoint as the provider UI.</li>
+<li><strong>Slack peer messages.</strong> Peer bot messages now reach the existing connector policy gates while self-loop messages are still blocked.</li>
 </ul>
 <h3>Hosted Deploys</h3>
 <p>SwarmClaw now ships provider-ready deploy files at the repo root:</p>
@@ -525,6 +526,15 @@ OTEL_EXPORTER_OTLP_HEADERS=Authorization=Bearer your-token
 <p>If you need a trace-specific endpoint, set <code>OTEL_EXPORTER_OTLP_TRACES_ENDPOINT</code> directly instead.</p>
 <p>Operational docs: <a href="https://swarmclaw.ai/docs/observability">https://swarmclaw.ai/docs/observability</a></p>
 <h3>Releases</h3>
+<h4>v1.9.25 Highlights</h4>
+<p>Gateway lifecycle release: saved OpenClaw gateways now have explicit operator lifecycle controls, automatic routing avoids gateways that should not receive new work, and Slack peer-agent messages flow through the existing connector policy gates.</p>
+<ul>
+<li><strong>Gateway lifecycle controls.</strong> Providers can activate, drain, cordon, and request restart for saved OpenClaw gateway profiles.</li>
+<li><strong>Routing guardrails.</strong> OpenClaw route selection skips draining and cordoned profiles, including default, preferred, and pinned gateway paths.</li>
+<li><strong>Operations Pulse awareness.</strong> Cordoned and draining gateways now appear as operator attention items before they surprise a handoff or release check.</li>
+<li><strong>CLI lifecycle access.</strong> <code>swarmclaw gateways activate</code>, <code>drain</code>, <code>cordon</code>, and <code>restart</code> now post the matching lifecycle action for automation and release scripts.</li>
+<li><strong>Slack peer collaboration.</strong> Slack peer-bot messages are no longer dropped before group policy, mention, and self-loop protections run.</li>
+</ul>
 <h4>v1.9.23 Highlights</h4>
 <p>Schedule reliability release: recurring work now repairs stale timing state before it can skip the nearest run, and scheduled board tasks keep mission context across repeat launches.</p>
 <ul>
@@ -765,18 +775,7 @@ OTEL_EXPORTER_OTLP_HEADERS=Authorization=Bearer your-token
 <p>CLI provider usability follow-up for v1.7.0/v1.7.1. The expanded coding-agent roster is now easier to find, configure, and validate from onboarding and setup diagnostics.</p>
 <ul>
 <li><strong>Shared CLI provider registry.</strong> Bespoke and generic CLI providers now share one metadata source for display names, binary names, capabilities, setup defaults, and provider-set behavior, reducing drift across onboarding, runtime routing, setup doctor, and capability prompts.</li>
-<li><strong>Onboarding exposes the full CLI roster.</strong> The setup wizard groups providers by CLI agents, gateways/local runtimes, API providers, and custom endpoints, with search so the 31 extended CLI providers added in v1.7 are usable without digging through settings.</li>
-<li><strong>Connection checks for every CLI provider.</strong> Bespoke CLIs keep auth-aware checks, while generic CLIs verify that the expected binary is on PATH and return actionable install guidance when missing.</li>
-<li><strong>Update banner polish.</strong> Source installs now show the target stable tag/version, remember dismissal per release target, and make the required restart after update explicit.</li>
-<li><strong>macOS desktop note.</strong> macOS builds remain ad-hoc signed and not notarized in this release, so the existing Gatekeeper/quarantine workaround still applies until Developer ID signing is available.</li>
-</ul>
-<h4>v1.7.1 Highlights</h4>
-<p>Republish of v1.7.0 from the correct commit. The v1.7.0 tarball on npm was inadvertently published from a pre-rebase tree that did not include the v1.6.1 codex continuity fixes (PR #62) or the v1.6.2 plan doc. v1.7.1 ships the same coding-agent-roster expansion on top of the correct v1.6.1+ history.</p>
-<p>Use v1.7.1 instead of v1.7.0; v1.7.0 has been deprecated on npm.</p>
-<h4>v1.7.0 Highlights</h4>
-<p>Extended CLI provider roster — every coding agent recognized by SwarmSkills now has a corresponding CLI provider in SwarmClaw, routed through a generic streamer when no bespoke parser exists.</p>
-<ul>
-<li>**31 new CLI provider</li>
+<li><strong>Onboarding exposes the full CLI roster.</strong> The setup wizard groups providers by CLI agents, gateways/local runtimes, API providers, and custom endpoints, with search so the 31 extended CLI providers added in v1.7 are usable without digg</li>
 </ul>
 <hr>
 <p><em>README truncated. <a href="https://github.com/swarmclawai/swarmclaw#readme">Continue reading on GitHub</a></em></p>

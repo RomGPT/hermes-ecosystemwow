@@ -1980,12 +1980,12 @@ Category: Multi-Agent & Orchestration
 Stars: 285
 Build autonomous AI agent swarms with orchestration, skills, and multiple model providers
 
-SwarmClaw is an open-source, self-hosted runtime and framework designed for orchestrating autonomous AI agent swarms. It operates as a centralized dashboard where users can manage agent memory, runtime skills, and delegation across more than 23 LLM providers. The platform supports complex workflows through scheduled tasks, heartbeats, and a conversation-to-skill learning system. It integrates with various tools including MCP, Docker sandboxes for browser execution, and specialized CLI backends like Claude Code and Hermes.
+SwarmClaw is a self-hosted runtime and framework designed for orchestrating autonomous AI agent swarms. It functions as a multi-agent dashboard where users can manage delegation, durable memory, and scheduled tasks across more than 23 LLM providers. The platform enables agents to learn new skills from conversation history and integrates with external tools via the Model Context Protocol (MCP). It supports diverse execution environments including local CLI backends, Docker sandboxes, and OpenClaw gateways.
 
 Highlights:
-- Orchestrates multi-agent swarms with durable memory and delegation
-- Supports 23+ LLM providers including Ollama, OpenAI, and Hermes
-- Features deterministic cron scheduling for autonomous recurring agent tasks
+- Orchestrates multi-agent swarms with delegation and visual org charts
+- Supports 23+ providers including Hermes, Ollama, and OpenRouter
+- Features durable agent memory and conversation-to-skill learning
 
 ---
 
@@ -2966,12 +2966,12 @@ Category: Guides & Docs
 Stars: 8
 Step-by-step WSL2 Ubuntu setup guide for Windows users
 
-This project provides a comprehensive setup guide and automation script for running Hermes Agent locally on Windows via WSL2, Linux, or macOS. It integrates llama.cpp for model inference with Qwen3.5 GGUF models, utilizing CUDA or Metal acceleration for optimized performance. The guide covers the full stack including the Camofox browser server for web-browsing tasks and the Hermes HUDUI for a graphical user interface. Users can deploy a production-ready agentic environment with local LLM support and OpenAI-compatible API endpoints.
+This project provides a comprehensive setup guide and automation script for running Hermes Agent locally on Windows via WSL2 or natively on macOS. It streamlines the integration of llama.cpp and Qwen3.5 models with GPU acceleration using CUDA or Metal. The guide covers the entire stack, including the Camofox browser server for web-browsing tasks and the Hermes HUDUI for a graphical user interface. Users can deploy a fully local agentic workflow that handles browser automation and LLM inference without relying on external APIs.
 
 Highlights:
-- Automated installation script for Hermes Agent, llama.cpp, and Camofox
-- Supports GPU acceleration via CUDA for WSL2 and Metal for macOS
-- Configures Qwen3.5 GGUF models for local inference and web browsing
+- Automated installation scripts for WSL2 Ubuntu and macOS platforms
+- Configures llama.cpp with CUDA or Metal for hardware-accelerated inference
+- Integrates Camofox browser server for autonomous web-browsing capabilities
 
 ---
 

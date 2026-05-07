@@ -553,14 +553,14 @@
     "auditedAt": "2026-05-04T08:48:03.169Z"
   },
   "swarmclawai/swarmclaw": {
-    "summary": "SwarmClaw is an open-source, self-hosted runtime and framework designed for orchestrating autonomous AI agent swarms. It operates as a centralized dashboard where users can manage agent memory, runtime skills, and delegation across more than 23 LLM providers. The platform supports complex workflows through scheduled tasks, heartbeats, and a conversation-to-skill learning system. It integrates with various tools including MCP, Docker sandboxes for browser execution, and specialized CLI backends like Claude Code and Hermes.",
+    "summary": "SwarmClaw is a self-hosted runtime and framework designed for orchestrating autonomous AI agent swarms. It functions as a multi-agent dashboard where users can manage delegation, durable memory, and scheduled tasks across more than 23 LLM providers. The platform enables agents to learn new skills from conversation history and integrates with external tools via the Model Context Protocol (MCP). It supports diverse execution environments including local CLI backends, Docker sandboxes, and OpenClaw gateways.",
     "highlights": [
-      "Orchestrates multi-agent swarms with durable memory and delegation",
-      "Supports 23+ LLM providers including Ollama, OpenAI, and Hermes",
-      "Features deterministic cron scheduling for autonomous recurring agent tasks"
+      "Orchestrates multi-agent swarms with delegation and visual org charts",
+      "Supports 23+ providers including Hermes, Ollama, and OpenRouter",
+      "Features durable agent memory and conversation-to-skill learning"
     ],
-    "readmeHash": "65403cb01bd2d1c0b0a7e7fbf1570028866d0c676fa1157ead1f160a4b0ab0ed",
-    "generatedAt": "2026-05-07T07:28:48.804Z",
+    "readmeHash": "5e57e45e156332768f4cc7126e7f67f704eabdb7641a03843af0b5ae76175344",
+    "generatedAt": "2026-05-07T10:10:23.277Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -1059,18 +1059,17 @@
     "audit": "pass"
   },
   "metantonio/hermes-wsl-ubuntu": {
-    "summary": "This project provides a comprehensive setup guide and automation script for running Hermes Agent locally on Windows via WSL2, Linux, or macOS. It integrates llama.cpp for model inference with Qwen3.5 GGUF models, utilizing CUDA or Metal acceleration for optimized performance. The guide covers the full stack including the Camofox browser server for web-browsing tasks and the Hermes HUDUI for a graphical user interface. Users can deploy a production-ready agentic environment with local LLM support and OpenAI-compatible API endpoints.",
+    "summary": "This project provides a comprehensive setup guide and automation script for running Hermes Agent locally on Windows via WSL2 or natively on macOS. It streamlines the integration of llama.cpp and Qwen3.5 models with GPU acceleration using CUDA or Metal. The guide covers the entire stack, including the Camofox browser server for web-browsing tasks and the Hermes HUDUI for a graphical user interface. Users can deploy a fully local agentic workflow that handles browser automation and LLM inference without relying on external APIs.",
     "highlights": [
-      "Automated installation script for Hermes Agent, llama.cpp, and Camofox",
-      "Supports GPU acceleration via CUDA for WSL2 and Metal for macOS",
-      "Configures Qwen3.5 GGUF models for local inference and web browsing"
+      "Automated installation scripts for WSL2 Ubuntu and macOS platforms",
+      "Configures llama.cpp with CUDA or Metal for hardware-accelerated inference",
+      "Integrates Camofox browser server for autonomous web-browsing capabilities"
     ],
-    "readmeHash": "180c97f02ba79a68600f00b509bd984a8a05a3dca10df14e41554f72283b123b",
-    "generatedAt": "2026-05-01T16:46:27.086Z",
+    "readmeHash": "7c11ad53a5c5c80b19337e8b85d783e692aab720e12441cc14a7b932be7a8668",
+    "generatedAt": "2026-05-07T10:10:37.153Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
-    "audit": "pass",
-    "auditedAt": "2026-05-04T08:50:05.983Z"
+    "audit": "pass"
   },
   "mudrii/hermes-agent-docs": {
     "summary": "Hermes Agent is an autonomous AI system designed for persistent, cross-session learning and multi-platform deployment. It utilizes a closed learning loop to automatically create and refine skills from experience while maintaining a long-term memory of user facts and conversation history. The agent operates through a unified core that supports 18 messaging platforms, an Ink-based TUI, and various IDE integrations. It features a pluggable transport layer that enables seamless switching between dozens of model providers including Nous Portal, Anthropic, and local endpoints via LM Studio.",
