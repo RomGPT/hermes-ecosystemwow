@@ -203,7 +203,7 @@ function renderMasthead(activeNav) {
   <div class="mast-meta" aria-label="Site metadata">
     <span>apr·2026</span>
     <span id="meta-count">${repos.length}·repos</span>
-    <span>hermes·v0.10.0</span>
+    <span id="meta-version">hermes·v0.10.0</span>
     <a class="mast-star" id="meta-atlas" href="https://github.com/ksimback/hermes-ecosystem" target="_blank" rel="noopener" aria-label="Star Hermes Atlas on GitHub">★ star this repo</a>
   </div>
   <nav class="mast-nav" aria-label="Primary">
@@ -728,7 +728,7 @@ ${summary ? `
 ${PAGE_FOOTER}
 
 <script>${THEME_TOGGLE_SCRIPT}</script>
-<script>(function(){fetch('/api/stars').then(function(r){return r.ok&&r.json()}).then(function(d){if(!d)return;var a=document.getElementById('meta-atlas');if(a&&d.atlas&&d.atlas.stars)a.textContent='★ '+d.atlas.stars+' · star this repo';var c=document.getElementById('meta-count');if(c&&d.totals&&d.totals.count)c.textContent=d.totals.count+'·repos'}).catch(function(){});})();</script>
+<script src="/assets/js/masthead-fetch.js" defer></script>
 <!-- Cloudflare Web Analytics -->
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
         data-cf-beacon='{"token": "fe0d4d79280b4386b6b0cd99b2d94dbc"}'></script>
@@ -855,7 +855,7 @@ ${listicleHtml}
 ${PAGE_FOOTER}
 
 <script>${THEME_TOGGLE_SCRIPT}</script>
-<script>(function(){fetch('/api/stars').then(function(r){return r.ok&&r.json()}).then(function(d){if(!d)return;var a=document.getElementById('meta-atlas');if(a&&d.atlas&&d.atlas.stars)a.textContent='★ '+d.atlas.stars+' · star this repo';var c=document.getElementById('meta-count');if(c&&d.totals&&d.totals.count)c.textContent=d.totals.count+'·repos'}).catch(function(){});})();</script>
+<script src="/assets/js/masthead-fetch.js" defer></script>
 <!-- Cloudflare Web Analytics -->
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
         data-cf-beacon='{"token": "fe0d4d79280b4386b6b0cd99b2d94dbc"}'></script>
@@ -994,7 +994,7 @@ ${renderMasthead("reports")}
 ${PAGE_FOOTER}
 
 <script>${THEME_TOGGLE_SCRIPT}</script>
-<script>(function(){fetch('/api/stars').then(function(r){return r.ok&&r.json()}).then(function(d){if(!d)return;var a=document.getElementById('meta-atlas');if(a&&d.atlas&&d.atlas.stars)a.textContent='★ '+d.atlas.stars+' · star this repo';var c=document.getElementById('meta-count');if(c&&d.totals&&d.totals.count)c.textContent=d.totals.count+'·repos'}).catch(function(){});})();</script>
+<script src="/assets/js/masthead-fetch.js" defer></script>
 <!-- Cloudflare Web Analytics -->
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
         data-cf-beacon='{"token": "fe0d4d79280b4386b6b0cd99b2d94dbc"}'></script>

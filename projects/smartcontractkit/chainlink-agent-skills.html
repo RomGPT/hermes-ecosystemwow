@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>chainlink-agent-skills — Hermes Agent Skills &amp; Skill Registries | Hermes Atlas</title>
-<meta name="description" content="[PUBLIC] Repository for Chainlink Skills that implement https://agentskills.io/specification">
+<meta name="description" content="Oracle network and smart contract interaction skills (agentskills.io spec)">
 <link rel="canonical" href="https://hermesatlas.com/projects/smartcontractkit/chainlink-agent-skills">
 <meta property="og:title" content="chainlink-agent-skills — Hermes Atlas">
-<meta property="og:description" content="[PUBLIC] Repository for Chainlink Skills that implement https://agentskills.io/specification">
+<meta property="og:description" content="Oracle network and smart contract interaction skills (agentskills.io spec)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hermesatlas.com/projects/smartcontractkit/chainlink-agent-skills">
 <meta property="og:site_name" content="Hermes Atlas">
-<meta property="og:image" content="https://hermesatlas.com/api/og?title=chainlink-agent-skills&amp;subtitle=%5BPUBLIC%5D+Repository+for+Chainlink+Skills+that+implement+https%3A%2F%2Fagentskills.io%2Fspecification&amp;kind=project+%C2%B7+skills">
+<meta property="og:image" content="https://hermesatlas.com/api/og?title=chainlink-agent-skills&amp;subtitle=Oracle+network+and+smart+contract+interaction+skills+%28agentskills.io+spec%29&amp;kind=project+%C2%B7+skills">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="chainlink-agent-skills — Hermes Atlas">
-<meta name="twitter:description" content="[PUBLIC] Repository for Chainlink Skills that implement https://agentskills.io/specification">
-<meta name="twitter:image" content="https://hermesatlas.com/api/og?title=chainlink-agent-skills&amp;subtitle=%5BPUBLIC%5D+Repository+for+Chainlink+Skills+that+implement+https%3A%2F%2Fagentskills.io%2Fspecification&amp;kind=project+%C2%B7+skills">
+<meta name="twitter:description" content="Oracle network and smart contract interaction skills (agentskills.io spec)">
+<meta name="twitter:image" content="https://hermesatlas.com/api/og?title=chainlink-agent-skills&amp;subtitle=Oracle+network+and+smart+contract+interaction+skills+%28agentskills.io+spec%29&amp;kind=project+%C2%B7+skills">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -40,20 +40,17 @@
   "codeRepository": "https://github.com/smartcontractkit/chainlink-agent-skills",
   "applicationCategory": "DeveloperApplication",
   "operatingSystem": "Cross-platform",
-  "programmingLanguage": "JavaScript",
-  "license": "https://spdx.org/licenses/MIT.html",
   "author": {
     "@type": "Organization",
     "name": "smartcontractkit",
     "url": "https://github.com/smartcontractkit"
   },
-  "dateModified": "2026-05-07T19:39:09.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 100
+    "userInteractionCount": 85
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -83,7 +80,7 @@
   <div class="mast-meta" aria-label="Site metadata">
     <span>apr·2026</span>
     <span id="meta-count">110·repos</span>
-    <span>hermes·v0.10.0</span>
+    <span id="meta-version">hermes·v0.10.0</span>
     <a class="mast-star" id="meta-atlas" href="https://github.com/ksimback/hermes-ecosystem" target="_blank" rel="noopener" aria-label="Star Hermes Atlas on GitHub">★ star this repo</a>
   </div>
   <nav class="mast-nav" aria-label="Primary">
@@ -109,14 +106,14 @@
   <h1 class="project-name">
     <span class="org">smartcontractkit</span><span class="slash">/</span>chainlink-agent-skills
   </h1>
-  <p class="project-desc">[PUBLIC] Repository for Chainlink Skills that implement https://agentskills.io/specification</p>
+  <p class="project-desc">Oracle network and smart contract interaction skills (agentskills.io spec)</p>
 
   <div class="meta-row">
-    <span class="stars">★ 100</span>
-    <span><span class="meta-label">lang</span>JavaScript</span>
-    <span><span class="meta-label">license</span>MIT</span>
+    <span class="stars">★ 85</span>
     
-    <span><span class="meta-label">updated</span>2026-05-07</span>
+    
+    
+    
   </div>
 
   <div class="actions">
@@ -143,9 +140,9 @@
 <details class="readme-details">
   <summary class="readme-toggle">full readme from github</summary>
   <section class="readme" data-nosnippet>
-    <h2>Chainlink Agent Skills</h2>
+    <h4>Chainlink Agent Skills</h4>
 <p>Official Repo for Chainlink skills. Each skill follows the <a href="https://agentskills.io/specification">Agent Skills specification</a>.</p>
-<h3>Available Skills</h3>
+<h5>Available Skills</h5>
 <table>
 <thead>
 <tr>
@@ -174,7 +171,7 @@
 <td>ACE core contracts, Policy Management, Cross-Chain Identity, and compliance token examples</td>
 </tr>
 </tbody></table>
-<h3>Install</h3>
+<h5>Install</h5>
 <p>Use <a href="https://github.com/vercel-labs/skills#readme">vercel&#39;s CLI for the open skills ecosystem</a>. Project-level installation is the default.</p>
 <pre><code class="language-bash">npx skills add smartcontractkit/chainlink-agent-skills
 </code></pre>
@@ -190,7 +187,7 @@ npx skills add smartcontractkit/chainlink-agent-skills --skill chainlink-data-fe
 npx skills add smartcontractkit/chainlink-agent-skills --skill chainlink-data-streams-skill -g
 npx skills add smartcontractkit/chainlink-agent-skills --skill chainlink-ace-skill -g
 </code></pre>
-<h3>Use</h3>
+<h5>Use</h5>
 <p>When your agent supports Agent Skills, it will discover and activate these skills based on the task. <strong>However</strong> we recommend that you explicitly invoke the skill in your agent chat sessions as follows:</p>
 <pre><code class="language-text">Using the /chainlink-data-feeds-skill, develop a Solidity contract that:
 
@@ -202,7 +199,7 @@ npx skills add smartcontractkit/chainlink-agent-skills --skill chainlink-ace-ski
 
 Any questions before you start?
 </code></pre>
-<h3>Evaluate And Improve Skills</h3>
+<h5>Evaluate And Improve Skills</h5>
 <p>This repo includes two local eval paths:</p>
 <ul>
 <li><code>evals/run-agent-eval.md</code> runs smoke/full evals through agent subagents without API keys.</li>
@@ -213,7 +210,6 @@ Any questions before you start?
 Improve chainlink-cre-skill using agent A/B tests
 </code></pre>
 <p>The A/B workflow is useful in Cursor, Codex, Gemini CLI, and similar tools because it spends local agent/subagent budget instead of external model API keys.</p>
-
   </section>
 </details>
 
@@ -225,35 +221,35 @@ Improve chainlink-cre-skill using agent A/B tests
   <div>
     <div class="related-list">
       <a class="related-row" href="/projects/mukul975/Anthropic-Cybersecurity-Skills">
-        <div class="stars">★ 6.1K</div>
+        <div class="stars">★ 4.1K</div>
         <div class="name"><span class="org">mukul975 /</span> Anthropic-Cybersecurity-Skills</div>
       </a>
       <a class="related-row" href="/projects/conorbronsdon/avoid-ai-writing">
-        <div class="stars">★ 1.4K</div>
+        <div class="stars">★ 759</div>
         <div class="name"><span class="org">conorbronsdon /</span> avoid-ai-writing</div>
       </a>
       <a class="related-row" href="/projects/wondelai/skills">
-        <div class="stars">★ 888</div>
+        <div class="stars">★ 480</div>
         <div class="name"><span class="org">wondelai /</span> skills</div>
       </a>
       <a class="related-row" href="/projects/DougTrajano/pydantic-ai-skills">
-        <div class="stars">★ 284</div>
+        <div class="stars">★ 220</div>
         <div class="name"><span class="org">DougTrajano /</span> pydantic-ai-skills</div>
       </a>
       <a class="related-row" href="/projects/Agents365-ai/drawio-skill">
-        <div class="stars">★ 1.3K</div>
+        <div class="stars">★ 131</div>
         <div class="name"><span class="org">Agents365-ai /</span> drawio-skill</div>
       </a>
       <a class="related-row" href="/projects/tlehman/litprog-skill">
-        <div class="stars">★ 128</div>
+        <div class="stars">★ 81</div>
         <div class="name"><span class="org">tlehman /</span> litprog-skill</div>
       </a>
       <a class="related-row" href="/projects/esaradev/icarus-plugin">
-        <div class="stars">★ 111</div>
+        <div class="stars">★ 51</div>
         <div class="name"><span class="org">esaradev /</span> icarus-plugin</div>
       </a>
       <a class="related-row" href="/projects/chigwell/skilldock.io">
-        <div class="stars">★ 61</div>
+        <div class="stars">★ 50</div>
         <div class="name"><span class="org">chigwell /</span> skilldock.io</div>
       </a>
     </div>
@@ -269,7 +265,7 @@ Improve chainlink-cre-skill using agent A/B tests
 </footer>
 
 <script>(function(){var t=document.getElementById('theme-toggle');if(!t)return;function render(){var c=document.documentElement.getAttribute('data-theme');t.querySelector('.tt-light').classList.toggle('tt-active',c==='light');t.querySelector('.tt-dark').classList.toggle('tt-active',c!=='light');}render();t.addEventListener('click',function(){var c=document.documentElement.getAttribute('data-theme');var n=c==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}render();});})();</script>
-<script>(function(){fetch('/api/stars').then(function(r){return r.ok&&r.json()}).then(function(d){if(!d)return;var a=document.getElementById('meta-atlas');if(a&&d.atlas&&d.atlas.stars)a.textContent='★ '+d.atlas.stars+' · star this repo';var c=document.getElementById('meta-count');if(c&&d.totals&&d.totals.count)c.textContent=d.totals.count+'·repos'}).catch(function(){});})();</script>
+<script src="/assets/js/masthead-fetch.js" defer></script>
 <!-- Cloudflare Web Analytics -->
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
         data-cf-beacon='{"token": "fe0d4d79280b4386b6b0cd99b2d94dbc"}'></script>

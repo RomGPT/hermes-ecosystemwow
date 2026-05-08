@@ -40,19 +40,17 @@
   "codeRepository": "https://github.com/stephenschoettler/hermes-lcm",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Cross-platform",
-  "programmingLanguage": "Python",
   "author": {
     "@type": "Organization",
     "name": "stephenschoettler",
     "url": "https://github.com/stephenschoettler"
   },
-  "dateModified": "2026-05-08T03:22:38.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 438
+    "userInteractionCount": 178
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -82,7 +80,7 @@
   <div class="mast-meta" aria-label="Site metadata">
     <span>apr·2026</span>
     <span id="meta-count">110·repos</span>
-    <span>hermes·v0.10.0</span>
+    <span id="meta-version">hermes·v0.10.0</span>
     <a class="mast-star" id="meta-atlas" href="https://github.com/ksimback/hermes-ecosystem" target="_blank" rel="noopener" aria-label="Star Hermes Atlas on GitHub">★ star this repo</a>
   </div>
   <nav class="mast-nav" aria-label="Primary">
@@ -111,11 +109,11 @@
   <p class="project-desc">Lossless Context Management plugin for Hermes Agent — DAG-based context engine that never loses a message</p>
 
   <div class="meta-row">
-    <span class="stars">★ 438</span>
-    <span><span class="meta-label">lang</span>Python</span>
+    <span class="stars">★ 178</span>
     
     
-    <span><span class="meta-label">updated</span>2026-05-08</span>
+    
+    
   </div>
 
   <div class="actions">
@@ -155,7 +153,7 @@
 <p>Based on the <a href="https://papers.voltropy.com/LCM">LCM paper</a> by Ehrlich &amp; Blackman (Voltropy PBC, Feb 2026).
 Inspired by <a href="https://github.com/martian-engineering/lossless-claw">lossless-claw</a> for OpenClaw.</p>
 <hr>
-<h3>The Problem</h3>
+<h5>The Problem</h5>
 <p>When active context fills up, agents usually replace older turns with a flat
 summary. Details can fall out of the prompt, and recovery depends on a separate
 history path the model may not use.</p>
@@ -163,7 +161,7 @@ history path the model may not use.</p>
   <img src="https://raw.githubusercontent.com/stephenschoettler/hermes-lcm/main/docs/standard_compression.png" alt="Standard compression" width="700">
 </p>
 
-<h3>The Fix</h3>
+<h5>The Fix</h5>
 <p>Persist the conversation, compact old context into a hierarchical summary DAG,
 and give the agent tools to drill back into the exact material that was
 compacted.</p>
@@ -175,7 +173,7 @@ compacted.</p>
   <img src="https://raw.githubusercontent.com/stephenschoettler/hermes-lcm/main/docs/architecture.png" alt="Architecture" width="700">
 </p>
 
-<h3>What It Does</h3>
+<h5>What It Does</h5>
 <ul>
 <li><strong>SQLite message store</strong> - preserves raw messages by default before compaction</li>
 <li><strong>Summary DAG</strong> - compacts older context into depth-aware summary nodes</li>
@@ -186,7 +184,7 @@ compacted.</p>
 <li><strong>Large output controls</strong> - optional externalization and transcript GC for oversized tool results</li>
 <li><strong>Diagnostics</strong> - <code>lcm_status</code>, <code>lcm_doctor</code>, and optional <code>/lcm</code> slash commands</li>
 </ul>
-<h3>LCM vs built-in compression</h3>
+<h5>LCM vs built-in compression</h5>
 <p>Hermes core may persist original conversation history in <code>state.db</code> before
 built-in compression rewrites the active prompt. Built-in compression can still
 be lossy in the active context, but previous content may be recoverable later
@@ -199,13 +197,13 @@ through host-level history tools such as <code>session_search</code>.</p>
 </ul>
 <p>Position LCM around retrieval quality, autonomy, and drill-down behavior. Do not
 claim that Hermes core has no persisted record of pre-compression history.</p>
-<h3>Requirements</h3>
+<h5>Requirements</h5>
 <ul>
 <li>Hermes Agent with the pluggable context engine slot (<a href="https://github.com/NousResearch/hermes-agent/pull/7464">PR #7464</a>)</li>
 <li>Python 3.11+</li>
 <li>No required third-party runtime dependencies. <code>tiktoken</code> is used if available; otherwise LCM falls back to character-based token estimates. <code>regex</code> is used if available to apply timeouts to message ignore patterns; if it is not installed, message-level regex filtering is disabled with a warning rather than running unbounded stdlib <code>re</code> matches.</li>
 </ul>
-<h3>Install</h3>
+<h5>Install</h5>
 <p>Canonical install path: clone <code>hermes-lcm</code> as a general user plugin.</p>
 <pre><code class="language-bash">git clone https://github.com/stephenschoettler/hermes-lcm \
   ~/.hermes/plugins/hermes-lcm
@@ -219,7 +217,7 @@ claim that Hermes core has no persisted record of pre-compression history.</p>
 # Optional profile-aware install:
 HERMES_PROFILE=myprofile ./scripts/install.sh
 </code></pre>
-<h3>Activate</h3>
+<h5>Activate</h5>
 <p>The plugin has two names:</p>
 <ul>
 <li>plugin manifest name: <code>hermes-lcm</code></li>
@@ -234,7 +232,7 @@ context:
   engine: lcm
 </code></pre>
 <p>Restart Hermes after changing plugin or context-engine config.</p>
-<h3>Update</h3>
+<h5>Update</h5>
 <p>If you cloned directly into the plugin directory:</p>
 <pre><code class="language-bash">cd ~/.hermes/plugins/hermes-lcm &amp;&amp; git pull --ff-only
 </code></pre>
@@ -245,7 +243,7 @@ context:
 <pre><code class="language-bash">./scripts/update.sh
 </code></pre>
 <p>Restart Hermes after updating.</p>
-<h3>Verify</h3>
+<h5>Verify</h5>
 <p>Run:</p>
 <pre><code class="language-bash">hermes plugins
 </code></pre>
@@ -265,16 +263,16 @@ Provider Plugins:
 <p>For source checkouts, <code>lcm_status</code>, <code>/lcm status</code>, <code>lcm_doctor</code>, and
 <code>/lcm doctor</code> also report the loaded plugin path and best-effort git identity:
 <code>plugin_git_commit</code>, <code>plugin_git_branch</code>, and <code>plugin_git_dirty</code>.</p>
-<h3>Troubleshooting</h3>
-<h4><code>hermes plugins</code> shows <code>lcm (not found)</code> but LCM tools exist</h4>
+<h5>Troubleshooting</h5>
+<h6><code>hermes plugins</code> shows <code>lcm (not found)</code> but LCM tools exist</h6>
 <p>If <code>plugins.enabled</code> contains <code>hermes-lcm</code>, <code>context.engine: lcm</code> is set, and
 the runtime exposes LCM tools, LCM is loaded. The <code>lcm (not found)</code> line is a
 Hermes host discovery/status mismatch, not an LCM storage or compaction failure.</p>
-<h4><code>/lcm status</code> looks unbound after restart</h4>
+<h6><code>/lcm status</code> looks unbound after restart</h6>
 <p>After a fresh Hermes restart, <code>/lcm status</code> may show <code>session_id: (unbound)</code> or
 <code>threshold_tokens: (uninitialized)</code>. Send one normal Hermes message first, then
 run <code>lcm_status</code> or <code>/lcm status</code> again for live per-session fields.</p>
-<h3>Configuration</h3>
+<h5>Configuration</h5>
 <p>Most installs only need <code>plugins.enabled</code> and <code>context.engine: lcm</code>. Useful
 environment variables:</p>
 <table>
@@ -377,7 +375,7 @@ environment variables:</p>
 </tr>
 </tbody></table>
 <p>Advanced compaction, assembly, and extraction knobs are defined in <code>config.py</code>.</p>
-<h4>Threshold ownership</h4>
+<h6>Threshold ownership</h6>
 <p>When <code>context.engine: lcm</code> is active, <code>LCM_CONTEXT_THRESHOLD</code> is the compaction
 threshold LCM uses. Hermes core <code>compression.threshold</code> belongs to the built-in
 compressor. Hermes core <code>compression.enabled</code> is still the global gate that
@@ -385,7 +383,7 @@ allows compaction, so leave it enabled when using LCM.</p>
 <p>If startup/status output shows a host-side compression percentage that disagrees
 with LCM, trust live LCM status after a normal message has initialized the
 session.</p>
-<h4>Session pattern syntax</h4>
+<h6>Session pattern syntax</h6>
 <p>Pattern matching checks multiple keys: raw <code>session_id</code>, <code>platform</code>, and
 <code>platform:session_id</code>.</p>
 <ul>
@@ -394,7 +392,7 @@ session.</p>
 </ul>
 <p>Example: <code>cron:*</code> can match Hermes cron sessions, while exact raw session IDs
 still work.</p>
-<h4>Noise suppression</h4>
+<h6>Noise suppression</h6>
 <p>LCM offers two layers of noise filtering, sized to two different shapes of
 noise:</p>
 <ul>
@@ -445,7 +443,7 @@ their <code>*_source</code> fields (<code>default</code> or <code>env</code>), t
 <code>stateless</code> booleans, and a process-lifetime <code>ignored_message_count</code> so operators
 can confirm their patterns are loaded and watch how often message filters fire.
 The counter resets on engine restart.</p>
-<h4>Large tool-output handling</h4>
+<h6>Large tool-output handling</h6>
 <p>Externalization is opt-in. When enabled, oversized tool results are written to
 plugin-managed JSON files and referenced from summaries. They remain inspectable
 later through <code>lcm_describe(externalized_ref=...)</code> and
@@ -455,7 +453,7 @@ already-summarized tool-role rows to compact placeholders. It keeps the same
 <code>store_id</code>, keeps payload files, skips pinned messages, and preserves lossless
 recovery through <code>externalized_ref</code>. After GC, <code>lcm_grep</code> will not match the
 original giant tool blob text directly; search summaries or refs instead.</p>
-<h3>Agent Tools</h3>
+<h5>Agent Tools</h5>
 <p>Use these tools for current-session recall after compaction. Use <code>session_search</code>
 for earlier separate sessions or broad cross-session history.</p>
 <table>
@@ -494,7 +492,7 @@ for earlier separate sessions or broad cross-session history.</p>
 <td>Run database, FTS, lifecycle, config, and context-pressure diagnostics.</td>
 </tr>
 </tbody></table>
-<h4>Retrieval contract</h4>
+<h6>Retrieval contract</h6>
 <p>LCM retrieval tools default to current-session scope. <code>lcm_grep</code> accepts
 <code>session_scope=&#39;all&#39;</code> or <code>session_scope=&#39;session&#39;</code> as an explicit opt-in for
 bounded archive search over rows already present in <code>lcm.db</code> (raw-message hits
@@ -506,7 +504,7 @@ summary nodes by descendant raw-message source lineage. <code>unknown</code> is 
 source value, not a wildcard. Legacy blank-source rows are treated as <code>unknown</code>.</p>
 <p>Carried-over summary nodes can become current-session content after <code>/new</code>, but
 their source eligibility still comes from the descendant raw messages.</p>
-<h4>Lossless raw recovery contract</h4>
+<h6>Lossless raw recovery contract</h6>
 <p>Tool responses are bounded so one retrieval call cannot flood the main context.
 Lossless recovery means raw content is stored with stable source lineage and can
 be recovered in deterministic pages.</p>
@@ -517,7 +515,7 @@ be recovered in deterministic pages.</p>
 <li><code>lcm_expand(externalized_ref=...)</code> pages payload content with <code>content_offset</code></li>
 <li><code>lcm_expand_query</code> uses <code>context_max_tokens</code> for auxiliary context and reports truncation/pagination hints when needed</li>
 </ul>
-<h4>lossless-claw/OpenClaw import utility</h4>
+<h6>lossless-claw/OpenClaw import utility</h6>
 <p><code>hermes-lcm</code> includes an opt-in operator script for backfilling raw message rows from a lossless-claw/OpenClaw LCM SQLite database into the local hermes-lcm SQLite store:</p>
 <pre><code class="language-bash">python scripts/import_lossless_claw.py \
   --source-db ~/.openclaw/path/to/lcm.db \
@@ -538,7 +536,7 @@ be recovered in deterministic pages.</p>
 <li>no OpenClaw config or separate secret tables are imported, but raw transcripts and tool payloads are imported and may contain sensitive user data</li>
 </ul>
 <p>This is a local archive migration path. It does not make LCM a general memory provider, and it does not change the current-session retrieval contract for agent tools.</p>
-<h3>Slash Commands</h3>
+<h5>Slash Commands</h5>
 <p>Slash commands are disabled by default. Enable them only in trusted operator
 contexts:</p>
 <pre><code class="language-bash">export LCM_ENABLE_SLASH_COMMAND=1
@@ -559,7 +557,7 @@ contexts:</p>
 </ul>
 <p>Apply paths are intentionally narrow and backup-first. Start with diagnostics
 before cleanup or repair.</p>
-<h3>How It Works</h3>
+<h5>How It Works</h5>
 <ol>
 <li><strong>Ingest</strong> - persist each message in SQLite with FTS metadata</li>
 <li><strong>Compact</strong> - summarize older messages outside the fresh tail into D0 leaf nodes</li>
@@ -568,7 +566,7 @@ before cleanup or repair.</p>
 <li><strong>Assemble</strong> - combine system prompt, highest-depth summaries, and fresh tail</li>
 <li><strong>Retrieve</strong> - use LCM tools to drill into compacted history or synthesize from expanded context</li>
 </ol>
-<h3>Development</h3>
+<h5>Development</h5>
 <p>Important files:</p>
 <pre><code class="language-text">plugin.yaml      manifest
 __init__.py      plugin registration and optional slash-command registration
@@ -587,14 +585,13 @@ python -m pytest tests/ -v
 </code></pre>
 <p>No Hermes Agent checkout is required for the test suite; tests include a
 lightweight ABC stub.</p>
-<h3>Contributing</h3>
+<h5>Contributing</h5>
 <p>Issues and PRs welcome. Bug fixes and correctness improvements are highest
 priority. New features should be scoped, backwards-compatible, and tested.</p>
 <p>See <a href="https://github.com/stephenschoettler/hermes-lcm/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> for branch, validation, and PR guidance.
 See the <a href="https://github.com/stephenschoettler/hermes-lcm/releases">releases page</a> for changelogs.</p>
-<h3>License</h3>
+<h5>License</h5>
 <p>MIT</p>
-
   </section>
 </details>
 
@@ -606,35 +603,35 @@ See the <a href="https://github.com/stephenschoettler/hermes-lcm/releases">relea
   <div>
     <div class="related-list">
       <a class="related-row" href="/projects/mem0ai/mem0">
-        <div class="stars">★ 55.1K</div>
+        <div class="stars">★ 53.9K</div>
         <div class="name"><span class="org">mem0ai /</span> mem0</div>
       </a>
       <a class="related-row" href="/projects/vectorize-io/hindsight">
-        <div class="stars">★ 12.6K</div>
+        <div class="stars">★ 8.4K</div>
         <div class="name"><span class="org">vectorize-io /</span> hindsight</div>
       </a>
       <a class="related-row" href="/projects/greyhaven-ai/autocontext">
-        <div class="stars">★ 973</div>
+        <div class="stars">★ 711</div>
         <div class="name"><span class="org">greyhaven-ai /</span> autocontext</div>
       </a>
       <a class="related-row" href="/projects/elkimek/honcho-self-hosted">
-        <div class="stars">★ 216</div>
+        <div class="stars">★ 126</div>
         <div class="name"><span class="org">elkimek /</span> honcho-self-hosted</div>
       </a>
       <a class="related-row" href="/projects/yoloshii/ClawMem">
-        <div class="stars">★ 156</div>
+        <div class="stars">★ 86</div>
         <div class="name"><span class="org">yoloshii /</span> ClawMem</div>
       </a>
       <a class="related-row" href="/projects/plur-ai/plur">
-        <div class="stars">★ 67</div>
+        <div class="stars">★ 31</div>
         <div class="name"><span class="org">plur-ai /</span> plur</div>
       </a>
       <a class="related-row" href="/projects/amanning3390/flowstate-qmd">
-        <div class="stars">★ 19</div>
+        <div class="stars">★ 5</div>
         <div class="name"><span class="org">amanning3390 /</span> flowstate-qmd</div>
       </a>
       <a class="related-row" href="/projects/garrytan/gbrain">
-        <div class="stars">★ 13.7K</div>
+        <div class="stars">★ 8.9K</div>
         <div class="name"><span class="org">garrytan /</span> gbrain</div>
       </a>
     </div>
@@ -650,7 +647,7 @@ See the <a href="https://github.com/stephenschoettler/hermes-lcm/releases">relea
 </footer>
 
 <script>(function(){var t=document.getElementById('theme-toggle');if(!t)return;function render(){var c=document.documentElement.getAttribute('data-theme');t.querySelector('.tt-light').classList.toggle('tt-active',c==='light');t.querySelector('.tt-dark').classList.toggle('tt-active',c!=='light');}render();t.addEventListener('click',function(){var c=document.documentElement.getAttribute('data-theme');var n=c==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}render();});})();</script>
-<script>(function(){fetch('/api/stars').then(function(r){return r.ok&&r.json()}).then(function(d){if(!d)return;var a=document.getElementById('meta-atlas');if(a&&d.atlas&&d.atlas.stars)a.textContent='★ '+d.atlas.stars+' · star this repo';var c=document.getElementById('meta-count');if(c&&d.totals&&d.totals.count)c.textContent=d.totals.count+'·repos'}).catch(function(){});})();</script>
+<script src="/assets/js/masthead-fetch.js" defer></script>
 <!-- Cloudflare Web Analytics -->
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
         data-cf-beacon='{"token": "fe0d4d79280b4386b6b0cd99b2d94dbc"}'></script>

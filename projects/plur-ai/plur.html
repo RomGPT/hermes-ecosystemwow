@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>plur — Hermes Agent Memory &amp; Context | Hermes Atlas</title>
-<meta name="description" content="Shared memory for AI agents">
+<meta name="description" content="Shared memory layer with open engram YAML format for multi-agent systems">
 <link rel="canonical" href="https://hermesatlas.com/projects/plur-ai/plur">
 <meta property="og:title" content="plur — Hermes Atlas">
-<meta property="og:description" content="Shared memory for AI agents">
+<meta property="og:description" content="Shared memory layer with open engram YAML format for multi-agent systems">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hermesatlas.com/projects/plur-ai/plur">
 <meta property="og:site_name" content="Hermes Atlas">
-<meta property="og:image" content="https://hermesatlas.com/api/og?title=plur&amp;subtitle=Shared+memory+for+AI+agents&amp;kind=project+%C2%B7+memory">
+<meta property="og:image" content="https://hermesatlas.com/api/og?title=plur&amp;subtitle=Shared+memory+layer+with+open+engram+YAML+format+for+multi-agent+systems&amp;kind=project+%C2%B7+memory">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="plur — Hermes Atlas">
-<meta name="twitter:description" content="Shared memory for AI agents">
-<meta name="twitter:image" content="https://hermesatlas.com/api/og?title=plur&amp;subtitle=Shared+memory+for+AI+agents&amp;kind=project+%C2%B7+memory">
+<meta name="twitter:description" content="Shared memory layer with open engram YAML format for multi-agent systems">
+<meta name="twitter:image" content="https://hermesatlas.com/api/og?title=plur&amp;subtitle=Shared+memory+layer+with+open+engram+YAML+format+for+multi-agent+systems&amp;kind=project+%C2%B7+memory">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -40,20 +40,17 @@
   "codeRepository": "https://github.com/plur-ai/plur",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Cross-platform",
-  "programmingLanguage": "TypeScript",
-  "license": "https://spdx.org/licenses/Apache-2.0.html",
   "author": {
     "@type": "Organization",
     "name": "plur-ai",
     "url": "https://github.com/plur-ai"
   },
-  "dateModified": "2026-05-07T12:36:24.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 67
+    "userInteractionCount": 31
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -83,7 +80,7 @@
   <div class="mast-meta" aria-label="Site metadata">
     <span>apr·2026</span>
     <span id="meta-count">110·repos</span>
-    <span>hermes·v0.10.0</span>
+    <span id="meta-version">hermes·v0.10.0</span>
     <a class="mast-star" id="meta-atlas" href="https://github.com/ksimback/hermes-ecosystem" target="_blank" rel="noopener" aria-label="Star Hermes Atlas on GitHub">★ star this repo</a>
   </div>
   <nav class="mast-nav" aria-label="Primary">
@@ -109,14 +106,14 @@
   <h1 class="project-name">
     <span class="org">plur-ai</span><span class="slash">/</span>plur
   </h1>
-  <p class="project-desc">Shared memory for AI agents</p>
+  <p class="project-desc">Shared memory layer with open engram YAML format for multi-agent systems</p>
 
   <div class="meta-row">
-    <span class="stars">★ 67</span>
-    <span><span class="meta-label">lang</span>TypeScript</span>
-    <span><span class="meta-label">license</span>Apache-2.0</span>
+    <span class="stars">★ 31</span>
     
-    <span><span class="meta-label">updated</span>2026-05-07</span>
+    
+    
+    
   </div>
 
   <div class="actions">
@@ -143,17 +140,17 @@
 <details class="readme-details">
   <summary class="readme-toggle">full readme from github</summary>
   <section class="readme" data-nosnippet>
-    <h2>PLUR — Your agents share the same memory</h2>
+    <h4>PLUR — Your agents share the same memory</h4>
 <p>Persistent memory for AI agents. Local-first, zero-cost, works across MCP tools.</p>
 <p><a href="https://plur.ai">plur.ai</a> · <a href="https://plur.ai/benchmark.html">Benchmark</a> · <a href="https://plur.ai/spec.html">Engram Spec</a> · <a href="https://www.npmjs.com/org/plur-ai">npm</a></p>
-<h3>The idea</h3>
+<h5>The idea</h5>
 <p>You correct your agent&#39;s coding style on Monday. On Tuesday, it makes the same mistake. You explain your architecture in Cursor. That night, Claude Code has no idea.</p>
 <p>PLUR fixes this. Install it once, and corrections, preferences, and conventions persist — across sessions, tools, and machines. Your memory is stored as plain YAML on your disk. No cloud, no API calls, no black box.</p>
 <p>The interesting part: <strong>Haiku with PLUR memory outperforms Opus without it</strong> — 2.6x better on tool routing, at roughly 10x less cost. Turns out the bottleneck isn&#39;t model intelligence. It&#39;s context.</p>
-<h3>Install</h3>
-<h4>Tell your agent</h4>
+<h5>Install</h5>
+<h6>Tell your agent</h6>
 <p>Go to <a href="https://plur.ai">plur.ai</a> and tell your agent to install memory for your tool — Claude Code, Cursor, Windsurf, or OpenClaw. The site has the right config for your setup.</p>
-<h4>Manual setup (Claude Code)</h4>
+<h6>Manual setup (Claude Code)</h6>
 <p>One command sets up everything — storage, MCP config, and Claude Code hooks:</p>
 <pre><code class="language-bash">npx @plur-ai/mcp init
 </code></pre>
@@ -166,22 +163,22 @@ npx @plur-ai/cli@0.9.1 init --domain myapp --scope project:my-app
 <blockquote>
 <p>Pin to <code>@0.9.1</code> — the <code>0.9.2</code> latest tag on npm is bricked (<code>Dynamic require of &quot;os&quot; is not supported</code>). Tracking in <a href="https://github.com/plur-ai/plur/issues/59">#59</a>.</p>
 </blockquote>
-<h4>Global install (faster startup)</h4>
+<h6>Global install (faster startup)</h6>
 <pre><code class="language-bash">npm install -g @plur-ai/mcp
 plur-mcp init
 </code></pre>
-<h4>OpenClaw</h4>
+<h6>OpenClaw</h6>
 <pre><code class="language-bash">openclaw plugins install @plur-ai/claw
 openclaw config set plur.enabled true
 </code></pre>
 <p>That&#39;s it. PLUR works in the background from here. No workflow changes needed — just use your tools as usual. Corrections accumulate automatically.</p>
-<h4>Hermes Agent</h4>
+<h6>Hermes Agent</h6>
 <pre><code class="language-bash">pip install plur-hermes
 </code></pre>
 <p>The plugin registers automatically via Hermes&#39; plugin system. It injects relevant memories before each LLM call, extracts learnings from agent responses, and exposes all PLUR tools to the agent. Requires the PLUR CLI — pin to the last working version: <code>npm install -g @plur-ai/cli@0.9.1</code> (the <code>0.9.2</code> latest tag on npm is bricked; tracking in <a href="https://github.com/plur-ai/plur/issues/59">#59</a>).</p>
-<h4>Verify it works</h4>
+<h6>Verify it works</h6>
 <p>Ask your agent: <em>&quot;What&#39;s my PLUR status?&quot;</em> — it should call <code>plur_status</code> and return your engram count and storage path.</p>
-<h3>How it works</h3>
+<h5>How it works</h5>
 <p>PLUR has two storage primitives:</p>
 <p><strong><a href="https://plur.ai/spec.html">Engrams</a></strong> — learned knowledge that persists across sessions. Each engram is a typed assertion (&quot;always use blue-green deploys&quot;, &quot;never force-push to main&quot;) with:</p>
 <ul>
@@ -201,7 +198,7 @@ Unused engrams          →  activation decays  →  naturally fade from injecti
 <p>Search is fully local: BM25 (with IDF weighting, TF saturation, length normalization) + BGE embeddings + Reciprocal Rank Fusion. Zero API calls, zero per-query cost. <a href="https://plur.ai/benchmark.html">Benchmark methodology →</a></p>
 <p>Plugins (OpenClaw, Hermes) automatically capture learnings from agent conversations — no manual saving needed. The agent&#39;s corrections become engrams without you doing anything.</p>
 <p>See the <a href="https://plur.ai/spec.html">full engram spec</a> for schema details, activation model, and injection algorithm.</p>
-<h3>Usage</h3>
+<h5>Usage</h5>
 <pre><code class="language-typescript">import { Plur } from &#39;@plur-ai/core&#39;
 
 const plur = new Plur()
@@ -237,7 +234,7 @@ const incidents = plur.timeline({ agent: &#39;claude-code&#39; })
 // Sync across machines
 plur.sync(&#39;git@github.com:you/plur-memory.git&#39;)
 </code></pre>
-<h4>MCP tools</h4>
+<h6>MCP tools</h6>
 <table>
 <thead>
 <tr>
@@ -286,7 +283,7 @@ plur.sync(&#39;git@github.com:you/plur-memory.git&#39;)
 <td>Check system health and engram counts</td>
 </tr>
 </tbody></table>
-<h3>Benchmark</h3>
+<h5>Benchmark</h5>
 <p>We ran 19 decisive contests across three Claude models (Haiku, Sonnet, Opus). Same task, same prompt — one agent with PLUR, one without. Ties removed.</p>
 <table>
 <thead>
@@ -320,7 +317,7 @@ plur.sync(&#39;git@github.com:you/plur-memory.git&#39;)
 <p><strong>31 wins, 4 losses (89% win rate).</strong> Without memory, agents got house rules right 10–38% of the time depending on model — with PLUR, 12–0 across every model. Memory isn&#39;t a reasoning crutch — it&#39;s information the model literally cannot infer.</p>
 <p>The cost insight was unexpected: Haiku + PLUR scored 0.80 on discoverability. Opus alone scored 0.31. A $0.25/MTok model with memory beat a $15/MTok model without it.</p>
 <p><a href="https://plur.ai/benchmark.html">Full methodology →</a></p>
-<h3>What PLUR is — and isn&#39;t</h3>
+<h5>What PLUR is — and isn&#39;t</h5>
 <p>PLUR is <strong>agent memory</strong> — it stores corrections, preferences, conventions, and architectural decisions that an AI agent learns during work sessions, and injects them back when they&#39;re relevant.</p>
 <p>PLUR is <strong>not</strong> a general-purpose search engine, a codebase indexer, or a replacement for code intelligence tools. It doesn&#39;t parse ASTs, navigate class hierarchies, or search your source files. If you need code-aware search (tree-sitter, language server features, symbol lookup), tools like <a href="https://github.com/skydeckai/claude-mem">claude-mem</a> or your IDE&#39;s built-in search are the right choice.</p>
 <p>The two are complementary:</p>
@@ -369,7 +366,7 @@ plur.sync(&#39;git@github.com:you/plur-memory.git&#39;)
 </tr>
 </tbody></table>
 <p>While search is a core part of PLUR (finding the right engram to inject), the search targets are always engrams — not files, not code, not documents. PLUR&#39;s hybrid search (BM25 + embeddings + RRF) is optimized for short natural-language assertions, not source code.</p>
-<h3>Packages</h3>
+<h5>Packages</h5>
 <table>
 <thead>
 <tr>
@@ -394,7 +391,7 @@ plur.sync(&#39;git@github.com:you/plur-memory.git&#39;)
 <td>Hermes Agent plugin (Python, via CLI bridge)</td>
 </tr>
 </tbody></table>
-<h3>Architecture</h3>
+<h5>Architecture</h5>
 <pre><code>@plur-ai/core
 ├── engrams.ts           Engram CRUD + YAML persistence
 ├── episodes.ts          Episode capture + timeline queries
@@ -412,7 +409,7 @@ plur.sync(&#39;git@github.com:you/plur-memory.git&#39;)
 @plur-ai/claw          OpenClaw ContextEngine hooks (assemble/compact/afterTurn)
 plur-hermes            Python plugin for Hermes Agent (CLI subprocess bridge)
 </code></pre>
-<h4>Storage</h4>
+<h6>Storage</h6>
 <p>Everything is plain YAML. Open it, read it, edit it.</p>
 <pre><code>~/.plur/
 ├── engrams.yaml     # learned knowledge (source of truth)
@@ -422,18 +419,18 @@ plur-hermes            Python plugin for Hermes Agent (CLI subprocess bridge)
 </code></pre>
 <p><code>PLUR_PATH</code> overrides the default location.</p>
 <p>For large stores (&gt;1k engrams), enable the SQLite read index for faster filtered queries. Add <code>index: true</code> to <code>config.yaml</code>. The YAML file stays the source of truth — the <code>.db</code> is a cache that rebuilds automatically. Delete it anytime.</p>
-<h3>Requirements</h3>
+<h5>Requirements</h5>
 <ul>
 <li><strong>Node.js 18+</strong></li>
 <li><strong>2GB RAM minimum</strong> — the embedding model (ONNX runtime) needs ~1GB for installation. On servers with less RAM, embeddings are skipped and search falls back to BM25 keyword matching.</li>
 </ul>
-<h3>Development</h3>
+<h5>Development</h5>
 <pre><code class="language-bash">git clone https://github.com/plur-ai/plur.git
 cd plur
 pnpm install &amp;&amp; pnpm build &amp;&amp; pnpm test
 </code></pre>
 <p>~340 tests across 27 files. <code>pnpm test:watch</code> for development.</p>
-<h3>Contributing</h3>
+<h5>Contributing</h5>
 <ul>
 <li><strong>Bug reports</strong> — issue with reproduction steps</li>
 <li><strong>Feature requests</strong> — issue describing the use case</li>
@@ -442,9 +439,8 @@ pnpm install &amp;&amp; pnpm build &amp;&amp; pnpm test
 </ul>
 <p>Before submitting: <code>pnpm test</code> passes, <code>pnpm build</code> succeeds, no new external deps in core without discussion.</p>
 <p>Conventions: TypeScript, Zod validation, Vitest, no external APIs in core, YAML storage, zero-cost search by default.</p>
-<h3>License</h3>
+<h5>License</h5>
 <p>Apache-2.0</p>
-
   </section>
 </details>
 
@@ -456,35 +452,35 @@ pnpm install &amp;&amp; pnpm build &amp;&amp; pnpm test
   <div>
     <div class="related-list">
       <a class="related-row" href="/projects/mem0ai/mem0">
-        <div class="stars">★ 55.1K</div>
+        <div class="stars">★ 53.9K</div>
         <div class="name"><span class="org">mem0ai /</span> mem0</div>
       </a>
       <a class="related-row" href="/projects/vectorize-io/hindsight">
-        <div class="stars">★ 12.6K</div>
+        <div class="stars">★ 8.4K</div>
         <div class="name"><span class="org">vectorize-io /</span> hindsight</div>
       </a>
       <a class="related-row" href="/projects/greyhaven-ai/autocontext">
-        <div class="stars">★ 973</div>
+        <div class="stars">★ 711</div>
         <div class="name"><span class="org">greyhaven-ai /</span> autocontext</div>
       </a>
       <a class="related-row" href="/projects/elkimek/honcho-self-hosted">
-        <div class="stars">★ 216</div>
+        <div class="stars">★ 126</div>
         <div class="name"><span class="org">elkimek /</span> honcho-self-hosted</div>
       </a>
       <a class="related-row" href="/projects/yoloshii/ClawMem">
-        <div class="stars">★ 156</div>
+        <div class="stars">★ 86</div>
         <div class="name"><span class="org">yoloshii /</span> ClawMem</div>
       </a>
       <a class="related-row" href="/projects/amanning3390/flowstate-qmd">
-        <div class="stars">★ 19</div>
+        <div class="stars">★ 5</div>
         <div class="name"><span class="org">amanning3390 /</span> flowstate-qmd</div>
       </a>
       <a class="related-row" href="/projects/garrytan/gbrain">
-        <div class="stars">★ 13.7K</div>
+        <div class="stars">★ 8.9K</div>
         <div class="name"><span class="org">garrytan /</span> gbrain</div>
       </a>
       <a class="related-row" href="/projects/stephenschoettler/hermes-lcm">
-        <div class="stars">★ 438</div>
+        <div class="stars">★ 178</div>
         <div class="name"><span class="org">stephenschoettler /</span> hermes-lcm</div>
       </a>
     </div>
@@ -500,7 +496,7 @@ pnpm install &amp;&amp; pnpm build &amp;&amp; pnpm test
 </footer>
 
 <script>(function(){var t=document.getElementById('theme-toggle');if(!t)return;function render(){var c=document.documentElement.getAttribute('data-theme');t.querySelector('.tt-light').classList.toggle('tt-active',c==='light');t.querySelector('.tt-dark').classList.toggle('tt-active',c!=='light');}render();t.addEventListener('click',function(){var c=document.documentElement.getAttribute('data-theme');var n=c==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}render();});})();</script>
-<script>(function(){fetch('/api/stars').then(function(r){return r.ok&&r.json()}).then(function(d){if(!d)return;var a=document.getElementById('meta-atlas');if(a&&d.atlas&&d.atlas.stars)a.textContent='★ '+d.atlas.stars+' · star this repo';var c=document.getElementById('meta-count');if(c&&d.totals&&d.totals.count)c.textContent=d.totals.count+'·repos'}).catch(function(){});})();</script>
+<script src="/assets/js/masthead-fetch.js" defer></script>
 <!-- Cloudflare Web Analytics -->
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
         data-cf-beacon='{"token": "fe0d4d79280b4386b6b0cd99b2d94dbc"}'></script>

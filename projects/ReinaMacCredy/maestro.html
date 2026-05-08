@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>maestro — Hermes Agent Skills &amp; Skill Registries | Hermes Atlas</title>
-<meta name="description" content="Conductor for cross-agent coding workflows: structured memory, handoffs, plan-approve-execute coordination, and an evidence-based trust substrate across externa">
+<meta name="description" content="Harness for long-running AI agents — structured memory, cross-feature learning, plan-approve-execute">
 <link rel="canonical" href="https://hermesatlas.com/projects/ReinaMacCredy/maestro">
 <meta property="og:title" content="maestro — Hermes Atlas">
-<meta property="og:description" content="Conductor for cross-agent coding workflows: structured memory, handoffs, plan-approve-execute coordination, and an evidence-based trust substrate across externa">
+<meta property="og:description" content="Harness for long-running AI agents — structured memory, cross-feature learning, plan-approve-execute">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hermesatlas.com/projects/ReinaMacCredy/maestro">
 <meta property="og:site_name" content="Hermes Atlas">
-<meta property="og:image" content="https://hermesatlas.com/api/og?title=maestro&amp;subtitle=Conductor+for+cross-agent+coding+workflows%3A+structured+memory%2C+handoffs%2C+plan-approve-execute+coordination%2C+and+an+evidence-based+trust+substrate+across+external+CLIs+%28Codex%2C+Claud&amp;kind=project+%C2%B7+skills">
+<meta property="og:image" content="https://hermesatlas.com/api/og?title=maestro&amp;subtitle=Harness+for+long-running+AI+agents+%E2%80%94+structured+memory%2C+cross-feature+learning%2C+plan-approve-execute&amp;kind=project+%C2%B7+skills">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="maestro — Hermes Atlas">
-<meta name="twitter:description" content="Conductor for cross-agent coding workflows: structured memory, handoffs, plan-approve-execute coordination, and an evidence-based trust substrate across externa">
-<meta name="twitter:image" content="https://hermesatlas.com/api/og?title=maestro&amp;subtitle=Conductor+for+cross-agent+coding+workflows%3A+structured+memory%2C+handoffs%2C+plan-approve-execute+coordination%2C+and+an+evidence-based+trust+substrate+across+external+CLIs+%28Codex%2C+Claud&amp;kind=project+%C2%B7+skills">
+<meta name="twitter:description" content="Harness for long-running AI agents — structured memory, cross-feature learning, plan-approve-execute">
+<meta name="twitter:image" content="https://hermesatlas.com/api/og?title=maestro&amp;subtitle=Harness+for+long-running+AI+agents+%E2%80%94+structured+memory%2C+cross-feature+learning%2C+plan-approve-execute&amp;kind=project+%C2%B7+skills">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -40,20 +40,17 @@
   "codeRepository": "https://github.com/ReinaMacCredy/maestro",
   "applicationCategory": "DeveloperApplication",
   "operatingSystem": "Cross-platform",
-  "programmingLanguage": "TypeScript",
-  "license": "https://spdx.org/licenses/MIT.html",
   "author": {
     "@type": "Organization",
     "name": "ReinaMacCredy",
     "url": "https://github.com/ReinaMacCredy"
   },
-  "dateModified": "2026-05-08T04:49:31.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 151
+    "userInteractionCount": 25
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -83,7 +80,7 @@
   <div class="mast-meta" aria-label="Site metadata">
     <span>apr·2026</span>
     <span id="meta-count">110·repos</span>
-    <span>hermes·v0.10.0</span>
+    <span id="meta-version">hermes·v0.10.0</span>
     <a class="mast-star" id="meta-atlas" href="https://github.com/ksimback/hermes-ecosystem" target="_blank" rel="noopener" aria-label="Star Hermes Atlas on GitHub">★ star this repo</a>
   </div>
   <nav class="mast-nav" aria-label="Primary">
@@ -109,14 +106,14 @@
   <h1 class="project-name">
     <span class="org">ReinaMacCredy</span><span class="slash">/</span>maestro
   </h1>
-  <p class="project-desc">Conductor for cross-agent coding workflows: structured memory, handoffs, plan-approve-execute coordination, and an evidence-based trust substrate across external CLIs (Codex, Claude Code, Hermes).</p>
+  <p class="project-desc">Harness for long-running AI agents — structured memory, cross-feature learning, plan-approve-execute</p>
 
   <div class="meta-row">
-    <span class="stars">★ 151</span>
-    <span><span class="meta-label">lang</span>TypeScript</span>
-    <span><span class="meta-label">license</span>MIT</span>
+    <span class="stars">★ 25</span>
     
-    <span><span class="meta-label">updated</span>2026-05-08</span>
+    
+    
+    
   </div>
 
   <div class="actions">
@@ -143,10 +140,10 @@
 <details class="readme-details">
   <summary class="readme-toggle">full readme from github</summary>
   <section class="readme" data-nosnippet>
-    <h2>maestro</h2>
+    <h4>maestro</h4>
 <p>Maestro is a local-first conductor for multi-agent software engineering. It gives you one CLI and one on-disk state model for missions, features, assertions, handoff launches, checkpoints, memory, and project context so separate agent sessions can collaborate without a server, database, or background daemon.</p>
 <p>It is designed for a workflow where a human operator coordinates multiple terminals, while Maestro keeps the shared state disciplined and inspectable.</p>
-<h3>Why Maestro</h3>
+<h5>Why Maestro</h5>
 <ul>
 <li>Shared state lives on disk in <code>.maestro/</code>, not in chat history.</li>
 <li>Missions break work into milestones, features, and validation assertions.</li>
@@ -155,17 +152,17 @@
 <li>Mission Control gives you a read-only TUI and JSON snapshots of current state.</li>
 <li>The runtime stays local-first: filesystem, git, config, and terminal tools.</li>
 </ul>
-<h3>System Map</h3>
+<h5>System Map</h5>
 <p><img src="https://raw.githubusercontent.com/ReinaMacCredy/maestro/main/assets/diagrams/readme-system-overview.svg" alt="Maestro system overview"></p>
 <p>Maestro is the shared state layer in the middle. The operator and fresh agent runs both go through the CLI, the CLI persists shared state locally, and Mission Control projects that same state without mutating it.</p>
-<h3>What Maestro Is Not</h3>
+<h5>What Maestro Is Not</h5>
 <ul>
 <li>It is not a hosted orchestration service or remote agent platform.</li>
 <li>It is not tied to a single model vendor or harness.</li>
 <li>It does not require a database, queue, or network API to work.</li>
 </ul>
 <p>The human operator is the bridge between terminals. Maestro is the shared state layer underneath that workflow.</p>
-<h3>Two Working Loops</h3>
+<h5>Two Working Loops</h5>
 <p>Maestro has two related but separate operating modes:</p>
 <table>
 <thead>
@@ -188,7 +185,7 @@
 </tr>
 </tbody></table>
 <p>If you only remember one distinction: <code>mission</code> is for planned execution; <code>task</code> is for the day-to-day queue.</p>
-<h3>Core Concepts</h3>
+<h5>Core Concepts</h5>
 <table>
 <thead>
 <tr>
@@ -245,20 +242,20 @@
 <td>A read-only dashboard for previewing mission state interactively or as JSON.</td>
 </tr>
 </tbody></table>
-<h3>Mission Control Preview</h3>
+<h5>Mission Control Preview</h5>
 <p>Mission Control gives you a read-only terminal dashboard over the current Maestro state.</p>
 <p><img src="https://raw.githubusercontent.com/ReinaMacCredy/maestro/main/assets/images/Misson_Control_Preview.png" alt="Mission Control preview"></p>
-<h3>How Work Flows</h3>
+<h5>How Work Flows</h5>
 <p><img src="https://raw.githubusercontent.com/ReinaMacCredy/maestro/main/assets/diagrams/readme-how-work-flows.svg" alt="How Maestro work flows"></p>
 <p>The loop is deliberately simple: define work, optionally inspect the feature brief, launch a fresh handoff, update progress, validate the outcome, and checkpoint before sealing the milestone.</p>
-<h3>Installation</h3>
-<h4>Requirements</h4>
+<h5>Installation</h5>
+<h6>Requirements</h6>
 <ul>
 <li><a href="https://bun.sh/">Bun</a></li>
 <li>Git</li>
 <li>A local agent harness in another terminal, such as Codex, Claude Code, or Hermes</li>
 </ul>
-<h4>Install From Release</h4>
+<h6>Install From Release</h6>
 <p>Install the latest published Maestro binary:</p>
 <pre><code class="language-bash">curl -fsSL https://raw.githubusercontent.com/ReinaMacCredy/maestro/main/scripts/install.sh | bash
 </code></pre>
@@ -268,12 +265,12 @@
 <p>After installation, refresh to the latest published release with:</p>
 <pre><code class="language-bash">maestro update
 </code></pre>
-<h4>Build From Source</h4>
+<h6>Build From Source</h6>
 <pre><code class="language-bash">bun install
 bun run build
 </code></pre>
 <p>This produces the compiled binary at <code>./dist/maestro</code>.</p>
-<h4>Install Locally</h4>
+<h6>Install Locally</h6>
 <pre><code class="language-bash">bun run release:local
 command -v maestro
 maestro --version
@@ -283,12 +280,12 @@ maestro --version
 </code></pre>
 <p>This syncs bundled Maestro skills into Codex, Claude Code, Hermes, and the shared AgentSkills root when those targets are available. See <a href="https://github.com/ReinaMacCredy/maestro/blob/main/docs/providers.md">Provider Registry and Skills</a> for roots, diagnostics, and external skill installs.</p>
 <p><code>./dist/maestro</code> is the fresh repo build. <code>maestro</code> on your <code>PATH</code> is the installed local binary.</p>
-<h3>Quick Start</h3>
-<h4>1. Initialize a project</h4>
+<h5>Quick Start</h5>
+<h6>1. Initialize a project</h6>
 <pre><code class="language-bash">maestro init
 </code></pre>
 <p>This creates the local <code>.maestro/</code> workspace for the current repository.</p>
-<h4>2. Create a mission plan file</h4>
+<h6>2. Create a mission plan file</h6>
 <p><code>mission create</code> expects a JSON plan file. A minimal example:</p>
 <pre><code class="language-json">{
   &quot;title&quot;: &quot;Add authentication&quot;,
@@ -343,17 +340,17 @@ maestro --version
   ]
 }
 </code></pre>
-<h4>3. Create and approve the mission</h4>
+<h6>3. Create and approve the mission</h6>
 <pre><code class="language-bash">maestro mission create --file plan.json
 maestro mission list
 maestro mission approve &lt;mission-id&gt;
 </code></pre>
-<h4>4. Inspect the current feature brief (optional)</h4>
+<h6>4. Inspect the current feature brief (optional)</h6>
 <pre><code class="language-bash">maestro feature list --mission &lt;mission-id&gt;
 maestro feature prompt &lt;feature-id&gt; --mission &lt;mission-id&gt; --out agent-prompt.md
 </code></pre>
 <p>This writes the prompt to <code>agent-prompt.md</code> and also stores it under <code>.maestro/missions/&lt;mission-id&gt;/agents/&lt;feature-id&gt;/prompt.md</code>. <code>maestro handoff</code> does not require this step, but it is useful when you want to inspect the current feature context before launching a fresh agent run.</p>
-<h4>5. Launch a handoff</h4>
+<h6>5. Launch a handoff</h6>
 <p>Launch a fresh Codex run for the next implementation slice:</p>
 <pre><code class="language-bash">maestro handoff \
   &quot;Implement auth-impl for mission &lt;mission-id&gt; and run the listed verification steps before stopping&quot; \
@@ -366,7 +363,7 @@ maestro handoff &quot;Finish auth-impl and wait for the result&quot; --agent cod
 maestro handoff &quot;Run a Hermes pass over auth-impl&quot; --agent hermes --wait --json
 maestro handoff pickup --id &lt;handoff-id&gt; --json
 </code></pre>
-<h4>6. Track progress, validate, and seal</h4>
+<h6>6. Track progress, validate, and seal</h6>
 <pre><code class="language-bash">maestro feature update auth-impl --mission &lt;mission-id&gt; --status in-progress
 maestro feature update auth-impl --mission &lt;mission-id&gt; --status review
 maestro validate show --mission &lt;mission-id&gt;
@@ -374,9 +371,9 @@ maestro validate update auth-login-works --mission &lt;mission-id&gt; --result p
 maestro checkpoint save --mission &lt;mission-id&gt;
 maestro milestone seal implement --mission &lt;mission-id&gt;
 </code></pre>
-<h3>Handoffs</h3>
+<h5>Handoffs</h5>
 <p><code>maestro handoff &quot;&lt;task&gt;&quot;</code> builds a self-contained markdown brief from the current repo state plus the linked task continuation, then launches a fresh Codex, Claude, or Hermes run. Every launch is persisted under <code>~/.maestro/handoff/&lt;id&gt;/</code> (a single global store) so the operator can inspect exactly what was sent and what the child process printed. Handoffs created in one working directory are visible from any other. Prompt-only packets can be picked up from any working directory, but task-linked packets must be picked up from their source project unless you explicitly pass <code>maestro handoff pickup --standalone</code>.</p>
-<h4>What a launch contains</h4>
+<h6>What a launch contains</h6>
 <p>A launch record always includes:</p>
 <ul>
 <li><code>id</code>, <code>agent</code>, and <code>model</code></li>
@@ -398,14 +395,14 @@ maestro milestone seal implement --mission &lt;mission-id&gt;
 <li><code>Acceptance Criteria</code></li>
 <li><code>Constraints</code></li>
 </ul>
-<h4>How prompt context is chosen</h4>
+<h6>How prompt context is chosen</h6>
 <ul>
 <li>If exactly one actionable feature exists in the active mission, Maestro anchors the brief to that mission, milestone, feature, assertions, agent prompt or report artifacts, and the current git state.</li>
 <li>Otherwise it falls back to repository context: current branch, recent commits, and changed files.</li>
 <li>If the handoff is linked to an active task continuation, Maestro injects the saved <code>currentState</code>, <code>nextAction</code>, active decisions, and recent local timeline into the prompt before launch.</li>
 <li>When <code>--worktree</code> is used, Maestro creates the sibling worktree first and appends that worktree path and branch information to the <code>Constraints</code> section.</li>
 </ul>
-<h4>Launch status flow</h4>
+<h6>Launch status flow</h6>
 <p><img src="https://raw.githubusercontent.com/ReinaMacCredy/maestro/main/assets/diagrams/readme-launch-status.svg" alt="Launch status flow"></p>
 <ul>
 <li>Default mode returns as soon as the child process is started and records status <code>launched</code>.</li>
@@ -413,7 +410,7 @@ maestro milestone seal implement --mission &lt;mission-id&gt;
 <li><code>--json</code> prints the persisted launch record for automation or debugging.</li>
 <li><code>handoff pickup</code> atomically consumes a packet on first pickup. Prompt-only packets can be consumed anywhere; task-linked packets resume their linked task only when pickup happens from the source project, unless <code>--standalone</code> is passed.</li>
 </ul>
-<h4>Typical commands</h4>
+<h6>Typical commands</h6>
 <p>Default Codex launch:</p>
 <pre><code class="language-bash">maestro handoff \
   &quot;Implement auth-impl for mission &lt;mission-id&gt; and verify the touched surface area&quot; \
@@ -440,9 +437,9 @@ maestro milestone seal implement --mission &lt;mission-id&gt;
   --json
 </code></pre>
 <p>Use <code>--model</code> to override the agent default (<code>gpt-5.4</code> for Codex, <code>opus</code> for Claude; Hermes only receives <code>--model</code> when explicitly provided), <code>--name</code> to label the launch, and <code>--base</code> when you need a specific base branch for a worktree handoff. Use <code>maestro handoff pickup</code> to consume a packet, and pass <code>--standalone</code> when you intentionally want only the prompt without resuming a linked task.</p>
-<h3>Task System</h3>
+<h5>Task System</h5>
 <p>Tasks are Maestro&#39;s lightweight, mutable issue graph for the daily queue. A task answers &quot;what do I do next?&quot;; a mission answers &quot;what are we building?&quot; Tasks live in <code>.maestro/tasks/tasks.jsonl</code>, are repo-tracked, and review like regular diffs.</p>
-<h4>Lifecycle</h4>
+<h6>Lifecycle</h6>
 <pre><code class="language-mermaid">flowchart LR
     pending --&gt;|claim| in_progress
     in_progress --&gt;|unclaim| pending
@@ -456,7 +453,7 @@ maestro milestone seal implement --mission &lt;mission-id&gt;
 <li>Legacy statuses (<code>open</code>, <code>blocked</code>, <code>deferred</code>, <code>closed</code>) still parse from older state files and collapse to <code>pending</code> or <code>completed</code> on read.</li>
 </ul>
 <p>Every task carries a <code>type</code> (<code>task</code>, <code>bug</code>, <code>feature</code>, <code>epic</code>, <code>chore</code>), a <code>priority</code> (<code>P0</code>-<code>P4</code>, default <code>P2</code>), freeform <code>labels</code>, optional <code>parentId</code>, ownership metadata (<code>assignee</code>, <code>claimedAt</code>, <code>lastActivityAt</code>), optional <code>contractId</code>, and an optional <code>receipt</code> (<code>summary</code>, <code>surprise</code>, <code>verifiedBy</code>) captured at completion.</p>
-<h4>Dependencies and blocking</h4>
+<h6>Dependencies and blocking</h6>
 <p>Blocking is symmetric and stored on both sides. Each task has a <code>blockedBy</code> list of prerequisites and a <code>blocks</code> list of dependents. Declaring that <code>A</code> blocks <code>B, C</code> atomically updates all three tasks.</p>
 <pre><code class="language-bash">maestro task block &lt;id&gt; &lt;blockedTaskIds...&gt;
 maestro task unblock &lt;id&gt; &lt;blockedTaskIds...&gt;
@@ -468,7 +465,7 @@ maestro task create &quot;...&quot; --blocked-by &lt;ids&gt;
 <li>Status moves into <code>in_progress</code> or <code>completed</code> fail with a blocker error when any prerequisite is still open.</li>
 <li>The retired <code>task deps add|remove</code> verbs now error and point to <code>task block</code> / <code>task unblock</code>.</li>
 </ul>
-<h4>Discovery</h4>
+<h6>Discovery</h6>
 <table>
 <thead>
 <tr>
@@ -501,7 +498,7 @@ maestro task create &quot;...&quot; --blocked-by &lt;ids&gt;
 <td>Full filter set: <code>--status</code>, <code>--priority</code>, <code>--type</code>, <code>--label</code>, <code>--parent</code>, <code>--assignee</code>, <code>--limit</code>. Add <code>--tracks</code> for headline-only output.</td>
 </tr>
 </tbody></table>
-<h4>Status view</h4>
+<h6>Status view</h6>
 <p><code>maestro task status</code> renders a hybrid operator board. Simple one-task tracks render as compact rows under <code>ACTIVE</code>, <code>READY</code>, or <code>BLOCKED</code>. Multi-step tracks expand only when dependency structure matters: blocked steps or ready steps that unlock downstream work. If a ready task unlocks blocked downstream work, a one-line <code>next:</code> hint appears under the header.</p>
 <pre><code class="language-text">$ maestro task status
 tasks: 42 open | 13 active | 5 ready | 16 blocked | 5 blocked tracks
@@ -567,7 +564,7 @@ BLOCKED
 </tbody></table>
 <p><strong>Render shape.</strong> The default view keeps solo/non-dependent work compact and expands only dependency tracks. <code>ACTIVE</code> shows at most four rows before <code>+ N more</code>; <code>READY</code>, <code>BLOCKED</code>, and dependency tracks are capped separately. Blocked rows render <code>blocked by &lt;slug-or-id&gt;</code> inline, while blocked steps inside dependency tracks render the blocker on the next line. Completed blockers are marked <code>(done)</code>.</p>
 <p>Color is auto-detected: <code>NO_COLOR=1</code> or a non-TTY pipe disables ANSI codes. Tracks (top-level tasks) carry a slug like <code>implement/&lt;kebab&gt;</code> (verbs: <code>implement | fix | chore | spike | epic</code>) which doubles as a human-friendly id — <code>task show implement/foo</code> and <code>task update implement/foo --status ...</code> work the same way <code>tsk-XXX</code> does.</p>
-<h5>Backfilling legacy tasks</h5>
+<h6>Backfilling legacy tasks</h6>
 <p>Tasks created before slugs landed have no slug and render with their bare <code>tsk-&lt;id&gt;</code> as the header. To bulk-derive slugs from titles:</p>
 <pre><code class="language-bash">maestro task backfill-slugs                  # dry-run; prints what would change
 maestro task backfill-slugs --apply          # write the slugs
@@ -576,7 +573,7 @@ maestro task backfill-slugs --rederive --apply  # refresh auto-derived slugs aft
 </code></pre>
 <p>Derivation drops English stop-words (&quot;and&quot;, &quot;of&quot;, &quot;in&quot;, ...), drops pure-hex tokens (commit shas) and digit-only tokens, caps at 4 significant words, and never truncates mid-word — so the result is short and scannable.</p>
 <p>Backfill is display-only and bypasses the completion + ownership locks (slugs don&#39;t affect runtime state), so it works on completed and currently-claimed tasks. By default it refuses to overwrite an existing slug; <code>--rederive</code> opts in to overwriting (use it when the derivation algorithm has changed).</p>
-<h4>Ownership and claim</h4>
+<h6>Ownership and claim</h6>
 <p>Claiming is exclusive and session-scoped. Session IDs come from the <code>sessionDetection</code> config (Claude Code out of the box) or <code>--session &lt;id&gt;</code> when scripting.</p>
 <pre><code class="language-bash">maestro task claim &lt;id&gt;
 maestro task claim &lt;id&gt; --busy-check        # refuse if this session already owns open work
@@ -587,7 +584,7 @@ maestro task release-owned &lt;sessionId&gt;      # release everything a session
 maestro task heartbeat &lt;id&gt;                 # bump lastActivityAt without other edits
 </code></pre>
 <p><code>task update &lt;id&gt; --status in_progress</code> auto-claims an unassigned task for the current session, provided the session has no other open work (or <code>--force</code> is passed). This preserves the invariant that a session owns at most one in-flight task at a time.</p>
-<h4>Batch planning</h4>
+<h6>Batch planning</h6>
 <p>Agents can stage a whole queue upfront from one JSON file. References between tasks use a batch-local <code>name</code> slot that resolves to real ids inside a single atomic write.</p>
 <pre><code class="language-bash">maestro task plan --file plan.json
 maestro task plan --file - &lt; plan.json
@@ -603,7 +600,7 @@ maestro task plan --file plan.json --dry-run           # validate without writin
   ]
 }
 </code></pre>
-<h4>Resumable continuation</h4>
+<h6>Resumable continuation</h6>
 <p>Every task has a durable, on-disk continuation record that tells the next agent where work stands. It is the source of truth for resume across sessions, across agents, and across context compaction. Standalone handoff packets are the transfer artifact; the continuation is the state.</p>
 <p>Two files back each task:</p>
 <ul>
@@ -611,7 +608,7 @@ maestro task plan --file plan.json --dry-run           # validate without writin
 <li><code>.maestro/tasks/local-history/&lt;taskId&gt;.jsonl</code> -- append-only event log (per-machine).</li>
 </ul>
 <p>Summary fields: <code>currentState</code>, <code>nextAction</code>, <code>keyDecisions</code>, <code>activeAgent</code>, <code>lastActiveAt</code>. Event kinds: <code>snapshot</code>, <code>decision</code>, <code>next_action_set</code>, <code>blocker_set</code>, <code>handoff_created</code>, <code>handoff_picked_up</code>, <code>agent_takeover</code>, <code>task_completed</code>, <code>task_reopened</code>.</p>
-<h5>Three ways work resumes</h5>
+<h6>Three ways work resumes</h6>
 <ol>
 <li><p><strong>Same session, chat intent.</strong> Maestro installs Claude Code hooks that hydrate the active continuation into the agent&#39;s context with no CLI call:</p>
 <ul>
@@ -635,7 +632,7 @@ maestro task plan --file plan.json --dry-run           # validate without writin
 <li><p><strong>Manual inspection.</strong> <code>maestro task show &lt;id&gt;</code> prints the raw task and continuation state for offline review.</p>
 </li>
 </ol>
-<h5>Keep the continuation fresh while working</h5>
+<h6>Keep the continuation fresh while working</h6>
 <pre><code class="language-bash">maestro task update &lt;id&gt; \
   --current-state &quot;Tests pass locally; rebased on main&quot; \
   --next-action &quot;Open PR and request review&quot; \
@@ -643,7 +640,7 @@ maestro task plan --file plan.json --dry-run           # validate without writin
   --remove-decision &quot;Use JWTs in localStorage&quot;
 </code></pre>
 <p>Refresh when current state or next action changes, when a load-bearing decision or constraint changes, or when blockers appear or clear.</p>
-<h4>Contracts</h4>
+<h6>Contracts</h6>
 <p>A contract is a machine-checked agreement attached to a task: what to touch, what to avoid, and what &quot;done&quot; means. At completion, Maestro diffs <code>claimedAtCommit..HEAD</code> and renders a verdict.</p>
 <p>Lifecycle: <code>draft</code> -&gt; <code>locked</code> or <code>amended</code> -&gt; <code>fulfilled</code> or <code>broken</code>, with <code>discarded</code> as an early-exit from <code>draft</code>. A closed contract can be reopened alongside its task.</p>
 <pre><code class="language-bash">maestro task contract new &lt;taskId&gt; --editor &quot;$EDITOR&quot;   # or --from template.yaml
@@ -678,7 +675,7 @@ maestro task contract criteria remove &lt;ref&gt; &lt;criterionId&gt;
   defaultMaxFilesTouched: ~    # integer cap or unset
   staleReclaimContractPolicy: inherit  # inherit | block (when taking over a stale claim)
 </code></pre>
-<h4>Task storage</h4>
+<h6>Task storage</h6>
 <pre><code class="language-text">.maestro/tasks/
 ├── tasks.jsonl                 # authoritative task graph (repo-tracked)
 ├── contracts/                  # per-task locked contracts and verdicts (repo-tracked)
@@ -694,7 +691,7 @@ maestro task prune --keep 100 --candidates-only
 maestro task prune --continuations-only --dry-run
 maestro task prune --all                 # purge both piles
 </code></pre>
-<h3>Evidence</h3>
+<h5>Evidence</h5>
 <p>Maestro has a lightweight logbook for recording verifiable outputs tied to a task. Use it to document commands that ran, their exit codes, and optional manual notes — before or after completing work.</p>
 <p>Evidence rows are stored under <code>.maestro/evidence/</code> (gitignored, per-machine) and stamped with a <code>WitnessLevel</code> that captures how trustworthy the claim is: <code>witnessed-by-maestro</code> for Maestro-invoked commands, <code>agent-claimed-locally</code> for evidence the agent self-reported, and <code>agent-claimed-and-not-reproducible</code> for manual notes.</p>
 <pre><code class="language-bash"># Record a command run
@@ -713,10 +710,10 @@ maestro evidence list --task tsk-aaaaaa
 maestro evidence show evd-xxxxxx
 </code></pre>
 <p>Evidence rows are linked to a task id and optionally to a contract criterion via <code>--criterion &lt;id&gt;</code>. Run <code>maestro evidence record --help</code> for the full flag set.</p>
-<h3>Trust Substrate</h3>
+<h5>Trust Substrate</h5>
 <p>Maestro&#39;s trust substrate is a stack of opt-in layers that turn agent claims into deterministic, auditable, gated decisions. Each layer is independently useful; together they compose. Contracts narrow the scope of work, the Trust Verifier checks the diff against that scope, the Verdict gates completion on witnessed evidence, CI makes the verdict authoritative, and the optional layers above (auto-merge, deploy safety, cross-task conflict) extend the same primitives outward.</p>
 <p>The sections below cover each layer in turn. They are presented in the order a team typically adopts them, but every layer past contracts is opt-in and can be enabled independently.</p>
-<h3>Contracts and the Trust Verifier</h3>
+<h5>Contracts and the Trust Verifier</h5>
 <p>This is the foundation. A contract pins down what a task is allowed to touch; the Trust Verifier checks the diff against that contract. Three behaviors define this layer:</p>
 <ol>
 <li><p><strong>Plan proposes a contract.</strong> During <code>maestro-plan</code>, the plan must include a <code>proposed_contract</code> with <code>allowed_files</code>, <code>forbidden_paths</code>, <code>done_when</code> criteria, and an <code>amendment_budget</code>. Plan-time proposals are not amendments — they seed the contract that gets locked when the agent claims the task.</p>
@@ -732,7 +729,7 @@ maestro evidence show evd-xxxxxx
 <p>The verifier runs 6 checks in parallel: scope adherence, lockfile parity, generated-file parity, sensitive-path policy, commit metadata, and secrets-in-diff. Findings are printed with severity (<code>info</code>, <code>warn</code>, <code>error</code>). <code>error</code> findings cause a non-zero exit code.</p>
 </li>
 </ol>
-<h4>CLI surface</h4>
+<h6>CLI surface</h6>
 <pre><code class="language-bash"># Versioned contract inspection and amendment
 maestro contract show --task &lt;id&gt;
 maestro contract show --task &lt;id&gt; --version &lt;n&gt;
@@ -749,13 +746,13 @@ maestro task verify --task &lt;id&gt; --json
 maestro spec show --mission &lt;id&gt;
 maestro spec edit --mission &lt;id&gt;
 </code></pre>
-<h4>Policy files</h4>
+<h6>Policy files</h6>
 <p><code>maestro init</code> bootstraps two policy files committed under <code>.maestro/policies/</code>:</p>
 <ul>
 <li><code>sensitive-paths.yaml</code> — glob list; paths matching these globs trigger <code>checkSensitivePaths</code> findings. See <code>docs/sensitive-paths-defaults.md</code> for the 8 default globs and guidance on extending or relaxing them.</li>
 <li><code>owners.yaml</code> — three role lists (<code>policy_approver</code>, <code>ratchet_approver</code>, <code>sensitive_waiver</code>). See <code>docs/owners-yaml-format.md</code> for the schema reference.</li>
 </ul>
-<h3>Verdicts and Risk Class</h3>
+<h5>Verdicts and Risk Class</h5>
 <p>The verdict layer turns a verifier run into a deterministic gating decision. After <code>maestro task verify</code>, an agent requests a verdict that produces one of four outcomes:</p>
 <table>
 <thead>
@@ -781,7 +778,7 @@ maestro spec edit --mission &lt;id&gt;
 <td>A hard blocker is active: broken contract, <code>critical</code> risk class with no human signoff, or a policy loosening still in its 30-day soak window.</td>
 </tr>
 </tbody></table>
-<h4>Witness levels</h4>
+<h6>Witness levels</h6>
 <p>Every Evidence row carries a <code>witness_level</code> that captures how trustworthy the claim is. The ladder, strongest to weakest:</p>
 <ol>
 <li><code>witnessed-by-maestro</code> — Maestro itself ran the command and captured the result.</li>
@@ -791,13 +788,13 @@ maestro spec edit --mission &lt;id&gt;
 </ol>
 <p>The Risk Engine demotes <code>PASS</code> to <code>HUMAN</code> if any evidence row&#39;s witness level is below the threshold required by the effective autopilot policy for the derived risk class.</p>
 <p>See <code>docs/witness-levels.md</code> for the full reference.</p>
-<h4>Risk class</h4>
+<h6>Risk class</h6>
 <p>The Risk Engine derives a risk class from deterministic diff signals and takes the higher of agent-proposed vs Maestro-derived. An agent can never lower the derived class. The four levels are <code>low</code>, <code>medium</code>, <code>high</code>, and <code>critical</code>. See <code>docs/risk-class-derivation.md</code> for the signal-to-class mapping table.</p>
-<h4>ProofMap</h4>
+<h6>ProofMap</h6>
 <p><code>maestro task proof --task &lt;id&gt;</code> produces a per-criterion coverage map: for each acceptance criterion in the linked Spec, it shows which Evidence rows satisfy it and at what witness level.</p>
-<h4>Asymmetric policy editing</h4>
+<h6>Asymmetric policy editing</h6>
 <p>Policy tightenings (stricter rules, lower budgets) take effect immediately. Policy loosenings (relaxed rules, higher budgets) soak for 30 days before becoming effective. Pending loosenings accumulate in <code>.maestro/policies/.pending-loosenings.json</code> (gitignored). Use <code>maestro policy pending</code> to inspect.</p>
-<h4>CLI surface</h4>
+<h6>CLI surface</h6>
 <pre><code class="language-bash"># Verdict
 maestro verdict request --task &lt;id&gt;           # exit 0=PASS 1=FAIL 2=HUMAN 3=BLOCK
 maestro verdict request --task &lt;id&gt; --json
@@ -812,7 +809,7 @@ maestro task proof --task &lt;id&gt; --json
 maestro policy check --task &lt;id&gt;
 maestro policy pending
 </code></pre>
-<h4>Policy files</h4>
+<h6>Policy files</h6>
 <p><code>maestro init</code> bootstraps three additional policy files under <code>.maestro/policies/</code>:</p>
 <ul>
 <li><code>risk.yaml</code> — extends or tightens the default signal-to-class mapping. Absent means defaults apply.</li>
@@ -820,9 +817,9 @@ maestro policy pending
 <li><code>release.yaml</code> — release-gate rules (e.g., minimum witness level required before a release commit is stamped).</li>
 </ul>
 <p>See <code>docs/policy-format.md</code> for the schema reference for all five policy files.</p>
-<h3>The Pre-Claim Loop</h3>
+<h5>The Pre-Claim Loop</h5>
 <p>The pre-claim loop closes the inner agent loop: the agent runs plan, implement, verify, and verdict steps without human intervention; humans still review and merge. The cycle is enforced by the tools, not by convention.</p>
-<h4>The pre-claim ritual</h4>
+<h6>The pre-claim ritual</h6>
 <p>Before claiming any non-trivial task done, the agent runs this ordered loop:</p>
 <ol>
 <li><strong>Plan</strong> — write a plan file and run <code>maestro plan check</code> to catch problems before code is written.</li>
@@ -832,7 +829,7 @@ maestro policy pending
 <li><strong>Verdict</strong> — run <code>maestro verdict request</code> and branch on the exit code.</li>
 </ol>
 <p>The canonical source for this ritual is the <code>maestro-verify</code> bundled skill — read it when in doubt about the verification protocol.</p>
-<h4>Plan-check</h4>
+<h6>Plan-check</h6>
 <p><code>maestro plan check</code> evaluates a plan file against the locked contract and spec before any code is written. It catches three classes of problems:</p>
 <ul>
 <li><strong><code>scope-widens</code></strong> — the plan intends to touch files outside <code>contract.scope.filesExpected</code>. Resolve by narrowing the intended files or amending the contract before coding.</li>
@@ -843,25 +840,25 @@ maestro policy pending
 <pre><code class="language-bash">maestro plan check --task &lt;id&gt; --plan-file ./plan.yaml
 maestro plan check --task &lt;id&gt; --plan-file ./plan.yaml --json
 </code></pre>
-<h4>AI Reviewer Evidence</h4>
+<h6>AI Reviewer Evidence</h6>
 <p>Agents can record reviewer findings as structured evidence via <code>maestro evidence record --kind ai-review</code>. Three reviewer kinds are available: <code>bug</code> (correctness, edge cases, regressions), <code>security</code> (auth, input validation, secrets, injection), and <code>architecture</code> (boundary violations, coupling, abstraction misuse).</p>
 <p>Any <code>error</code>-severity finding raises the effective risk class by one notch. A <code>security</code>-reviewer <code>error</code> always lifts to <code>critical</code>. A clean review (zero <code>error</code> findings) never lowers the deterministic baseline derived from diff signals.</p>
 <p>See <code>docs/ai-reviewer-protocol.md</code> for the finding schema, confidence semantics, and recording guidance.</p>
-<h4>Threat-model evidence</h4>
+<h6>Threat-model evidence</h6>
 <p>When the diff intersects security-relevant sensitive paths, the Verdict is <code>HUMAN</code> with reason <code>threat-model-required</code> unless a <code>threat-model</code> Evidence row is present. Produce the threat-model document and record it before requesting a verdict:</p>
 <pre><code class="language-bash">maestro evidence record --task &lt;id&gt; --kind threat-model \
   --threat-model-file ./threat-model.json
 </code></pre>
 <p>See <code>docs/threat-model-format.md</code> for the schema (assets, threatCategories, mitigations, residualRisk) and examples.</p>
-<h4>Cost budgets</h4>
+<h6>Cost budgets</h6>
 <p>Contracts can declare cost limits: <code>maxRetries</code>, <code>maxWallClockSeconds</code>, and <code>maxTokens</code>. When any limit is exceeded, run-state at <code>.maestro/runs/&lt;task-id&gt;/state.json</code> (gitignored) is marked exhausted and the next <code>verdict request</code> returns <code>BLOCK</code> (exit 3) with reason <code>cost-budget-exhausted</code>. Check consumption at any time:</p>
 <pre><code class="language-bash">maestro task budget --task &lt;id&gt;
 maestro task budget --task &lt;id&gt; --json
 </code></pre>
 <p><code>retryCount</code> increments automatically on each <code>FAIL</code> or <code>HUMAN</code> verdict.</p>
-<h4>Mission Control autopilot view</h4>
+<h6>Mission Control autopilot view</h6>
 <p>In mission mode, Mission Control gains an <code>autopilot</code> screen that projects the current verify/verdict state across all active tasks in the mission. Use <code>maestro mission-control --preview autopilot --size 120x40 --format plain</code> to inspect it non-interactively.</p>
-<h4>CLI surface</h4>
+<h6>CLI surface</h6>
 <pre><code class="language-bash"># Plan-check
 maestro plan check --task &lt;id&gt; --plan-file &lt;path&gt;
 maestro plan check --task &lt;id&gt; --plan-file &lt;path&gt; --json
@@ -880,7 +877,7 @@ maestro evidence record --task &lt;id&gt; --kind ai-review \
 maestro evidence record --task &lt;id&gt; --kind threat-model \
   --threat-model-file &lt;path&gt;
 </code></pre>
-<h3>CI Integration</h3>
+<h5>CI Integration</h5>
 <p>Local Maestro is advisory; CI Maestro is authoritative. The PR check status posted by <code>maestro ci verify</code> is the merge gate.</p>
 <ol>
 <li>Bootstrap your repo with <code>maestro setup</code> — the maestro-setup skill installs <code>.github/workflows/maestro-verify.yml</code> from its bundled template (when <code>.github/</code> exists).</li>
@@ -890,9 +887,9 @@ maestro evidence record --task &lt;id&gt; --kind threat-model \
 </ol>
 <p>Verdicts are bound to (pr, tree_sha), so squashes survive but force-pushes to a different tree invalidate them.</p>
 <p>See <code>docs/ci-integration.md</code> for the full reference (workflow template, env contract, witness ingestion, troubleshooting).</p>
-<h3>Auto-Merge</h3>
+<h5>Auto-Merge</h5>
 <p>When all 8 eligibility predicates pass, <code>maestro merge auto</code> triggers <code>gh pr merge --auto</code> without further human intervention. Auto-merge applies to roughly 5–15% of merged PRs in practice — only those where the diff is small-scope, fully CI-witnessed, and the autopilot policy explicitly opts in for the relevant risk class.</p>
-<h4>Opt-in</h4>
+<h6>Opt-in</h6>
 <p>Auto-merge is disabled for all risk classes by default. Opt in per class in <code>.maestro/policies/autopilot.yaml</code>:</p>
 <pre><code class="language-yaml">autoMergeAllowed:
   low: true
@@ -900,7 +897,7 @@ maestro evidence record --task &lt;id&gt; --kind threat-model \
   high: false
   critical: false
 </code></pre>
-<h4>Eligibility predicates</h4>
+<h6>Eligibility predicates</h6>
 <p>All 8 must pass for <code>merge auto</code> to trigger. In canonical check order:</p>
 <table>
 <thead>
@@ -942,7 +939,7 @@ maestro evidence record --task &lt;id&gt; --kind threat-model \
 <td>If a Spec is linked, its quality score must be 1.0</td>
 </tr>
 </tbody></table>
-<h4>CLI shapes</h4>
+<h6>CLI shapes</h6>
 <pre><code class="language-bash"># Check eligibility and trigger if eligible
 maestro merge auto --pr &lt;number&gt; --task &lt;id&gt; [--base &lt;ref&gt;] [--repo &lt;owner/name&gt;] [--json]
 
@@ -954,11 +951,11 @@ maestro review ack --task &lt;id&gt; --verdict &lt;id&gt; --criterion &quot;&lt;
 </code></pre>
 <p>Exit codes for <code>merge auto</code>: 0 = eligible and triggered, 1 = ineligible (reasons printed).</p>
 <p>See <code>docs/auto-merge-eligibility.md</code> for the full predicate reference and &quot;Why isn&#39;t my PR auto-merging?&quot; troubleshooting. See <code>docs/override-flow.md</code> for override authorization, audit trail, and no-silent-pass guarantees.</p>
-<h3>Deploy Safety</h3>
+<h5>Deploy Safety</h5>
 <p>Deploy Safety is opt-in. Producing <code>deploy-readiness</code> and <code>runtime-signal</code> Evidence does not by itself flip Verdict semantics; teams wire the new Evidence into <code>policies/risk.yaml</code> if they want it to gate.</p>
-<h4>Spec schema: <code>runtime_signals</code> and <code>rollout_plan</code></h4>
+<h6>Spec schema: <code>runtime_signals</code> and <code>rollout_plan</code></h6>
 <p>The spec adds two optional fields: <code>runtime_signals</code> (array of <code>RuntimeSignal</code> — name, provider, query, threshold) and <code>rollout_plan</code> (feature flag name, canary stages, rollback command). Older specs forward-migrate at read time with empty arrays and no rollout plan.</p>
-<h4><code>maestro deploy gate</code></h4>
+<h6><code>maestro deploy gate</code></h6>
 <p>Runs four checks and records a <code>deploy-readiness</code> Evidence row. Exits 0 when all checks pass, 1 when any fail.</p>
 <table>
 <thead>
@@ -985,33 +982,33 @@ maestro review ack --task &lt;id&gt; --verdict &lt;id&gt; --criterion &quot;&lt;
 </tr>
 </tbody></table>
 <p><code>deploy gate</code> does NOT mutate the Verdict. Teams add a <code>deploy-readiness</code> signal to <code>policies/risk.yaml</code> if they want it to block a PR.</p>
-<h4><code>maestro deploy rollback</code></h4>
+<h6><code>maestro deploy rollback</code></h6>
 <p>Runs the provided shell command, records a <code>rollback-exercised</code> Evidence row, and exits 1 if the command fails. The witness level is <code>witnessed-by-ci</code> in CI and <code>witnessed-by-maestro</code> locally — both satisfy the rollback check in <code>deploy gate</code>.</p>
-<h4><code>maestro runtime check</code></h4>
+<h6><code>maestro runtime check</code></h6>
 <p>Queries each signal declared in <code>Spec.runtime_signals</code> via the configured provider (Prometheus). Records one <code>runtime-signal</code> Evidence row per signal. Exit code is always 0; <code>pass=false</code> rows are advisory unless wired into risk policy.</p>
 <p>Provider base URL precedence: <code>--provider-base-url</code> flag → <code>MAESTRO_PROMETHEUS_URL</code> env → <code>http://localhost:9090</code>.</p>
-<h4><code>owners.yaml</code> — <code>deploy_approver</code> role</h4>
+<h6><code>owners.yaml</code> — <code>deploy_approver</code> role</h6>
 <p><code>owners.yaml</code> has a fourth role: <code>deploy_approver</code>. The list is checked by <code>deploy gate</code> (owner check). See <code>docs/owners-yaml-format.md</code> for the full schema. CI Maestro&#39;s PR-author check also verifies that the committer is not self-approving their own deploy.</p>
-<h4>CLI shapes</h4>
+<h6>CLI shapes</h6>
 <pre><code class="language-bash">maestro deploy gate --task &lt;id&gt; [--base &lt;ref&gt;] [--json]
 maestro deploy rollback --task &lt;id&gt; --command &lt;cmd&gt; [--json]
 maestro runtime check --task &lt;id&gt; [--provider-base-url &lt;url&gt;] [--json]
 </code></pre>
 <p>See <code>docs/deploy-gate.md</code> for the full check enumeration, <code>Spec.rollout_plan</code> reference, and troubleshooting. See <code>docs/runtime-monitoring.md</code> for the <code>RuntimeMonitorPort</code> reference and Prometheus adapter guide.</p>
-<h3>Cross-Task Conflict and Trust Benchmarks</h3>
+<h5>Cross-Task Conflict and Trust Benchmarks</h5>
 <p>Two features extend the trust substrate horizontally — one across PRs, one across edge cases.</p>
-<h4>Cross-task conflict detection</h4>
+<h6>Cross-task conflict detection</h6>
 <p><code>maestro ci verify</code> checks whether other open PRs touch any of the same file paths as the current PR. When overlap is detected, it records a <code>kind=cross-task-conflict</code> Evidence row at <code>witnessed-by-ci</code> and passes it to the Risk Engine. The Risk Engine raises the effective risk class one tier per signal (capped at <code>critical</code>; multiple conflict rows still produce only a one-tier raise total).</p>
 <p>Detection is file-path-level: a path counts as overlapping when it appears in both this PR&#39;s changed-file list and at least one other open PR&#39;s changed-file list. The check is non-fatal on API errors — a failed <code>gh api</code> call logs a warning and skips the record without failing the verify step.</p>
 <p>See <code>docs/cross-task-conflict.md</code> for the port/adapter/use-case flow, payload schema, and troubleshooting.</p>
-<h4>Trust benchmark corpus</h4>
+<h6>Trust benchmark corpus</h6>
 <p><code>tests/e2e/trust-benchmark/</code> is an end-to-end regression corpus of 9 scenarios drawn from a master edge-case list of 32. The corpus covers: out-of-scope edits, generated-file drift, sensitive-path violations, security-thin diffs, amendment creep, proof not tied to criteria, rebase/squash verdict identity, deploy-gate decision authority, and PR self-weakening. Each scenario includes a positive assertion (mitigation fires) and a negative assertion (mitigation does not fire without the trigger).</p>
 <pre><code class="language-bash">bun test tests/e2e/trust-benchmark/
 </code></pre>
 <p>See <code>docs/trust-benchmark.md</code> for the full scenario table, fixture pattern, and how to add new scenarios.</p>
-<h4>Roadmap</h4>
+<h6>Roadmap</h6>
 <p>The following capabilities are not in this release and will ship when teams ask maestro to learn from incidents: autopsy generator, <code>maestro ratchet</code> review/approve/sunset CLI, N≥2 broad-promotion guard for ratchet rules, and sunset/decay machinery.</p>
-<h3>Common Commands</h3>
+<h5>Common Commands</h5>
 <table>
 <thead>
 <tr>
@@ -1094,7 +1091,6 @@ maestro runtime check --task &lt;id&gt; [--provider-base-url &lt;url&gt;] [--jso
 </tbody></table>
 <hr>
 <p><em>README truncated. <a href="https://github.com/ReinaMacCredy/maestro#readme">Continue reading on GitHub</a></em></p>
-
   </section>
 </details>
 
@@ -1106,35 +1102,35 @@ maestro runtime check --task &lt;id&gt; [--provider-base-url &lt;url&gt;] [--jso
   <div>
     <div class="related-list">
       <a class="related-row" href="/projects/mukul975/Anthropic-Cybersecurity-Skills">
-        <div class="stars">★ 6.1K</div>
+        <div class="stars">★ 4.1K</div>
         <div class="name"><span class="org">mukul975 /</span> Anthropic-Cybersecurity-Skills</div>
       </a>
       <a class="related-row" href="/projects/conorbronsdon/avoid-ai-writing">
-        <div class="stars">★ 1.4K</div>
+        <div class="stars">★ 759</div>
         <div class="name"><span class="org">conorbronsdon /</span> avoid-ai-writing</div>
       </a>
       <a class="related-row" href="/projects/wondelai/skills">
-        <div class="stars">★ 888</div>
+        <div class="stars">★ 480</div>
         <div class="name"><span class="org">wondelai /</span> skills</div>
       </a>
       <a class="related-row" href="/projects/DougTrajano/pydantic-ai-skills">
-        <div class="stars">★ 284</div>
+        <div class="stars">★ 220</div>
         <div class="name"><span class="org">DougTrajano /</span> pydantic-ai-skills</div>
       </a>
       <a class="related-row" href="/projects/Agents365-ai/drawio-skill">
-        <div class="stars">★ 1.3K</div>
+        <div class="stars">★ 131</div>
         <div class="name"><span class="org">Agents365-ai /</span> drawio-skill</div>
       </a>
       <a class="related-row" href="/projects/smartcontractkit/chainlink-agent-skills">
-        <div class="stars">★ 100</div>
+        <div class="stars">★ 85</div>
         <div class="name"><span class="org">smartcontractkit /</span> chainlink-agent-skills</div>
       </a>
       <a class="related-row" href="/projects/tlehman/litprog-skill">
-        <div class="stars">★ 128</div>
+        <div class="stars">★ 81</div>
         <div class="name"><span class="org">tlehman /</span> litprog-skill</div>
       </a>
       <a class="related-row" href="/projects/esaradev/icarus-plugin">
-        <div class="stars">★ 111</div>
+        <div class="stars">★ 51</div>
         <div class="name"><span class="org">esaradev /</span> icarus-plugin</div>
       </a>
     </div>
@@ -1150,7 +1146,7 @@ maestro runtime check --task &lt;id&gt; [--provider-base-url &lt;url&gt;] [--jso
 </footer>
 
 <script>(function(){var t=document.getElementById('theme-toggle');if(!t)return;function render(){var c=document.documentElement.getAttribute('data-theme');t.querySelector('.tt-light').classList.toggle('tt-active',c==='light');t.querySelector('.tt-dark').classList.toggle('tt-active',c!=='light');}render();t.addEventListener('click',function(){var c=document.documentElement.getAttribute('data-theme');var n=c==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}render();});})();</script>
-<script>(function(){fetch('/api/stars').then(function(r){return r.ok&&r.json()}).then(function(d){if(!d)return;var a=document.getElementById('meta-atlas');if(a&&d.atlas&&d.atlas.stars)a.textContent='★ '+d.atlas.stars+' · star this repo';var c=document.getElementById('meta-count');if(c&&d.totals&&d.totals.count)c.textContent=d.totals.count+'·repos'}).catch(function(){});})();</script>
+<script src="/assets/js/masthead-fetch.js" defer></script>
 <!-- Cloudflare Web Analytics -->
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
         data-cf-beacon='{"token": "fe0d4d79280b4386b6b0cd99b2d94dbc"}'></script>
