@@ -1,6 +1,6 @@
 # Hermes Atlas — Full Context Bundle
 
-> Complete content of hermesatlas.com as of 2026-05-08. Concatenated from guide pages, ecosystem overview, the quarterly report, and project summaries. Canonical URLs preserved throughout.
+> Complete content of hermesatlas.com as of 2026-05-09. Concatenated from guide pages, ecosystem overview, the quarterly report, and project summaries. Canonical URLs preserved throughout.
 
 This file is the companion to https://hermesatlas.com/llms.txt (the concise index).
 
@@ -1548,12 +1548,12 @@ Stars: 83,290
 Official: Yes (maintained by Nous Research)
 The self-improving AI agent that grows with you — persistent memory, auto-generated skills, 14 platforms, 6 execution backends
 
-Hermes Agent is an autonomous AI system designed for persistent, cross-platform task execution and self-improvement. It utilizes a closed learning loop to autonomously generate and refine skills from experience while maintaining long-term user models and session memory. The agent integrates with 14 messaging platforms and supports seven execution backends, including serverless and containerized environments, to ensure continuity across different devices. Users can automate complex workflows through built-in cron scheduling, parallel subagents, and a library of over 40 tools.
+Hermes Agent is a self-improving AI agent designed to maintain persistent memory and evolve its capabilities over time. It utilizes a closed learning loop to autonomously create and refine skills from experience while building a user model across sessions. The system supports a wide array of LLM providers and can be deployed across various environments, from local machines to serverless infrastructure. Users can interact with the agent via a dedicated terminal interface or through multiple messaging platforms.
 
 Highlights:
-- Autonomous skill creation and self-improvement based on task experience
-- Multi-platform support including Telegram, Discord, Slack, and terminal interfaces
-- Flexible execution across local, Docker, SSH, and serverless cloud backends
+- Autonomous skill creation and self-improvement learning loop
+- Cross-platform access via Telegram, Discord, Slack, and more
+- Flexible deployment across seven different execution backends
 
 ---
 
@@ -1582,12 +1582,12 @@ Category: Memory & Context
 Stars: 8,857
 Garry's Opinionated OpenClaw/Hermes Agent Brain
 
-GBrain is a memory and context management system designed to provide AI agents with long-term persistence and structured knowledge. It utilizes a self-wiring knowledge graph and hybrid search to link entities like people and companies without requiring additional LLM calls. The system supports automated ingestion of diverse data types and offers specialized evaluation tools for measuring retrieval performance. It can be deployed as a standalone CLI, an MCP server, or a remote OAuth 2.1-protected service.
+GBrain is a persistent memory and context layer designed to prevent AI agents from losing information over time. It utilizes a self-wiring knowledge graph and hybrid search to automatically extract entity relationships like investments and professional roles without requiring additional LLM calls. The system consolidates data from meetings, emails, and tweets into a structured timeline with backlink-boosted ranking for improved retrieval. It integrates with Hermes Agent and OpenClaw via MCP or a standalone CLI, providing 34 specialized skills for autonomous memory management.
 
 Highlights:
-- Self-wiring knowledge graph with typed entity links
-- Hybrid search combining vector and graph-based retrieval
-- Supports MCP, CLI, and OAuth 2.1 remote connections
+- Self-wiring knowledge graph extracts typed entity links automatically
+- Hybrid search combining vector retrieval with graph-based ranking
+- Exposes 30+ MCP tools for Claude Code, Cursor, and Windsurf
 
 ---
 
@@ -2643,12 +2643,12 @@ Category: Workspaces & GUIs
 Stars: 25
 Glassmorphic web interface for Hermes Agent — your self-hosted AI assistant
 
-Hermes UI is a glassmorphic web interface that serves as a centralized command center for managing the self-hosted Hermes Agent. Built as a single-file React 18 application, it communicates with the agent via a lightweight Python proxy server to provide real-time operational visibility. The interface includes a Kanban-style task board, a workspace-aware file browser, and a chat system capable of rendering Mermaid diagrams and streaming logs. Users can manage skills, monitor system health, and execute scheduled cron jobs through a unified dashboard.
+Hermes UI is a glassmorphic web-based command center designed to provide a visual interface for managing the self-hosted Hermes Agent. It operates as a single-file React 18 application served via a lightweight Python proxy, enabling users to interact with their AI assistant through a browser. The interface consolidates chat, real-time log streaming, file browsing, and memory inspection into a unified workspace. It also includes dedicated modules for managing MCP tools, scheduling cron jobs, and monitoring background task progress.
 
 Highlights:
 - Single-file React 18 application with a lightweight Python proxy server
-- Kanban-style task board for tracking active tool work and subagents
-- Integrated file browser and terminal for workspace-aware project management
+- Real-time log streaming and live workspace file browser with previews
+- Integrated management for MCP tools, cron jobs, and skill libraries
 
 ---
 

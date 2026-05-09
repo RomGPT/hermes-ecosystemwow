@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/garrytan/gbrain#software",
   "name": "gbrain",
-  "description": "GBrain is a memory and context management system designed to provide AI agents with long-term persistence and structured knowledge. It utilizes a self-wiring knowledge graph and hybrid search to link entities like people and companies without requiring additional LLM calls. The system supports automated ingestion of diverse data types and offers specialized evaluation tools for measuring retrieval performance. It can be deployed as a standalone CLI, an MCP server, or a remote OAuth 2.1-protected",
+  "description": "GBrain is a persistent memory and context layer designed to prevent AI agents from losing information over time. It utilizes a self-wiring knowledge graph and hybrid search to automatically extract entity relationships like investments and professional roles without requiring additional LLM calls. The system consolidates data from meetings, emails, and tweets into a structured timeline with backlink-boosted ranking for improved retrieval. It integrates with Hermes Agent and OpenClaw via MCP or a",
   "url": "https://hermesatlas.com/projects/garrytan/gbrain",
   "codeRepository": "https://github.com/garrytan/gbrain",
   "applicationCategory": "UtilitiesApplication",
@@ -47,13 +47,13 @@
     "name": "garrytan",
     "url": "https://github.com/garrytan"
   },
-  "dateModified": "2026-05-08T20:25:49.000Z",
+  "dateModified": "2026-05-09T07:06:46.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 13839
+    "userInteractionCount": 13912
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -112,11 +112,11 @@
   <p class="project-desc">Garry's Opinionated OpenClaw/Hermes Agent Brain</p>
 
   <div class="meta-row">
-    <span class="stars">★ 13.8K</span>
+    <span class="stars">★ 13.9K</span>
     <span><span class="meta-label">lang</span>TypeScript</span>
     <span><span class="meta-label">license</span>MIT</span>
     
-    <span><span class="meta-label">updated</span>2026-05-08</span>
+    <span><span class="meta-label">updated</span>2026-05-09</span>
   </div>
 
   <div class="actions">
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">GBrain is a memory and context management system designed to provide AI agents with long-term persistence and structured knowledge. It utilizes a self-wiring knowledge graph and hybrid search to link entities like people and companies without requiring additional LLM calls. The system supports automated ingestion of diverse data types and offers specialized evaluation tools for measuring retrieval performance. It can be deployed as a standalone CLI, an MCP server, or a remote OAuth 2.1-protected service.</p>
+    <p class="summary-text">GBrain is a persistent memory and context layer designed to prevent AI agents from losing information over time. It utilizes a self-wiring knowledge graph and hybrid search to automatically extract entity relationships like investments and professional roles without requiring additional LLM calls. The system consolidates data from meetings, emails, and tweets into a structured timeline with backlink-boosted ranking for improved retrieval. It integrates with Hermes Agent and OpenClaw via MCP or a standalone CLI, providing 34 specialized skills for autonomous memory management.</p>
     <ul class="summary-highlights">
-      <li>Self-wiring knowledge graph with typed entity links</li>
-      <li>Hybrid search combining vector and graph-based retrieval</li>
-      <li>Supports MCP, CLI, and OAuth 2.1 remote connections</li>
+      <li>Self-wiring knowledge graph extracts typed entity links automatically</li>
+      <li>Hybrid search combining vector retrieval with graph-based ranking</li>
+      <li>Exposes 30+ MCP tools for Claude Code, Cursor, and Windsurf</li>
     </ul>
   </div>
 </section>
@@ -991,9 +991,11 @@ ADMIN
                                         $GBRAIN_HOME/clones/&lt;id&gt;/ and re-cloned on sync if
                                         it goes missing. Also exposed via MCP for remote
                                         agent setup (whoami + sources_{add,list,remove,status}).
-  gbrain dream [--dry-run] [--phase N]  8-phase maintenance cycle (lint→backlinks→sync→synthesize
-                                        →extract→patterns→embed→orphans). v0.23 added synthesize +
-                                        patterns: transcripts → reflections + cross-session themes.
+  gbrain dream [--dry-run] [--phase N]  9-phase maintenance cycle (lint→backlinks→sync→synthesize
+                                        →extract→patterns→recompute_emotional_weight→embed→orphans).
+                                        v0.23 added synthesize + patterns. v0.29 added emotional-weight
+                                        recompute. v0.30.2: synthesize now chunks fat transcripts
+                                        (config: dream.synthesize.max_prompt_tokens, max_chunks_per_transcript).
   gbrain dream --input &lt;file&gt;           Ad-hoc transcript synthesis (implies --phase synthesize)
   gbrain dream --date YYYY-MM-DD        Synthesize a single day; --from/--to for backfill ranges
   gbrain check-backlinks check|fix      Back-link enforcement
@@ -1008,13 +1010,7 @@ ADMIN
 <h3>Origin Story</h3>
 <p>I was setting up my <a href="https://openclaw.ai">OpenClaw</a> agent and started a markdown brain repo. One page per person, one page per company, compiled truth on top, timeline on the bottom. Within a week: 10,000+ files, 3,000+ people, 13 years of calendar data, 280+ meeting transcripts, 300+ captured ideas.</p>
 <p>The agent runs while I sleep. The dream cycle scans every conversation, enriches missing entities, fixes broken citations, consolidates memory. I wake up and the brain is smarter than when I went to sleep.</p>
-<p>The skills in this repo are those patterns, generalized. What took 11 days to build by hand ships as a mod you install in 30 minutes.</p>
-<h3>Docs</h3>
-<p><strong>For agents:</strong></p>
-<ul>
-<li><strong><a href="https://github.com/garrytan/gbrain/blob/main/skills/RESOLVER.md">skills/RESOLVER.md</a></strong> ... Start here. The skill dispatcher.</li>
-<li><a href="skills/">Individual skill files</a> ...</li>
-</ul>
+<p>The skills in this repo are those patterns, generalized. What took </p>
 <hr>
 <p><em>README truncated. <a href="https://github.com/garrytan/gbrain#readme">Continue reading on GitHub</a></em></p>
 
@@ -1029,7 +1025,7 @@ ADMIN
   <div>
     <div class="related-list">
       <a class="related-row" href="/projects/mem0ai/mem0">
-        <div class="stars">★ 55.1K</div>
+        <div class="stars">★ 55.2K</div>
         <div class="name"><span class="org">mem0ai /</span> mem0</div>
       </a>
       <a class="related-row" href="/projects/vectorize-io/hindsight">
@@ -1037,7 +1033,7 @@ ADMIN
         <div class="name"><span class="org">vectorize-io /</span> hindsight</div>
       </a>
       <a class="related-row" href="/projects/greyhaven-ai/autocontext">
-        <div class="stars">★ 974</div>
+        <div class="stars">★ 975</div>
         <div class="name"><span class="org">greyhaven-ai /</span> autocontext</div>
       </a>
       <a class="related-row" href="/projects/elkimek/honcho-self-hosted">
@@ -1057,7 +1053,7 @@ ADMIN
         <div class="name"><span class="org">amanning3390 /</span> flowstate-qmd</div>
       </a>
       <a class="related-row" href="/projects/stephenschoettler/hermes-lcm">
-        <div class="stars">★ 445</div>
+        <div class="stars">★ 449</div>
         <div class="name"><span class="org">stephenschoettler /</span> hermes-lcm</div>
       </a>
     </div>

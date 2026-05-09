@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/NousResearch/hermes-agent#software",
   "name": "hermes-agent",
-  "description": "Hermes Agent is an autonomous AI system designed for persistent, cross-platform task execution and self-improvement. It utilizes a closed learning loop to autonomously generate and refine skills from experience while maintaining long-term user models and session memory. The agent integrates with 14 messaging platforms and supports seven execution backends, including serverless and containerized environments, to ensure continuity across different devices. Users can automate complex workflows thro",
+  "description": "Hermes Agent is a self-improving AI agent designed to maintain persistent memory and evolve its capabilities over time. It utilizes a closed learning loop to autonomously create and refine skills from experience while building a user model across sessions. The system supports a wide array of LLM providers and can be deployed across various environments, from local machines to serverless infrastructure. Users can interact with the agent via a dedicated terminal interface or through multiple messa",
   "url": "https://hermesatlas.com/projects/NousResearch/hermes-agent",
   "codeRepository": "https://github.com/NousResearch/hermes-agent",
   "applicationCategory": "DeveloperApplication",
@@ -47,13 +47,13 @@
     "name": "NousResearch",
     "url": "https://github.com/NousResearch"
   },
-  "dateModified": "2026-05-08T20:32:07.000Z",
+  "dateModified": "2026-05-09T05:13:03.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 139073
+    "userInteractionCount": 139771
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -112,11 +112,11 @@
   <p class="project-desc">The agent that grows with you</p>
 
   <div class="meta-row">
-    <span class="stars">★ 139.1K</span>
+    <span class="stars">★ 139.8K</span>
     <span><span class="meta-label">lang</span>Python</span>
     <span><span class="meta-label">license</span>MIT</span>
     <span><span class="meta-label">maintainer</span>Nous Research</span>
-    <span><span class="meta-label">updated</span>2026-05-08</span>
+    <span><span class="meta-label">updated</span>2026-05-09</span>
   </div>
 
   <div class="actions">
@@ -136,11 +136,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Hermes Agent is an autonomous AI system designed for persistent, cross-platform task execution and self-improvement. It utilizes a closed learning loop to autonomously generate and refine skills from experience while maintaining long-term user models and session memory. The agent integrates with 14 messaging platforms and supports seven execution backends, including serverless and containerized environments, to ensure continuity across different devices. Users can automate complex workflows through built-in cron scheduling, parallel subagents, and a library of over 40 tools.</p>
+    <p class="summary-text">Hermes Agent is a self-improving AI agent designed to maintain persistent memory and evolve its capabilities over time. It utilizes a closed learning loop to autonomously create and refine skills from experience while building a user model across sessions. The system supports a wide array of LLM providers and can be deployed across various environments, from local machines to serverless infrastructure. Users can interact with the agent via a dedicated terminal interface or through multiple messaging platforms.</p>
     <ul class="summary-highlights">
-      <li>Autonomous skill creation and self-improvement based on task experience</li>
-      <li>Multi-platform support including Telegram, Discord, Slack, and terminal interfaces</li>
-      <li>Flexible execution across local, Docker, SSH, and serverless cloud backends</li>
+      <li>Autonomous skill creation and self-improvement learning loop</li>
+      <li>Cross-platform access via Telegram, Discord, Slack, and more</li>
+      <li>Flexible deployment across seven different execution backends</li>
     </ul>
   </div>
 </section>
@@ -175,12 +175,21 @@
 
 <hr>
 <h3>Quick Install</h3>
+<h4>Linux, macOS, WSL2, Termux</h4>
 <pre><code class="language-bash">curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
 </code></pre>
-<p>Works on Linux, macOS, WSL2, and Android via Termux. The installer handles the platform-specific setup for you.</p>
+<h4>Windows (native, PowerShell) — Early Beta</h4>
+<blockquote>
+<p><strong>Heads up:</strong> Native Windows support is <strong>early beta</strong>. It installs and runs, but hasn&#39;t been road-tested as broadly as our Linux/macOS/WSL2 paths. Please <a href="https://github.com/NousResearch/hermes-agent/issues">file issues</a> when you hit rough edges. For the most battle-tested Windows setup today, run the Linux/macOS one-liner above inside <strong>WSL2</strong>.</p>
+</blockquote>
+<p>Run this in PowerShell:</p>
+<pre><code class="language-powershell">irm https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1 | iex
+</code></pre>
+<p>The installer handles everything: uv, Python 3.11, Node.js, ripgrep, ffmpeg, <strong>and a portable Git Bash</strong> (MinGit, unpacked to <code>%LOCALAPPDATA%\hermes\git</code> — no admin required, completely isolated from any system Git install).  Hermes uses this bundled Git Bash to run shell commands.</p>
+<p>If you already have Git installed, the installer detects it and uses that instead.  Otherwise a ~45MB MinGit download is all you need — it won&#39;t touch or interfere with any system Git.</p>
 <blockquote>
 <p><strong>Android / Termux:</strong> The tested manual path is documented in the <a href="https://hermes-agent.nousresearch.com/docs/getting-started/termux">Termux guide</a>. On Termux, Hermes installs a curated <code>.[termux]</code> extra because the full <code>.[all]</code> extra currently pulls Android-incompatible voice dependencies.</p>
-<p><strong>Windows:</strong> Native Windows is not supported. Please install <a href="https://learn.microsoft.com/en-us/windows/wsl/install">WSL2</a> and run the command above.</p>
+<p><strong>Windows:</strong> Native Windows is supported as an <strong>early beta</strong> — the PowerShell one-liner above installs everything, but expect rough edges and please file issues when you hit them. If you&#39;d rather use WSL2 (our most battle-tested Windows path), the Linux command works there too. Native Windows install lives under <code>%LOCALAPPDATA%\hermes</code>; WSL2 installs under <code>~/.hermes</code> as on Linux.  The only Hermes feature that currently needs WSL2 specifically is the browser-based dashboard chat pane (it uses a POSIX PTY — classic CLI and gateway both run natively).</p>
 </blockquote>
 <p>After installation:</p>
 <pre><code class="language-bash">source ~/.bashrc    # reload shell (or: source ~/.zshrc)
@@ -408,7 +417,7 @@ scripts/run_tests.sh
         <div class="name"><span class="org">NousResearch /</span> hermes-paperclip-adapter</div>
       </a>
       <a class="related-row" href="/projects/NousResearch/autonovel">
-        <div class="stars">★ 883</div>
+        <div class="stars">★ 886</div>
         <div class="name"><span class="org">NousResearch /</span> autonovel</div>
       </a>
     </div>
