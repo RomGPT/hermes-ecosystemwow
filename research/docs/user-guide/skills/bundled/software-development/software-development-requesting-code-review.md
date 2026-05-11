@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `code-review`, `security`, `verification`, `quality`, `pre-commit`, `auto-fix`

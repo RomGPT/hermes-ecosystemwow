@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `GitHub`, `Code-Review`, `Pull-Requests`, `Git`, `Quality`

@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `MCP`, `Tools`, `API`, `Integrations`, `Interop`

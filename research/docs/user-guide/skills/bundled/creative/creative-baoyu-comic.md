@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `comic`, `knowledge-comic`, `creative`, `image-generation`

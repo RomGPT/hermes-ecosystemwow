@@ -30,6 +30,10 @@ Dependencies
 
 `chromadb`, `sentence-transformers`
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `RAG`, `Chroma`, `Vector Database`, `Embeddings`, `Semantic Search`, `Open Source`, `Self-Hosted`, `Document Retrieval`, `Metadata Filtering`

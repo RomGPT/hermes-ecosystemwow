@@ -30,6 +30,10 @@ Dependencies
 
 `accelerate`, `torch`, `transformers`
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `Distributed Training`, `HuggingFace`, `Accelerate`, `DeepSpeed`, `FSDP`, `Mixed Precision`, `PyTorch`, `DDP`, `Unified API`, `Simple`

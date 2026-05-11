@@ -30,6 +30,10 @@ Dependencies
 
 `torch`, `transformers`, `datasets`, `trl`, `accelerate`
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `Post-Training`, `SimPO`, `Preference Optimization`, `Alignment`, `DPO Alternative`, `Reference-Free`, `LLM Alignment`, `Efficient Training`

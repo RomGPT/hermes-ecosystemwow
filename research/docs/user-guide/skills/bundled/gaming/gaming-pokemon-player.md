@@ -14,6 +14,10 @@ Path
 
 `skills/gaming/pokemon-player`
 
+Platforms
+
+linux, macos, windows
+
 ## Reference: full SKILL.md
 
 info

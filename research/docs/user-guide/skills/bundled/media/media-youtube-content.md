@@ -14,6 +14,10 @@ Path
 
 `skills/media/youtube-content`
 
+Platforms
+
+linux, macos, windows
+
 ## Reference: full SKILL.md
 
 info

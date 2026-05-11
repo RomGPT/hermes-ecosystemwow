@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `diagrams`, `svg`, `visualization`, `education`, `physics`, `chemistry`, `engineering`

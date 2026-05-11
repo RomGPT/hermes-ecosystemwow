@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `GitHub`, `Pull-Requests`, `CI/CD`, `Git`, `Automation`, `Merge`

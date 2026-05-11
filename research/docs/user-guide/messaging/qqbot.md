@@ -110,9 +110,9 @@ API key for voice-to-text provider
 
 `QQ_STT_BASE_URL`
 
-Base URL for STT provider
+(Not read directly — set `platforms.qqbot.extra.stt.baseUrl` in `config.yaml` instead)
 
-`https://open.bigmodel.cn/api/coding/paas/v4`
+n/a
 
 `QQ_STT_MODEL`
 
@@ -126,7 +126,7 @@ For fine-grained control, add platform settings to `~/.hermes/config.yaml`:
 
 ```
 platforms:
-  qq:
+  qqbot:
     enabled: true
     extra:
       app_id: "your-app-id"

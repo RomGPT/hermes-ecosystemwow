@@ -18,6 +18,10 @@ Version
 
 `1.0.0`
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `yuanbao`, `mention`, `at`, `group`, `members`, `元宝`, `派`, `艾特`

@@ -14,6 +14,10 @@ Path
 
 `skills/note-taking/obsidian`
 
+Platforms
+
+linux, macos, windows
+
 ## Reference: full SKILL.md
 
 info

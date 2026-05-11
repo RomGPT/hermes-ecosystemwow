@@ -30,6 +30,10 @@ Dependencies
 
 `openai-whisper`, `transformers`, `torch`
 
+Platforms
+
+linux, macos
+
 Tags
 
 `Whisper`, `Speech Recognition`, `ASR`, `Multimodal`, `Multilingual`, `OpenAI`, `Speech-To-Text`, `Transcription`, `Translation`, `Audio Processing`

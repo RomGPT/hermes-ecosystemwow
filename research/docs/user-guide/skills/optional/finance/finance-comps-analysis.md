@@ -26,6 +26,10 @@ License
 
 Apache-2.0
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `finance`, `valuation`, `comps`, `excel`, `openpyxl`, `modeling`, `investment-banking`

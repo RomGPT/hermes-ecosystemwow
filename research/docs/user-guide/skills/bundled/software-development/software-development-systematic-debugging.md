@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `debugging`, `troubleshooting`, `problem-solving`, `root-cause`, `investigation`

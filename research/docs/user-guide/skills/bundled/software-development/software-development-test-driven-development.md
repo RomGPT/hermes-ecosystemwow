@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `testing`, `tdd`, `development`, `quality`, `red-green-refactor`

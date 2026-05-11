@@ -2,7 +2,7 @@
 
 **Source:** https://hermes-agent.nousresearch.com/docs/developer-guide/gateway-internals
 
-The messaging gateway is the long-running process that connects Hermes to 14+ external messaging platforms through a unified architecture.
+The messaging gateway is the long-running process that connects Hermes to 20+ external messaging platforms through a unified architecture.
 
 ## Key Files
 
@@ -12,7 +12,7 @@ Purpose
 
 `gateway/run.py`
 
-`GatewayRunner` — main loop, slash commands, message dispatch (~12,000 lines)
+`GatewayRunner` — main loop, slash commands, message dispatch (large file; check git for current LOC)
 
 `gateway/session.py`
 
@@ -200,7 +200,10 @@ gateway/platforms/
 ├── wecom.py             # WeCom (WeChat Work) callback
 ├── weixin.py            # Weixin (personal WeChat) via iLink Bot API
 ├── bluebubbles.py       # Apple iMessage via BlueBubbles macOS server
-├── qqbot.py             # QQ Bot (Tencent QQ) via Official API v2
+├── qqbot/               # QQ Bot (Tencent QQ) via Official API v2 (sub-package: adapter.py, crypto.py, keyboards.py, …)
+├── yuanbao.py           # Yuanbao (Tencent) DM/group adapter
+├── feishu_comment.py    # Feishu document/drive comment-reply handler
+├── msgraph_webhook.py   # Microsoft Graph change-notification webhook (Teams, Outlook, etc.)
 ├── webhook.py           # Inbound/outbound webhook adapter
 ├── api_server.py        # REST API server adapter
 └── homeassistant.py     # Home Assistant conversation integration
@@ -269,7 +272,7 @@ Agent finishes and returns response
 
 Any slash command is executed
 
-Hooks are discovered from `gateway/builtin_hooks/` (always active) and `~/.hermes/hooks/` (user-installed). Each hook is a directory with a `HOOK.yaml` manifest and `handler.py`.
+Hooks are discovered from `gateway/builtin_hooks/` (an extension point — currently empty in the shipped distribution; `_register_builtin_hooks()` is a no-op stub) and `~/.hermes/hooks/` (user-installed). Each hook is a directory with a `HOOK.yaml` manifest and `handler.py`.
 
 ## Memory Provider Integration
 

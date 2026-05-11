@@ -22,7 +22,7 @@ The easiest path is the interactive manager:
 hermes fallback
 ```
 
-`hermes fallback` reuses the provider picker from `hermes model` — same provider list, same credential prompts, same validation. Press `a` to add a fallback, `↑`/`↓` to reorder, `d` to remove, `q` to save and exit. Changes persist under `model.fallback_providers` in `config.yaml`.
+`hermes fallback` reuses the provider picker from `hermes model` — same provider list, same credential prompts, same validation. Use the subcommands `add`, `list` (alias `ls`), `remove` (alias `rm`), and `clear` to manage the chain. Changes persist under the top-level `fallback_providers:` list in `config.yaml`.
 
 If you'd rather edit the YAML directly, add a `fallback_model` section to `~/.hermes/config.yaml`:
 
@@ -439,6 +439,12 @@ Session title summaries
 
 `auxiliary.title_generation`
 
+Triage Specifier
+
+`hermes kanban specify` / dashboard ✨ button — fleshes out a one-liner triage task into a real spec
+
+`auxiliary.triage_specifier`
+
 ### Auto-Detection Chain
 
 When a task's provider is set to `"auto"` (the default), Hermes tries providers in order until one works:
@@ -711,6 +717,12 @@ Title generation
 Auto-detection chain
 
 `auxiliary.title_generation`
+
+Triage specifier
+
+Auto-detection chain
+
+`auxiliary.triage_specifier`
 
 Delegation
 

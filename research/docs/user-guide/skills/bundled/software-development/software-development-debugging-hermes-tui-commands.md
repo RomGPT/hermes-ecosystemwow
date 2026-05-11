@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `debugging`, `hermes-agent`, `tui`, `slash-commands`, `typescript`, `python`

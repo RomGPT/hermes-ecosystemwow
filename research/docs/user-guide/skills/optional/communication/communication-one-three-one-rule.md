@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `communication`, `decision-making`, `proposals`, `trade-offs`

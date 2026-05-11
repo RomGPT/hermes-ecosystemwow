@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `architecture`, `diagrams`, `SVG`, `HTML`, `visualization`, `infrastructure`, `cloud`

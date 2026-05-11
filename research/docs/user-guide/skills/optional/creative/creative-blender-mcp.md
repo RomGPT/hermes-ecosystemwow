@@ -22,6 +22,10 @@ Author
 
 alireza78a
 
+Platforms
+
+linux, macos, windows
+
 ## Reference: full SKILL.md
 
 info

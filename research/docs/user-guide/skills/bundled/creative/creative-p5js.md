@@ -18,6 +18,10 @@ Version
 
 `1.0.0`
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `creative-coding`, `generative-art`, `p5js`, `canvas`, `interactive`, `visualization`, `webgl`, `shaders`, `animation`

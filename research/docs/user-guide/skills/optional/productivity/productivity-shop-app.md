@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `Shopping`, `E-commerce`, `Shop.app`, `Products`, `Orders`, `Returns`

@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `Solana`, `Blockchain`, `Crypto`, `Web3`, `RPC`, `DeFi`, `NFT`

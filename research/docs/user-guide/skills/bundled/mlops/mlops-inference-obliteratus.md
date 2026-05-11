@@ -30,6 +30,10 @@ Dependencies
 
 `obliteratus`, `torch`, `transformers`, `bitsandbytes`, `accelerate`, `safetensors`
 
+Platforms
+
+linux, macos
+
 Tags
 
 `Abliteration`, `Uncensoring`, `Refusal-Removal`, `LLM`, `Weight-Projection`, `SVD`, `Mechanistic-Interpretability`, `HuggingFace`, `Model-Surgery`

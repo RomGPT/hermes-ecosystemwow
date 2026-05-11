@@ -14,6 +14,10 @@ Path
 
 `skills/creative/songwriting-and-ai-music`
 
+Platforms
+
+linux, macos, windows
+
 ## Reference: full SKILL.md
 
 info

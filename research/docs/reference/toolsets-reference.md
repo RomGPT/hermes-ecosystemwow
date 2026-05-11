@@ -54,9 +54,9 @@ Purpose
 
 `browser`
 
-`browser_back`, `browser_click`, `browser_console`, `browser_get_images`, `browser_navigate`, `browser_press`, `browser_scroll`, `browser_snapshot`, `browser_type`, `browser_vision`, `web_search`
+`browser_back`, `browser_cdp`, `browser_click`, `browser_console`, `browser_dialog`, `browser_get_images`, `browser_navigate`, `browser_press`, `browser_scroll`, `browser_snapshot`, `browser_type`, `browser_vision`, `web_search`
 
-Core browser automation. Includes `web_search` as a fallback for quick lookups. `browser_cdp` and `browser_dialog` live in a separate `browser-cdp` toolset and are registered only when a CDP endpoint is reachable at session start — via `/browser connect`, `browser.cdp_url` config, Browserbase, or Camofox. `browser_dialog` works together with the `pending_dialogs` and `frame_tree` fields that `browser_snapshot` adds when a CDP supervisor is attached.
+Core browser automation. Includes `web_search` as a fallback for quick lookups. `browser_cdp` and `browser_dialog` are gated at runtime — registered only when a CDP endpoint is reachable at session start (via `/browser connect`, `browser.cdp_url` config, Browserbase, or Camofox). `browser_dialog` works together with the `pending_dialogs` and `frame_tree` fields that `browser_snapshot` adds when a CDP supervisor is attached.
 
 `clarify`
 
@@ -124,11 +124,23 @@ File reading, writing, searching, and editing.
 
 Smart home control via Home Assistant. Only available when `HASS_TOKEN` is set.
 
+`computer_use`
+
+`computer_use`
+
+Background macOS desktop control via cua-driver — does not steal cursor/focus. Works with any tool-capable model. macOS only; requires `cua-driver` on `$PATH`.
+
 `image_gen`
 
 `image_generate`
 
 Text-to-image generation via FAL.ai (with opt-in OpenAI / xAI backends).
+
+`kanban`
+
+`kanban_block`, `kanban_comment`, `kanban_complete`, `kanban_create`, `kanban_heartbeat`, `kanban_link`, `kanban_show`
+
+Multi-agent coordination tools — only registered when the agent is spawned by the kanban dispatcher (`HERMES_KANBAN_TASK` env set). Lets workers mark tasks done with structured handoffs, block for human input, heartbeat during long ops, comment on threads, and (for orchestrators) fan out into child tasks.
 
 `memory`
 
@@ -208,6 +220,12 @@ Text-to-speech audio generation.
 
 Image analysis via vision-capable models.
 
+`video`
+
+`video_analyze`
+
+Video analysis and understanding tools (opt-in, not in the default toolset — add explicitly via `--toolsets`).
+
 `web`
 
 `web_extract`, `web_search`
@@ -230,7 +248,7 @@ Differences from `hermes-cli`
 
 `hermes-cli`
 
-Full toolset — 38 tools. The default for interactive CLI sessions.
+Full toolset — the default for interactive CLI sessions. Includes file, terminal, web, browser, memory, skills, vision, image\_gen, todo, tts, delegation, code\_execution, cronjob, session\_search, clarify, and `safe` (read-only) bundles plus the standard messaging tools.
 
 `hermes-acp`
 

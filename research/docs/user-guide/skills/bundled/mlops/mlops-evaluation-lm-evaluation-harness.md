@@ -30,6 +30,10 @@ Dependencies
 
 `lm-eval`, `transformers`, `vllm`
 
+Platforms
+
+linux, macos
+
 Tags
 
 `Evaluation`, `LM Evaluation Harness`, `Benchmarking`, `MMLU`, `HumanEval`, `GSM8K`, `EleutherAI`, `Model Quality`, `Academic Benchmarks`, `Industry Standard`

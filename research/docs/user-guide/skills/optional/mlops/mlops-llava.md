@@ -30,6 +30,10 @@ Dependencies
 
 `transformers`, `torch`, `pillow`
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `LLaVA`, `Vision-Language`, `Multimodal`, `Visual Question Answering`, `Image Chat`, `CLIP`, `Vicuna`, `Conversational AI`, `Instruction Tuning`, `VQA`

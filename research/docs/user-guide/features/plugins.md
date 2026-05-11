@@ -147,6 +147,10 @@ Register a memory backend
 
 Subclass `MemoryProvider` in `plugins/memory/<name>/__init__.py` — see [Memory Provider Plugins](/docs/developer-guide/memory-provider-plugin) (uses a separate discovery system)
 
+Run a host-owned LLM call
+
+`ctx.llm.complete(...)` / `ctx.llm.complete_structured(...)` — borrow the user's active model + auth for a one-shot completion with optional JSON schema validation. See [Plugin LLM Access](/docs/developer-guide/plugin-llm-access)
+
 Register an inference backend (LLM provider)
 
 `register_provider(ProviderProfile(...))` in `plugins/model-providers/<name>/__init__.py` — see [Model Provider Plugins](/docs/developer-guide/model-provider-plugin) (uses a separate discovery system)
@@ -288,7 +292,7 @@ All discovered; one is active, chosen by `context.engine` in `config.yaml`.
 
 **Model providers** (`plugins/model-providers/`)
 
-All 33 providers discover and register at the first `get_provider_profile()` call. The user picks one at a time via `--provider` or `config.yaml`.
+All bundled providers under `plugins/model-providers/` discover and register at the first `get_provider_profile()` call. The user picks one at a time via `--provider` or `config.yaml`.
 
 **Pip-installed `backend` plugins**
 

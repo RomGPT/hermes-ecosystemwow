@@ -14,6 +14,10 @@ Path
 
 `skills/gaming/minecraft-modpack-server`
 
+Platforms
+
+linux, macos
+
 ## Reference: full SKILL.md
 
 info

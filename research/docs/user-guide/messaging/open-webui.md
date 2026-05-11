@@ -306,16 +306,22 @@ To run separate Hermes instances per user — each with their own config, memory
 
 ### 1\. Create profiles and configure API servers
 
+`API_SERVER_*` are env vars, not YAML config keys, so write them to each profile's `.env`. Pick ports outside the default-platform range (`8644` is the webhook adapter, `8645` is wecom-callback, `8646` is msgraph-webhook), e.g. `8650+`:
+
 ```
 hermes profile create alice
-hermes -p alice config set API_SERVER_ENABLED true
-hermes -p alice config set API_SERVER_PORT 8643
-hermes -p alice config set API_SERVER_KEY alice-secret
+cat >> ~/.hermes/profiles/alice/.env <<EOF
+API_SERVER_ENABLED=true
+API_SERVER_PORT=8650
+API_SERVER_KEY=alice-secret
+EOF
 
 hermes profile create bob
-hermes -p bob config set API_SERVER_ENABLED true
-hermes -p bob config set API_SERVER_PORT 8644
-hermes -p bob config set API_SERVER_KEY bob-secret
+cat >> ~/.hermes/profiles/bob/.env <<EOF
+API_SERVER_ENABLED=true
+API_SERVER_PORT=8651
+API_SERVER_KEY=bob-secret
+EOF
 ```
 
 ### 2\. Start each gateway
@@ -337,13 +343,13 @@ API Key
 
 Alice
 
-`http://host.docker.internal:8643/v1`
+`http://host.docker.internal:8650/v1`
 
 `alice-secret`
 
 Bob
 
-`http://host.docker.internal:8644/v1`
+`http://host.docker.internal:8651/v1`
 
 `bob-secret`
 

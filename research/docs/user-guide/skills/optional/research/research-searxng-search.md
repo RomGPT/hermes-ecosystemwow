@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos
+
 Tags
 
 `search`, `searxng`, `meta-search`, `self-hosted`, `free`, `fallback`

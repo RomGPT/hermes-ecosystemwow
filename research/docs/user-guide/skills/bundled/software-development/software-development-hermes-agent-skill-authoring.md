@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `skills`, `authoring`, `hermes-agent`, `conventions`, `skill-md`

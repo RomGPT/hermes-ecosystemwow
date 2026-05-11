@@ -30,6 +30,10 @@ Dependencies
 
 `guidance`, `transformers`
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `Prompt Engineering`, `Guidance`, `Constrained Generation`, `Structured Output`, `JSON Validation`, `Grammar`, `Microsoft Research`, `Format Enforcement`, `Multi-Step Workflows`

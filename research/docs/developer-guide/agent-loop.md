@@ -2,7 +2,7 @@
 
 **Source:** https://hermes-agent.nousresearch.com/docs/developer-guide/agent-loop
 
-The core orchestration engine is `run_agent.py`'s `AIAgent` class — roughly 13,700 lines that handle everything from prompt assembly to tool dispatch to provider failover.
+The core orchestration engine is `run_agent.py`'s `AIAgent` class — a large file (15k+ lines) that handles everything from prompt assembly to tool dispatch to provider failover.
 
 ## Core Responsibilities
 
@@ -299,7 +299,7 @@ Purpose
 
 `run_agent.py`
 
-AIAgent class — the complete agent loop (~13,700 lines)
+AIAgent class — the complete agent loop
 
 `agent/prompt_builder.py`
 

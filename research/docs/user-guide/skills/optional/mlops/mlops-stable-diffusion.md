@@ -30,6 +30,10 @@ Dependencies
 
 `diffusers>=0.30.0`, `transformers>=4.41.0`, `accelerate>=0.31.0`, `torch>=2.0.0`
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `Image Generation`, `Stable Diffusion`, `Diffusers`, `Text-to-Image`, `Multimodal`, `Computer Vision`

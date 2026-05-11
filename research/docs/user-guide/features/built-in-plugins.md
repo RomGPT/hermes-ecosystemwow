@@ -102,17 +102,11 @@ dashboard tab
 
 Steam-style collectible badges generated from your real Hermes session history
 
-`example-dashboard`
+`kanban/dashboard`
 
-dashboard example
+dashboard tab
 
-Reference dashboard plugin for [Extending the Dashboard](/docs/user-guide/features/extending-the-dashboard)
-
-`strike-freedom-cockpit`
-
-dashboard skin
-
-Sample custom dashboard skin
+Kanban board UI for the multi-agent dispatcher — tasks, comments, fan-out, board switching. See [Kanban Multi-Agent](/docs/user-guide/features/kanban).
 
 Memory providers (`plugins/memory/*`) and context engines (`plugins/context_engine/*`) are listed separately on [Memory Providers](/docs/user-guide/features/memory-providers) — they're managed through `hermes memory` and `hermes plugins` respectively. The full per-plugin detail for the two long-running hooks-based plugins follows.
 

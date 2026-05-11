@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `Excalidraw`, `Diagrams`, `Flowcharts`, `Architecture`, `Visualization`, `JSON`

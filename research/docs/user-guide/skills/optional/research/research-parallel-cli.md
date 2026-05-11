@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `Research`, `Web`, `Search`, `Deep-Research`, `Enrichment`, `CLI`

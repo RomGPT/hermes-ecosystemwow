@@ -22,6 +22,10 @@ Author
 
 Hermes Agent + Teknium
 
+Platforms
+
+linux, macos, windows
+
 ## Reference: full SKILL.md
 
 info

@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `gitnexus`, `code-intelligence`, `knowledge-graph`, `visualization`

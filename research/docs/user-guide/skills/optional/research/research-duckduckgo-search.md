@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `search`, `duckduckgo`, `web-search`, `free`, `fallback`

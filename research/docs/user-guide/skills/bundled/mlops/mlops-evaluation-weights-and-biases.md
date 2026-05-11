@@ -30,6 +30,10 @@ Dependencies
 
 `wandb`
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `MLOps`, `Weights And Biases`, `WandB`, `Experiment Tracking`, `Hyperparameter Tuning`, `Model Registry`, `Collaboration`, `Real-Time Visualization`, `PyTorch`, `TensorFlow`, `HuggingFace`

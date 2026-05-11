@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `LOC`, `Code Analysis`, `pygount`, `Codebase`, `Metrics`, `Repository`

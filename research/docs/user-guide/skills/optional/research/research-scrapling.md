@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `Web Scraping`, `Browser`, `Cloudflare`, `Stealth`, `Crawling`, `Spider`

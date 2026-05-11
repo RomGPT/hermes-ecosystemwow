@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `Linear`, `Project Management`, `Issues`, `GraphQL`, `API`, `Productivity`

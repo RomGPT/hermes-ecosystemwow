@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `GitHub`, `Authentication`, `Git`, `gh-cli`, `SSH`, `Setup`

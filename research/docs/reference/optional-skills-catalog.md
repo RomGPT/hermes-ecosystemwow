@@ -101,6 +101,10 @@ Run 150+ AI apps via inference.sh CLI (infsh) — image generation, video creati
 
 Manage Docker containers, images, volumes, networks, and Compose stacks — lifecycle ops, debugging, cleanup, and Dockerfile optimization.
 
+[**watchers**](/docs/user-guide/skills/optional/devops/devops-watchers)
+
+Poll RSS, JSON APIs, and GitHub with watermark dedup.
+
 ## dogfood
 
 Skill
@@ -203,6 +207,10 @@ Description
 
 Simplest distributed training API. 4 lines to add distributed support to any PyTorch script. Unified API for DeepSpeed/FSDP/Megatron/DDP. Automatic device placement, mixed precision (FP16/BF16/FP8). Interactive config, single launch comm...
 
+[**axolotl**](/docs/user-guide/skills/optional/mlops/mlops-training-axolotl)
+
+Axolotl: YAML LLM fine-tuning (LoRA, DPO, GRPO).
+
 [**chroma**](/docs/user-guide/skills/optional/mlops/mlops-chroma)
 
 Open-source embedding database for AI applications. Store embeddings and metadata, perform vector and full-text search, filter by metadata. Simple 4-function API. Scales from notebooks to production clusters. Use for semantic search, RAG...
@@ -251,6 +259,10 @@ Serverless GPU cloud platform for running ML workloads. Use when you need on-dem
 
 GPU-accelerated data curation for LLM training. Supports text/image/video/audio. Features fuzzy deduplication (16× faster), quality filtering (30+ heuristics), semantic deduplication, PII redaction, NSFW detection. Scales across GPUs wit...
 
+[**outlines**](/docs/user-guide/skills/optional/mlops/mlops-inference-outlines)
+
+Outlines: structured JSON/regex/Pydantic LLM generation.
+
 [**peft-fine-tuning**](/docs/user-guide/skills/optional/mlops/mlops-peft)
 
 Parameter-efficient fine-tuning for LLMs using LoRA, QLoRA, and 25+ methods. Use when fine-tuning large models (7B-70B) with limited GPU memory, when you need to train <1% of parameters with minimal accuracy loss, or for multi-adapter se...
@@ -294,6 +306,14 @@ Optimizes LLM inference with NVIDIA TensorRT for maximum throughput and lowest l
 [**distributed-llm-pretraining-torchtitan**](/docs/user-guide/skills/optional/mlops/mlops-torchtitan)
 
 Provides PyTorch-native distributed LLM pretraining using torchtitan with 4D parallelism (FSDP2, TP, PP, CP). Use when pretraining Llama 3.1, DeepSeek V3, or custom models at scale from 8 to 512+ GPUs with Float8, torch.compile, and dist...
+
+[**fine-tuning-with-trl**](/docs/user-guide/skills/optional/mlops/mlops-training-trl-fine-tuning)
+
+TRL: SFT, DPO, PPO, GRPO, reward modeling for LLM RLHF.
+
+[**unsloth**](/docs/user-guide/skills/optional/mlops/mlops-training-unsloth)
+
+Unsloth: 2-5x faster LoRA/QLoRA fine-tuning, less VRAM.
 
 [**whisper**](/docs/user-guide/skills/optional/mlops/mlops-whisper)
 

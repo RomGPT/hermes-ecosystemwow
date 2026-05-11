@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `video`, `kanban`, `multi-agent`, `orchestration`, `production-pipeline`

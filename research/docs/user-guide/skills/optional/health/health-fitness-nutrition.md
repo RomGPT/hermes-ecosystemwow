@@ -22,6 +22,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `health`, `fitness`, `nutrition`, `gym`, `workout`, `diet`, `exercise`

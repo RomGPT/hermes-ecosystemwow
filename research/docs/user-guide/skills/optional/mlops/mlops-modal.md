@@ -30,6 +30,10 @@ Dependencies
 
 `modal>=0.64.0`
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `Infrastructure`, `Serverless`, `GPU`, `Cloud`, `Deployment`, `Modal`

@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `osint`, `security`, `username`, `social-media`, `reconnaissance`

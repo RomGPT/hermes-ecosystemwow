@@ -18,6 +18,10 @@ Version
 
 `1.1.0`
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `webhook`, `events`, `automation`, `integrations`, `notifications`, `push`

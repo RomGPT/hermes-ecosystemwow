@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `Audio`, `Visualization`, `Spectrogram`, `Music`, `Analysis`

@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `writing`, `editing`, `humanize`, `anti-ai-slop`, `voice`, `prose`, `text`

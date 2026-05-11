@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `qa`, `ux`, `testing`, `adversarial`, `dogfood`, `personas`, `user-testing`

@@ -30,6 +30,10 @@ Dependencies
 
 `faiss-cpu`, `faiss-gpu`, `numpy`
 
+Platforms
+
+linux, macos
+
 Tags
 
 `RAG`, `FAISS`, `Similarity Search`, `Vector Search`, `Facebook AI`, `GPU Acceleration`, `Billion-Scale`, `K-NN`, `HNSW`, `High Performance`, `Large Scale`

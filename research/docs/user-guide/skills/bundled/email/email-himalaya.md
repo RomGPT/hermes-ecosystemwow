@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `Email`, `IMAP`, `SMTP`, `CLI`, `Communication`

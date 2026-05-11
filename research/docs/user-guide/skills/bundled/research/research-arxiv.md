@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `Research`, `Arxiv`, `Papers`, `Academic`, `Science`, `API`

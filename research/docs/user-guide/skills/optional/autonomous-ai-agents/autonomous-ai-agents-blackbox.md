@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `Coding-Agent`, `Blackbox`, `Multi-Agent`, `Judge`, `Multi-Model`

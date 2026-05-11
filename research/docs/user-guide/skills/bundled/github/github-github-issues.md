@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `GitHub`, `Issues`, `Project-Management`, `Bug-Tracking`, `Triage`

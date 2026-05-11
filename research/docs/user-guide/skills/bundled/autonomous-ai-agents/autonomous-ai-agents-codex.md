@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `Coding-Agent`, `Codex`, `OpenAI`, `Code-Review`, `Refactoring`

@@ -40,6 +40,12 @@ Send and receive iMessages/SMS via the imsg CLI on macOS.
 
 `apple/imessage`
 
+[`macos-computer-use`](/docs/user-guide/skills/bundled/apple/apple-macos-computer-use)
+
+Drive the macOS desktop in the background — screenshots, mouse, keyboard, scroll, drag — without stealing the user's cursor, keyboard focus, or Space. Works with any tool-capable model. Load this skill whenever the `computer_use` tool is...
+
+`apple/macos-computer-use`
+
 ## autonomous-ai-agents
 
 Skill
@@ -218,7 +224,7 @@ Path
 
 [`kanban-orchestrator`](/docs/user-guide/skills/bundled/devops/devops-kanban-orchestrator)
 
-Decomposition playbook + specialist-roster conventions + anti-temptation rules for an orchestrator profile routing work through Kanban. The "don't do the work yourself" rule and the basic lifecycle are auto-injected into every kanban wor...
+Decomposition playbook + anti-temptation rules for an orchestrator profile routing work through Kanban. The "don't do the work yourself" rule and the basic lifecycle are auto-injected into every kanban worker's system prompt; this skill...
 
 `devops/kanban-orchestrator`
 
@@ -392,12 +398,6 @@ AudioCraft: MusicGen text-to-music, AudioGen text-to-sound.
 
 `mlops/models/audiocraft`
 
-[`axolotl`](/docs/user-guide/skills/bundled/mlops/mlops-training-axolotl)
-
-Axolotl: YAML LLM fine-tuning (LoRA, DPO, GRPO).
-
-`mlops/training/axolotl`
-
 [`dspy`](/docs/user-guide/skills/bundled/mlops/mlops-research-dspy)
 
 DSPy: declarative LM programs, auto-optimize prompts, RAG.
@@ -428,29 +428,11 @@ OBLITERATUS: abliterate LLM refusals (diff-in-means).
 
 `mlops/inference/obliteratus`
 
-[`outlines`](/docs/user-guide/skills/bundled/mlops/mlops-inference-outlines)
-
-Outlines: structured JSON/regex/Pydantic LLM generation.
-
-`mlops/inference/outlines`
-
 [`segment-anything-model`](/docs/user-guide/skills/bundled/mlops/mlops-models-segment-anything)
 
 SAM: zero-shot image segmentation via points, boxes, masks.
 
 `mlops/models/segment-anything`
-
-[`fine-tuning-with-trl`](/docs/user-guide/skills/bundled/mlops/mlops-training-trl-fine-tuning)
-
-TRL: SFT, DPO, PPO, GRPO, reward modeling for LLM RLHF.
-
-`mlops/training/trl-fine-tuning`
-
-[`unsloth`](/docs/user-guide/skills/bundled/mlops/mlops-training-unsloth)
-
-Unsloth: 2-5x faster LoRA/QLoRA fine-tuning, less VRAM.
-
-`mlops/training/unsloth`
 
 [`serving-llms-vllm`](/docs/user-guide/skills/bundled/mlops/mlops-inference-vllm)
 
@@ -533,6 +515,12 @@ Extract text from PDFs/scans (pymupdf, marker-pdf).
 Create, read, edit .pptx decks, slides, notes, templates.
 
 `productivity/powerpoint`
+
+[`teams-meeting-pipeline`](/docs/user-guide/skills/bundled/productivity/productivity-teams-meeting-pipeline)
+
+Operate the Teams meeting summary pipeline via Hermes CLI — summarize meetings, inspect pipeline status, replay jobs, manage Microsoft Graph subscriptions.
+
+`productivity/teams-meeting-pipeline`
 
 ## red-teaming
 

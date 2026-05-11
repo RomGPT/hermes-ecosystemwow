@@ -30,6 +30,10 @@ Dependencies
 
 `lambda-cloud-client>=1.0.0`
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `Infrastructure`, `GPU Cloud`, `Training`, `Inference`, `Lambda Labs`

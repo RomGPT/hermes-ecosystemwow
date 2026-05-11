@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `science`, `chemistry`, `pharmacology`, `research`, `health`

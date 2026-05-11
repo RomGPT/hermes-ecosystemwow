@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `MCP`, `FastMCP`, `Python`, `Tools`, `Resources`, `Prompts`, `Deployment`

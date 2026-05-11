@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `SiYuan`, `Notes`, `Knowledge Base`, `PKM`, `API`

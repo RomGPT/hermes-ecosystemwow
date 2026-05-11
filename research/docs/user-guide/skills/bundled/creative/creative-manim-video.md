@@ -18,6 +18,10 @@ Version
 
 `1.0.0`
 
+Platforms
+
+linux, macos, windows
+
 ## Reference: full SKILL.md
 
 info

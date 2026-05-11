@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos
+
 Tags
 
 `debugging`, `python`, `pdb`, `debugpy`, `breakpoints`, `dap`, `post-mortem`

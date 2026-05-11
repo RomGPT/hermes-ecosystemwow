@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `wiki`, `knowledge-base`, `research`, `notes`, `markdown`, `rag-alternative`

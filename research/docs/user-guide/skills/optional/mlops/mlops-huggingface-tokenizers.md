@@ -30,6 +30,10 @@ Dependencies
 
 `tokenizers`, `transformers`, `datasets`
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `Tokenization`, `HuggingFace`, `BPE`, `WordPiece`, `Unigram`, `Fast Tokenization`, `Rust`, `Custom Tokenizer`, `Alignment Tracking`, `Production`

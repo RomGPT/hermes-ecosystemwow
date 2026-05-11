@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `PDF`, `Documents`, `Research`, `Arxiv`, `Text-Extraction`, `OCR`

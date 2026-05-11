@@ -18,6 +18,10 @@ License
 
 Proprietary. LICENSE.txt has complete terms
 
+Platforms
+
+linux, macos, windows
+
 ## Reference: full SKILL.md
 
 info

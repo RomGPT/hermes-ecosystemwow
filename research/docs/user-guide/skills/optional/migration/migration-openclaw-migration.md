@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `Migration`, `OpenClaw`, `Hermes`, `Memory`, `Persona`, `Import`

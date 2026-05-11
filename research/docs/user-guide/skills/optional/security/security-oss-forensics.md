@@ -14,6 +14,10 @@ Path
 
 `optional-skills/security/oss-forensics`
 
+Platforms
+
+linux, macos, windows
+
 ## Reference: full SKILL.md
 
 info

@@ -2,7 +2,7 @@
 
 **Source:** https://hermes-agent.nousresearch.com/docs/user-guide/messaging/
 
-Chat with Hermes from Telegram, Discord, Slack, WhatsApp, Signal, SMS, Email, Home Assistant, Mattermost, Matrix, DingTalk, Feishu/Lark, WeCom, Weixin, BlueBubbles (iMessage), QQ, Yuanbao, Microsoft Teams, or your browser. The gateway is a single background process that connects to all your configured platforms, handles sessions, runs cron jobs, and delivers voice messages.
+Chat with Hermes from Telegram, Discord, Slack, WhatsApp, Signal, SMS, Email, Home Assistant, Mattermost, Matrix, DingTalk, Feishu/Lark, WeCom, Weixin, BlueBubbles (iMessage), QQ, Yuanbao, Microsoft Teams, LINE, or your browser. The gateway is a single background process that connects to all your configured platforms, handles sessions, runs cron jobs, and delivers voice messages.
 
 For the full voice feature set — including CLI microphone mode, spoken replies in messaging, and Discord voice-channel conversations — see [Voice Mode](/docs/user-guide/features/voice-mode) and [Use Voice Mode with Hermes](/docs/guides/use-voice-mode-with-hermes).
 
@@ -71,6 +71,22 @@ Slack
 ✅
 
 ✅
+
+Google Chat
+
+—
+
+✅
+
+✅
+
+✅
+
+—
+
+✅
+
+—
 
 WhatsApp
 
@@ -328,6 +344,22 @@ Microsoft Teams
 
 —
 
+LINE
+
+—
+
+✅
+
+✅
+
+—
+
+—
+
+✅
+
+—
+
 **Voice** = TTS audio replies and/or voice message transcription. **Images** = send/receive images. **Files** = send/receive file attachments. **Threads** = threaded conversations. **Reactions** = emoji reactions on messages. **Typing** = typing indicator while processing. **Streaming** = progressive message updates via editing.
 
 ## Architecture
@@ -386,6 +418,10 @@ Remove the last exchange
 `/status`
 
 Show session info
+
+`/whoami`
+
+Show your slash command access on this scope (admin / user / unrestricted)
 
 `/stop`
 
@@ -541,6 +577,33 @@ hermes pairing revoke telegram 123456789  # Remove access
 ```
 
 Pairing codes expire after 1 hour, are rate-limited, and use cryptographic randomness.
+
+### Slash Command Access Control
+
+Once users are allowed in, you can split them into **admins** (full slash command access) and **regular users** (only the slash commands you explicitly enable). This applies per platform and per scope (DM vs group/channel) and works through the live command registry, so it covers built-in AND plugin-registered slash commands without per-feature wiring.
+
+```
+gateway:
+  platforms:
+    discord:
+      extra:
+        allow_from: ["111", "222", "333"]
+        allow_admin_from: ["111"]                    # admins → all slash commands
+        user_allowed_commands: [status, model]       # what non-admins may run
+        # Optional: separate group/channel scope
+        group_allow_admin_from: ["111"]
+        group_user_allowed_commands: [status]
+```
+
+Behavior:
+
+-   A user in `allow_admin_from` for a scope can run **every** registered slash command.
+-   A user in `allow_from` but not in `allow_admin_from` can only run commands in `user_allowed_commands`, plus the always-allowed floor: `/help` and `/whoami`.
+-   Plain chat is unaffected. Non-admins can still talk to the agent normally; they just can't trigger arbitrary commands.
+-   **Backward compat:** if `allow_admin_from` is not set for a scope, slash gating is disabled for that scope. Existing installs keep working with no changes.
+-   DM admin status does not imply group/channel admin status. Each scope has its own admin list.
+
+Use `/whoami` from any platform to see the active scope, your tier (admin / user / unrestricted), and which slash commands you can run. See the [Telegram](/docs/user-guide/messaging/telegram#slash-command-access-control) and [Discord](/docs/user-guide/messaging/discord#slash-command-access-control) pages for platform-specific examples.
 
 ## Interrupting the Agent
 
@@ -750,6 +813,12 @@ Slack
 
 Full tools including terminal
 
+Google Chat
+
+`hermes-google_chat`
+
+Full tools including terminal
+
 Signal
 
 `hermes-signal`
@@ -842,9 +911,9 @@ Full tools including terminal
 
 API Server
 
-`hermes` (default)
+`hermes-api-server`
 
-Full tools including terminal
+Full tools (drops `clarify`, `send_message`, `text_to_speech` — programmatic access doesn't have an interactive user)
 
 Webhooks
 
@@ -857,6 +926,7 @@ Full tools including terminal
 -   [Telegram Setup](/docs/user-guide/messaging/telegram)
 -   [Discord Setup](/docs/user-guide/messaging/discord)
 -   [Slack Setup](/docs/user-guide/messaging/slack)
+-   [Google Chat Setup](/docs/user-guide/messaging/google_chat)
 -   [WhatsApp Setup](/docs/user-guide/messaging/whatsapp)
 -   [Signal Setup](/docs/user-guide/messaging/signal)
 -   [SMS Setup (Twilio)](/docs/user-guide/messaging/sms)
@@ -873,5 +943,6 @@ Full tools including terminal
 -   [QQBot Setup](/docs/user-guide/messaging/qqbot)
 -   [Yuanbao Setup](/docs/user-guide/messaging/yuanbao)
 -   [Microsoft Teams Setup](/docs/user-guide/messaging/teams)
+-   [Teams Meetings Pipeline](/docs/user-guide/messaging/teams-meetings)
 -   [Open WebUI + API Server](/docs/user-guide/messaging/open-webui)
 -   [Webhooks](/docs/user-guide/messaging/webhooks)

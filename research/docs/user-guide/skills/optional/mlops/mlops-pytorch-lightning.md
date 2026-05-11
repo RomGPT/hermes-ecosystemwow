@@ -30,6 +30,10 @@ Dependencies
 
 `lightning`, `torch`, `transformers`
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `PyTorch Lightning`, `Training Framework`, `Distributed Training`, `DDP`, `FSDP`, `DeepSpeed`, `High-Level API`, `Callbacks`, `Best Practices`, `Scalable`

@@ -26,6 +26,10 @@ License
 
 Apache-2.0
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `finance`, `three-statement`, `income-statement`, `balance-sheet`, `cash-flow`, `excel`, `openpyxl`, `modeling`

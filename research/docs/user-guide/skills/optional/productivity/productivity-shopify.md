@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `Shopify`, `E-commerce`, `Commerce`, `API`, `GraphQL`

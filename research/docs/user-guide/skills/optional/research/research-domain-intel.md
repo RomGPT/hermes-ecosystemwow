@@ -14,6 +14,10 @@ Path
 
 `optional-skills/research/domain-intel`
 
+Platforms
+
+linux, macos, windows
+
 ## Reference: full SKILL.md
 
 info

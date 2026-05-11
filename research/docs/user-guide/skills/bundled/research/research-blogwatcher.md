@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `RSS`, `Blogs`, `Feed-Reader`, `Monitoring`

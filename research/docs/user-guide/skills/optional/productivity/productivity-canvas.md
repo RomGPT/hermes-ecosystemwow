@@ -26,6 +26,10 @@ License
 
 MIT
 
+Platforms
+
+linux, macos, windows
+
 Tags
 
 `Canvas`, `LMS`, `Education`, `Courses`, `Assignments`

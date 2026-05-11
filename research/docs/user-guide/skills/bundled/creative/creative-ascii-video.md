@@ -14,6 +14,10 @@ Path
 
 `skills/creative/ascii-video`
 
+Platforms
+
+linux, macos, windows
+
 ## Reference: full SKILL.md
 
 info
