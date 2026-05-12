@@ -64,13 +64,22 @@ jobs:
           # bot workflow committing) — vanilla `git push` then fails with
           # `! [rejected] main -> main (fetch first)`. Retry up to 3 times,
           # rebasing onto the new remote tip between attempts.
+          #
+          # `-X theirs` on rebase auto-resolves conflicts in our favour
+          # (during rebase, "theirs" = the commit being replayed = ours).
+          # chunks.json conflicts are guaranteed when two runs both modify
+          # it because OpenRouter embeddings aren't byte-deterministic, and
+          # the two outputs are semantically equivalent (built from the same
+          # source), so keeping ours is safe. If the conflict is in a file
+          # we did NOT modify, `-X theirs` still keeps origin/main's version
+          # (only our local-commit-touched paths get auto-resolved).
           for attempt in 1 2 3; do
             if git push; then
               echo "Pushed on attempt $attempt"
               exit 0
             fi
             echo "Push rejected (attempt $attempt) — pulling --rebase and retrying"
-            git pull --rebase origin main || { echo "Rebase failed — aborting"; exit 1; }
+            git pull --rebase -X theirs origin main || { echo "Rebase failed — aborting"; exit 1; }
           done
           echo "Push failed after 3 attempts"
           exit 1
