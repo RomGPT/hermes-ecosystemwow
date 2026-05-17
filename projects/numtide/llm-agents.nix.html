@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/numtide/llm-agents.nix#software",
   "name": "llm-agents.nix",
-  "description": "llm-agents.nix is a collection of Nix packages designed to simplify the deployment and management of AI coding agents and development tools. The project provides a centralized repository that automatically updates daily, ensuring users have access to the latest versions of various agentic tools. It allows developers to run a wide range of CLI-based agents, such as Goose, Claude Code, and Bernstein, directly via Nix flakes without manual installation. This infrastructure supports multi-agent orch",
+  "description": "llm-agents.nix is a collection of Nix packages designed to simplify the deployment and management of AI coding agents and development tools. It provides a centralized repository of reproducible Nix expressions that allow users to run various agentic tools directly via the terminal without manual installation. The project features daily automated updates to ensure compatibility with the latest versions of tools like Claude Code, Goose, and various multi-agent orchestrators. By leveraging the Nix ",
   "url": "https://hermesatlas.com/projects/numtide/llm-agents.nix",
   "codeRepository": "https://github.com/numtide/llm-agents.nix",
   "applicationCategory": "DeveloperApplication",
@@ -47,13 +47,13 @@
     "name": "numtide",
     "url": "https://github.com/numtide"
   },
-  "dateModified": "2026-05-17T05:28:44.000Z",
+  "dateModified": "2026-05-17T14:18:28.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 1246
+    "userInteractionCount": 1247
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">llm-agents.nix is a collection of Nix packages designed to simplify the deployment and management of AI coding agents and development tools. The project provides a centralized repository that automatically updates daily, ensuring users have access to the latest versions of various agentic tools. It allows developers to run a wide range of CLI-based agents, such as Goose, Claude Code, and Bernstein, directly via Nix flakes without manual installation. This infrastructure supports multi-agent orchestration, unified API proxies, and terminal-based AI pair programming across different model providers.</p>
+    <p class="summary-text">llm-agents.nix is a collection of Nix packages designed to simplify the deployment and management of AI coding agents and development tools. It provides a centralized repository of reproducible Nix expressions that allow users to run various agentic tools directly via the terminal without manual installation. The project features daily automated updates to ensure compatibility with the latest versions of tools like Claude Code, Goose, and various multi-agent orchestrators. By leveraging the Nix ecosystem, it offers a consistent environment for developers to experiment with diverse AI-powered engineering automation frameworks.</p>
     <ul class="summary-highlights">
-      <li>Provides daily updated Nix packages for numerous AI coding agents</li>
-      <li>Enables instant execution of tools via Nix run commands</li>
-      <li>Supports diverse agents including local, open-source, and proprietary binaries</li>
+      <li>Provides reproducible Nix packages for numerous AI coding agents</li>
+      <li>Automated daily updates ensure access to latest tool versions</li>
+      <li>Supports diverse agents including Claude Code, Goose, and Gemini CLI</li>
     </ul>
   </div>
 </section>
@@ -745,7 +745,7 @@
 </ul>
 </details>
 <details>
-<summary><strong>ccusage</strong> - Usage analysis tool for Claude Code</summary>
+<summary><strong>ccusage</strong> - Analyze coding agent CLI token usage and costs from local data</summary>
 
 <ul>
 <li><strong>Source</strong>: bytecode</li>
@@ -753,50 +753,6 @@
 <li><strong>Homepage</strong>: <a href="https://github.com/ryoppippi/ccusage">https://github.com/ryoppippi/ccusage</a></li>
 <li><strong>Usage</strong>: <code>nix run github:numtide/llm-agents.nix#ccusage -- --help</code></li>
 <li><strong>Nix</strong>: <a href="packages/ccusage/package.nix">packages/ccusage/package.nix</a></li>
-</ul>
-</details>
-<details>
-<summary><strong>ccusage-amp</strong> - Usage analysis tool for Amp CLI sessions</summary>
-
-<ul>
-<li><strong>Source</strong>: bytecode</li>
-<li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a href="https://github.com/ryoppippi/ccusage">https://github.com/ryoppippi/ccusage</a></li>
-<li><strong>Usage</strong>: <code>nix run github:numtide/llm-agents.nix#ccusage-amp -- --help</code></li>
-<li><strong>Nix</strong>: <a href="packages/ccusage-amp/package.nix">packages/ccusage-amp/package.nix</a></li>
-</ul>
-</details>
-<details>
-<summary><strong>ccusage-codex</strong> - Usage analysis tool for OpenAI Codex sessions</summary>
-
-<ul>
-<li><strong>Source</strong>: bytecode</li>
-<li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a href="https://github.com/ryoppippi/ccusage">https://github.com/ryoppippi/ccusage</a></li>
-<li><strong>Usage</strong>: <code>nix run github:numtide/llm-agents.nix#ccusage-codex -- --help</code></li>
-<li><strong>Nix</strong>: <a href="packages/ccusage-codex/package.nix">packages/ccusage-codex/package.nix</a></li>
-</ul>
-</details>
-<details>
-<summary><strong>ccusage-opencode</strong> - Usage analysis tool for OpenCode sessions</summary>
-
-<ul>
-<li><strong>Source</strong>: bytecode</li>
-<li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a href="https://github.com/ryoppippi/ccusage">https://github.com/ryoppippi/ccusage</a></li>
-<li><strong>Usage</strong>: <code>nix run github:numtide/llm-agents.nix#ccusage-opencode -- --help</code></li>
-<li><strong>Nix</strong>: <a href="packages/ccusage-opencode/package.nix">packages/ccusage-opencode/package.nix</a></li>
-</ul>
-</details>
-<details>
-<summary><strong>ccusage-pi</strong> - Pi-agent usage tracking for Claude Max</summary>
-
-<ul>
-<li><strong>Source</strong>: bytecode</li>
-<li><strong>License</strong>: MIT</li>
-<li><strong>Homepage</strong>: <a href="https://github.com/ryoppippi/ccusage">https://github.com/ryoppippi/ccusage</a></li>
-<li><strong>Usage</strong>: <code>nix run github:numtide/llm-agents.nix#ccusage-pi -- --help</code></li>
-<li><strong>Nix</strong>: <a href="packages/ccusage-pi/package.nix">packages/ccusage-pi/package.nix</a></li>
 </ul>
 </details>
 
@@ -1471,7 +1427,7 @@ nix flake check
         <div class="name"><span class="org">0xrsydn /</span> nix-hermes-agent</div>
       </a>
       <a class="related-row" href="/projects/rookiemann/portable-hermes-agent">
-        <div class="stars">★ 125</div>
+        <div class="stars">★ 124</div>
         <div class="name"><span class="org">rookiemann /</span> portable-hermes-agent</div>
       </a>
       <a class="related-row" href="/projects/xmbshwll/hermes-agent-docker">

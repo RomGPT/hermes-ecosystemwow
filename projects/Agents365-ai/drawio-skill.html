@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>drawio-skill — Hermes Agent Skills &amp; Skill Registries | Hermes Atlas</title>
-<meta name="description" content="drawio-skill — From Text to Professional Diagrams. An Agent Skill (SKILL.md) that generates draw.io diagrams from natural language and exports to PNG/SVG/PDF. W">
+<meta name="description" content="Generate draw.io diagrams from natural language with 6 presets and a 2-round self-check loop. Exports to PNG/SVG/PDF/JPG.">
 <link rel="canonical" href="https://hermesatlas.com/projects/Agents365-ai/drawio-skill">
 <meta property="og:title" content="drawio-skill — Hermes Atlas">
-<meta property="og:description" content="drawio-skill — From Text to Professional Diagrams. An Agent Skill (SKILL.md) that generates draw.io diagrams from natural language and exports to PNG/SVG/PDF. W">
+<meta property="og:description" content="Generate draw.io diagrams from natural language with 6 presets and a 2-round self-check loop. Exports to PNG/SVG/PDF/JPG.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hermesatlas.com/projects/Agents365-ai/drawio-skill">
 <meta property="og:site_name" content="Hermes Atlas">
-<meta property="og:image" content="https://hermesatlas.com/api/og?title=drawio-skill&amp;subtitle=drawio-skill+%E2%80%94+From+Text+to+Professional+Diagrams.+An+Agent+Skill+%28SKILL.md%29+that+generates+draw.io+diagrams+from+natural+language+and+exports+to+PNG%2FSVG%2FPDF.+Works+with+Claude+Cod&amp;kind=project+%C2%B7+skills">
+<meta property="og:image" content="https://hermesatlas.com/api/og?title=drawio-skill&amp;subtitle=Generate+draw.io+diagrams+from+natural+language+with+6+presets+and+a+2-round+self-check+loop.+Exports+to+PNG%2FSVG%2FPDF%2FJPG.&amp;kind=project+%C2%B7+skills">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="drawio-skill — Hermes Atlas">
-<meta name="twitter:description" content="drawio-skill — From Text to Professional Diagrams. An Agent Skill (SKILL.md) that generates draw.io diagrams from natural language and exports to PNG/SVG/PDF. W">
-<meta name="twitter:image" content="https://hermesatlas.com/api/og?title=drawio-skill&amp;subtitle=drawio-skill+%E2%80%94+From+Text+to+Professional+Diagrams.+An+Agent+Skill+%28SKILL.md%29+that+generates+draw.io+diagrams+from+natural+language+and+exports+to+PNG%2FSVG%2FPDF.+Works+with+Claude+Cod&amp;kind=project+%C2%B7+skills">
+<meta name="twitter:description" content="Generate draw.io diagrams from natural language with 6 presets and a 2-round self-check loop. Exports to PNG/SVG/PDF/JPG.">
+<meta name="twitter:image" content="https://hermesatlas.com/api/og?title=drawio-skill&amp;subtitle=Generate+draw.io+diagrams+from+natural+language+with+6+presets+and+a+2-round+self-check+loop.+Exports+to+PNG%2FSVG%2FPDF%2FJPG.&amp;kind=project+%C2%B7+skills">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/Agents365-ai/drawio-skill#software",
   "name": "drawio-skill",
-  "description": "The drawio-skill project is a tool that converts natural language descriptions into professional .drawio diagrams and exports them to common image formats. It functions by generating XML code and utilizing the native draw.io desktop CLI for rendering, layout, and export. The system includes a self-correction mechanism that analyzes its own output to fix visual issues and supports iterative refinement through a multi-round feedback loop. It integrates with various agent platforms including Claude",
+  "description": "This project is a diagramming skill that converts natural language descriptions into professional .drawio XML files and image exports. It utilizes the native draw.io desktop CLI to render diagrams and features an automated self-check mechanism that reads its own output to fix layout issues like overlapping labels or stacked edges. The tool supports six specialized presets including UML, ERD, and ML architectures, while allowing users to capture and reuse custom visual styles from existing files.",
   "url": "https://hermesatlas.com/projects/Agents365-ai/drawio-skill",
   "codeRepository": "https://github.com/Agents365-ai/drawio-skill",
   "applicationCategory": "DeveloperApplication",
@@ -47,13 +47,13 @@
     "name": "Agents365-ai",
     "url": "https://github.com/Agents365-ai"
   },
-  "dateModified": "2026-05-17T07:27:16.000Z",
+  "dateModified": "2026-05-17T08:33:03.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 1635
+    "userInteractionCount": 1650
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -109,7 +109,7 @@
   <h1 class="project-name">
     <span class="org">Agents365-ai</span><span class="slash">/</span>drawio-skill
   </h1>
-  <p class="project-desc">drawio-skill — From Text to Professional Diagrams. An Agent Skill (SKILL.md) that generates draw.io diagrams from natural language and exports to PNG/SVG/PDF. Works with Claude Code, OpenClaw, Hermes Agent, OpenAI Codex, and SkillsMP.</p>
+  <p class="project-desc">Generate draw.io diagrams from natural language with 6 presets and a 2-round self-check loop. Exports to PNG/SVG/PDF/JPG.</p>
 
   <div class="meta-row">
     <span class="stars">★ 1.6K</span>
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">The drawio-skill project is a tool that converts natural language descriptions into professional .drawio diagrams and exports them to common image formats. It functions by generating XML code and utilizing the native draw.io desktop CLI for rendering, layout, and export. The system includes a self-correction mechanism that analyzes its own output to fix visual issues and supports iterative refinement through a multi-round feedback loop. It integrates with various agent platforms including Claude Code, Cursor, and Hermes, requiring no additional server-side dependencies.</p>
+    <p class="summary-text">This project is a diagramming skill that converts natural language descriptions into professional .drawio XML files and image exports. It utilizes the native draw.io desktop CLI to render diagrams and features an automated self-check mechanism that reads its own output to fix layout issues like overlapping labels or stacked edges. The tool supports six specialized presets including UML, ERD, and ML architectures, while allowing users to capture and reuse custom visual styles from existing files. It integrates with various AI agents such as Claude Code, Cursor, and Hermes to provide an iterative feedback loop for diagram refinement.</p>
     <ul class="summary-highlights">
-      <li>Generates .drawio XML from text with 6 diagram type presets</li>
-      <li>Self-checks and auto-fixes visual issues using native CLI output</li>
-      <li>Learns and applies custom visual styles from existing files or images</li>
+      <li>Generates .drawio XML and exports to PNG, SVG, PDF, or JPG</li>
+      <li>Auto-fixes layout issues via a multi-round self-check and feedback loop</li>
+      <li>Includes presets for Architecture, UML, Flowcharts, ERD, and ML diagrams</li>
     </ul>
   </div>
 </section>
@@ -152,42 +152,40 @@
 <p><a href="https://skillsmp.com/skills/agents365-ai-drawio-skill-skills-drawio-skill-skill-md"><img src="https://img.shields.io/badge/SkillsMP-listed-1f6feb" alt="SkillsMP"></a>
 <a href="https://clawhub.ai/agents365-ai/drawio-pro-skill"><img src="https://img.shields.io/badge/ClawHub-listed-ff6b35" alt="ClawHub"></a>
 <a href="https://github.com/Agents365-ai/365-skills"><img src="https://img.shields.io/badge/Claude%20Code-plugin-8a2be2" alt="Claude Code Plugin"></a>
-<a href="https://agentskills.io"><img src="https://img.shields.io/badge/Agent%20Skills-compatible-2ea44f" alt="Agent Skills"></a></p>
+<a href="https://agentskills.io"><img src="https://img.shields.io/badge/Agent%20Skills-compatible-2ea44f" alt="Agent Skills"></a>
+<a href="https://discord.gg/79JF5Atuk"><img src="https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&amp;logoColor=white" alt="Discord"></a></p>
 <p><strong>English</strong> · <a href="https://github.com/Agents365-ai/drawio-skill/blob/main/README_CN.md">中文</a> · <a href="https://agents365-ai.github.io/drawio-skill/">📖 Online Docs</a></p>
 <p>A skill that turns natural-language descriptions into <code>.drawio</code> XML and exports them to PNG / SVG / PDF / JPG via the native draw.io desktop CLI. Works with <strong>Claude Code, Cursor, Copilot, OpenClaw, Codex, Hermes</strong>, and any agent compatible with the <a href="https://agentskills.io">Agent Skills</a> format.</p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Agents365-ai/drawio-skill/main/assets/workflow.png" width="900" alt="Workflow">
+  <img src="https://raw.githubusercontent.com/Agents365-ai/drawio-skill/main/assets/microservices-example.png" width="900" alt="Microservices Architecture — generated from a single natural-language prompt">
 </p>
 
 <h3>✨ Highlights</h3>
 <ul>
 <li><strong>6 diagram type presets</strong> — ERD, UML Class, Sequence, Architecture, ML/Deep Learning, Flowchart</li>
-<li><strong>Self-check + auto-fix</strong> — reads its own PNG output and auto-fixes 6 issue types (up to 2 rounds)</li>
-<li><strong>Iterative feedback loop</strong> — 5-round targeted refinement until you&#39;re satisfied</li>
+<li><strong>Self-check + auto-fix</strong> — reads its own PNG output and auto-fixes overlaps, clipped labels, stacked edges, and more (up to 2 rounds)</li>
+<li><strong>Iterative feedback loop</strong> — up to 5 rounds of targeted refinement</li>
 <li><strong>Style presets</strong> — capture your visual style from a <code>.drawio</code> file or image, reuse on demand</li>
-<li><strong>Grid-aligned layout</strong> — complexity-scaled spacing, routing corridors, hub-center strategy</li>
-<li><strong>Multi-agent, zero-config</strong> — pure SKILL.md; no MCP server, no Python, no Node.js</li>
+<li><strong>Clean layout</strong> — grid-aligned, spacing scales with diagram size, connectors routed clear of nodes</li>
+<li><strong>Multi-agent, zero-config</strong> — runs from a single SKILL.md; no MCP server, no background daemon (the optional <code>npx</code> installer needs Node, the skill itself does not)</li>
 </ul>
 <h3>🖼️ Examples</h3>
 <blockquote>
 <p>[!TIP]
-<strong>Try this prompt</strong> to generate the diagram below:</p>
+<strong>The hero image above was generated from this single prompt:</strong></p>
 </blockquote>
 <pre><code>Create a microservices e-commerce architecture with Mobile/Web/Admin clients,
-API Gateway, Auth/User/Order/Product/Payment services, Kafka message queue,
-Notification service, and User DB / Order DB / Product DB / Redis Cache / Stripe API
+API Gateway (auth + rate limiting + routing), Auth/User/Order/Product/Payment
+services, Kafka message queue, Notification service, and User DB / Order DB /
+Product DB / Redis Cache / Stripe API
 </code></pre>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Agents365-ai/drawio-skill/main/assets/microservices-example.png" width="800" alt="Microservices Architecture">
-</p>
-
-<p>The skill also routes edges cleanly across different topologies — no lines crossing through shapes:</p>
+<p>The skill is designed to route edges cleanly across different topologies, avoiding lines that cross through shapes:</p>
 <table>
   <tr>
     <td align="center" width="33%">
       <img src="https://raw.githubusercontent.com/Agents365-ai/drawio-skill/main/assets/demo-star.png" alt="Star topology" width="100%"><br>
       <b>Star</b> · 7 nodes<br>
-      <sub>Central message broker with 6 microservices radiating outward, zero edge crossings.</sub>
+      <sub>Central message broker with 6 microservices radiating outward, no edge crossings on this example.</sub>
     </td>
     <td align="center" width="33%">
       <img src="https://raw.githubusercontent.com/Agents365-ai/drawio-skill/main/assets/demo-layered.png" alt="Layered flow" width="100%"><br>
@@ -241,10 +239,11 @@ git clone https://github.com/Agents365-ai/drawio-skill.git \
 <p>Also indexed on <a href="https://skillsmp.com/skills/agents365-ai-drawio-skill-skills-drawio-skill-skill-md">SkillsMP</a> and <a href="https://clawhub.ai/agents365-ai/drawio-pro-skill">ClawHub</a>.</p>
 <p><strong>Updating:</strong> <code>/plugin update drawio</code> (Claude Code), <code>skills update drawio-skill</code> (SkillsMP), <code>clawhub update drawio-pro-skill</code> (OpenClaw), or <code>git pull</code> for manual installs — see <a href="https://github.com/Agents365-ai/drawio-skill/blob/main/docs/INSTALL_SKILL.md#updates">docs/INSTALL_SKILL.md#updates</a>.</p>
 <h3>⚡ Quick Start</h3>
-<p>After installation, just describe what you want:</p>
-<pre><code>Create a microservices e-commerce architecture with API Gateway,
-Auth/User/Order/Product/Payment services, Kafka message queue,
-Notification service, and a separate database per service
+<p>After installation, just describe what you want. For example, an ML model:</p>
+<pre><code>Draw a Transformer encoder-decoder for machine translation: 6-layer encoder
+with self-attention, 6-layer decoder with cross-attention, input embeddings
+(batch × 512 × 768), positional encoding, and a final output projection.
+Annotate tensor shapes between layers and color-code by layer type.
 </code></pre>
 <p>The skill plans the layout, generates the <code>.drawio</code> XML, exports to your chosen format, self-checks the result, and lets you iterate.</p>
 <h3>🧩 Supported Diagram Types</h3>
@@ -294,6 +293,12 @@ Notification service, and a separate database per service
 <pre><code>Learn my style from ~/diagrams/brand.drawio as &quot;mybrand&quot;
 </code></pre>
 <p>The skill extracts colors, shapes, fonts, and edge style, renders a preview, and only saves the preset after you approve. Full preset-management commands in <a href="https://github.com/Agents365-ai/drawio-skill/blob/main/docs/STYLE_PRESETS.md">docs/STYLE_PRESETS.md</a>.</p>
+<h3>🔄 How it works</h3>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Agents365-ai/drawio-skill/main/assets/workflow.png" width="700" alt="Internal workflow">
+</p>
+
+<p>Behind the scenes: <strong>check dependencies → plan layout → generate <code>.drawio</code> XML → export draft PNG → self-check + auto-fix</strong> (up to 2 rounds) → <strong>show to user → 5-round feedback loop</strong> until approved → <strong>final export</strong>.</p>
 <h3>🆚 Comparison</h3>
 <h4>vs Native Agent (no skill)</h4>
 <table>
@@ -341,37 +346,37 @@ Notification service, and a separate database per service
 <tr>
 <th>Feature</th>
 <th>drawio-skill</th>
-<th><a href="https://github.com/jgraph/drawio-mcp">jgraph/drawio-mcp</a><br>(official, 1.3k⭐)</th>
-<th><a href="https://github.com/bahayonghang/drawio-skills">bahayonghang/drawio-skills</a><br>(60⭐)</th>
-<th><a href="https://github.com/GBSOSS/ai-drawio">GBSOSS/ai-drawio</a><br>(63⭐)</th>
+<th><a href="https://github.com/jgraph/drawio-mcp">jgraph/drawio-mcp</a> (official)<br><img src="https://img.shields.io/github/stars/jgraph/drawio-mcp?style=flat-square&amp;logo=github" alt="stars"></th>
+<th><a href="https://github.com/bahayonghang/drawio-skills">bahayonghang/drawio-skills</a><br><img src="https://img.shields.io/github/stars/bahayonghang/drawio-skills?style=flat-square&amp;logo=github" alt="stars"></th>
+<th><a href="https://github.com/GBSOSS/ai-drawio">GBSOSS/ai-drawio</a><br><img src="https://img.shields.io/github/stars/GBSOSS/ai-drawio?style=flat-square&amp;logo=github" alt="stars"></th>
 </tr>
 </thead>
 <tbody><tr>
 <td><strong>Approach</strong></td>
 <td>Pure SKILL.md</td>
 <td>SKILL.md / MCP / Project</td>
-<td>YAML DSL + MCP</td>
-<td>Plugin + browser</td>
+<td>YAML DSL + CLI (MCP optional)</td>
+<td>Claude Code plugin</td>
 </tr>
 <tr>
 <td><strong>Dependencies</strong></td>
 <td>draw.io desktop only</td>
 <td>draw.io desktop</td>
-<td>MCP server (<code>npx</code>)</td>
-<td>Browser + local server</td>
+<td>draw.io desktop (MCP optional)</td>
+<td>draw.io plugin + browser</td>
 </tr>
 <tr>
 <td><strong>Multi-agent</strong></td>
 <td>✅ 6 platforms</td>
+<td>❌ Claude apps only</td>
+<td>✅ Claude / Gemini / Codex</td>
 <td>❌ Claude Code only</td>
-<td>❌ Claude Code only</td>
-<td>❌</td>
 </tr>
 <tr>
 <td><strong>Self-check + auto-fix</strong></td>
-<td>✅ 2-round</td>
+<td>✅ 2-round (reads PNG)</td>
 <td>❌</td>
-<td>❌</td>
+<td>✅ validation + strict mode</td>
 <td>❌ screenshot only</td>
 </tr>
 <tr>
@@ -385,7 +390,7 @@ Notification service, and a separate database per service
 <td><strong>Diagram presets</strong></td>
 <td>✅ 6 types</td>
 <td>❌</td>
-<td>❌</td>
+<td>✅ paper-mode classifier</td>
 <td>❌</td>
 </tr>
 <tr>
@@ -399,56 +404,54 @@ Notification service, and a separate database per service
 <td><strong>Color system</strong></td>
 <td>✅ 7-color semantic</td>
 <td>❌</td>
-<td>✅ 5 themes</td>
+<td>✅ 6 themes</td>
 <td>❌</td>
 </tr>
 <tr>
 <td><strong>Browser fallback</strong></td>
 <td>✅ diagrams.net URL</td>
-<td>❌</td>
-<td>❌</td>
-<td>❌</td>
+<td>❌ inline preview only</td>
+<td>✅ via optional MCP</td>
+<td>✅ diagrams.net viewer (primary)</td>
 </tr>
 <tr>
 <td><strong>Zero-config</strong></td>
 <td>✅ copy <code>skills/drawio-skill/</code></td>
 <td>✅</td>
-<td>❌ needs <code>npx</code></td>
+<td>✅ desktop-only mode</td>
 <td>❌ needs plugin install</td>
 </tr>
 </tbody></table>
-<p>Full 18-row comparison + key-advantages summary in <a href="https://github.com/Agents365-ai/drawio-skill/blob/main/docs/COMPARISON.md">docs/COMPARISON.md</a>.</p>
-<h3>📚 Documentation</h3>
+<p>Full comparison + key-advantages summary in <a href="https://github.com/Agents365-ai/drawio-skill/blob/main/docs/COMPARISON.md">docs/COMPARISON.md</a> (with audit timestamp).</p>
+<h3>🔗 Related Skills</h3>
+<p>Part of the <a href="https://github.com/Agents365-ai">Agents365-ai diagram-skill family</a> — pick the right tool for the job:</p>
 <table>
 <thead>
 <tr>
-<th>Doc</th>
-<th>What&#39;s inside</th>
+<th>Skill</th>
+<th>Style</th>
+<th>Best for</th>
 </tr>
 </thead>
 <tbody><tr>
-<td><a href="https://github.com/Agents365-ai/drawio-skill/blob/main/docs/INSTALL_CLI.md">docs/INSTALL_CLI.md</a></td>
-<td>draw.io desktop CLI install recipes for macOS / Windows / Linux</td>
+<td><a href="https://github.com/Agents365-ai/excalidraw-skill">excalidraw-skill</a></td>
+<td>Hand-drawn / sketchy</td>
+<td>Whiteboard mockups, informal diagrams</td>
 </tr>
 <tr>
-<td><a href="https://github.com/Agents365-ai/drawio-skill/blob/main/docs/INSTALL_SKILL.md">docs/INSTALL_SKILL.md</a></td>
-<td>Plugin marketplace, manual clone, update commands</td>
+<td><a href="https://github.com/Agents365-ai/mermaid-skill">mermaid-skill</a></td>
+<td>Text-based, auto-layout</td>
+<td>README-embeddable, version-control friendly</td>
 </tr>
 <tr>
-<td><a href="https://github.com/Agents365-ai/drawio-skill/blob/main/docs/USAGE.md">docs/USAGE.md</a></td>
-<td>Natural-language prompts, microservices walkthrough, topology demos</td>
+<td><a href="https://github.com/Agents365-ai/plantuml-skill">plantuml-skill</a></td>
+<td>UML-focused</td>
+<td>Class / sequence diagrams in CI pipelines</td>
 </tr>
 <tr>
-<td><a href="https://github.com/Agents365-ai/drawio-skill/blob/main/docs/STYLE_PRESETS.md">docs/STYLE_PRESETS.md</a></td>
-<td>Built-in presets, &quot;learn my style from a file&quot; workflow, manage commands</td>
-</tr>
-<tr>
-<td><a href="https://github.com/Agents365-ai/drawio-skill/blob/main/docs/COMPARISON.md">docs/COMPARISON.md</a></td>
-<td>Side-by-side tables vs. native agents and other draw.io skills/tools</td>
-</tr>
-<tr>
-<td><a href="https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/SKILL.md">skills/drawio-skill/SKILL.md</a></td>
-<td>Workflow guide loaded by the agent</td>
+<td><a href="https://github.com/Agents365-ai/tldraw-skill">tldraw-skill</a></td>
+<td>Whiteboard collaboration</td>
+<td>Casual sketches, FigJam-style boards</td>
 </tr>
 </tbody></table>
 <h3>💬 Community</h3>
@@ -515,7 +518,7 @@ Notification service, and a separate database per service
         <div class="name"><span class="org">conorbronsdon /</span> avoid-ai-writing</div>
       </a>
       <a class="related-row" href="/projects/wondelai/skills">
-        <div class="stars">★ 988</div>
+        <div class="stars">★ 993</div>
         <div class="name"><span class="org">wondelai /</span> skills</div>
       </a>
       <a class="related-row" href="/projects/DougTrajano/pydantic-ai-skills">
@@ -527,7 +530,7 @@ Notification service, and a separate database per service
         <div class="name"><span class="org">smartcontractkit /</span> chainlink-agent-skills</div>
       </a>
       <a class="related-row" href="/projects/tlehman/litprog-skill">
-        <div class="stars">★ 141</div>
+        <div class="stars">★ 143</div>
         <div class="name"><span class="org">tlehman /</span> litprog-skill</div>
       </a>
       <a class="related-row" href="/projects/esaradev/icarus-plugin">

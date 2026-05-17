@@ -1818,12 +1818,12 @@ Category: Deployment & Infra
 Stars: 967
 Nix packages for AI coding agents including Hermes
 
-llm-agents.nix is a collection of Nix packages designed to simplify the deployment and management of AI coding agents and development tools. The project provides a centralized repository that automatically updates daily, ensuring users have access to the latest versions of various agentic tools. It allows developers to run a wide range of CLI-based agents, such as Goose, Claude Code, and Bernstein, directly via Nix flakes without manual installation. This infrastructure supports multi-agent orchestration, unified API proxies, and terminal-based AI pair programming across different model providers.
+llm-agents.nix is a collection of Nix packages designed to simplify the deployment and management of AI coding agents and development tools. It provides a centralized repository of reproducible Nix expressions that allow users to run various agentic tools directly via the terminal without manual installation. The project features daily automated updates to ensure compatibility with the latest versions of tools like Claude Code, Goose, and various multi-agent orchestrators. By leveraging the Nix ecosystem, it offers a consistent environment for developers to experiment with diverse AI-powered engineering automation frameworks.
 
 Highlights:
-- Provides daily updated Nix packages for numerous AI coding agents
-- Enables instant execution of tools via Nix run commands
-- Supports diverse agents including local, open-source, and proprietary binaries
+- Provides reproducible Nix packages for numerous AI coding agents
+- Automated daily updates ensure access to latest tool versions
+- Supports diverse agents including Claude Code, Goose, and Gemini CLI
 
 ---
 
@@ -2161,12 +2161,12 @@ Category: Skills & Skill Registries
 Stars: 131
 Generate draw.io diagrams from natural language descriptions
 
-The drawio-skill project is a tool that converts natural language descriptions into professional .drawio diagrams and exports them to common image formats. It functions by generating XML code and utilizing the native draw.io desktop CLI for rendering, layout, and export. The system includes a self-correction mechanism that analyzes its own output to fix visual issues and supports iterative refinement through a multi-round feedback loop. It integrates with various agent platforms including Claude Code, Cursor, and Hermes, requiring no additional server-side dependencies.
+This project is a diagramming skill that converts natural language descriptions into professional .drawio XML files and image exports. It utilizes the native draw.io desktop CLI to render diagrams and features an automated self-check mechanism that reads its own output to fix layout issues like overlapping labels or stacked edges. The tool supports six specialized presets including UML, ERD, and ML architectures, while allowing users to capture and reuse custom visual styles from existing files. It integrates with various AI agents such as Claude Code, Cursor, and Hermes to provide an iterative feedback loop for diagram refinement.
 
 Highlights:
-- Generates .drawio XML from text with 6 diagram type presets
-- Self-checks and auto-fixes visual issues using native CLI output
-- Learns and applies custom visual styles from existing files or images
+- Generates .drawio XML and exports to PNG, SVG, PDF, or JPG
+- Auto-fixes layout issues via a multi-round self-check and feedback loop
+- Includes presets for Architecture, UML, Flowcharts, ERD, and ML diagrams
 
 ---
 
@@ -3198,12 +3198,12 @@ Category: Guides & Docs
 Stars: 6
 Community documentation covering deployment patterns and v0.2.0+ workflows
 
-Hermes Agent is an autonomous AI system designed to create a persistent, self-improving learning loop across multiple platforms. It utilizes a unified core to manage long-running conversations, execute parallel tool calls, and autonomously generate reusable skills stored in a local SQLite database. The agent integrates with over 20 messaging platforms and dozens of model providers, allowing it to function as a CLI, a messaging gateway, or an IDE extension. Its architecture supports context compression, full-text session search, and a plugin system for extending tools and backends without forking the codebase.
+hermes-agent-docs is a community-driven documentation repository for the Hermes Agent ecosystem. It provides practical guidance on deployment patterns and workflows specifically for versions 0.2.0 and above. Users can leverage these resources to better implement the agent's autonomous learning loops and multi-platform messaging capabilities.
 
 Highlights:
-- Autonomous skill creation and self-improvement based on task experience
-- Unified messaging gateway supporting Telegram, Discord, Slack, and WhatsApp
-- Pluggable transport layer compatible with 400+ models and custom endpoints
+- Covers deployment patterns for various infrastructure types
+- Guides workflows for Hermes Agent v0.2.0+
+- Supports community-driven documentation efforts
 
 ---
 

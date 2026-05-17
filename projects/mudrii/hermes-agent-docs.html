@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/mudrii/hermes-agent-docs#software",
   "name": "hermes-agent-docs",
-  "description": "Hermes Agent is an autonomous AI system designed to create a persistent, self-improving learning loop across multiple platforms. It utilizes a unified core to manage long-running conversations, execute parallel tool calls, and autonomously generate reusable skills stored in a local SQLite database. The agent integrates with over 20 messaging platforms and dozens of model providers, allowing it to function as a CLI, a messaging gateway, or an IDE extension. Its architecture supports context compr",
+  "description": "hermes-agent-docs is a community-driven documentation repository for the Hermes Agent ecosystem. It provides practical guidance on deployment patterns and workflows specifically for versions 0.2.0 and above. Users can leverage these resources to better implement the agent's autonomous learning loops and multi-platform messaging capabilities.",
   "url": "https://hermesatlas.com/projects/mudrii/hermes-agent-docs",
   "codeRepository": "https://github.com/mudrii/hermes-agent-docs",
   "applicationCategory": "ReferenceApplication",
@@ -46,7 +46,7 @@
     "name": "mudrii",
     "url": "https://github.com/mudrii"
   },
-  "dateModified": "2026-05-16T13:03:02.000Z",
+  "dateModified": "2026-05-17T13:52:27.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
@@ -115,7 +115,7 @@
     <span><span class="meta-label">lang</span>MDX</span>
     
     
-    <span><span class="meta-label">updated</span>2026-05-16</span>
+    <span><span class="meta-label">updated</span>2026-05-17</span>
   </div>
 
   <div class="actions">
@@ -130,11 +130,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Hermes Agent is an autonomous AI system designed to create a persistent, self-improving learning loop across multiple platforms. It utilizes a unified core to manage long-running conversations, execute parallel tool calls, and autonomously generate reusable skills stored in a local SQLite database. The agent integrates with over 20 messaging platforms and dozens of model providers, allowing it to function as a CLI, a messaging gateway, or an IDE extension. Its architecture supports context compression, full-text session search, and a plugin system for extending tools and backends without forking the codebase.</p>
+    <p class="summary-text">hermes-agent-docs is a community-driven documentation repository for the Hermes Agent ecosystem. It provides practical guidance on deployment patterns and workflows specifically for versions 0.2.0 and above. Users can leverage these resources to better implement the agent's autonomous learning loops and multi-platform messaging capabilities.</p>
     <ul class="summary-highlights">
-      <li>Autonomous skill creation and self-improvement based on task experience</li>
-      <li>Unified messaging gateway supporting Telegram, Discord, Slack, and WhatsApp</li>
-      <li>Pluggable transport layer compatible with 400+ models and custom endpoints</li>
+      <li>Covers deployment patterns for various infrastructure types</li>
+      <li>Guides workflows for Hermes Agent v0.2.0+</li>
+      <li>Supports community-driven documentation efforts</li>
     </ul>
   </div>
 </section>
@@ -269,7 +269,7 @@
 <h4>Secret Redaction</h4>
 <p><code>agent/redact.py</code> provides regex-based secret redaction for logs and tool output. It masks API keys (OpenAI, GitHub, Slack, Google, AWS, Stripe, SendGrid, HuggingFace, and others), env variable assignments containing secret names, JSON secret fields, Authorization headers, Telegram bot tokens, private key blocks, database connection string passwords, and E.164 phone numbers. Short tokens (&lt; 18 chars) are fully masked; longer tokens preserve the first 6 and last 4 characters. Controlled via <code>security.redact_secrets</code> in config.yaml or <code>HERMES_REDACT_SECRETS</code> env var. A <code>RedactingFormatter</code> log handler applies redaction to all log output.</p>
 <h4>Research-Ready</h4>
-<p>Batch trajectory generation, trajectory compression for training datasets (<code>trajectory_compressor.py</code>), and Atropos RL environments including WebResearchEnv, YC-Bench, and Agentic On-Policy Distillation (OPD, v0.3.0). The pipeline supports SFT data generation and GRPO/PPO RL fine-tuning.</p>
+<p>Batch trajectory generation and trajectory compression for training datasets (<code>batch_runner.py</code>, <code>agent/trajectory.py</code>, and <code>trajectory_compressor.py</code>). Hermes can export ShareGPT-format traces for SFT data generation, evaluation, and debugging; model-training frameworks live in optional skills rather than a bundled Atropos runtime.</p>
 <h4>Skills Ecosystem</h4>
 <p>166 tracked skills (87 bundled + 79 optional) across 26+ categories in the current source tree. Compatible with the <a href="https://agentskills.io">agentskills.io</a> open standard. Skills support per-platform enable/disable, conditional activation based on tool availability, and prerequisite validation. The Skills Hub integrates with both ClawHub and skills.sh (v0.3.0).</p>
 <hr>
@@ -1005,15 +1005,15 @@ hermes update       # Update to the latest version (with auto-restart for gatewa
         <div class="name"><span class="org">martymcenroe /</span> HermesWiki</div>
       </a>
       <a class="related-row" href="/projects/ksimback/hermes-ecosystem">
-        <div class="stars">★ 827</div>
+        <div class="stars">★ 832</div>
         <div class="name"><span class="org">ksimback /</span> hermes-ecosystem</div>
       </a>
       <a class="related-row" href="/projects/jwangkun/hermes-agent-guide">
-        <div class="stars">★ 225</div>
+        <div class="stars">★ 228</div>
         <div class="name"><span class="org">jwangkun /</span> hermes-agent-guide</div>
       </a>
       <a class="related-row" href="/projects/longyunfeigu/learn-hermes-agent">
-        <div class="stars">★ 106</div>
+        <div class="stars">★ 107</div>
         <div class="name"><span class="org">longyunfeigu /</span> learn-hermes-agent</div>
       </a>
     </div>
