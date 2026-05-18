@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hermes-bort — Hermes Agent Integrations &amp; Bridges | Hermes Atlas</title>
+<meta name="description" content="Hermes Agent plugin for BORT (BAP-578) agent NFTs on BNB Smart Chain: multi-source reads, operator-signed writes, portable IPFS-anchored memory.">
+<link rel="canonical" href="https://hermesatlas.com/projects/BORT-AGENTS/hermes-bort">
+<meta property="og:title" content="hermes-bort — Hermes Atlas">
+<meta property="og:description" content="Hermes Agent plugin for BORT (BAP-578) agent NFTs on BNB Smart Chain: multi-source reads, operator-signed writes, portable IPFS-anchored memory.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hermesatlas.com/projects/BORT-AGENTS/hermes-bort">
+<meta property="og:site_name" content="Hermes Atlas">
+<meta property="og:image" content="https://hermesatlas.com/api/og?title=hermes-bort&amp;subtitle=Hermes+Agent+plugin+for+BORT+%28BAP-578%29+agent+NFTs+on+BNB+Smart+Chain%3A+multi-source+reads%2C+operator-signed+writes%2C+portable+IPFS-anchored+memory.&amp;kind=project+%C2%B7+integrations">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="hermes-bort — Hermes Atlas">
+<meta name="twitter:description" content="Hermes Agent plugin for BORT (BAP-578) agent NFTs on BNB Smart Chain: multi-source reads, operator-signed writes, portable IPFS-anchored memory.">
+<meta name="twitter:image" content="https://hermesatlas.com/api/og?title=hermes-bort&amp;subtitle=Hermes+Agent+plugin+for+BORT+%28BAP-578%29+agent+NFTs+on+BNB+Smart+Chain%3A+multi-source+reads%2C+operator-signed+writes%2C+portable+IPFS-anchored+memory.&amp;kind=project+%C2%B7+integrations">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "map", "item": "https://hermesatlas.com/" },
+    { "@type": "ListItem", "position": 2, "name": "integrations &amp; bridges", "item": "https://hermesatlas.com/" },
+    { "@type": "ListItem", "position": 3, "name": "hermes-bort" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": "https://hermesatlas.com/projects/BORT-AGENTS/hermes-bort#software",
+  "name": "hermes-bort",
+  "description": "Hermes-bort is a plugin for Hermes Agent that enables interaction with BORT agent NFTs on the Binance Smart Chain mainnet. It allows Hermes processes to read agent states, execute on-chain actions via operator-signed writes, and manage portable session memory. The plugin integrates with the BORT logic contracts and knowledge registries to anchor chat history and evolution metrics to IPFS. This setup facilitates a persistent identity and memory for autonomous agents that can be transferred alongs",
+  "url": "https://hermesatlas.com/projects/BORT-AGENTS/hermes-bort",
+  "codeRepository": "https://github.com/BORT-AGENTS/hermes-bort",
+  "applicationCategory": "CommunicationApplication",
+  "operatingSystem": "Cross-platform",
+  "programmingLanguage": "Python",
+  "license": "https://spdx.org/licenses/MIT.html",
+  "author": {
+    "@type": "Organization",
+    "name": "BORT-AGENTS",
+    "url": "https://github.com/BORT-AGENTS"
+  },
+  "dateModified": "2026-05-17T23:51:49.000Z",
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": {
+      "@type": "LikeAction"
+    },
+    "userInteractionCount": 2
+  },
+  "isPartOf": {
+    "@id": "https://hermesatlas.com/#website"
+  }
+}
+</script>
+<link rel="alternate" type="application/rss+xml" title="Hermes Atlas — new projects" href="/rss.xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script>(function(){try{var s=localStorage.getItem('theme');var o=window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches;var t=s||(o?'light':'dark');document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','dark')}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/tokens.css">
+<link rel="stylesheet" href="/assets/css/base.css">
+<link rel="stylesheet" href="/assets/css/page.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <a href="/" class="brand" aria-label="Hermes Atlas — home">hermes atlas</a>
+  <div class="mast-meta" aria-label="Site metadata">
+    <span>apr·2026</span>
+    <span id="meta-count">117·repos</span>
+    <span id="meta-version">hermes·v0.10.0</span>
+    <a class="mast-star" id="meta-atlas" href="https://github.com/ksimback/hermes-ecosystem" target="_blank" rel="noopener" aria-label="Star Hermes Atlas on GitHub">★ star this repo</a>
+  </div>
+  <nav class="mast-nav" aria-label="Primary">
+    <a href="/" class="active">map</a>
+    <a href="/#curated-lists">lists</a>
+    <a href="/guide/">handbook</a>
+    <a href="/reports/">reports</a>
+    <a href="/#newsletter">newsletter</a>
+    <a href="https://github.com/ksimback/hermes-ecosystem">source</a>
+  </nav>
+  <button id="theme-toggle" class="mast-toggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+    <span class="tt-light">light</span><span class="tt-sep">/</span><span class="tt-dark">dark</span>
+  </button>
+</header>
+
+<div class="breadcrumb" aria-label="Breadcrumb">
+  <a href="/">map</a><span class="sep">/</span><a href="/">integrations &amp; bridges</a><span class="sep">/</span>hermes-bort
+</div>
+
+<main id="main">
+
+<section class="project">
+  <h1 class="project-name">
+    <span class="org">BORT-AGENTS</span><span class="slash">/</span>hermes-bort
+  </h1>
+  <p class="project-desc">Hermes Agent plugin for BORT (BAP-578) agent NFTs on BNB Smart Chain: multi-source reads, operator-signed writes, portable IPFS-anchored memory.</p>
+
+  <div class="meta-row">
+    <span class="stars">★ 2</span>
+    <span><span class="meta-label">lang</span>Python</span>
+    <span><span class="meta-label">license</span>MIT</span>
+    
+    <span><span class="meta-label">updated</span>2026-05-17</span>
+  </div>
+
+  <div class="actions">
+    <a href="https://github.com/BORT-AGENTS/hermes-bort" target="_blank" rel="noopener" class="btn-primary">view on github →</a>
+    
+  </div>
+</section>
+
+
+
+
+<section class="project-summary">
+  <div class="section-label">overview</div>
+  <div>
+    <p class="summary-text">Hermes-bort is a plugin for Hermes Agent that enables interaction with BORT agent NFTs on the Binance Smart Chain mainnet. It allows Hermes processes to read agent states, execute on-chain actions via operator-signed writes, and manage portable session memory. The plugin integrates with the BORT logic contracts and knowledge registries to anchor chat history and evolution metrics to IPFS. This setup facilitates a persistent identity and memory for autonomous agents that can be transferred alongside the underlying NFT.</p>
+    <ul class="summary-highlights">
+      <li>Reads multi-source agent state, logic snapshots, and marketplace data.</li>
+      <li>Executes operator-signed writes gated by local policy and approval prompts.</li>
+      <li>Anchors session memory to IPFS and on-chain knowledge registries.</li>
+    </ul>
+  </div>
+</section>
+
+<details class="readme-details">
+  <summary class="readme-toggle">full readme from github</summary>
+  <section class="readme" data-nosnippet>
+    <h2>hermes-bort</h2>
+<p><a href="https://pypi.org/project/hermes-bort/"><img src="https://img.shields.io/pypi/v/hermes-bort.svg" alt="PyPI"></a>
+<a href="https://pypi.org/project/hermes-bort/"><img src="https://img.shields.io/pypi/pyversions/hermes-bort.svg" alt="Python"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a></p>
+<p>A plugin for <a href="https://github.com/NousResearch/hermes-agent">Hermes Agent</a> that lets a Hermes process read, act for, and anchor memory on BORT (BAP-578) agent NFTs on BSC mainnet.</p>
+<p>A BORT agent is an ERC-721 with on-chain state, an IPFS-pinned identity, a logic
+contract that exposes a small action catalog, and a knowledge registry. This plugin
+gives Hermes:</p>
+<ul>
+<li>One-call multi-source reads of an agent&#39;s full state.</li>
+<li>Owner-signed deep links into the BORT dapp for marketplace flows.</li>
+<li>Operator-signed writes through <code>VaultPermissionManagerV2.forwardHandleAction</code>,
+gated by a local policy file and the Hermes approval prompt.</li>
+<li>Portable session memory: write to local JSONL during a chat, anchor to IPFS and
+<code>KnowledgeRegistryV2.addKnowledgeSourceDelegated</code> at session end, prefetch
+those sources at the next session&#39;s start.</li>
+</ul>
+<h3>Install</h3>
+<pre><code class="language-bash">pip install hermes-bort
+</code></pre>
+<p>Or install it straight from Hermes:</p>
+<pre><code class="language-bash">hermes plugins install BORT-AGENTS/hermes-bort
+</code></pre>
+<p>Either way, enable it in <code>~/.hermes/config.yaml</code>:</p>
+<pre><code class="language-yaml">plugins:
+  enabled:
+    - hermes-bort
+</code></pre>
+<h4>From source</h4>
+<pre><code class="language-bash">git clone https://github.com/BORT-AGENTS/hermes-bort
+cd hermes-bort
+pip install -e .[dev]
+</code></pre>
+<p>You can also drop the <code>hermes_bort/</code> package into <code>~/.hermes/plugins/</code> directly.</p>
+<h3>Read-only quickstart</h3>
+<p>No setup beyond install. Reads hit the public BORT runtime API + BSC public RPC.</p>
+<pre><code class="language-python">from hermes_bort.tools.read_agent import handle as read_agent
+import asyncio, json
+
+raw = asyncio.run(read_agent({&quot;token_id&quot;: 11100}))
+print(json.dumps(json.loads(raw), indent=2)[:800])
+</code></pre>
+<p>Inside Hermes the same call surfaces as a tool: <code>bort_read_agent(token_id=11100)</code>.</p>
+<h3>Configure for writes</h3>
+<p>Writes need three things: an operator key, a vault grant from the agent owner, and
+permission from the local policy file.</p>
+<h4>1. Generate an operator key</h4>
+<pre><code class="language-bash">hermes bort init-operator
+</code></pre>
+<p>Prints a fresh address + private key. Set <code>BORT_OPERATOR_PRIVATE_KEY</code> in your env
+and fund the address with ~0.01 BNB for gas. The key is never written to disk by
+the plugin and never leaves your process.</p>
+<h4>2. Write the default policy</h4>
+<pre><code class="language-bash">hermes bort init-policy
+</code></pre>
+<p>Writes <code>~/.hermes/bort-policy.yaml</code>. Each action has a disposition (<code>auto</code> /
+<code>confirm</code> / <code>block</code>) and an optional <code>per_action_max_bnb</code> cap. Defaults are
+conservative: exits auto, trades and campaign lifecycle confirm, governance and
+large transfers block.</p>
+<h4>3. Have the agent owner grant the operator</h4>
+<pre><code class="language-python">from hermes_bort.tools.grant_permission import handle as grant
+raw = await grant({&quot;token_id&quot;: 11100, &quot;operator&quot;: &quot;0xYourOperatorAddress&quot;})
+</code></pre>
+<p>Returns the two-step calldata (<code>createVault</code> then <code>grantPermission</code>) the owner
+clicks through in their own wallet. Operator scope: <code>WRITE</code>, time-bound, limited
+to the actions you whitelist in the grant description.</p>
+<h4>4. Run</h4>
+<p>By default writes simulate only. Set <code>BORT_ALLOW_BROADCAST=1</code> to enable real
+broadcasting once you have confirmed simulation looks right.</p>
+<pre><code class="language-bash">export BORT_ALLOW_BROADCAST=1
+</code></pre>
+<h4>Doctor</h4>
+<pre><code class="language-bash">hermes bort doctor
+</code></pre>
+<p>Walks the setup: RPC reachable, operator key valid and funded, policy file present
+and parseable, Pinata creds set if you plan to anchor memory.</p>
+<h3>Tools</h3>
+<h4>Read</h4>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>bort_read_agent(token_id, include_logic_details=true, include_trades=true)</code></td>
+<td>Full state: BAP-578 state, IPFS identity, trade summary + PnL, knowledge sources, learning metrics, logic-specific state (Hunter positions / CTO campaign / Trading vault).</td>
+</tr>
+<tr>
+<td><code>bort_health_check()</code></td>
+<td>CircuitBreaker preflight: global pause + per-contract pause for the active logic contracts. Cheap, mandatory before any write.</td>
+</tr>
+<tr>
+<td><code>bort_list_actions(logic_name)</code></td>
+<td>Action catalog for <code>&quot;Hunter&quot;</code> / <code>&quot;Trading V5&quot;</code> / <code>&quot;CTO&quot;</code>, split into on-chain and off-chain.</td>
+</tr>
+<tr>
+<td><code>bort_marketplace_browse(sort?, limit?, offset?, seller?, include_recent_sales?)</code></td>
+<td>MarketplaceV3 listings + recent sales. No wallet.</td>
+</tr>
+<tr>
+<td><code>bort_marketplace_agent(token_id, include_offers?, include_activity?)</code></td>
+<td>One agent&#39;s active listing, open offers, recent marketplace events.</td>
+</tr>
+<tr>
+<td><code>bort_list_agent_uri(token_id, intent)</code></td>
+<td>Dapp deep link + step list for owner-signed actions. <code>intent</code> is <code>list</code> / <code>manage</code> / <code>view</code> / <code>offers</code>.</td>
+</tr>
+</tbody></table>
+<h4>Write</h4>
+<p>All writes preflight <code>globalPause</code>, contract pause, <code>VPMv2.canForward</code>, policy
+disposition, and (when <code>confirm</code>) the Hermes approval prompt. With
+<code>BORT_ALLOW_BROADCAST</code> unset they return <code>simulated_only</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>bort_grant_permission_uri(token_id, operator, ...)</code></td>
+<td>Builds the two owner-signed transactions to give the operator a <code>WRITE</code> grant on the agent&#39;s vault.</td>
+</tr>
+<tr>
+<td><code>bort_commit_learning(token_id, claim_root, ...)</code></td>
+<td>Records a learning leaf on the logic contract via <code>record_learning</code> (Hunter / Trading V5 / CTO).</td>
+</tr>
+<tr>
+<td><code>bort_invoke(token_id, action, args)</code></td>
+<td>Universal write: any catalogued <code>handleAction</code> through <code>VPMv2.forwardHandleAction</code>. 13 actions wired today.</td>
+</tr>
+<tr>
+<td><code>bort_anchor_memory(token_id)</code></td>
+<td>Pins the agent&#39;s local JSONL memory buffer to IPFS and writes a <code>MEMORY</code> source through <code>KnowledgeRegistryV2.addKnowledgeSourceDelegated</code>.</td>
+</tr>
+<tr>
+<td><code>bort_commit_evolution(token_id, output_dir)</code></td>
+<td>Anchors a <code>hermes-agent-self-evolution</code> run (<code>output/&lt;skill&gt;/&lt;timestamp&gt;/evolved_skill.md</code> + <code>metrics.json</code>) as an <code>INSTRUCTION</code> knowledge source.</td>
+</tr>
+</tbody></table>
+<h3>Examples</h3>
+<h4>Read an agent</h4>
+<pre><code class="language-python">from hermes_bort.tools.read_agent import handle as read_agent
+import json, asyncio
+
+state = json.loads(asyncio.run(read_agent({&quot;token_id&quot;: 11100})))
+print(state[&quot;on_chain&quot;][&quot;state&quot;][&quot;owner&quot;])
+print(state[&quot;logic&quot;][&quot;name&quot;], state[&quot;logic&quot;][&quot;snapshot&quot;])
+</code></pre>
+<h4>Browse the marketplace</h4>
+<pre><code class="language-python">from hermes_bort.tools.marketplace_browse import handle as browse
+import json, asyncio
+
+raw = asyncio.run(browse({&quot;sort&quot;: &quot;price_asc&quot;, &quot;limit&quot;: 10}))
+for row in json.loads(raw)[&quot;listings&quot;]:
+    print(row[&quot;token_id&quot;], row[&quot;price_per_token&quot;], row[&quot;lister&quot;])
+</code></pre>
+<h4>Drive an action through the operator</h4>
+<p>Requires the agent owner to have already run <code>bort_grant_permission_uri</code> and signed
+the two grant transactions.</p>
+<pre><code class="language-python">from hermes_bort.tools.invoke import handle as invoke
+import json, asyncio
+
+raw = asyncio.run(invoke({
+    &quot;token_id&quot;: 11100,
+    &quot;action&quot;: &quot;buy_token&quot;,
+    &quot;args&quot;: {&quot;token_address&quot;: &quot;0x...&quot;, &quot;amount_bnb_wei&quot;: &quot;10000000000000000&quot;},
+}))
+result = json.loads(raw)
+print(result[&quot;status&quot;])           # &#39;broadcast&#39; / &#39;simulated_only&#39; / &#39;blocked&#39;
+print(result.get(&quot;tx_hash&quot;))
+</code></pre>
+<h4>Anchor session memory to IPFS</h4>
+<p>After the agent owner has granted the operator a WRITE permission, this turns the
+local JSONL buffer into an on-chain <code>MEMORY</code> knowledge source the next session
+will prefetch.</p>
+<pre><code class="language-bash">hermes bort anchor-memory --token-id 11100
+</code></pre>
+<h4>Generate a marketplace deep link</h4>
+<pre><code class="language-python">from hermes_bort.tools.list_agent_uri import handle as list_uri
+import json, asyncio
+
+raw = asyncio.run(list_uri({&quot;token_id&quot;: 11100, &quot;intent&quot;: &quot;list&quot;}))
+print(json.loads(raw)[&quot;url&quot;])     # https://www.bortagent.xyz/#/my-listings
+</code></pre>
+<h3>Memory portability</h3>
+<p><code>BortMemoryProvider</code> keys session memory by the agent&#39;s <code>tokenId</code> (passed to
+Hermes as <code>agent_identity</code> at session start).</p>
+<ul>
+<li>During a chat: turns go into <code>~/.hermes/bort-memory/&lt;tokenId&gt;.jsonl</code>.</li>
+<li>On session end (or <code>bort_anchor_memory</code>): the buffer is pinned to IPFS via
+Pinata and committed to <code>KnowledgeRegistryV2</code> as a <code>MEMORY</code> source through the
+operator&#39;s WRITE grant.</li>
+<li>On next session start: the provider pulls active <code>MEMORY</code> sources from
+<code>KnowledgeRegistry.getActiveKnowledgeSources(tokenId)</code> and exposes them to
+prefetch.</li>
+</ul>
+<p>The agent&#39;s memory travels with the NFT: a buyer who imports the same tokenId in
+their own Hermes instance picks up the same history without anyone sharing files.</p>
+<h3>Threat model</h3>
+<p>A BORT agent NFT carries text that the owner controls: the IPFS-pinned identity
+(name, description, attribute values), <code>KnowledgeRegistry</code> source descriptions,
+and the IPFS content of those sources. All of it can reach the LLM through
+<code>bort_read_agent</code> results and <code>BortMemoryProvider.prefetch()</code> output. Hermes
+itself does not sanitize tool returns or memory prefetch: whatever a plugin
+gives back is injected into context as-is.</p>
+<p>The plugin treats those surfaces as untrusted and applies a narrow data-boundary
+layer in <code>hermes_bort.bort_sanitize</code>:</p>
+<ul>
+<li>Free-form text fields (identity <code>name</code> / <code>description</code> / <code>external_url</code>,
+knowledge source <code>description</code>, prefetched memory blocks) are wrapped in an
+<code>&lt;external-data source=&quot;...&quot;&gt;...&lt;/external-data&gt;</code> envelope with a one-line
+preamble telling the model to treat the contents as data, not instructions.</li>
+<li>Each string is capped at 2 KB with an explicit <code>[truncated, N chars total]</code>
+marker so an attacker cannot flood the context.</li>
+<li>C0 controls, ANSI escape sequences, zero-width characters, and bidi-override
+Unicode are stripped before wrapping (same character set Hermes&#39; own cron
+scanner blocks).</li>
+<li>Numeric ids, addresses, on-chain enums, and structural keys are not wrapped:
+only the strings that came from owner-controlled inputs.</li>
+</ul>
+<p>This raises the bar from &quot;trivial injection&quot; to &quot;the model has to ignore an
+explicit data-boundary marker.&quot; It is not a complete defense, and it is not
+meant to be: the operator-key boundary below is what binds what a tricked model
+can actually cause on-chain.</p>
+<h3>Security boundary</h3>
+<p>The plugin holds the operator key, not the NFT owner&#39;s key. The operator can
+only do what the owner has granted in <code>VaultPermissionManagerV2</code> and what
+<code>~/.hermes/bort-policy.yaml</code> allows. The Hermes approval prompt fires when an
+action&#39;s disposition is <code>confirm</code>. With <code>BORT_ALLOW_BROADCAST</code> unset, every
+write returns <code>simulated_only</code>.</p>
+<p>A leaked operator key can be revoked by the owner with one <code>revokePermission</code>
+transaction in VPM v2; it cannot mint, transfer, or list the NFT. The plugin
+never writes the key to disk: <code>hermes bort init-operator</code> prints it once to
+stdout for the user to set in their env.</p>
+<h3>Configuration</h3>
+<p>Read from <code>plugin.yaml</code> or environment.</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Env var</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Runtime API base</td>
+<td><code>BORT_API_URL</code></td>
+<td><code>https://bap578-nfa-platform.onrender.com</code></td>
+</tr>
+<tr>
+<td>BSC RPC</td>
+<td><code>BSC_RPC_URL</code></td>
+<td><code>https://bsc-dataseed.binance.org</code></td>
+</tr>
+<tr>
+<td>Dapp URL (deep links)</td>
+<td><code>BORT_DAPP_URL</code></td>
+<td><code>https://www.bortagent.xyz</code></td>
+</tr>
+<tr>
+<td>Memory dir</td>
+<td><code>BORT_MEMORY_DIR</code></td>
+<td><code>~/.hermes/bort-memory</code></td>
+</tr>
+<tr>
+<td>Operator key</td>
+<td><code>BORT_OPERATOR_PRIVATE_KEY</code></td>
+<td>unset (writes disabled)</td>
+</tr>
+<tr>
+<td>Allow broadcast</td>
+<td><code>BORT_ALLOW_BROADCAST</code></td>
+<td>unset (simulate only)</td>
+</tr>
+<tr>
+<td>Policy file</td>
+<td><code>BORT_POLICY_PATH</code></td>
+<td><code>~/.hermes/bort-policy.yaml</code></td>
+</tr>
+<tr>
+<td>Pinata key</td>
+<td><code>PINATA_API_KEY</code></td>
+<td>unset (needed for anchor tools)</td>
+</tr>
+<tr>
+<td>Pinata secret</td>
+<td><code>PINATA_API_SECRET</code></td>
+<td>unset (needed for anchor tools)</td>
+</tr>
+</tbody></table>
+<h3>Test</h3>
+<pre><code class="language-bash">BORT_TEST_TOKEN_ID=11100 pytest -q
+</code></pre>
+<p>99 tests. Most are integration-style: they hit BSC mainnet RPC and the BORT
+runtime API and verify the plugin works end-to-end against live infrastructure.
+Network tests are skipped or short-circuit when the relevant env var is unset
+(e.g. Pinata pin tools return a clear error without <code>PINATA_API_KEY</code>).</p>
+<h3>Architecture</h3>
+<pre><code>hermes_bort/
+  plugin.yaml                 metadata + config keys
+  __init__.py                 register(ctx) entry point
+  bort_chain.py               web3.py reads + VPM v2 / KR v2 ABIs
+  bort_ipfs.py                Pinata pin + dual-gateway fetch (pinata, ipfs.io)
+  bort_api.py                 async HTTP client to the BORT runtime API
+  bort_logic_adapters.py      HunterAdapter / TradingV5Adapter / CTOAdapter
+  bort_kr.py                  KR v2 delegated-write helper
+  bort_marketplace.py         MarketplaceV3 constants + dapp deep-link builders
+  action_codec.py             encode/decode the 13 handleAction payloads
+  bort_signer.py              operator key load + broadcast
+  bort_policy.py              ~/.hermes/bort-policy.yaml loader + writer
+  approval.py                 Hermes approval prompt integration
+  cli.py                      hermes bort init-operator / init-policy / doctor / anchor-memory / commit-evolution
+  tools/
+    read_agent.py health_check.py list_actions.py
+    marketplace_browse.py marketplace_agent.py list_agent_uri.py
+    grant_permission.py commit_learning.py invoke.py
+    anchor_memory.py commit_evolution.py
+  memory/
+    provider.py               BortMemoryProvider
+</code></pre>
+<p>The plugin is thin on purpose. BORT&#39;s runtime API at
+<code>bap578-nfa-platform.onrender.com</code> already exposes most data as public read
+endpoints; this plugin uses those instead of re-implementing them. Direct
+on-chain calls are reserved for what the runtime does not expose: <code>tokenURI</code>,
+<code>KnowledgeRegistry.getActiveKnowledgeSources</code>, <code>CircuitBreaker.globalPause</code>, the
+VPM v2 forwarder, and KR v2 delegated writes.</p>
+<h3>License</h3>
+<p>MIT. See <a href="LICENSE">LICENSE</a>.</p>
+
+  </section>
+</details>
+
+<aside class="related" aria-label="Related repos">
+  <div>
+    <div class="section-label">more in integrations &amp; bridges</div>
+    <div class="section-sub">other repos in this category, ranked by stars.</div>
+  </div>
+  <div>
+    <div class="related-list">
+      <a class="related-row" href="/projects/raulvidis/hermes-android">
+        <div class="stars">★ 182</div>
+        <div class="name"><span class="org">raulvidis /</span> hermes-android</div>
+      </a>
+      <a class="related-row" href="/projects/teknium1/hermes-miniverse">
+        <div class="stars">★ 34</div>
+        <div class="name"><span class="org">teknium1 /</span> hermes-miniverse</div>
+      </a>
+      <a class="related-row" href="/projects/Ridwannurudeen/hermes-council">
+        <div class="stars">★ 25</div>
+        <div class="name"><span class="org">Ridwannurudeen /</span> hermes-council</div>
+      </a>
+      <a class="related-row" href="/projects/marlandoj/zouroboros-swarm-executors">
+        <div class="stars">★ 6</div>
+        <div class="name"><span class="org">marlandoj /</span> zouroboros-swarm-executors</div>
+      </a>
+      <a class="related-row" href="/projects/gizdusum/hermes-blockchain-oracle">
+        <div class="stars">★ 4</div>
+        <div class="name"><span class="org">gizdusum /</span> hermes-blockchain-oracle</div>
+      </a>
+      <a class="related-row" href="/projects/kevinmarmstrong/hermes-claude-code-rc">
+        <div class="stars">★ 2</div>
+        <div class="name"><span class="org">kevinmarmstrong /</span> hermes-claude-code-rc</div>
+      </a>
+      <a class="related-row" href="/projects/AaronWong1999/hermesclaw">
+        <div class="stars">★ 507</div>
+        <div class="name"><span class="org">AaronWong1999 /</span> hermesclaw</div>
+      </a>
+      <a class="related-row" href="/projects/Codename-11/hermes-relay">
+        <div class="stars">★ 24</div>
+        <div class="name"><span class="org">Codename-11 /</span> hermes-relay</div>
+      </a>
+    </div>
+    
+  </div>
+</aside>
+
+</main>
+
+<footer class="page-footer">
+  <div class="fn-left">hermes atlas · curated by <a href="https://github.com/ksimback">ksimback</a> · <a href="https://github.com/ksimback/hermes-ecosystem/issues">suggest a repo</a> · <a href="/privacy">privacy</a></div>
+  <div>v2 · 2026.04</div>
+</footer>
+
+<script>(function(){var t=document.getElementById('theme-toggle');if(!t)return;function render(){var c=document.documentElement.getAttribute('data-theme');t.querySelector('.tt-light').classList.toggle('tt-active',c==='light');t.querySelector('.tt-dark').classList.toggle('tt-active',c!=='light');}render();t.addEventListener('click',function(){var c=document.documentElement.getAttribute('data-theme');var n=c==='light'?'dark':'light';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}render();});})();</script>
+<script src="/assets/js/masthead-fetch.js" defer></script>
+<!-- Cloudflare Web Analytics -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token": "fe0d4d79280b4386b6b0cd99b2d94dbc"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</body>
+</html>

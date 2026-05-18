@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/mudrii/hermes-agent-docs#software",
   "name": "hermes-agent-docs",
-  "description": "hermes-agent-docs is a community-driven documentation repository for the Hermes Agent ecosystem. It provides practical guidance on deployment patterns and workflows specifically for versions 0.2.0 and above. Users can leverage these resources to better implement the agent's autonomous learning loops and multi-platform messaging capabilities.",
+  "description": "Hermes Agent is an autonomous AI system designed to create a self-improving learning loop through persistent memory and skill acquisition. It operates by executing tool calls, managing long-running conversation context in SQLite, and automatically generating reusable skills from complex tasks. The agent supports a wide array of deployment patterns, ranging from a multi-platform messaging gateway for apps like Discord and Slack to an Ink-based TUI and IDE integrations. It features a pluggable tra",
   "url": "https://hermesatlas.com/projects/mudrii/hermes-agent-docs",
   "codeRepository": "https://github.com/mudrii/hermes-agent-docs",
   "applicationCategory": "ReferenceApplication",
@@ -46,7 +46,7 @@
     "name": "mudrii",
     "url": "https://github.com/mudrii"
   },
-  "dateModified": "2026-05-17T13:52:27.000Z",
+  "dateModified": "2026-05-17T17:34:16.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
@@ -81,7 +81,7 @@
   <a href="/" class="brand" aria-label="Hermes Atlas — home">hermes atlas</a>
   <div class="mast-meta" aria-label="Site metadata">
     <span>apr·2026</span>
-    <span id="meta-count">115·repos</span>
+    <span id="meta-count">117·repos</span>
     <span id="meta-version">hermes·v0.10.0</span>
     <a class="mast-star" id="meta-atlas" href="https://github.com/ksimback/hermes-ecosystem" target="_blank" rel="noopener" aria-label="Star Hermes Atlas on GitHub">★ star this repo</a>
   </div>
@@ -130,11 +130,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">hermes-agent-docs is a community-driven documentation repository for the Hermes Agent ecosystem. It provides practical guidance on deployment patterns and workflows specifically for versions 0.2.0 and above. Users can leverage these resources to better implement the agent's autonomous learning loops and multi-platform messaging capabilities.</p>
+    <p class="summary-text">Hermes Agent is an autonomous AI system designed to create a self-improving learning loop through persistent memory and skill acquisition. It operates by executing tool calls, managing long-running conversation context in SQLite, and automatically generating reusable skills from complex tasks. The agent supports a wide array of deployment patterns, ranging from a multi-platform messaging gateway for apps like Discord and Slack to an Ink-based TUI and IDE integrations. It features a pluggable transport layer that allows it to interface with dozens of model providers including Anthropic, AWS Bedrock, and local LLM servers.</p>
     <ul class="summary-highlights">
-      <li>Covers deployment patterns for various infrastructure types</li>
-      <li>Guides workflows for Hermes Agent v0.2.0+</li>
-      <li>Supports community-driven documentation efforts</li>
+      <li>Autonomous skill creation and self-improvement based on task experience</li>
+      <li>Multi-platform gateway supporting over 20 messaging and collaboration services</li>
+      <li>Pluggable architecture for custom tools, providers, and transport layers</li>
     </ul>
   </div>
 </section>
@@ -222,7 +222,7 @@
 <h4>v0.14.0 Foundation Release</h4>
 <ul>
 <li><strong>Native Windows early beta</strong> -- PowerShell installer, native subprocess paths, taskkill-based process management, portable Git Bash bootstrap, and Windows-specific terminal/tooling fixes.</li>
-<li><strong>PyPI package</strong> -- <code>pip install hermes-agent &amp;&amp; hermes</code> now installs the released wheel without cloning the repository.</li>
+<li><strong>Python package status</strong> -- the source release is versioned as <code>hermes-agent</code> 0.14.0, but PyPI currently serves 0.13.0 (verified May 18, 2026). Use the git installer for v0.14.0 until PyPI publishes 0.14.0.</li>
 <li><strong>Subscription proxy</strong> -- <code>hermes proxy</code> exposes OAuth-backed providers through an OpenAI-compatible local endpoint for tools such as Codex, Aider, Cline, and VS Code Continue.</li>
 <li><strong>New tools and diagnostics</strong> -- <code>x_search</code>, <code>computer_use</code>, write-time LSP diagnostics, pixel-preserving <code>vision_analyze</code>, pluggable <code>video_generate</code>, and a per-turn file-mutation verifier.</li>
 </ul>
@@ -989,11 +989,11 @@ hermes update       # Update to the latest version (with auto-restart for gatewa
         <div class="name"><span class="org">0xNyk /</span> awesome-hermes-agent</div>
       </a>
       <a class="related-row" href="/projects/alchaincyf/hermes-agent-orange-book">
-        <div class="stars">★ 3.7K</div>
+        <div class="stars">★ 3.8K</div>
         <div class="name"><span class="org">alchaincyf /</span> hermes-agent-orange-book</div>
       </a>
       <a class="related-row" href="/projects/OnlyTerp/hermes-optimization-guide">
-        <div class="stars">★ 301</div>
+        <div class="stars">★ 302</div>
         <div class="name"><span class="org">OnlyTerp /</span> hermes-optimization-guide</div>
       </a>
       <a class="related-row" href="/projects/metantonio/hermes-wsl-ubuntu">
@@ -1005,15 +1005,15 @@ hermes update       # Update to the latest version (with auto-restart for gatewa
         <div class="name"><span class="org">martymcenroe /</span> HermesWiki</div>
       </a>
       <a class="related-row" href="/projects/ksimback/hermes-ecosystem">
-        <div class="stars">★ 832</div>
+        <div class="stars">★ 843</div>
         <div class="name"><span class="org">ksimback /</span> hermes-ecosystem</div>
       </a>
       <a class="related-row" href="/projects/jwangkun/hermes-agent-guide">
-        <div class="stars">★ 228</div>
+        <div class="stars">★ 235</div>
         <div class="name"><span class="org">jwangkun /</span> hermes-agent-guide</div>
       </a>
       <a class="related-row" href="/projects/longyunfeigu/learn-hermes-agent">
-        <div class="stars">★ 107</div>
+        <div class="stars">★ 109</div>
         <div class="name"><span class="org">longyunfeigu /</span> learn-hermes-agent</div>
       </a>
     </div>

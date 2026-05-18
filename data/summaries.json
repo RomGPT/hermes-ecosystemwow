@@ -93,14 +93,14 @@
     "audit": "pass"
   },
   "fathah/hermes-desktop": {
-    "summary": "Hermes Desktop is a native cross-platform GUI designed to simplify the installation, configuration, and operation of the Hermes Agent. It automates the setup process using official scripts and provides a visual interface for managing local or remote backends without manual CLI intervention. Users can interact with the agent through a streaming chat UI that supports 22 slash commands, session history search, and real-time token usage tracking. The application integrates comprehensive management tools for memory systems, persona editing, scheduled cron tasks, and 16 different messaging gateways.",
+    "summary": "Hermes Desktop is a native GUI companion for the Hermes Agent that simplifies the installation, configuration, and management of the AI assistant. It automates the setup of dependencies like Python and Git, providing a visual interface to replace manual CLI interactions. Users can manage multi-provider LLM connections, configure 16 messaging gateways such as Telegram and Discord, and monitor agent memory and skills. The application also includes a 3D interface called Hermes Office for visual adapter management and a comprehensive suite of 22 slash commands for chat interaction.",
     "highlights": [
-      "Guided installation and dependency resolution for local or remote backends",
-      "Supports 14 toolsets including web browsing, code execution, and vision",
-      "Integrated gateway management for Telegram, Discord, Slack, and other platforms"
+      "Guided installation with automated dependency resolution and provider setup",
+      "Supports 16 messaging gateways including Discord, Slack, and Telegram",
+      "Integrated management for memory systems, personas, and scheduled tasks"
     ],
-    "readmeHash": "e7d33774fa0248a39419865d7de8618e155542031afb09fc3bb33c06e5b61379",
-    "generatedAt": "2026-05-15T07:36:23.206Z",
+    "readmeHash": "8f8457637bed3d475566ade823620e73f2ba1683ca6de2258b93f82a05136e2b",
+    "generatedAt": "2026-05-18T07:50:13.210Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -1073,14 +1073,14 @@
     "audit": "pass"
   },
   "mudrii/hermes-agent-docs": {
-    "summary": "hermes-agent-docs is a community-driven documentation repository for the Hermes Agent ecosystem. It provides practical guidance on deployment patterns and workflows specifically for versions 0.2.0 and above. Users can leverage these resources to better implement the agent's autonomous learning loops and multi-platform messaging capabilities.",
+    "summary": "Hermes Agent is an autonomous AI system designed to create a self-improving learning loop through persistent memory and skill acquisition. It operates by executing tool calls, managing long-running conversation context in SQLite, and automatically generating reusable skills from complex tasks. The agent supports a wide array of deployment patterns, ranging from a multi-platform messaging gateway for apps like Discord and Slack to an Ink-based TUI and IDE integrations. It features a pluggable transport layer that allows it to interface with dozens of model providers including Anthropic, AWS Bedrock, and local LLM servers.",
     "highlights": [
-      "Covers deployment patterns for various infrastructure types",
-      "Guides workflows for Hermes Agent v0.2.0+",
-      "Supports community-driven documentation efforts"
+      "Autonomous skill creation and self-improvement based on task experience",
+      "Multi-platform gateway supporting over 20 messaging and collaboration services",
+      "Pluggable architecture for custom tools, providers, and transport layers"
     ],
-    "readmeHash": "52256a09670cc3d0dd02bbe791d28a199ecb1d19bdb8ae700649730700582e2d",
-    "generatedAt": "2026-05-17T15:26:11.031Z",
+    "readmeHash": "fc0130614bd2a1b64c189bf3727f5753bb8ac77d29552f958cffa50b361533f3",
+    "generatedAt": "2026-05-18T07:50:33.300Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -1193,27 +1193,27 @@
     "auditedAt": "2026-05-11T09:06:42.452Z"
   },
   "nesquena/hermes-webui": {
-    "summary": "Hermes WebUI is a lightweight, browser-based interface for the Hermes Agent, providing a graphical alternative to the standard command-line environment. Built with Python and vanilla JavaScript, it maintains full parity with the CLI and connects to the agent's persistent memory and self-improving skill system. The interface features a three-panel layout for managing chat sessions, workspace files, and model configurations through a centralized control center. It allows users to manage autonomous tasks, scheduled cron jobs, and multi-platform messaging integrations from a single web dashboard.",
+    "summary": "Hermes WebUI provides a lightweight, browser-based interface for the Hermes Agent, offering a graphical alternative to the standard command-line experience. Built with Python and vanilla JavaScript, it maintains full parity with the CLI without requiring complex build steps or frameworks. The interface features a three-panel layout for managing chat sessions, workspace files, and agent settings through a centralized control center. It allows users to interact with persistent memory, scheduled cron jobs, and self-improving skills while remaining provider-agnostic across various AI models.",
     "highlights": [
       "Three-panel layout for chat, navigation, and workspace file browsing",
       "Full parity with Hermes CLI features using Python and vanilla JS",
-      "Visual context ring for real-time monitoring of token usage"
+      "Visual context ring for real-time token usage monitoring"
     ],
-    "readmeHash": "e2afa6997742f7476262fc50513ca2505f24c11857af4acb7aae1528b13763f7",
-    "generatedAt": "2026-05-16T07:17:15.371Z",
+    "readmeHash": "d8771ad5ad42a11276fdaadeafc459750dbd232627e7485024ec11ed5209c4a8",
+    "generatedAt": "2026-05-18T07:50:38.781Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
   },
   "garrytan/gbrain": {
-    "summary": "GBrain is a persistent memory and knowledge graph system designed to prevent AI agents from losing context over time. It utilizes a self-wiring graph layer and hybrid search to extract entity relationships like investments and affiliations without requiring additional LLM calls. The system consolidates data from meetings, emails, and tweets into a structured timeline with backlink-boosted ranking for improved retrieval accuracy. It supports 14 embedding providers and includes built-in benchmarking tools to evaluate retrieval performance against standard datasets.",
+    "summary": "GBrain is an opinionated memory and context layer designed to provide AI agents with a persistent, self-wiring knowledge graph. It utilizes a hybrid search approach that combines vector retrieval with structured entity linking to extract relationships like investments, employment, and founder roles without additional LLM calls. The system automates memory consolidation by ingesting diverse data sources such as meetings, emails, and tweets while performing overnight citation fixes. It includes specialized tools for tracking company trajectories and founder scorecards, making it suitable for high-volume information synthesis in production environments.",
     "highlights": [
-      "Self-wiring knowledge graph extracts entity relationships without LLM calls.",
-      "Hybrid search combines vector retrieval with backlink-boosted graph ranking.",
-      "Supports 14 embedding providers including OpenAI, Anthropic, and local Ollama."
+      "Self-wiring knowledge graph with typed entity relationship extraction",
+      "Hybrid search combining vector retrieval and backlink-boosted ranking",
+      "Automated memory consolidation and overnight citation self-correction"
     ],
-    "readmeHash": "614afbad0930b389559420d400f0eb38cb44273c95399e08f3b778d0a1774e77",
-    "generatedAt": "2026-05-15T07:37:17.700Z",
+    "readmeHash": "1de288f4c4c1953176ed1e96441887191100b6f61c7c26bd619dd439414a3ea0",
+    "generatedAt": "2026-05-18T07:50:42.684Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -1574,6 +1574,32 @@
     ],
     "readmeHash": "eb2e8f8902aa6f38c813f352c17e64e2437a57b98ada59e20c109ecd318819fe",
     "generatedAt": "2026-05-16T07:17:42.243Z",
+    "model": "google/gemma-4-31b-it:free",
+    "version": 1,
+    "audit": "pass"
+  },
+  "alias8818/hermes-tool-slimmer": {
+    "summary": "Hermes Tool Slimmer is a context-optimization plugin that reduces prompt overhead by dynamically filtering large tool catalogs into a smaller, relevant subset. It builds an indexable corpus from Hermes tool schemas and ranks them using local BM25 keyword selection and explicit boosts. This process can significantly decrease the token footprint of requests in environments with dozens of native or MCP tools. The project includes a dashboard for monitoring estimated token savings and provides a fail-safe mechanism that reverts to the full schema list if errors occur.",
+    "highlights": [
+      "Reduces schema overhead using BM25 keyword ranking and explicit boosts.",
+      "Supports Anthropic Tool Search and deferred tool loading modes.",
+      "Includes a dashboard plugin for tracking estimated token savings."
+    ],
+    "readmeHash": "6cabe0d07d9d0b329721168249a99808b3146edf91b112037bd4ece7798ee67f",
+    "generatedAt": "2026-05-18T07:50:52.503Z",
+    "model": "google/gemma-4-31b-it:free",
+    "version": 1,
+    "audit": "pass"
+  },
+  "BORT-AGENTS/hermes-bort": {
+    "summary": "Hermes-bort is a plugin for Hermes Agent that enables interaction with BORT agent NFTs on the Binance Smart Chain mainnet. It allows Hermes processes to read agent states, execute on-chain actions via operator-signed writes, and manage portable session memory. The plugin integrates with the BORT logic contracts and knowledge registries to anchor chat history and evolution metrics to IPFS. This setup facilitates a persistent identity and memory for autonomous agents that can be transferred alongside the underlying NFT.",
+    "highlights": [
+      "Reads multi-source agent state, logic snapshots, and marketplace data.",
+      "Executes operator-signed writes gated by local policy and approval prompts.",
+      "Anchors session memory to IPFS and on-chain knowledge registries."
+    ],
+    "readmeHash": "4149a2b92ea7edccd87b24403d198c11a2a41f17b341ff419d780b5c7eb9311c",
+    "generatedAt": "2026-05-18T07:51:08.423Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
