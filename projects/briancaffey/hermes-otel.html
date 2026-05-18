@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/briancaffey/hermes-otel#software",
   "name": "hermes-otel",
-  "description": "The hermes-otel plugin provides observability for Hermes Agent by automatically exporting execution data as OpenTelemetry spans. It captures LLM tool calls, model invocations, and API requests, sending them to OTLP-compatible backends for monitoring and debugging. The plugin supports a wide range of backends including Phoenix, Langfuse, SigNoz, and Jaeger for tracing, metrics, and logs. Users can configure multiple backends simultaneously through a YAML configuration file to fan out data across ",
+  "description": "hermes-otel is an OpenTelemetry plugin designed to provide observability for the Hermes Agent ecosystem. It automatically captures and exports LLM tool calls, model invocations, and API requests as OTel spans to compatible backends. The plugin supports single or multi-backend configurations, allowing users to stream telemetry to various tracing and monitoring platforms simultaneously.",
   "url": "https://hermesatlas.com/projects/briancaffey/hermes-otel",
   "codeRepository": "https://github.com/briancaffey/hermes-otel",
   "applicationCategory": "BrowserApplication",
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">The hermes-otel plugin provides observability for Hermes Agent by automatically exporting execution data as OpenTelemetry spans. It captures LLM tool calls, model invocations, and API requests, sending them to OTLP-compatible backends for monitoring and debugging. The plugin supports a wide range of backends including Phoenix, Langfuse, SigNoz, and Jaeger for tracing, metrics, and logs. Users can configure multiple backends simultaneously through a YAML configuration file to fan out data across different observability platforms.</p>
+    <p class="summary-text">hermes-otel is an OpenTelemetry plugin designed to provide observability for the Hermes Agent ecosystem. It automatically captures and exports LLM tool calls, model invocations, and API requests as OTel spans to compatible backends. The plugin supports single or multi-backend configurations, allowing users to stream telemetry to various tracing and monitoring platforms simultaneously.</p>
     <ul class="summary-highlights">
-      <li>Exports LLM tool calls and model invocations as OTel spans</li>
-      <li>Supports multiple backends including Phoenix, Langfuse, SigNoz, and Jaeger</li>
-      <li>Enables parallel data export to multiple OTLP-compatible endpoints</li>
+      <li>Exports LLM tool calls and API requests as OTel spans</li>
+      <li>Supports multiple backends like Phoenix, Langfuse, and SigNoz</li>
+      <li>Enables parallel telemetry streaming via config.yaml</li>
     </ul>
   </div>
 </section>

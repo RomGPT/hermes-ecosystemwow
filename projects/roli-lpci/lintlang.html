@@ -133,9 +133,9 @@
   <div>
     <p class="summary-text">lintlang is a static analysis tool designed to identify structural and linguistic failures in AI agent configurations, system prompts, and tool definitions. It utilizes regex and AST-based heuristics rather than LLM calls to detect issues like vague tool descriptions, missing termination conditions, and schema mismatches. This approach ensures deterministic, zero-cost scans that run in approximately 2ms per file. The tool is intended for use in CI/CD pipelines to prevent agent looping and incorrect tool selection before runtime.</p>
     <ul class="summary-highlights">
-      <li>Deterministic scans using static regex and structural heuristics</li>
-      <li>Zero LLM calls for cost-free and offline CI integration</li>
-      <li>Detects seven specific structural failure modes including H1-H7 patterns</li>
+      <li>Deterministic structural analysis using regex and AST without LLM calls</li>
+      <li>Detects seven specific failure modes including ambiguity and missing constraints</li>
+      <li>Supports YAML, JSON, plain text, and .prompt file formats</li>
     </ul>
   </div>
 </section>

@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/cablate/Agentic-MCP-Skill#software",
   "name": "Agentic-MCP-Skill",
-  "description": "Agentic-MCP-Skill is an experimental MCP client and daemon designed to optimize token usage through a three-layer progressive disclosure pattern. It functions by lazy-loading server metadata, tool lists, and specific schemas only when required by the agent, rather than loading all tool definitions upfront. This approach reduces context window overhead by up to 86% while providing a socket-based architecture for persistent server management. The project includes a CLI for managing MCP servers lik",
+  "description": "Agentic-MCP-Skill is an experimental MCP client and daemon designed to optimize token consumption through a three-layer lazy loading architecture. It implements the AgentSkills.io pattern by progressively disclosing server metadata, tool lists, and specific schemas only when requested by the agent. This approach reduces context window overhead by up to 86% compared to loading full tool definitions upfront. The project includes a socket-based daemon for persistent server connections and a CLI for",
   "url": "https://hermesatlas.com/projects/cablate/Agentic-MCP-Skill",
   "codeRepository": "https://github.com/cablate/Agentic-MCP-Skill",
   "applicationCategory": "DeveloperApplication",
@@ -130,11 +130,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Agentic-MCP-Skill is an experimental MCP client and daemon designed to optimize token usage through a three-layer progressive disclosure pattern. It functions by lazy-loading server metadata, tool lists, and specific schemas only when required by the agent, rather than loading all tool definitions upfront. This approach reduces context window overhead by up to 86% while providing a socket-based architecture for persistent server management. The project includes a CLI for managing MCP servers like Playwright and supports hot-reloading configurations without restarting the daemon.</p>
+    <p class="summary-text">Agentic-MCP-Skill is an experimental MCP client and daemon designed to optimize token consumption through a three-layer lazy loading architecture. It implements the AgentSkills.io pattern by progressively disclosing server metadata, tool lists, and specific schemas only when requested by the agent. This approach reduces context window overhead by up to 86% compared to loading full tool definitions upfront. The project includes a socket-based daemon for persistent server connections and a CLI for managing tools like Playwright and filesystem access.</p>
     <ul class="summary-highlights">
-      <li>Three-layer lazy loading reduces token consumption for large toolsets</li>
-      <li>Socket-based daemon maintains persistent connections to multiple MCP servers</li>
-      <li>CLI supports metadata inspection, tool listing, and schema retrieval</li>
+      <li>Three-layer progressive disclosure reduces context token usage</li>
+      <li>Socket-based daemon maintains persistent MCP server connections</li>
+      <li>Hot-reload support for dynamic configuration without daemon restarts</li>
     </ul>
   </div>
 </section>
@@ -461,7 +461,7 @@ agentic-mcp call playwright browser_click --params &#39;{&quot;element&quot;: &q
         <div class="name"><span class="org">conorbronsdon /</span> avoid-ai-writing</div>
       </a>
       <a class="related-row" href="/projects/wondelai/skills">
-        <div class="stars">★ 998</div>
+        <div class="stars">★ 1.0K</div>
         <div class="name"><span class="org">wondelai /</span> skills</div>
       </a>
       <a class="related-row" href="/projects/DougTrajano/pydantic-ai-skills">

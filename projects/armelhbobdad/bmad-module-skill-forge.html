@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/armelhbobdad/bmad-module-skill-forge#software",
   "name": "bmad-module-skill-forge",
-  "description": "Skill Forge is a development tool that converts source code, documentation, and developer discourse into verified instruction files for AI agents. It uses Abstract Syntax Tree (AST) analysis and documentation scraping to extract precise function signatures, parameter types, and usage patterns. Every generated instruction includes a provenance map linking back to specific file line numbers at pinned commits or source URLs to prevent model hallucinations. The tool supports lifecycle management for",
+  "description": "Skill Forge is a development tool that converts source code, documentation, and developer discourse into verified instruction files for AI agents. It uses Abstract Syntax Tree (AST) analysis to extract precise function signatures and types, ensuring agents use libraries correctly without hallucinating API calls. Every generated instruction includes a provenance map linking back to specific file lines at pinned commits or documentation URLs. The project follows the agentskills.io specification, m",
   "url": "https://hermesatlas.com/projects/armelhbobdad/bmad-module-skill-forge",
   "codeRepository": "https://github.com/armelhbobdad/bmad-module-skill-forge",
   "applicationCategory": "DeveloperApplication",
@@ -130,11 +130,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Skill Forge is a development tool that converts source code, documentation, and developer discourse into verified instruction files for AI agents. It uses Abstract Syntax Tree (AST) analysis and documentation scraping to extract precise function signatures, parameter types, and usage patterns. Every generated instruction includes a provenance map linking back to specific file line numbers at pinned commits or source URLs to prevent model hallucinations. The tool supports lifecycle management for versioned skills and exports files compliant with the agentskills.io specification for use in agents like Cursor and Claude.</p>
+    <p class="summary-text">Skill Forge is a development tool that converts source code, documentation, and developer discourse into verified instruction files for AI agents. It uses Abstract Syntax Tree (AST) analysis to extract precise function signatures and types, ensuring agents use libraries correctly without hallucinating API calls. Every generated instruction includes a provenance map linking back to specific file lines at pinned commits or documentation URLs. The project follows the agentskills.io specification, making the output compatible with AI tools like Cursor, Claude, and Copilot.</p>
     <ul class="summary-highlights">
-      <li>Generates version-pinned AI instructions from codebases and documentation</li>
-      <li>Provides verifiable audit trails with file-level and line-level citations</li>
-      <li>Exports agentskills.io-compliant markdown and JSON for cross-platform agent use</li>
+      <li>Generates version-pinned skills from codebases and documentation</li>
+      <li>Provides verifiable audit trails with file-and-line level provenance</li>
+      <li>Automates skill lifecycle management including updates and transactional exports</li>
     </ul>
   </div>
 </section>
@@ -394,7 +394,7 @@ results = await cognee.search(
         <div class="name"><span class="org">conorbronsdon /</span> avoid-ai-writing</div>
       </a>
       <a class="related-row" href="/projects/wondelai/skills">
-        <div class="stars">★ 998</div>
+        <div class="stars">★ 1.0K</div>
         <div class="name"><span class="org">wondelai /</span> skills</div>
       </a>
       <a class="related-row" href="/projects/DougTrajano/pydantic-ai-skills">

@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/clawvader-tech/hermes-telegram-miniapp#software",
   "name": "hermes-telegram-miniapp",
-  "description": "Hermes Telegram Mini App is a React-based terminal interface that allows users to manage and interact with Hermes agents directly within the Telegram ecosystem. It establishes a secure mobile-first workspace by wrapping the Hermes CLI in a dark-mode web UI, featuring streaming chat and system monitoring. The application utilizes dual HMAC-SHA256 and Ed25519 validation to ensure secure access while providing tools for cron job management and background agent spawning. Users can also perform visio",
+  "description": "Hermes Telegram Mini App is a terminal-style web interface that allows users to interact with their Hermes agent directly within Telegram. It functions as a React SPA that connects to the Hermes Agent via a secure gateway, utilizing dual HMAC-SHA256 and Ed25519 validation for authentication. The interface provides a mobile-first dashboard for managing agent instances, monitoring system health, and handling scheduled cron jobs. It also supports file attachments with automatic vision analysis and ",
   "url": "https://hermesatlas.com/projects/clawvader-tech/hermes-telegram-miniapp",
   "codeRepository": "https://github.com/clawvader-tech/hermes-telegram-miniapp",
   "applicationCategory": "DesktopEnhancementApplication",
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Hermes Telegram Mini App is a React-based terminal interface that allows users to manage and interact with Hermes agents directly within the Telegram ecosystem. It establishes a secure mobile-first workspace by wrapping the Hermes CLI in a dark-mode web UI, featuring streaming chat and system monitoring. The application utilizes dual HMAC-SHA256 and Ed25519 validation to ensure secure access while providing tools for cron job management and background agent spawning. Users can also perform vision-based tasks through integrated OCR and local LLM server support for file attachments.</p>
+    <p class="summary-text">Hermes Telegram Mini App is a terminal-style web interface that allows users to interact with their Hermes agent directly within Telegram. It functions as a React SPA that connects to the Hermes Agent via a secure gateway, utilizing dual HMAC-SHA256 and Ed25519 validation for authentication. The interface provides a mobile-first dashboard for managing agent instances, monitoring system health, and handling scheduled cron jobs. It also supports file attachments with automatic vision analysis and OCR capabilities.</p>
     <ul class="summary-highlights">
-      <li>Terminal-style chat with streaming responses and slash command support</li>
-      <li>Real-time system monitoring for CPU, memory, and disk usage</li>
-      <li>Background agent spawning with support for five concurrent instances</li>
+      <li>Terminal-style chat with streaming responses and slash commands</li>
+      <li>Background agent spawning with live output monitoring</li>
+      <li>System health gauges and scheduled cron job management</li>
     </ul>
   </div>
 </section>
@@ -572,7 +572,7 @@ Optional Local Models (CPU)
         <div class="name"><span class="org">Euraika-Labs /</span> pan-ui</div>
       </a>
       <a class="related-row" href="/projects/xaspx/hermes-control-interface">
-        <div class="stars">★ 659</div>
+        <div class="stars">★ 660</div>
         <div class="name"><span class="org">xaspx /</span> hermes-control-interface</div>
       </a>
       <a class="related-row" href="/projects/dodo-reach/hermes-desktop">

@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/swarmclawai/swarmclaw#software",
   "name": "swarmclaw",
-  "description": "SwarmClaw is a self-hosted runtime and framework designed for orchestrating autonomous AI agent swarms. It utilizes a centralized dashboard to manage agent delegation, durable memory, and scheduled tasks across more than 23 LLM providers. The platform enables agents to learn new skills from conversation history and integrate with external tools via the Model Context Protocol (MCP). Users can deploy the system as a desktop application, via Docker, or as a Node.js server to create multi-agent work",
+  "description": "SwarmClaw is a self-hosted AI agent runtime and multi-agent framework designed for building and managing autonomous agent swarms. It operates through an orchestration layer that supports durable memory, delegation, and scheduled tasks across more than 23 LLM providers. The platform features an organizational chart interface for visualizing agent activity and includes a conversation-to-skill learning system to expand agent capabilities. It integrates with various tools including MCP, OpenClaw gat",
   "url": "https://hermesatlas.com/projects/swarmclawai/swarmclaw",
   "codeRepository": "https://github.com/swarmclawai/swarmclaw",
   "applicationCategory": "DeveloperApplication",
@@ -47,13 +47,13 @@
     "name": "swarmclawai",
     "url": "https://github.com/swarmclawai"
   },
-  "dateModified": "2026-05-15T11:12:48.000Z",
+  "dateModified": "2026-05-18T08:48:54.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 491
+    "userInteractionCount": 493
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -112,11 +112,11 @@
   <p class="project-desc">Open-source self-hosted AI agent runtime and multi-agent framework for autonomous agent swarms. Agent memory, MCP tools, schedules, delegation, and 23+ LLM providers (Claude, GPT, Gemini, OpenRouter, Ollama). A practical Claude Code and LangChain alternative.</p>
 
   <div class="meta-row">
-    <span class="stars">★ 491</span>
+    <span class="stars">★ 493</span>
     <span><span class="meta-label">lang</span>TypeScript</span>
     <span><span class="meta-label">license</span>MIT</span>
     
-    <span><span class="meta-label">updated</span>2026-05-15</span>
+    <span><span class="meta-label">updated</span>2026-05-18</span>
   </div>
 
   <div class="actions">
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">SwarmClaw is a self-hosted runtime and framework designed for orchestrating autonomous AI agent swarms. It utilizes a centralized dashboard to manage agent delegation, durable memory, and scheduled tasks across more than 23 LLM providers. The platform enables agents to learn new skills from conversation history and integrate with external tools via the Model Context Protocol (MCP). Users can deploy the system as a desktop application, via Docker, or as a Node.js server to create multi-agent workflows with live activity monitoring.</p>
+    <p class="summary-text">SwarmClaw is a self-hosted AI agent runtime and multi-agent framework designed for building and managing autonomous agent swarms. It operates through an orchestration layer that supports durable memory, delegation, and scheduled tasks across more than 23 LLM providers. The platform features an organizational chart interface for visualizing agent activity and includes a conversation-to-skill learning system to expand agent capabilities. It integrates with various tools including MCP, OpenClaw gateways, and delegated CLI backends like Claude Code and Ollama.</p>
     <ul class="summary-highlights">
-      <li>Orchestrates multi-agent swarms with delegation and hierarchical org charts</li>
-      <li>Supports 23+ providers including Hermes, Ollama, and OpenRouter</li>
-      <li>Features durable agent memory and conversation-to-skill learning capabilities</li>
+      <li>Supports 23+ LLM providers including Hermes, OpenAI, and local Ollama.</li>
+      <li>Features durable agent memory and reviewed conversation-to-skill learning.</li>
+      <li>Orchestrates multi-agent swarms with delegation, heartbeats, and task scheduling.</li>
     </ul>
   </div>
 </section>
@@ -260,6 +260,15 @@ docker compose up -d --build
 <pre><code class="language-bash">openclaw skills install swarmclaw
 </code></pre>
 <p><a href="https://clawhub.ai/waydelyle/swarmclaw">Browse on ClawHub</a></p>
+<h3>v1.9.33 Highlights</h3>
+<p>Issue and PR validation release for credential durability, delegated task dispatch, connector output hygiene, and OpenClaw gateway protocol compatibility.</p>
+<ul>
+<li><strong>Credential durability.</strong> Execute-tool credential injection now reads the persisted <code>encryptedKey</code> field, and <code>CREDENTIAL_SECRET</code> now resolves in a stable order: explicit environment value, <code>DATA_DIR/credential-secret</code>, legacy env files, then generated fallback.</li>
+<li><strong>Delegated task dispatch.</strong> Agent-created tasks delegated to another agent auto-queue when no explicit status is supplied, and failed dead-lettered tasks can be requeued through <code>POST /api/tasks/:id/retry</code>.</li>
+<li><strong>Connector output hygiene.</strong> Connector replies now reuse the internal metadata scrubber before delivery and persistence, while successful non-connector delivery tool output is no longer overwritten as an unconfirmed send.</li>
+<li><strong>Agent and gateway compatibility.</strong> Agent updates preserve workspace filesystem settings, and OpenClaw gateway routes now use protocol version 4.</li>
+<li><strong>Regression coverage.</strong> Added tests for credential env injection, secret precedence, delegated queueing, failed-task retry, connector sanitization, agent workspace settings, and OpenClaw gateway protocol exports.</li>
+</ul>
 <h3>v1.9.32 Highlights</h3>
 <p>PR integration release for background model routing, reflection memory controls, and current ClawHub install guidance.</p>
 <ul>
@@ -548,6 +557,15 @@ OTEL_EXPORTER_OTLP_HEADERS=Authorization=Bearer your-token
 <p>If you need a trace-specific endpoint, set <code>OTEL_EXPORTER_OTLP_TRACES_ENDPOINT</code> directly instead.</p>
 <p>Operational docs: <a href="https://swarmclaw.ai/docs/observability">https://swarmclaw.ai/docs/observability</a></p>
 <h3>Releases</h3>
+<h4>v1.9.33 Highlights</h4>
+<p>Issue and PR validation release for credential durability, delegated task dispatch, connector output hygiene, and OpenClaw gateway protocol compatibility.</p>
+<ul>
+<li><strong>Credential durability.</strong> Execute-tool credential injection now reads the persisted <code>encryptedKey</code> field, and <code>CREDENTIAL_SECRET</code> now resolves in a stable order: explicit environment value, <code>DATA_DIR/credential-secret</code>, legacy env files, then generated fallback.</li>
+<li><strong>Delegated task dispatch.</strong> Agent-created tasks delegated to another agent auto-queue when no explicit status is supplied, and failed dead-lettered tasks can be requeued through <code>POST /api/tasks/:id/retry</code>.</li>
+<li><strong>Connector output hygiene.</strong> Connector replies now reuse the internal metadata scrubber before delivery and persistence, while successful non-connector delivery tool output is no longer overwritten as an unconfirmed send.</li>
+<li><strong>Agent and gateway compatibility.</strong> Agent updates preserve workspace filesystem settings, and OpenClaw gateway routes now use protocol version 4.</li>
+<li><strong>Regression coverage.</strong> Added tests for credential env injection, secret precedence, delegated queueing, failed-task retry, connector sanitization, agent workspace settings, and OpenClaw gateway protocol exports.</li>
+</ul>
 <h4>v1.9.32 Highlights</h4>
 <p>PR integration release for background model routing, reflection memory controls, and current ClawHub install guidance.</p>
 <ul>
@@ -769,26 +787,7 @@ OTEL_EXPORTER_OTLP_HEADERS=Authorization=Bearer your-token
 <h4>v1.9.4 Highlights</h4>
 <p>Bundled runtime-environment release: gateway execution visibility, task context handoff, and operator triage in one release cycle.</p>
 <ul>
-<li><strong>OpenClaw environments.</strong> Gateway topology now calls <code>environments.list</code>, stores available environment counts, exposes <code>/api/gateways/:id/environments</code>, and adds CLI commands for list/status checks.</li>
-<li><strong>Provider dashboard visibility.</strong> The Providers screen now shows fleet-wide and per-gateway execution environment availability alongside nodes, sessions, presence, and pairings.</li>
-<li><strong>Task context packets.</strong> Prepared task workspaces now write <code>context.json</code> with task, preview, runtime, blocker, tag, and upstream-result context for external workers.</li>
-<li><strong>Runtime env handoff.</strong> Workspaces now include <code>.env.swarmclaw</code> plus SwarmClaw, portable task/workspace, and <code>AGENT_HOME</code> env hints without embedding secrets.</li>
-<li><strong>Operations Pulse triage.</strong> Gateway actions now surface zero-available-environment states as high-priority operator work.</li>
-</ul>
-<h4>v1.9.3 Highlights</h4>
-<p>Bundled extension-orchestration release: managed plugin resources, gateway/setup declarations, and safer local folder access in one release cycle.</p>
-<ul>
-<li><strong>Managed extension resources.</strong> Extensions can now declare provisionable agents, schedules/routines, local folders, gateway platforms, and setup checks through <code>managedResources</code> or top-level manifest aliases.</li>
-<li><strong>Deterministic reconciliation.</strong> <code>/api/extensions/managed-resources</code> can preview and reconcile extension-owned agents and routines with stable IDs and <code>managedByExtension</code> markers.</li>
-<li><strong>Trusted local folders.</strong> Extension-declared local folders support root-bounded inspection and recursive listing with traversal and symlink-escape protection.</li>
-<li><strong>Operator UI.</strong> The Extensions screen now shows managed-resource badges and a Managed tab with totals plus per-extension reconcile controls.</li>
-<li><strong>Extension authoring spec.</strong> <code>extension_creator</code> now documents managed resources, gateway declarations, setup checks, and manifest aliases.</li>
-</ul>
-<h4>v1.9.2 Highlights</h4>
-<p>Bundled runtime-polish release: reasoning hygiene, deterministic delegation routing, task workflow polish, OpenClaw export hardening, and timeout hygiene.</p>
-<ul>
-<li><strong>Stateful reasoning tag scrubber.</strong> String-streamed <code>&lt;think&gt;</code>, <code>&lt;thinking&gt;</code>, <code>&lt;reasoning&gt;</code>, <code>&lt;thought&gt;</code>, and <code>&lt;REASONING_SCRATCHPAD&gt;</code> blocks are removed across split deltas and routed into SwarmClaw&#39;s thinking stream instead of leaking into visible answers.</li>
-<li><strong>Deterministic delegation profiles.</strong> <code>manage_tasks</code> now accepts explicit <code>workType</code> and <code>requiredCapabilities</code> routing hints, returns a stable <code>routeKey</code>, and can auto-assign unowned work without a classifier call when the profile i</li>
+<li><strong>OpenClaw environments.</strong> Gateway topolo</li>
 </ul>
 <hr>
 <p><em>README truncated. <a href="https://github.com/swarmclawai/swarmclaw#readme">Continue reading on GitHub</a></em></p>

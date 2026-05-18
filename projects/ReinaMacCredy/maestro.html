@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/ReinaMacCredy/maestro#software",
   "name": "maestro",
-  "description": "Maestro is a local-first agent harness designed to manage the spec-to-ship lifecycle through a structured state model stored directly on disk. It coordinates multi-agent collaboration without a central server by using a shared CLI and a directory-based state layer for tasks, evidence, and handoffs. This approach allows separate agent sessions to resume work seamlessly by reading durable continuation records and passive JSON envelopes. The system enforces discipline through machine-checked contra",
+  "description": "Maestro is a local-first agent harness that provides a structured state layer for the software development lifecycle. It uses a CLI and on-disk state model in a .maestro/ directory to manage specs, tasks, and handoffs without requiring a database or background daemon. By persisting continuation records and evidence rows locally, it allows separate agent sessions to collaborate and resume work exactly where the previous one finished. The system enforces discipline through machine-checked contract",
   "url": "https://hermesatlas.com/projects/ReinaMacCredy/maestro",
   "codeRepository": "https://github.com/ReinaMacCredy/maestro",
   "applicationCategory": "DeveloperApplication",
@@ -47,7 +47,7 @@
     "name": "ReinaMacCredy",
     "url": "https://github.com/ReinaMacCredy"
   },
-  "dateModified": "2026-05-17T17:13:58.000Z",
+  "dateModified": "2026-05-18T08:00:48.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
@@ -116,7 +116,7 @@
     <span><span class="meta-label">lang</span>TypeScript</span>
     <span><span class="meta-label">license</span>MIT</span>
     
-    <span><span class="meta-label">updated</span>2026-05-17</span>
+    <span><span class="meta-label">updated</span>2026-05-18</span>
   </div>
 
   <div class="actions">
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Maestro is a local-first agent harness designed to manage the spec-to-ship lifecycle through a structured state model stored directly on disk. It coordinates multi-agent collaboration without a central server by using a shared CLI and a directory-based state layer for tasks, evidence, and handoffs. This approach allows separate agent sessions to resume work seamlessly by reading durable continuation records and passive JSON envelopes. The system enforces discipline through machine-checked contracts and auditable evidence rows that gate task completion based on witnessed results.</p>
+    <p class="summary-text">Maestro is a local-first agent harness that provides a structured state layer for the software development lifecycle. It uses a CLI and on-disk state model in a .maestro/ directory to manage specs, tasks, and handoffs without requiring a database or background daemon. By persisting continuation records and evidence rows locally, it allows separate agent sessions to collaborate and resume work exactly where the previous one finished. The system enforces discipline through machine-checked contracts and a plan-approve-execute workflow that gates task completion on witnessed evidence.</p>
     <ul class="summary-highlights">
-      <li>Local-first state management using on-disk .maestro directory and Git</li>
-      <li>Structured task lifecycle following a spec-task-verify-ship workflow</li>
-      <li>Passive handoff envelopes for seamless context transfer between agents</li>
+      <li>Local-first state management using on-disk files instead of chat history</li>
+      <li>Structured spec-to-ship workflow with auditable evidence and witness levels</li>
+      <li>Passive handoff envelopes for seamless task resumption between different agents</li>
     </ul>
   </div>
 </section>
@@ -253,10 +253,10 @@ maestro --version
 <pre><code class="language-bash">maestro init
 </code></pre>
 <p>Creates the local <code>.maestro/</code> workspace for the current repository and writes <code>.maestro/MAESTRO.md</code> — a read-order compass that points fresh agents at the right files.</p>
-<h4>2. Bootstrap the directory layout</h4>
-<pre><code class="language-bash">maestro setup bootstrap
+<h4>2. Scaffold the directory layout</h4>
+<pre><code class="language-bash">maestro setup
 </code></pre>
-<p>Creates the canonical subdirectories under <code>.maestro/</code> with <code>.gitkeep</code> placeholders. Idempotent: safe to re-run.</p>
+<p>Runs the idempotent setup state machine: scaffolds the canonical subdirectories under <code>.maestro/</code>, writes the project config, drops bundled skills, and seeds the default principles pack. Safe to re-run.</p>
 <h4>3. Check setup</h4>
 <pre><code class="language-bash">maestro setup check
 </code></pre>
@@ -343,14 +343,14 @@ ship &lt;tsk-id&gt;
 <p>Interview-driven product-spec authoring. Runs the grill protocol: a one-question-at-a-time interview that walks acceptance criteria, non-goals, risk class, mode, and work type, challenging user language against <code>CONTEXT.md</code> and committed ADRs. Output is a committed <code>.maestro/specs/&lt;slug&gt;.md</code> ready for <code>maestro task from-spec</code>. Use this skill before authoring any spec.</p>
 <h4>maestro-handoff</h4>
 <p>Session handoff awareness for the passive handoff model. Describes the envelope schema, which lifecycle verbs emit envelopes (<code>task:claim</code>, <code>task:block</code>), and the read-only pickup protocol an incoming agent follows to resume a task left by a prior agent. Also documents the four handoff MCP tools for runtimes that prefer structured tool calls over direct file reads. Read this skill at session start in any <code>.maestro/</code> project to learn what the last agent left behind.</p>
-<h4>maestro-plan</h4>
-<p>Heavy-mode workflow. Takes an approved <code>mode: heavy</code> product-spec and turns it into an exec-plan with child tasks via <code>maestro plan from-spec</code> followed by <code>maestro plan decompose</code>. The decompose step runs the grill protocol against the spec, <code>CONTEXT.md</code>, and the architecture lint set before emitting the task batch. The exec-plan auto-completes when every child task reaches <code>shipped</code> or <code>abandoned</code> (ADR-0011). Use this skill when the work spans three or more vertical slices or multiple feature directories.</p>
+<h4>maestro-mission</h4>
+<p>Heavy-mode workflow. Takes an approved <code>mode: heavy</code> product-spec and turns it into a mission with child tasks via <code>maestro mission from-spec</code> followed by <code>maestro mission decompose</code>. The decompose step runs the grill protocol against the spec, <code>CONTEXT.md</code>, and the architecture lint set before emitting the task batch. The mission auto-completes when every child task reaches <code>shipped</code> or <code>abandoned</code> (ADR-0011). Use this skill when the work spans three or more vertical slices or multiple feature directories.</p>
 <h4>maestro-task</h4>
 <p>Single-task execution loop for light-mode specs. Guides the agent from <code>task from-spec</code> through <code>claim</code>, the <code>doing &lt;-&gt; verifying</code> iteration, blocking when stuck, and finally <code>ship</code>. Auto-activates when a <code>.maestro/</code> directory is detected in the working tree. Every state transition emits a handoff envelope and an evidence row. Use this skill for any single-PR implementation task.</p>
 <h4>maestro-verify</h4>
-<p>The canonical verification protocol. Documents exit-code routing (PASS / FAIL / HUMAN / BLOCK), the architecture-lint corpus, the Trust Verifier checks, and the ProofMap acceptance-criteria coverage gate. Cross-referenced by <code>maestro-task</code> and <code>maestro-plan</code>. Read this skill before declaring any task complete; it is the shared pre-ship ritual every agent follows.</p>
+<p>The canonical verification protocol. Documents exit-code routing (PASS / FAIL / HUMAN / BLOCK), the architecture-lint corpus, the Trust Verifier checks, and the ProofMap acceptance-criteria coverage gate. Cross-referenced by <code>maestro-task</code> and <code>maestro-mission</code>. Read this skill before declaring any task complete; it is the shared pre-ship ritual every agent follows.</p>
 <h4>maestro-setup</h4>
-<p>Repository onboarding. The skill generates context docs under <code>.maestro/context/</code>, a hierarchical <code>AGENTS.md</code>, language style guides, and a setup report. The CLI mirrors the skill: <code>setup check</code> audits drift, <code>setup bootstrap</code> scaffolds directories, <code>setup migrate-v2</code> performs the 11-step upgrade from a pre-rebuild <code>.maestro/</code>, and <code>setup migrate-corrections</code> moves legacy corrections into <code>docs/principles/legacy/</code>. Use this skill when initializing a new project or upgrading an older <code>.maestro/</code> directory.</p>
+<p>Repository onboarding. The skill generates context docs under <code>.maestro/context/</code>, a hierarchical <code>AGENTS.md</code>, language style guides, and a setup report. The CLI mirrors the skill: <code>setup check</code> audits drift; <code>setup</code> runs the idempotent state machine that scaffolds and reconciles the directory layout, drops bundled skills, and seeds the default principles pack. Use this skill when initializing a new project.</p>
 <h3>Handoffs</h3>
 <p>Handoffs in Maestro are passive. Lifecycle verbs drop a small JSON envelope on disk at each meaningful transition; the next agent reads the file to understand what was happening and why. There is no launch daemon, no remote queue, and no active broker.</p>
 <h4>Which verbs emit envelopes</h4>
@@ -595,7 +595,7 @@ maestro evidence show evd-xxxxxx
 <h3>Contracts and the Trust Verifier</h3>
 <p>This is the foundation. A contract pins down what a task is allowed to touch; the Trust Verifier checks the diff against that contract. Three behaviors define this layer:</p>
 <ol>
-<li><p><strong>Plan proposes a contract.</strong> During <code>maestro-plan</code>, the plan must include a <code>proposed_contract</code> with <code>allowed_files</code>, <code>forbidden_paths</code>, <code>done_when</code> criteria, and an <code>amendment_budget</code>. Plan-time proposals are not amendments — they seed the contract that gets locked when the agent claims the task.</p>
+<li><p><strong>Plan proposes a contract.</strong> During <code>maestro-mission</code>, the plan must include a <code>proposed_contract</code> with <code>allowed_files</code>, <code>forbidden_paths</code>, <code>done_when</code> criteria, and an <code>amendment_budget</code>. Plan-time proposals are not amendments — they seed the contract that gets locked when the agent claims the task.</p>
 </li>
 <li><p><strong>Agent works within scope; amends on genuine discovery.</strong> When work uncovers a file that lies outside the locked contract scope, the agent must amend before touching it:</p>
 <pre><code class="language-bash">maestro contract amend --task &lt;id&gt; --add-path src/new-file.ts --reason &quot;discovered at runtime&quot;
@@ -946,7 +946,7 @@ maestro runtime check --task &lt;id&gt; [--provider-base-url &lt;url&gt;] [--jso
 </tr>
 <tr>
 <td>Setup</td>
-<td><code>maestro_setup_check</code>, <code>maestro_setup_migrate_v2</code></td>
+<td><code>maestro_setup_check</code></td>
 </tr>
 <tr>
 <td>Handoff</td>
@@ -1041,16 +1041,12 @@ maestro mcp check --json
 <td>Inspect the current Maestro state quickly.</td>
 </tr>
 <tr>
-<td><code>maestro setup bootstrap</code></td>
-<td>Scaffold the canonical <code>.maestro/</code> directory layout.</td>
+<td><code>maestro setup</code></td>
+<td>Scaffold and reconcile the canonical <code>.maestro/</code> directory layout. Idempotent.</td>
 </tr>
 <tr>
 <td><code>maestro setup check</code></td>
 <td>Audit the directory layout, principles pack, and config file for drift.</td>
-</tr>
-<tr>
-<td><code>maestro setup migrate-v2</code></td>
-<td>Upgrade a pre-rebuild <code>.maestro/</code> to the current layout.</td>
 </tr>
 <tr>
 <td><code>maestro spec new &lt;slug&gt;</code></td>
@@ -1117,12 +1113,12 @@ maestro mcp check --json
 <td>Show the latest verdict for a task.</td>
 </tr>
 <tr>
-<td><code>maestro plan from-spec &lt;path&gt;</code></td>
-<td>Create an exec-plan from a heavy-mode spec.</td>
+<td><code>maestro mission from-spec &lt;path&gt;</code></td>
+<td>Create a mission from a heavy-mode spec.</td>
 </tr>
 <tr>
-<td><code>maestro plan decompose &lt;id&gt; --file &lt;path&gt;</code></td>
-<td>Decompose an exec-plan into child tasks from a batch file.</td>
+<td><code>maestro mission decompose &lt;id&gt; --file &lt;path&gt;</code></td>
+<td>Decompose a mission into child tasks from a batch file.</td>
 </tr>
 <tr>
 <td><code>maestro mcp serve</code></td>
@@ -1202,7 +1198,7 @@ maestro mcp check --json
 <tr>
 <td><code>service</code></td>
 <td><code>src/service/</code></td>
-<td>Use cases: task-claim, task-verify, plan-decompose, migrate-v2, setup-check, principle-promote, emit-handoff</td>
+<td>Use cases: task-claim, task-verify, plan-decompose, setup-check, principle-promote, emit-handoff</td>
 </tr>
 <tr>
 <td><code>runtime</code></td>
@@ -1243,8 +1239,6 @@ maestro mcp check --json
 │   └── &lt;task-id&gt;.json  worktree binding records
 ├── context/            operator-authored context docs
 ├── policies/           risk, autopilot, release, sensitive-paths, owners
-├── backups/            migration backup tarballs (pre-v2-&lt;ts&gt;.tar.gz)
-├── .migrated-v2.json   migration idempotency stamp
 └── principles.jsonl    behavioral principles (repo-tracked)
 
 ~/.maestro/
@@ -1257,8 +1251,9 @@ maestro mcp check --json
 <p>Maestro is organized as a feature-first hexagonal codebase:</p>
 <ul>
 <li><code>src/features/&lt;name&gt;/</code> — each feature is a bounded context containing its own <code>commands/</code>, <code>usecases/</code>, <code>domain/</code>, <code>ports/</code>, <code>adapters/</code>, plus a <code>services.ts</code> composition factory and <code>index.ts</code> public surface. Current features: <code>bundle</code>, <code>ci</code>, <code>deploy</code>, <code>evidence</code>, <code>gc</code>, <code>mcp</code>, <code>merge</code>, <code>plan</code>, <code>policy</code>, <code>principle</code>, <code>recover</code>, <code>reply</code>, <code>review</code>, <code>risk</code>, <code>runtime</code>, <code>skills</code>, <code>verdict</code>, <code>worktree</code>.</li>
-<li><code>src/runtime/</code> — v2 CLI command registration: <code>spec</code>, <code>task</code>, <code>plan</code>, <code>principle</code>, <code>setup</code> command trees.</li>
-<li><code>src/infra/</code> — plumbing that isn&#39;t a feature: init, doctor,</li>
+<li><code>src/runtime/</code> — CLI command registration: <code>spec</code>, <code>task</code>, <code>plan</code>, <code>principle</code>, <code>setup</code> command trees.</li>
+<li><code>src/infra/</code> — plumbing that isn&#39;t a feature: init, doctor, status, install, update, uninstall, providers, and mission-control commands; config and git ports/adapters; infra-owned domain types.</li>
+<li><code>src/shared/</code> — generic utilities with no domain knowledge: filesystem, YAML, shell, path safety, and output form</li>
 </ul>
 <hr>
 <p><em>README truncated. <a href="https://github.com/ReinaMacCredy/maestro#readme">Continue reading on GitHub</a></em></p>
@@ -1282,7 +1277,7 @@ maestro mcp check --json
         <div class="name"><span class="org">conorbronsdon /</span> avoid-ai-writing</div>
       </a>
       <a class="related-row" href="/projects/wondelai/skills">
-        <div class="stars">★ 998</div>
+        <div class="stars">★ 1.0K</div>
         <div class="name"><span class="org">wondelai /</span> skills</div>
       </a>
       <a class="related-row" href="/projects/DougTrajano/pydantic-ai-skills">

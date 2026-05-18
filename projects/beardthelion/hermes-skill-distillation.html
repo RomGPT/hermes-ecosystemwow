@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/beardthelion/hermes-skill-distillation#software",
   "name": "hermes-skill-distillation",
-  "description": "This project provides a skill distillation pipeline designed to fine-tune Hermes 4 models using real-world agentic trajectories. It captures tool-use sessions from the Hermes agent and converts them into high-quality training data via a specialized environment and scoring system. The pipeline supports both offline SFT data generation and live reinforcement learning through integration with the Atropos training framework. By focusing on practical tasks like coding and system administration, it cr",
+  "description": "This project provides a skill distillation pipeline designed to fine-tune Hermes 4 models using real-world agentic trajectories. It captures tool-use sessions from a diverse 30-task battery and converts them into SFT-ready data or live RL signals for the Atropos training framework. The system uses a multi-dimensional reward function to score trajectories based on task completion, efficiency, and error recovery. This approach enables a closed learning loop where production-style agent interaction",
   "url": "https://hermesatlas.com/projects/beardthelion/hermes-skill-distillation",
   "codeRepository": "https://github.com/beardthelion/hermes-skill-distillation",
   "applicationCategory": "DeveloperApplication",
@@ -130,11 +130,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">This project provides a skill distillation pipeline designed to fine-tune Hermes 4 models using real-world agentic trajectories. It captures tool-use sessions from the Hermes agent and converts them into high-quality training data via a specialized environment and scoring system. The pipeline supports both offline SFT data generation and live reinforcement learning through integration with the Atropos training framework. By focusing on practical tasks like coding and system administration, it creates a feedback loop where production agent behavior informs model improvements.</p>
+    <p class="summary-text">This project provides a skill distillation pipeline designed to fine-tune Hermes 4 models using real-world agentic trajectories. It captures tool-use sessions from a diverse 30-task battery and converts them into SFT-ready data or live RL signals for the Atropos training framework. The system uses a multi-dimensional reward function to score trajectories based on task completion, efficiency, and error recovery. This approach enables a closed learning loop where production-style agent interactions serve as the primary training data for future model iterations.</p>
     <ul class="summary-highlights">
-      <li>Generates SFT-ready JSONL data from 30 diverse real-world task categories</li>
-      <li>Automates trajectory scoring based on completion, efficiency, and error recovery</li>
-      <li>Integrates with Atropos for live RL training and model evaluation</li>
+      <li>Generates SFT-ready JSONL data from real-world tool usage trajectories</li>
+      <li>Integrates with Atropos for live reinforcement learning via GRPO</li>
+      <li>Automated scoring based on completion, efficiency, and error recovery</li>
     </ul>
   </div>
 </section>

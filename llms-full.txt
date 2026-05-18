@@ -1576,12 +1576,12 @@ Stars: 83,290
 Official: Yes (maintained by Nous Research)
 The self-improving AI agent that grows with you — persistent memory, auto-generated skills, 14 platforms, 6 execution backends
 
-Hermes Agent is an autonomous AI system designed for persistent, cross-platform task execution and self-improvement. It utilizes a closed learning loop to generate new skills from experience, curate long-term memory, and build user models across sessions. The agent integrates with 14 messaging platforms and supports six execution backends, ranging from local Docker environments to serverless cloud infrastructure. Users can switch between various LLM providers and models via a unified CLI or messaging interface without changing code.
+Hermes Agent is an autonomous AI system designed for persistent, cross-platform task execution and self-improvement. It utilizes a closed learning loop to generate new skills from experience and build long-term user models through memory nudges and session searches. The agent integrates with 14 messaging platforms and supports six execution backends, allowing it to run on everything from local hardware to serverless cloud environments. Users can automate complex workflows via a built-in cron scheduler and delegate tasks to parallel subagents.
 
 Highlights:
 - Autonomous skill creation and self-improvement from task experience
-- Multi-platform support including Telegram, Discord, Slack, and Signal
-- Flexible execution across local, SSH, Docker, and serverless backends
+- Multi-platform support including Telegram, Discord, Slack, and CLI
+- Flexible execution across local, Docker, SSH, and serverless backends
 
 ---
 
@@ -1593,12 +1593,12 @@ Category: Memory & Context
 Stars: 53,915
 Universal memory layer for AI Agents — official Hermes Agent memory provider, available as managed cloud or Apache-2.0 self-hosted OSS
 
-Mem0 is a universal memory layer designed to provide AI agents and assistants with long-term context and personalization. It utilizes a multi-signal retrieval algorithm that fuses semantic search, BM25 keyword matching, and entity linking to recall user preferences and past interactions. The system supports multi-level memory across users, sessions, and agents while maintaining temporal reasoning for time-aware queries. It is available as an Apache-2.0 self-hosted package, a Python/NPM library, or a managed cloud service.
+Mem0 is a universal memory layer designed to provide AI agents and assistants with long-term context and personalization. It utilizes a multi-signal retrieval algorithm that fuses semantic search, BM25 keyword matching, and entity linking to recall user preferences and past interactions. The system supports temporal reasoning to distinguish between past events and current states while maintaining separate memory tiers for users, sessions, and agents. It is available as an Apache-2.0 self-hosted package, a Python/Node.js library, or a managed cloud service.
 
 Highlights:
-- Multi-signal retrieval combining semantic, keyword, and entity-based matching.
-- Temporal reasoning for ranking memories by current and past relevance.
-- Single-pass memory extraction that accumulates facts without overwriting data.
+- Multi-level memory for users, sessions, and autonomous agent states
+- Hybrid retrieval combining semantic, keyword, and entity-linked signals
+- Temporal reasoning for time-aware ranking of past and future events
 
 ---
 
@@ -1628,12 +1628,12 @@ Stars: 8,362
 Official: Yes (maintained by Nous Research)
 Agent memory that learns — long-term retain/recall/reflect workflows
 
-Hindsight is an agent memory system designed to enable long-term learning and information retention for AI agents. It utilizes a workflow of retain, recall, and reflect operations to move beyond simple conversation history into persistent mental models. The system can be integrated via a two-line LLM wrapper or a direct API to automate memory storage and retrieval during LLM calls. It supports multi-user personalization through metadata filtering and is compatible with major providers like OpenAI, Anthropic, and Ollama.
+Hindsight is an agent memory system designed to enable long-term learning and information retention for AI agents. It utilizes a workflow of retain, recall, and reflect operations to move beyond simple conversation history into persistent mental models. The system can be integrated via an LLM wrapper for automatic memory management or through a direct API for granular control over storage and retrieval. It supports multi-user isolation through metadata filtering and is compatible with major providers including OpenAI, Anthropic, and Ollama.
 
 Highlights:
-- Implements retain, recall, and reflect workflows for long-term agent learning
-- Offers a two-line LLM wrapper for automatic memory management
-- Supports PostgreSQL and Oracle AI Database for enterprise-grade storage
+- Implements retain, recall, and reflect workflows for long-term learning.
+- Provides an LLM wrapper for two-line code integration.
+- Supports PostgreSQL and Oracle AI Database for enterprise storage.
 
 ---
 
@@ -1645,12 +1645,12 @@ Category: Skills & Skill Registries
 Stars: 4,132
 754 structured cybersecurity skills mapped to MITRE ATT&CK, NIST CSF 2.0, ATLAS, D3FEND & NIST AI RMF
 
-Anthropic Cybersecurity Skills is an open-source library of 754 structured skills designed to provide AI agents with the domain-specific workflows of a senior security analyst. Each skill follows the agentskills.io standard, utilizing YAML frontmatter and structured Markdown to guide agents through step-by-step execution and verification. The repository maps every skill across five major frameworks, including MITRE ATT&CK, NIST CSF 2.0, and the NIST AI RMF. It is compatible with over 26 platforms, including Claude Code and Hermes Agent, to support automated threat hunting, digital forensics, and cloud security operations.
+Anthropic Cybersecurity Skills is an open-source library of 754 structured skills designed to provide AI agents with the domain-specific workflows of a senior security analyst. Each skill follows the agentskills.io standard, utilizing YAML frontmatter and structured Markdown to guide agents through step-by-step execution and verification. The repository maps every skill across five major frameworks, including MITRE ATT&CK, NIST CSF 2.0, and the NIST AI RMF. It supports over 26 security domains such as cloud security and threat hunting, integrating directly with platforms like Claude Code and Hermes Agent.
 
 Highlights:
-- 754 structured skills across 26 specialized security domains
+- 754 structured cybersecurity skills across 26 specialized security domains
 - Unified mapping to MITRE ATT&CK, ATLAS, D3FEND, and NIST frameworks
-- Standardized agentskills.io format for sub-second discovery and execution
+- Compatible with agentskills.io standard for sub-second AI skill discovery
 
 ---
 
@@ -1680,12 +1680,12 @@ Stars: 3,143
 Official: Yes (maintained by Nous Research)
 Memory library for building stateful agents — the upstream library that the elkimek/honcho-self-hosted Hermes wrapper builds on.
 
-Honcho is a memory infrastructure library designed to build stateful agents that track evolving relationships between users, groups, and projects. It utilizes a background reasoning loop to extract conclusions and peer representations from stored conversation logs and events rather than relying solely on simple vector matching. Developers can query these representations for natural-language insights or inject session-specific context directly into LLM prompts. The system supports both a managed cloud service and a self-hosted FastAPI server with integrations for MCP, Claude Code, and Hermes.
+Honcho is a memory infrastructure library designed to help developers build stateful agents that track evolving entities like users, groups, and projects over time. It functions through a background reasoning loop that extracts conclusions from stored messages and events rather than relying solely on simple vector matching. This approach allows agents to query natural-language insights, peer representations, and session context to inform future model calls. The system supports both a managed cloud service and a self-hosted FastAPI server with integrations for MCP, Claude Code, and Hermes.
 
 Highlights:
-- Asynchronous reasoning extracts conclusions from messages and event traces
-- Peer-centric model tracks evolving entities and multi-peer perspectives
-- Hybrid search combines BM25 and vector retrieval for context
+- Asynchronous reasoning extracts conclusions from conversation history and events
+- Peer-centric model tracks evolving relationships between users and agents
+- Provides prompt-ready context via Python and TypeScript SDKs
 
 ---
 
@@ -1714,12 +1714,12 @@ Category: Workspaces & GUIs
 Stars: 1,844
 Web dashboard for Hermes Agent — multi-platform AI chat, session management, scheduled jobs, usage analytics & channel configuration (Telegram, Discord, Slack, WhatsApp)
 
-Hermes Web UI is a comprehensive management dashboard for the Hermes Agent ecosystem that provides a graphical interface for AI interaction and system administration. It centralizes agent operations by integrating multi-platform channel configuration, real-time chat streaming via Socket.IO, and a local SQLite database for session persistence. Users can monitor detailed usage analytics, manage scheduled cron jobs, and configure credentials for eight different messaging platforms including Telegram, Discord, and Slack. The interface also includes advanced tools such as a file browser for remote backends, a web-based terminal, and multi-profile management for isolated gateway environments.
+Hermes Web UI is a comprehensive management dashboard for the Hermes Agent ecosystem that provides a graphical interface for AI interaction and system administration. The platform utilizes a local SQLite database for session management and Socket.IO for real-time chat streaming, allowing users to monitor usage analytics and configure multi-platform integrations. It simplifies complex agent operations by centralizing channel configuration for eight platforms, including Telegram and Discord, while offering built-in tools for file browsing, cron job scheduling, and log monitoring. Users can manage multiple Hermes profiles and gateway instances with automated port conflict resolution and credential handling.
 
 Highlights:
-- Unified configuration for eight messaging platforms including WhatsApp and WeChat
-- Real-time chat streaming with multi-session management and markdown support
-- Usage analytics tracking token consumption, costs, and model distribution
+- Unified configuration for Telegram, Discord, Slack, WhatsApp, and four other platforms
+- Real-time AI chat with multi-session management and markdown syntax highlighting
+- Usage analytics tracking token consumption, estimated costs, and model distribution
 
 ---
 
@@ -1749,12 +1749,12 @@ Stars: 1,249
 Official: Yes (maintained by Nous Research)
 Function calling examples and training data for Hermes LLM models
 
-This repository provides the implementation and examples for enabling function calling and JSON mode in Hermes 2 Pro models. It utilizes a recursive loop to generate, execute, and process tool calls based on provided schemas, primarily using the ChatML prompt format for structured dialogue. Users can define custom tools via Python functions or enforce specific output structures using Pydantic models. The included examples demonstrate practical applications in financial data retrieval, such as fetching stock prices and fundamentals through the yfinance library.
+This repository provides the implementation and training data for enabling function calling and structured JSON output in Hermes LLMs, specifically optimized for the Hermes 2 Pro series. It utilizes a recursive inference loop to parse user queries, execute tools via the yfinance library, and return validated data within a ChatML-formatted dialogue. Users can define custom tools using Python decorators or generate structured data objects by integrating Pydantic schemas. The project serves as a reference for building agentic workflows that require reliable financial data retrieval and strict schema adherence.
 
 Highlights:
-- Enables recursive function calling and tool execution loops
-- Supports structured JSON mode using Pydantic schema validation
-- Uses ChatML format for OpenAI-compatible multi-turn interactions
+- Implements recursive function calling using ChatML prompt formatting
+- Supports structured data generation via Pydantic-based JSON mode
+- Includes pre-configured tools for retrieving real-time financial and stock data
 
 ---
 
@@ -1766,12 +1766,12 @@ Category: Skills & Skill Registries
 Stars: 1,103
 Let Skills Evolve Collectively with Agentic Evolver
 
-SkillClaw is an agentic skill management system that enables AI agents to evolve their capabilities through real-world interactions. It operates as a background process that automatically deduplicates, improves, and merges skills across different sessions and devices. The system creates a unified skill library that synchronizes experience between multiple agents and users, allowing knowledge gained in one context to benefit others. It natively integrates with Hermes, OpenClaw, and various OpenAI-compatible APIs to provide a continuous evolution loop for agentic tools.
+SkillClaw is an agentic evolution framework that manages and improves AI agent skill libraries through real-world interaction data. It operates a background loop that automatically deduplicates, merges, and refines skills across different sessions, devices, and users. The system enables a unified skill repository where experience gained by one agent instance—such as a frontend task—can be cross-pollinated to benefit other instances like backend or ML agents. It natively integrates with Hermes, OpenClaw, and various OpenAI-compatible APIs to provide continuous skill growth without manual intervention.
 
 Highlights:
-- Automates skill deduplication and quality improvement across agent sessions
-- Unifies skill libraries across multiple devices and different agent frameworks
-- Enables collective evolution by sharing learned skills within user groups
+- Automates skill deduplication and quality improvement from interaction history
+- Unifies skill libraries across multiple agents, devices, and user groups
+- Natively supports Hermes, Codex, Claude Code, and OpenClaw integrations
 
 ---
 
@@ -1783,12 +1783,12 @@ Category: Plugins & Extensions
 Stars: 1,096
 Supports GPT Image 2, Nanobanana & ComfyUI, with a 1,400+ prompt library, carefully crafted hooks and a multi-task orchestration system
 
-MeiGen AI Design MCP is a Model Context Protocol server that integrates professional image and video generation directly into AI coding environments and agents. It functions by connecting to three backend modes: the MeiGen cloud platform, local ComfyUI instances, or any OpenAI-compatible API. The system includes a library of over 1,400 curated prompt templates and supports parallel sub-agent orchestration for batch processing. It is compatible with major tools including Hermes Agent, Claude Code, Cursor, and Windsurf, and also offers a standalone CLI for CI/CD pipelines.
+MeiGen AI Design MCP is an open-source Model Context Protocol server that integrates professional image and video generation directly into AI coding environments. It connects to nine leading models, including Midjourney and Flux, via three backend modes: the MeiGen cloud, OpenAI-compatible APIs, or local ComfyUI instances. The system features a library of over 1,400 curated prompt templates and supports parallel sub-agent orchestration for batch processing. It is designed for use in tools like Hermes Agent, Claude Code, and Cursor to facilitate design tasks like logo creation and product rendering.
 
 Highlights:
-- Supports 9 image and video models including Midjourney and Flux
-- Integrates local ComfyUI for offline GPU-accelerated generation
-- Includes 1,446 curated prompt templates for design and animation
+- Supports nine image and video models including Midjourney and Flux
+- Integrates with local ComfyUI or OpenAI-compatible cloud backends
+- Includes a curated library of over 1,400 prompt templates
 
 ---
 
@@ -1801,12 +1801,12 @@ Stars: 997
 Official: Yes (maintained by Nous Research)
 RL training environments framework for tool-calling models
 
-Atropos is an environment microservice framework designed for asynchronous reinforcement learning (RL) with large language models. It operates by setting up interactive environments as services that communicate via a trajectory API to collect and distribute training data for external trainers. The system supports a wide range of tasks including multi-turn tool calling, code execution, and multimodal evaluation. Research using this framework has demonstrated performance gains in complex domains such as parallel function calling and financial prediction.
+Atropos is an environment microservice framework designed for asynchronous reinforcement learning (RL) with large language models. It operates by setting up environments as services and utilizing a trajectory API to manage data flow between the environment, trainer, and inference engine. The system supports a wide range of interactive settings, including code execution, multi-turn tool calling, and multimodal tasks. By standardizing how models interact with external tools and datasets, it enables the training of specialized models for complex reasoning and functional tasks.
 
 Highlights:
-- Async microservice architecture for scalable RL environment management
-- Trajectory API for standardized data collection and trainer integration
-- Supports diverse environments including tool calling, coding, and RLAIF
+- Microservice framework for asynchronous RL environment management
+- Trajectory API for scalable data collection and evaluation
+- Supports tool calling, code execution, and multimodal environments
 
 ---
 
@@ -1818,12 +1818,12 @@ Category: Deployment & Infra
 Stars: 967
 Nix packages for AI coding agents including Hermes
 
-llm-agents.nix is a collection of Nix packages designed to simplify the deployment and management of AI coding agents and development tools. It provides a centralized repository of reproducible Nix expressions that allow users to run various agentic tools directly via the terminal without manual installation. The project features daily automated updates to ensure compatibility with the latest versions of tools like Claude Code, Goose, and various multi-agent orchestrators. By leveraging the Nix ecosystem, it offers a consistent environment for developers to experiment with diverse AI-powered engineering automation frameworks.
+llm-agents.nix is a collection of Nix packages designed to simplify the deployment and management of AI coding agents and development tools. It provides a unified repository of reproducible Nix expressions that allow users to run various agentic tools directly via the Nix CLI without manual installation. The project features daily automated updates and includes a wide range of tools such as multi-agent orchestrators, terminal-based coding assistants, and API proxies for OpenAI, Gemini, and Claude compatible interfaces.
 
 Highlights:
 - Provides reproducible Nix packages for numerous AI coding agents
-- Automated daily updates ensure access to latest tool versions
-- Supports diverse agents including Claude Code, Goose, and Gemini CLI
+- Automated daily updates ensure access to the latest tool versions
+- Includes orchestrators, CLI agents, and unified API proxies
 
 ---
 
@@ -1835,12 +1835,12 @@ Category: Guides & Docs
 Stars: 898
 Curated list of awesome skills, tools, integrations, and resources for Hermes Agent
 
-Awesome Hermes Agent is a curated repository of resources designed to support the ecosystem of the self-improving AI agent developed by Nous Research. It provides a structured directory of skills, deployment tools, and integrations that extend the agent's core capabilities, such as its autonomous skill curation and multi-platform messaging support. Users can find community-contributed plugins for goal management, literate programming, and automated skill generation to enhance their agent workflows. The list also categorizes resources by maturity level to help developers identify stable tools for production use.
+Awesome Hermes Agent is a curated repository of resources designed to support the ecosystem of the self-improving Hermes Agent by Nous Research. It centralizes documentation, deployment tools, and a library of community-developed skills that extend the agent's procedural memory and task capabilities. The collection includes integrations for 18 messaging platforms, various terminal backends, and specialized plugins for goal management and cost control. Users can find structured paths for getting started, ranging from basic installation to advanced multi-agent orchestration.
 
 Highlights:
-- Directory of skills for the Hermes Agent learning loop
-- Guides for 18 messaging platforms and seven terminal backends
-- Links to official documentation and core research repositories
+- Directory of community skills for extending agent procedural memory
+- Guides for 18 messaging integrations including Discord and Telegram
+- Categorized resources for deployment across seven different terminal backends
 
 ---
 
@@ -1852,12 +1852,12 @@ Category: Workspaces & GUIs
 Stars: 830
 Native web workspace — chat, terminal, memory browser, skills manager, and inspector panel
 
-Hermes Workspace is a comprehensive native web interface designed to serve as a command center for the Hermes Agent ecosystem. It integrates chat, terminal access, memory management, and skill orchestration into a single dashboard to streamline agent interactions. The system operates as a zero-fork frontend that connects to vanilla Hermes Agent installations via API, supporting multi-agent swarms and persistent tmux-backed workers. Users can manage complex missions, browse thousands of skills, and monitor agent state through a unified control plane.
+Hermes Workspace is a native web-based command center designed to provide a unified interface for managing Hermes Agents. It integrates chat, a cross-platform terminal, and a file browser with a memory editor and skills manager to streamline agent orchestration. The platform features a Swarm Mode for role-based dispatching and persistent tmux-backed workers, allowing users to monitor multi-agent operations through a centralized dashboard. It maintains zero-fork parity with the official Nous Research Hermes Agent, connecting via API to existing gateway and dashboard services.
 
 Highlights:
-- Unified dashboard for chat, memory browsing, and terminal operations.
-- Swarm Mode for role-based dispatch of multiple persistent agents.
-- Zero-fork integration with vanilla NousResearch Hermes Agent installations.
+- Unified interface for chat, terminal, memory browsing, and skill management
+- Swarm Mode for autonomous multi-agent orchestration and role-based dispatching
+- Zero-fork integration with vanilla Nous Research Hermes Agent installations
 
 ---
 
@@ -1904,12 +1904,12 @@ Category: Memory & Context
 Stars: 711
 Recursive self-improving context harness — helps agents succeed on complex tasks
 
-Autocontext is a recursive self-improving harness designed to help AI agents succeed on complex tasks through iterative evaluation. It works by running a multi-role loop—including competitors, analysts, and coaches—that tests strategies against real-world scenarios and retains successful outcomes. The system generates structured traces, playbooks, and datasets that allow future agent iterations to inherit accumulated knowledge. It integrates with various providers like Anthropic and OpenAI, and offers specialized support for Hermes Agent and MCP-compatible clients.
+Autocontext is a recursive self-improving harness that enables agents to succeed on complex tasks through iterative refinement. It operates by executing a goal against real-world evaluations, retaining successful strategies while discarding failures to produce structured playbooks and artifacts. The system uses five specialized roles—competitor, analyst, coach, architect, and curator—to manage knowledge persistence and tool generation. It integrates with various providers including Anthropic, OpenAI, and local runtimes like Pi, exporting structured traces and playbooks for future agent iterations.
 
 Highlights:
-- Iterative self-improvement loop using five specialized agent roles
-- Generates structured playbooks and traces for knowledge persistence
-- Supports Hermes Agent, Claude Code, and multiple LLM providers
+- Iterative self-improvement through structured evaluation and knowledge persistence
+- Five-role architecture manages strategy, analysis, coaching, and curation
+- Produces reusable playbooks, datasets, and detailed execution traces
 
 ---
 
@@ -1978,8 +1978,8 @@ The Hermes Control Interface is a self-hosted web dashboard designed to manage t
 
 Highlights:
 - Multi-agent gateway for starting, stopping, and configuring individual profiles.
-- Real-time token analytics tracking usage, costs, and model performance.
-- Integrated browser-based terminal and split-view file editor with syntax highlighting.
+- Real-time chat interface with collapsible tool-call cards and session history.
+- Comprehensive token analytics tracking usage, costs, and model performance.
 
 ---
 
@@ -2025,12 +2025,12 @@ Category: Multi-Agent & Orchestration
 Stars: 285
 Build autonomous AI agent swarms with orchestration, skills, and multiple model providers
 
-SwarmClaw is a self-hosted runtime and framework designed for orchestrating autonomous AI agent swarms. It utilizes a centralized dashboard to manage agent delegation, durable memory, and scheduled tasks across more than 23 LLM providers. The platform enables agents to learn new skills from conversation history and integrate with external tools via the Model Context Protocol (MCP). Users can deploy the system as a desktop application, via Docker, or as a Node.js server to create multi-agent workflows with live activity monitoring.
+SwarmClaw is a self-hosted AI agent runtime and multi-agent framework designed for building and managing autonomous agent swarms. It operates through an orchestration layer that supports durable memory, delegation, and scheduled tasks across more than 23 LLM providers. The platform features an organizational chart interface for visualizing agent activity and includes a conversation-to-skill learning system to expand agent capabilities. It integrates with various tools including MCP, OpenClaw gateways, and delegated CLI backends like Claude Code and Ollama.
 
 Highlights:
-- Orchestrates multi-agent swarms with delegation and hierarchical org charts
-- Supports 23+ providers including Hermes, Ollama, and OpenRouter
-- Features durable agent memory and conversation-to-skill learning capabilities
+- Supports 23+ LLM providers including Hermes, OpenAI, and local Ollama.
+- Features durable agent memory and reviewed conversation-to-skill learning.
+- Orchestrates multi-agent swarms with delegation, heartbeats, and task scheduling.
 
 ---
 
@@ -2110,12 +2110,12 @@ Category: Workspaces & GUIs
 Stars: 194
 React SPA dashboard for Telegram Mini App v2.0 — 10-page mobile-first UI. Runs locally.
 
-Hermes Telegram Mini App is a React-based terminal interface that allows users to manage and interact with Hermes agents directly within the Telegram ecosystem. It establishes a secure mobile-first workspace by wrapping the Hermes CLI in a dark-mode web UI, featuring streaming chat and system monitoring. The application utilizes dual HMAC-SHA256 and Ed25519 validation to ensure secure access while providing tools for cron job management and background agent spawning. Users can also perform vision-based tasks through integrated OCR and local LLM server support for file attachments.
+Hermes Telegram Mini App is a terminal-style web interface that allows users to interact with their Hermes agent directly within Telegram. It functions as a React SPA that connects to the Hermes Agent via a secure gateway, utilizing dual HMAC-SHA256 and Ed25519 validation for authentication. The interface provides a mobile-first dashboard for managing agent instances, monitoring system health, and handling scheduled cron jobs. It also supports file attachments with automatic vision analysis and OCR capabilities.
 
 Highlights:
-- Terminal-style chat with streaming responses and slash command support
-- Real-time system monitoring for CPU, memory, and disk usage
-- Background agent spawning with support for five concurrent instances
+- Terminal-style chat with streaming responses and slash commands
+- Background agent spawning with live output monitoring
+- System health gauges and scheduled cron job management
 
 ---
 
@@ -2161,12 +2161,12 @@ Category: Skills & Skill Registries
 Stars: 131
 Generate draw.io diagrams from natural language descriptions
 
-This project is a diagramming skill that converts natural language descriptions into professional .drawio XML files and image exports. It utilizes the native draw.io desktop CLI to render diagrams and features an automated self-check mechanism that reads its own output to fix layout issues like overlapping labels or stacked edges. The tool supports six specialized presets including UML, ERD, and ML architectures, while allowing users to capture and reuse custom visual styles from existing files. It integrates with various AI agents such as Claude Code, Cursor, and Hermes to provide an iterative feedback loop for diagram refinement.
+This project is a diagramming skill that converts natural-language descriptions into professional .drawio XML files and high-resolution image exports. It utilizes the native draw.io desktop CLI to render diagrams and features an automated self-check mechanism that reads its own output to fix layout issues like overlapping labels or stacked edges. The tool includes six specialized presets for architecture, UML, and machine learning diagrams while supporting iterative refinement through a multi-round feedback loop. It integrates directly with agent environments such as Claude Code, Cursor, and Hermes without requiring a background daemon.
 
 Highlights:
 - Generates .drawio XML and exports to PNG, SVG, PDF, or JPG
-- Auto-fixes layout issues via a multi-round self-check and feedback loop
-- Includes presets for Architecture, UML, Flowcharts, ERD, and ML diagrams
+- Auto-fixes layout issues using a self-check visual feedback loop
+- Includes six diagram presets for architecture, UML, and ML models
 
 ---
 
@@ -2229,12 +2229,12 @@ Category: Integrations & Bridges
 Stars: 112
 Run Hermes Agent and OpenClaw on the same WeChat account
 
-HermesClaw is an integration bridge that allows Hermes Agent, OpenClaw, and OpenCode to operate simultaneously on a single WeChat account. It acts as a central iLink poller and routes messages through local proxy servers to prevent the 403 errors and connection drops caused by multiple gateways competing for the same API token. This architecture enables users to switch between different AI models and agents using simple chat commands like /hermes, /openclaw, or /three. The tool also supports OpenCode's ACP bridge, allowing for voice-activated coding tasks directly within the WeChat interface.
+HermesClaw is an integration bridge that allows Hermes Agent, OpenClaw, and OpenCode to operate simultaneously on a single WeChat account. It functions as a centralized iLink poller and proxy server, routing messages to each agent's gateway to prevent the 403 errors and token conflicts caused by multiple simultaneous connections. Users can switch between agents or activate multiple brains at once using commands like /hermes, /openclaw, or /three. The tool also enables voice-based coding via an OpenCode ACP bridge, supporting free models like MiniMax M2.5.
 
 Highlights:
 - Enables three AI agents on one WeChat account simultaneously
-- Prevents iLink token conflicts using a central proxy architecture
-- Supports agent switching via /hermes, /openclaw, and /opencode commands
+- Prevents iLink token conflicts via centralized message proxying
+- Supports agent switching with /hermes, /openclaw, and /opencode commands
 
 ---
 
@@ -2263,12 +2263,12 @@ Category: Skills & Skill Registries
 Stars: 85
 Oracle network and smart contract interaction skills (agentskills.io spec)
 
-Chainlink Agent Skills is a collection of standardized coding tools designed to help AI agents interact with Chainlink's oracle network and smart contract services. The project implements the Agent Skills specification, allowing developers to equip agents with specialized knowledge for specific blockchain workflows via a CLI-based installation. These skills enable agents to perform tasks such as managing Verifiable Random Function (VRF) subscriptions, executing Cross-Chain Interoperability Protocol (CCIP) transfers, and integrating real-time data feeds. By providing structured access to SDKs and contract addresses, it simplifies the creation of complex decentralized applications like tokenized funds and cross-chain settlement systems.
+Chainlink Agent Skills is a collection of coding skills designed to enable AI agents to interact with oracle networks and smart contracts. The project implements the agentskills.io specification to provide standardized capabilities for agent discovery and activation. It includes specialized skills for managing CCIP, Data Feeds, VRF, ACE, Data Streams, and CRE operations. These tools allow agents to generate workflows, handle on-chain verification, and build cross-chain applications.
 
 Highlights:
-- Implements standardized Agent Skills specification for AI agent integration
-- Supports CCIP, Data Feeds, VRF, and Data Streams workflows
-- Provides CLI tools for local CRE simulations and cross-chain monitoring
+- Follows the agentskills.io specification for agent compatibility
+- Supports CCIP, VRF, Data Feeds, and Data Streams
+- Includes CRE onboarding and runtime operation capabilities
 
 ---
 
@@ -2280,12 +2280,12 @@ Category: Memory & Context
 Stars: 82
 Accelerating Long Context LLM Inference with Accuracy-Preserving Context Optimization in SGLang, vLLM, llama.cpp, OpenClaw, RAG, and Agentic AI.
 
-ContextPilot is a context optimization engine designed to accelerate long-context LLM inference by maximizing prefix cache reuse. It functions by maintaining a context index that reorders and deduplicates overlapping data blocks before they reach the inference server. This approach reduces redundant KV cache recomputation and lowers token consumption without compromising reasoning accuracy. The project provides native plugins for Hermes Agent and OpenClaw, and supports backends like vLLM, SGLang, and llama.cpp.
+ContextPilot is an inference optimization layer designed to accelerate long-context LLM workloads by maximizing prefix cache reuse. It maintains a context index to reorder and deduplicate overlapping content blocks before they reach the inference engine, effectively reducing redundant KV cache computation. The system provides significant token savings and faster prefill speeds for RAG, multi-turn memory chat, and agentic workflows. It integrates as a native plugin or proxy for various backends including vLLM, SGLang, llama.cpp, and Hermes Agent.
 
 Highlights:
-- Reduces prompt tokens by up to 36% through context deduplication
-- Boosts prefill speeds by 1.5–3× via optimized prefix sharing
-- Native integration for Hermes Agent, OpenClaw, and vLLM
+- Reduces input tokens by reordering and deduplicating shared context blocks
+- Boosts prefill throughput with 1.5–3× faster processing speeds
+- Native plugin support for Hermes Agent and OpenClaw ecosystems
 
 ---
 
@@ -2314,12 +2314,12 @@ Category: Workspaces & GUIs
 Stars: 81
 Hermes Agent made portable desktop for Windows — 100 tools, GUI, local models via LM Studio, TTS, Music, ComfyUI, workflows, tool maker. No install. No Docker. No admin rights.
 
-Portable Hermes Agent is a standalone Windows desktop application that provides a graphical interface for the Hermes Agent framework without requiring Docker, administrator rights, or system-wide installations. It operates through an embedded Python environment and connects to local models via LM Studio or cloud providers like OpenRouter. The platform integrates over 100 tools for tasks including image generation via ComfyUI, text-to-speech, music creation, and automated multi-step workflows. Users can also extend the agent's capabilities at runtime using a built-in dynamic tool maker for API wrappers and Python handlers.
+Portable Hermes Agent is a standalone Windows desktop application that provides a graphical interface for the Hermes Agent framework without requiring system-wide installations or administrative rights. It operates by bundling an embedded Python environment and connecting to local models via LM Studio or cloud providers through an OpenAI-compatible API. The platform features over 100 tools for tasks such as music generation, text-to-speech, and ComfyUI image creation, alongside a workflow engine for multi-step automation. Users can also extend the agent's capabilities at runtime using a built-in dynamic tool maker for API wrapping and Python scripting.
 
 Highlights:
 - Zero-install Windows desktop GUI with granular permission controls
 - Over 100 tools including TTS, MusicGen, and ComfyUI integrations
-- Dynamic tool maker for creating API wrappers at runtime
+- Dynamic tool maker for creating API wrappers and Python handlers
 
 ---
 
@@ -2331,12 +2331,12 @@ Category: Developer Tools
 Stars: 76
 Community CLI skins and themes for Hermes terminal UI
 
-Hermes Skins is a collection of community-contributed visual themes for the Hermes CLI agent. It allows users to customize the terminal interface by modifying YAML configuration files that control banner colors, ASCII art, spinner animations, and branding text. The system uses a fallback mechanism where custom skins inherit missing values from a default theme, ensuring visual consistency while allowing for granular adjustments. Available themes range from retro computing aesthetics like MS-DOS and Vault-Tec to modern styles like Catppuccin and Synthwave.
+Hermes Skins is a collection of community-contributed visual themes for the Hermes CLI agent. It allows users to customize the terminal interface by modifying YAML configuration files that control banner colors, ASCII art, spinner animations, and branding text. The project separates visual presentation from agent logic, enabling aesthetic transformations ranging from retro CRT styles to modern pastel palettes. Users can apply these themes globally or for specific sessions without altering the underlying AI behavior.
 
 Highlights:
-- Customizes terminal visuals including ASCII banners and spinner animations
-- Uses YAML configuration files for easy theme creation and sharing
-- Inherits from default skin to support partial configuration overrides
+- Customizes terminal UI elements including banners, spinners, and ASCII art
+- Uses YAML-based configuration for easy theme creation and sharing
+- Inherits from default settings to support partial skin definitions
 
 ---
 
@@ -2365,12 +2365,12 @@ Category: Workspaces & GUIs
 Stars: 65
 Desktop companion app for installing, configuring, and chatting with Hermes Agent
 
-Hermes Desktop is a native GUI companion for the Hermes Agent that simplifies the installation, configuration, and management of the AI assistant. It automates the setup of dependencies like Python and Git, providing a visual interface to replace manual CLI interactions. Users can manage multi-provider LLM connections, configure 16 messaging gateways such as Telegram and Discord, and monitor agent memory and skills. The application also includes a 3D interface called Hermes Office for visual adapter management and a comprehensive suite of 22 slash commands for chat interaction.
+Hermes Desktop is a native GUI application for managing the installation, configuration, and operation of Hermes Agent. It automates the setup of local dependencies like Python and uv or connects to remote API servers to provide a streamlined alternative to CLI management. The app features a streaming chat interface, session history with full-text search, and a visual editor for personas and scheduled tasks. It integrates with 16 messaging gateways and 14 toolsets, including web browsing, code execution, and memory systems.
 
 Highlights:
-- Guided installation with automated dependency resolution and provider setup
-- Supports 16 messaging gateways including Discord, Slack, and Telegram
-- Integrated management for memory systems, personas, and scheduled tasks
+- Guided installer for local Hermes Agent or remote API connection
+- Supports 16 messaging gateways including Telegram, Discord, and Slack
+- Built-in management for 14 toolsets, memory systems, and personas
 
 ---
 
@@ -2382,12 +2382,12 @@ Category: Workspaces & GUIs
 Stars: 57
 Process monitoring and configuration dashboard for Hermes
 
-Hermes WebUI is a dedicated process monitoring and configuration dashboard for the Hermes Agent ecosystem. It functions as a non-intrusive polling bridge that reads from the agent's SQLite database and YAML files without requiring modifications to the core agent code. Users can track real-time activity, inspect full conversation histories via full-text search, and manage scheduled cron jobs through a responsive React-based interface. The tool also provides read-only visibility into system configurations, environment variables, and available skill source code.
+Hermes WebUI is a dedicated process monitoring and configuration dashboard for the Hermes Agent ecosystem. It functions as a non-intrusive polling bridge that reads from the agent's SQLite database and YAML files to provide real-time updates without requiring modifications to the core agent code. Users can track session histories, monitor platform health and costs, and manage scheduled cron jobs through a responsive, themeable interface. The system also includes a secure, read-only configuration viewer and a skill browser for inspecting built-in and custom agent capabilities.
 
 Highlights:
-- Real-time dashboard for session activity, cost tracking, and service health
-- Full-text search and inspection of conversation histories and message details
-- Management of scheduled agent cron jobs and skill source browsing
+- Real-time dashboard for session activity, gateway status, and cost tracking
+- Full conversation history inspection with FTS5-powered search functionality
+- Read-only management of config.yaml, environment variables, and cron jobs
 
 ---
 
@@ -2433,12 +2433,12 @@ Category: Guides & Docs
 Stars: 51
 Performance optimization guide for Hermes deployments
 
-The Hermes Optimization Guide is a comprehensive technical resource and toolkit designed to help users deploy, secure, and scale Hermes Agent in production environments. It provides 24 detailed instructional parts alongside runnable artifacts, including opinionated configuration templates, installable skills, and a one-command VPS bootstrap script. The project enables advanced workflows such as durable Kanban orchestration, multi-platform integration across 20+ services, and cost-optimized model routing using providers like Anthropic, OpenAI, and local deployments.
+The Hermes Optimization Guide is a comprehensive documentation suite and artifact repository designed to streamline the deployment and scaling of Hermes Agent. It provides 24 instructional parts alongside runnable scripts, including a one-command VPS bootstrap and 13 installable skills. The guide covers advanced configurations for production environments, such as multi-platform integrations, cost-optimized model routing, and secure remote sandboxing. Users can leverage provided templates for systemd, Caddy, and Langfuse to establish observable and hardened agent architectures.
 
 Highlights:
-- One-command VPS bootstrap script for automated production-ready deployment
+- One-command VPS bootstrap script for automated production-ready deployments
 - Thirteen installable skills and five opinionated configuration templates
-- Detailed security playbook for prompt injection and sandbox isolation
+- Detailed blueprints for security hardening, observability, and cost-optimized routing
 
 ---
 
@@ -2450,12 +2450,12 @@ Category: Skills & Skill Registries
 Stars: 50
 Registry of reusable AI skills based on AgentSkills specification
 
-SkillDock is a registry and SDK for managing reusable AI skills based on the AgentSkills specification. It provides a Python client and CLI that interact with an OpenAPI-driven backend to facilitate the discovery, installation, and versioning of agentic capabilities. The system supports recursive dependency resolution, local skill verification, and a commerce layer for buying and selling skills via Stripe or TON. Developers can publish new skill releases by packaging local directories with metadata defined in Markdown frontmatter.
+SkillDock is a registry and SDK for managing reusable AI skills based on the AgentSkills specification. It provides a Python client and CLI that interact with an OpenAPI-driven backend to discover, install, and version agent capabilities. The platform supports a commerce layer for buying and selling skills using Stripe or TON blockchain payments. Developers can package local skill folders, manage dependencies, and publish immutable releases with metadata defined in Markdown frontmatter.
 
 Highlights:
-- OpenAPI-driven Python SDK and CLI for skill management and discovery
-- Recursive dependency resolution for local skill installation and uninstallation
-- Integrated commerce flow supporting Stripe and TON blockchain payments
+- OpenAPI-driven Python SDK and CLI for skill lifecycle management
+- Supports skill monetization via Stripe and TON blockchain integration
+- Automated dependency resolution and local installation of agent skills
 
 ---
 
@@ -2501,12 +2501,12 @@ Category: Developer Tools
 Stars: 44
 AI-native browser built for autonomous agent control via MCP
 
-Vessel is an open-source, Chromium-based browser designed specifically for autonomous agent control rather than traditional human-centric browsing. It provides a persistent runtime with durable state and a visible UI that allows humans to audit, intervene, and redirect long-running agent workflows. The browser integrates with the Model Context Protocol (MCP) to support external harnesses like Hermes Agent and includes built-in tools for page schema inference, action rollback, and agent-readable bookmarks. It is primarily optimized for Linux and macOS environments where agents act as the primary operators.
+Vessel is an open-source, Chromium-based browser designed specifically for autonomous agent control rather than traditional human-centric browsing. It provides a persistent runtime environment where agents drive workflows via the Model Context Protocol (MCP) while humans supervise through a visible UI. The browser maintains durable state across sessions, including annotated checkpoints, action undo capabilities, and agent-readable bookmarks with structured metadata. This setup eliminates the "black box" nature of headless automation by allowing users to audit, intervene, and redirect long-running agent tasks in real-time.
 
 Highlights:
-- Provides a human-visible supervisory UI for auditing autonomous agent actions
-- Exposes browser control via MCP for external agent harnesses
-- Maintains durable state with named sessions and annotated checkpoints
+- Native MCP control for external agent harnesses like Hermes Agent
+- Human-in-the-loop supervisory UI with live approvals and runtime controls
+- Automated page schema inference for structured entity and form detection
 
 ---
 
@@ -2518,12 +2518,12 @@ Category: Integrations & Bridges
 Stars: 38
 Android device control — bridge app + Python toolset for mobile automation
 
-Hermes-android is a remote device control bridge that allows AI agents to interact with Android hardware through a suite of automation tools. It operates via a Kotlin-based bridge app that connects to a Python relay server using WebSockets, enabling remote execution of commands without requiring port forwarding or USB connections. The system provides 36 specialized tools for tasks such as UI navigation, screen recording, and managing system functions like SMS or GPS. It is compatible with standard mobile devices and Android Automotive OS, facilitating agentic control over both personal phones and vehicle head units.
+hermes-android is a remote control system that enables AI agents to interact with Android devices. It utilizes a Kotlin-based bridge app that connects to a Python relay server via WebSockets, allowing for control behind NATs without VPNs or port forwarding. The system provides 36 specialized tools for UI automation, device management, and hardware access. It is compatible with both standard Android phones and Android Automotive OS head units.
 
 Highlights:
-- Executes 36 automation tools via Android AccessibilityService
-- Connects behind NAT using WebSocket relay and 6-character pairing
-- Supports Android Automotive OS for vehicle head unit automation
+- 36 tools for UI interaction, screen recording, and device control
+- WebSocket-based connection using a 6-character pairing code
+- Support for Android Automotive OS car head units
 
 ---
 
@@ -2603,12 +2603,12 @@ Category: Memory & Context
 Stars: 29
 The Zero-Dependency, Sub-Millisecond AI Memory System for Hermes Agents
 
-Mnemosyne is a local-first memory system designed for the Hermes Agent framework to provide private, zero-dependency context management. It utilizes SQLite with native vector search and full-text search to store conversations and knowledge without requiring external databases or API keys. The system operates entirely in-process to eliminate network latency and supports offline use cases. It features a three-tier architecture consisting of working, episodic, and scratchpad memory for long-term information retention.
+Mnemosyne is a local-first memory system designed for the Hermes Agent framework to provide private, zero-dependency context management. It utilizes SQLite with native vector search and full-text search to store conversations and knowledge without requiring external databases or API keys. The system operates entirely in-process to eliminate network latency, achieving sub-millisecond read and write speeds. It features a three-tier architecture comprising working, episodic, and scratchpad memory to handle long-term information retention.
 
 Highlights:
-- Local-first storage using SQLite with native vector and full-text search
+- Local-first SQLite storage with native vector and full-text search
 - Sub-millisecond latency for read, write, and search operations
-- Native integration as a Hermes Agent memory provider plugin
+- Native Hermes Agent plugin with offline-capable memory architecture
 
 ---
 
@@ -2620,12 +2620,12 @@ Category: Multi-Agent & Orchestration
 Stars: 28
 17 specialized agents for research, planning, implementation, quality, and infrastructure
 
-Hermes is a multi-agent orchestration system for OpenCode AI designed to automate complex software development lifecycles. It utilizes a master orchestrator to route tasks through specialized pipelines involving 17 distinct agents focused on research, planning, implementation, quality, and infrastructure. The system enforces mandatory quality gates, such as automated reviews and security audits, while maintaining state across session checkpoints. It integrates with MCP servers and supports various model providers to handle tasks ranging from feature development to performance optimization.
+Hermes is a multi-agent orchestration system for OpenCode AI designed to automate the full software development lifecycle. It utilizes a master orchestrator to route tasks through specialized pipelines involving 17 distinct agents focused on research, planning, implementation, quality, and infrastructure. The system enforces mandatory quality gates and security audits while managing context flow between models like GPT-5.2, Gemini, and Claude. It supports complex workflows such as security-sensitive feature development, automated bug investigation, and performance optimization.
 
 Highlights:
-- Coordinates 17 specialized agents across six functional domains
-- Implements strict pipeline architectures for features, fixes, and refactoring
-- Enforces mandatory quality gates and security audits for code changes
+- Coordinates 17 specialized agents through role-specific development pipelines
+- Enforces mandatory reviewer and tester gates for all code changes
+- Integrates with MCP servers for external documentation and web fetching
 
 ---
 
@@ -2654,12 +2654,12 @@ Category: Memory & Context
 Stars: 27
 Memory kernel stack for Hermes agent
 
-Brainstack is a local-first memory kernel designed to provide Hermes agents with a structured memory model rather than a flat data blob. It integrates three distinct memory lines—Hindsight, Graphiti, and MemPalace—to manage session continuity, temporal graph relations, and large-corpus retrieval through a single memory owner. The system processes queries by routing them to specific "shelves" such as profile, graph, or corpus, ensuring Hermes receives a compact, purpose-built evidence packet. This approach prevents prompt stuffing and maintains temporal truth by separating historical facts from recent session context.
+Brainstack is a local-first memory kernel designed to provide Hermes agents with a structured memory model rather than a flat data blob. It integrates three distinct memory lines—Hindsight, Graphiti, and MemPalace—to manage session continuity, temporal graph relations, and large-corpus retrieval through a single memory owner. The system processes queries by routing them to specific "shelves" such as profile, graph, or corpus, ensuring Hermes receives a compact, purpose-built evidence packet. This approach prevents prompt stuffing and maintains clear distinctions between historical facts, user preferences, and external knowledge.
 
 Highlights:
-- Consolidates temporal continuity, graph truth, and corpus retrieval into one kernel.
-- Uses a five-shelf architecture to prevent flat memory blob issues.
-- Integrates directly as a native MemoryProvider plugin for Hermes agents.
+- Consolidates temporal continuity, graph truth, and corpus retrieval into one kernel
+- Uses a five-shelf architecture to prevent flat memory blob issues
+- Provides a native Hermes-Agent MemoryProvider plugin with SQLite and Kuzu
 
 ---
 
@@ -2671,12 +2671,12 @@ Category: Skills & Skill Registries
 Stars: 25
 Harness for long-running AI agents — structured memory, cross-feature learning, plan-approve-execute
 
-Maestro is a local-first agent harness designed to manage the spec-to-ship lifecycle through a structured state model stored directly on disk. It coordinates multi-agent collaboration without a central server by using a shared CLI and a directory-based state layer for tasks, evidence, and handoffs. This approach allows separate agent sessions to resume work seamlessly by reading durable continuation records and passive JSON envelopes. The system enforces discipline through machine-checked contracts and auditable evidence rows that gate task completion based on witnessed results.
+Maestro is a local-first agent harness that provides a structured state layer for the software development lifecycle. It uses a CLI and on-disk state model in a .maestro/ directory to manage specs, tasks, and handoffs without requiring a database or background daemon. By persisting continuation records and evidence rows locally, it allows separate agent sessions to collaborate and resume work exactly where the previous one finished. The system enforces discipline through machine-checked contracts and a plan-approve-execute workflow that gates task completion on witnessed evidence.
 
 Highlights:
-- Local-first state management using on-disk .maestro directory and Git
-- Structured task lifecycle following a spec-task-verify-ship workflow
-- Passive handoff envelopes for seamless context transfer between agents
+- Local-first state management using on-disk files instead of chat history
+- Structured spec-to-ship workflow with auditable evidence and witness levels
+- Passive handoff envelopes for seamless task resumption between different agents
 
 ---
 
@@ -2742,9 +2742,9 @@ Static linter for AI agent configs, tool descriptions, and system prompts. HERM 
 lintlang is a static analysis tool designed to identify structural and linguistic failures in AI agent configurations, system prompts, and tool definitions. It utilizes regex and AST-based heuristics rather than LLM calls to detect issues like vague tool descriptions, missing termination conditions, and schema mismatches. This approach ensures deterministic, zero-cost scans that run in approximately 2ms per file. The tool is intended for use in CI/CD pipelines to prevent agent looping and incorrect tool selection before runtime.
 
 Highlights:
-- Deterministic scans using static regex and structural heuristics
-- Zero LLM calls for cost-free and offline CI integration
-- Detects seven specific structural failure modes including H1-H7 patterns
+- Deterministic structural analysis using regex and AST without LLM calls
+- Detects seven specific failure modes including ambiguity and missing constraints
+- Supports YAML, JSON, plain text, and .prompt file formats
 
 ---
 
@@ -2756,12 +2756,12 @@ Category: Skills & Skill Registries
 Stars: 22
 Progressive MCP client with three-layer lazy loading — validates agentskills.io pattern
 
-Agentic-MCP-Skill is an experimental MCP client and daemon designed to optimize token usage through a three-layer progressive disclosure pattern. It functions by lazy-loading server metadata, tool lists, and specific schemas only when required by the agent, rather than loading all tool definitions upfront. This approach reduces context window overhead by up to 86% while providing a socket-based architecture for persistent server management. The project includes a CLI for managing MCP servers like Playwright and supports hot-reloading configurations without restarting the daemon.
+Agentic-MCP-Skill is an experimental MCP client and daemon designed to optimize token consumption through a three-layer lazy loading architecture. It implements the AgentSkills.io pattern by progressively disclosing server metadata, tool lists, and specific schemas only when requested by the agent. This approach reduces context window overhead by up to 86% compared to loading full tool definitions upfront. The project includes a socket-based daemon for persistent server connections and a CLI for managing tools like Playwright and filesystem access.
 
 Highlights:
-- Three-layer lazy loading reduces token consumption for large toolsets
-- Socket-based daemon maintains persistent connections to multiple MCP servers
-- CLI supports metadata inspection, tool listing, and schema retrieval
+- Three-layer progressive disclosure reduces context token usage
+- Socket-based daemon maintains persistent MCP server connections
+- Hot-reload support for dynamic configuration without daemon restarts
 
 ---
 
@@ -2807,12 +2807,12 @@ Category: Skills & Skill Registries
 Stars: 17
 Converts repos, docs, and developer discourse into agentskills.io-compliant skills
 
-Skill Forge is a development tool that converts source code, documentation, and developer discourse into verified instruction files for AI agents. It uses Abstract Syntax Tree (AST) analysis and documentation scraping to extract precise function signatures, parameter types, and usage patterns. Every generated instruction includes a provenance map linking back to specific file line numbers at pinned commits or source URLs to prevent model hallucinations. The tool supports lifecycle management for versioned skills and exports files compliant with the agentskills.io specification for use in agents like Cursor and Claude.
+Skill Forge is a development tool that converts source code, documentation, and developer discourse into verified instruction files for AI agents. It uses Abstract Syntax Tree (AST) analysis to extract precise function signatures and types, ensuring agents use libraries correctly without hallucinating API calls. Every generated instruction includes a provenance map linking back to specific file lines at pinned commits or documentation URLs. The project follows the agentskills.io specification, making the output compatible with AI tools like Cursor, Claude, and Copilot.
 
 Highlights:
-- Generates version-pinned AI instructions from codebases and documentation
-- Provides verifiable audit trails with file-level and line-level citations
-- Exports agentskills.io-compliant markdown and JSON for cross-platform agent use
+- Generates version-pinned skills from codebases and documentation
+- Provides verifiable audit trails with file-and-line level provenance
+- Automates skill lifecycle management including updates and transactional exports
 
 ---
 
@@ -2841,12 +2841,12 @@ Category: Deployment & Infra
 Stars: 16
 Hermes Agent sandboxed with hardware-level enforcement
 
-HermesClaw is a deployment framework that runs the Hermes Agent within NVIDIA’s OpenShell sandbox to provide hardware-level security enforcement. It utilizes kernel-level mechanisms like Landlock LSM and Seccomp BPF to restrict network egress, filesystem access, and system calls. Users can manage the agent's capabilities through predefined security policies ranging from strict inference-only modes to permissive settings for web and messaging integration. The project includes a library of over 40 built-in tools and skills for tasks such as automated research, code review, and multi-platform messaging.
+HermesClaw is a deployment framework that runs the Hermes Agent within NVIDIA’s OpenShell sandbox to provide hardware-level security enforcement. It utilizes kernel-level mechanisms like Landlock LSM and Seccomp BPF to restrict the agent's filesystem access, network egress, and system calls. Users can toggle between strict and permissive security policies to enable features like web searching or messaging integrations while maintaining an isolated environment. The project includes a library of over 40 built-in tools and skills for tasks such as automated research, code review, and multi-agent delegation.
 
 Highlights:
-- Hardware-enforced sandboxing via NVIDIA OpenShell and kernel-level security layers
-- Dynamic policy presets to control network, filesystem, and tool access
-- Supports persistent memory and 40+ built-in skills for automated workflows
+- Hardware-enforced sandboxing via NVIDIA OpenShell kernel-level security
+- Multi-layer protection blocking unauthorized network egress and filesystem writes
+- Pre-configured policy presets for strict, gateway, or permissive access
 
 ---
 
@@ -3028,12 +3028,12 @@ Category: Guides & Docs
 Stars: 8
 Step-by-step WSL2 Ubuntu setup guide for Windows users
 
-This project provides a comprehensive setup guide and automation scripts for running the Hermes Agent ecosystem locally on Windows via WSL2, Ubuntu, or macOS. It integrates the Hermes Agent with llama.cpp for local inference and Camofox for browser-based task automation. The guide enables users to deploy a full-stack agentic environment including a Web UI (HUDUI), an API server, and GPU-accelerated models like Qwen3.5. By utilizing GGUF quantization and CUDA or Metal acceleration, it allows for high-performance agent operations on consumer-grade hardware.
+This project provides a comprehensive setup guide and automation scripts for running Hermes Agent locally on Windows via WSL2 or natively on macOS. It streamlines the integration of llama.cpp, the Qwen3.5 model family, and the Camofox browser server to enable local agentic workflows with GPU acceleration. The repository includes an automated installation script that configures the environment, builds necessary backends like CUDA or Metal, and sets up the Hermes HUDUI web interface. By focusing on local execution, it allows users to maintain data privacy while utilizing browser-automation and LLM capabilities.
 
 Highlights:
-- Automated installation scripts for WSL2, Ubuntu, and Apple Silicon macOS.
-- Integrated support for llama.cpp with CUDA and Metal GPU acceleration.
-- Configures Camofox browser server for autonomous web-browsing capabilities.
+- Automated installation scripts for WSL2 Ubuntu and macOS environments
+- Supports CUDA and Metal acceleration for local LLM inference
+- Integrates Camofox browser server for agentic web-browsing tasks
 
 ---
 
@@ -3130,12 +3130,12 @@ Category: Plugins & Extensions
 Stars: 7
 The agent-to-agent marketplace, in your agent host. Your agent lists, haggles, and closes deals for you while you live your life.
 
-Klodi is an agent-to-agent marketplace plugin that enables AI agents to list, negotiate, and purchase items on behalf of their users. The system functions by deploying host-specific adapters that load a standardized skill tree, allowing agents to handle structured offers and private negotiations through a peer-to-peer marketplace. Users maintain control via markdown policy files that define floor prices and negotiation styles, ensuring sensitive strategy data remains local to the user's disk. The project provides native integrations for multiple agent hosts including Hermes, OpenClaw, and Moltis.
+Klodi is an agent-to-agent marketplace plugin that enables AI agents to autonomously list, search for, and negotiate the sale of goods on behalf of their users. The system functions by deploying host-specific adapters that load a standardized skill tree, allowing agents to manage structured offers and private negotiation channels while adhering to local markdown policy files. This architecture ensures that sensitive data like floor prices and walk-away rules remain on the user's local disk rather than being shared with the marketplace or the counterparty. It supports multiple agent environments including Hermes, OpenClaw, and Moltis, maintaining a consistent user identity and rating across all platforms.
 
 Highlights:
-- Automates listing, haggling, and closing deals between AI agents
-- Maintains private negotiation strategies and floor prices on local disk
-- Cross-platform support for Hermes, OpenClaw, Moltis, and IronClaw hosts
+- Automates listing, haggling, and closing deals via agent-to-agent negotiation
+- Keeps floor prices and private strategies on local disk only
+- Cross-platform compatibility with Hermes, OpenClaw, and Rust-based agent hosts
 
 ---
 
@@ -3198,12 +3198,12 @@ Category: Guides & Docs
 Stars: 6
 Community documentation covering deployment patterns and v0.2.0+ workflows
 
-Hermes Agent is an autonomous AI system designed to create a self-improving learning loop through persistent memory and skill acquisition. It operates by executing tool calls, managing long-running conversation context in SQLite, and automatically generating reusable skills from complex tasks. The agent supports a wide array of deployment patterns, ranging from a multi-platform messaging gateway for apps like Discord and Slack to an Ink-based TUI and IDE integrations. It features a pluggable transport layer that allows it to interface with dozens of model providers including Anthropic, AWS Bedrock, and local LLM servers.
+Hermes Agent is an autonomous AI system designed for persistent learning and multi-platform task execution. It utilizes a closed learning loop that creates and patches reusable skills while maintaining long-term memory through SQLite and FTS5 session search. The agent operates across diverse interfaces including a messaging gateway for over 20 platforms, an Ink-based TUI, and an OpenAI-compatible API server. It supports a wide range of model providers and features a plugin architecture for extending tools, transports, and backend capabilities.
 
 Highlights:
 - Autonomous skill creation and self-improvement based on task experience
-- Multi-platform gateway supporting over 20 messaging and collaboration services
-- Pluggable architecture for custom tools, providers, and transport layers
+- Unified messaging gateway supporting Telegram, Discord, Slack, and WhatsApp
+- Pluggable transport layer for native integration with 20+ model providers
 
 ---
 
@@ -3334,12 +3334,12 @@ Category: Plugins & Extensions
 Stars: 4
 OTel Plugin for Hermes Agent
 
-The hermes-otel plugin provides observability for Hermes Agent by automatically exporting execution data as OpenTelemetry spans. It captures LLM tool calls, model invocations, and API requests, sending them to OTLP-compatible backends for monitoring and debugging. The plugin supports a wide range of backends including Phoenix, Langfuse, SigNoz, and Jaeger for tracing, metrics, and logs. Users can configure multiple backends simultaneously through a YAML configuration file to fan out data across different observability platforms.
+hermes-otel is an OpenTelemetry plugin designed to provide observability for the Hermes Agent ecosystem. It automatically captures and exports LLM tool calls, model invocations, and API requests as OTel spans to compatible backends. The plugin supports single or multi-backend configurations, allowing users to stream telemetry to various tracing and monitoring platforms simultaneously.
 
 Highlights:
-- Exports LLM tool calls and model invocations as OTel spans
-- Supports multiple backends including Phoenix, Langfuse, SigNoz, and Jaeger
-- Enables parallel data export to multiple OTLP-compatible endpoints
+- Exports LLM tool calls and API requests as OTel spans
+- Supports multiple backends like Phoenix, Langfuse, and SigNoz
+- Enables parallel telemetry streaming via config.yaml
 
 ---
 
@@ -3419,12 +3419,12 @@ Category: Guides & Docs
 Stars: 2
 Community wiki with deployment patterns and recipes
 
-HermesWiki serves as the central documentation hub for the Hermes autonomous AI email agent. It provides a structured repository of information to help users understand and implement the agent's capabilities. The wiki contains specific deployment patterns and practical recipes for various email automation scenarios. By centralizing these resources, it assists developers in configuring and scaling their AI-driven communication workflows.
+HermesWiki serves as the central documentation hub for the Hermes autonomous AI email agent. It provides a structured repository of information to help users understand and implement the agent's core functionalities. The resource focuses on delivering practical deployment patterns and configuration recipes for various environments. By centralizing these guides, it assists developers in navigating the setup process and optimizing their email automation workflows.
 
 Highlights:
-- Official documentation for the Hermes autonomous email agent
-- Contains curated deployment patterns for various environments
-- Provides practical recipes for email automation use cases
+- Official documentation for the Hermes autonomous AI email agent
+- Provides specific deployment patterns for various environments
+- Contains practical configuration recipes for user implementation
 
 ---
 
@@ -3487,12 +3487,12 @@ Category: Forks & Derivatives
 Stars: 1
 Generate agentic training trajectories from real-world tasks for Hermes 4 fine-tuning
 
-This project provides a skill distillation pipeline designed to fine-tune Hermes 4 models using real-world agentic trajectories. It captures tool-use sessions from the Hermes agent and converts them into high-quality training data via a specialized environment and scoring system. The pipeline supports both offline SFT data generation and live reinforcement learning through integration with the Atropos training framework. By focusing on practical tasks like coding and system administration, it creates a feedback loop where production agent behavior informs model improvements.
+This project provides a skill distillation pipeline designed to fine-tune Hermes 4 models using real-world agentic trajectories. It captures tool-use sessions from a diverse 30-task battery and converts them into SFT-ready data or live RL signals for the Atropos training framework. The system uses a multi-dimensional reward function to score trajectories based on task completion, efficiency, and error recovery. This approach enables a closed learning loop where production-style agent interactions serve as the primary training data for future model iterations.
 
 Highlights:
-- Generates SFT-ready JSONL data from 30 diverse real-world task categories
-- Automates trajectory scoring based on completion, efficiency, and error recovery
-- Integrates with Atropos for live RL training and model evaluation
+- Generates SFT-ready JSONL data from real-world tool usage trajectories
+- Integrates with Atropos for live reinforcement learning via GRPO
+- Automated scoring based on completion, efficiency, and error recovery
 
 ---
 

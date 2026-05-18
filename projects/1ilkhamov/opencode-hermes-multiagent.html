@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/1ilkhamov/opencode-hermes-multiagent#software",
   "name": "opencode-hermes-multiagent",
-  "description": "Hermes is a multi-agent orchestration system for OpenCode AI designed to automate complex software development lifecycles. It utilizes a master orchestrator to route tasks through specialized pipelines involving 17 distinct agents focused on research, planning, implementation, quality, and infrastructure. The system enforces mandatory quality gates, such as automated reviews and security audits, while maintaining state across session checkpoints. It integrates with MCP servers and supports vario",
+  "description": "Hermes is a multi-agent orchestration system for OpenCode AI designed to automate the full software development lifecycle. It utilizes a master orchestrator to route tasks through specialized pipelines involving 17 distinct agents focused on research, planning, implementation, quality, and infrastructure. The system enforces mandatory quality gates and security audits while managing context flow between models like GPT-5.2, Gemini, and Claude. It supports complex workflows such as security-sensi",
   "url": "https://hermesatlas.com/projects/1ilkhamov/opencode-hermes-multiagent",
   "codeRepository": "https://github.com/1ilkhamov/opencode-hermes-multiagent",
   "applicationCategory": "DeveloperApplication",
@@ -129,11 +129,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Hermes is a multi-agent orchestration system for OpenCode AI designed to automate complex software development lifecycles. It utilizes a master orchestrator to route tasks through specialized pipelines involving 17 distinct agents focused on research, planning, implementation, quality, and infrastructure. The system enforces mandatory quality gates, such as automated reviews and security audits, while maintaining state across session checkpoints. It integrates with MCP servers and supports various model providers to handle tasks ranging from feature development to performance optimization.</p>
+    <p class="summary-text">Hermes is a multi-agent orchestration system for OpenCode AI designed to automate the full software development lifecycle. It utilizes a master orchestrator to route tasks through specialized pipelines involving 17 distinct agents focused on research, planning, implementation, quality, and infrastructure. The system enforces mandatory quality gates and security audits while managing context flow between models like GPT-5.2, Gemini, and Claude. It supports complex workflows such as security-sensitive feature development, automated bug investigation, and performance optimization.</p>
     <ul class="summary-highlights">
-      <li>Coordinates 17 specialized agents across six functional domains</li>
-      <li>Implements strict pipeline architectures for features, fixes, and refactoring</li>
-      <li>Enforces mandatory quality gates and security audits for code changes</li>
+      <li>Coordinates 17 specialized agents through role-specific development pipelines</li>
+      <li>Enforces mandatory reviewer and tester gates for all code changes</li>
+      <li>Integrates with MCP servers for external documentation and web fetching</li>
     </ul>
   </div>
 </section>
@@ -777,7 +777,7 @@ uvx mcp-server-fetch
         <div class="name"><span class="org">builderz-labs /</span> mission-control</div>
       </a>
       <a class="related-row" href="/projects/swarmclawai/swarmclaw">
-        <div class="stars">★ 491</div>
+        <div class="stars">★ 493</div>
         <div class="name"><span class="org">swarmclawai /</span> swarmclaw</div>
       </a>
       <a class="related-row" href="/projects/howdymary/hermes-agent-metaharness">

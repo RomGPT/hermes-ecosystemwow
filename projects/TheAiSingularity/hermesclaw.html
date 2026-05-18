@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/TheAiSingularity/hermesclaw#software",
   "name": "hermesclaw",
-  "description": "HermesClaw is a deployment framework that runs the Hermes Agent within NVIDIA’s OpenShell sandbox to provide hardware-level security enforcement. It utilizes kernel-level mechanisms like Landlock LSM and Seccomp BPF to restrict network egress, filesystem access, and system calls. Users can manage the agent's capabilities through predefined security policies ranging from strict inference-only modes to permissive settings for web and messaging integration. The project includes a library of over 40",
+  "description": "HermesClaw is a deployment framework that runs the Hermes Agent within NVIDIA’s OpenShell sandbox to provide hardware-level security enforcement. It utilizes kernel-level mechanisms like Landlock LSM and Seccomp BPF to restrict the agent's filesystem access, network egress, and system calls. Users can toggle between strict and permissive security policies to enable features like web searching or messaging integrations while maintaining an isolated environment. The project includes a library of o",
   "url": "https://hermesatlas.com/projects/TheAiSingularity/hermesclaw",
   "codeRepository": "https://github.com/TheAiSingularity/hermesclaw",
   "applicationCategory": "DeveloperApplication",
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">HermesClaw is a deployment framework that runs the Hermes Agent within NVIDIA’s OpenShell sandbox to provide hardware-level security enforcement. It utilizes kernel-level mechanisms like Landlock LSM and Seccomp BPF to restrict network egress, filesystem access, and system calls. Users can manage the agent's capabilities through predefined security policies ranging from strict inference-only modes to permissive settings for web and messaging integration. The project includes a library of over 40 built-in tools and skills for tasks such as automated research, code review, and multi-platform messaging.</p>
+    <p class="summary-text">HermesClaw is a deployment framework that runs the Hermes Agent within NVIDIA’s OpenShell sandbox to provide hardware-level security enforcement. It utilizes kernel-level mechanisms like Landlock LSM and Seccomp BPF to restrict the agent's filesystem access, network egress, and system calls. Users can toggle between strict and permissive security policies to enable features like web searching or messaging integrations while maintaining an isolated environment. The project includes a library of over 40 built-in tools and skills for tasks such as automated research, code review, and multi-agent delegation.</p>
     <ul class="summary-highlights">
-      <li>Hardware-enforced sandboxing via NVIDIA OpenShell and kernel-level security layers</li>
-      <li>Dynamic policy presets to control network, filesystem, and tool access</li>
-      <li>Supports persistent memory and 40+ built-in skills for automated workflows</li>
+      <li>Hardware-enforced sandboxing via NVIDIA OpenShell kernel-level security</li>
+      <li>Multi-layer protection blocking unauthorized network egress and filesystem writes</li>
+      <li>Pre-configured policy presets for strict, gateway, or permissive access</li>
     </ul>
   </div>
 </section>

@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/NousResearch/Hermes-Function-Calling#software",
   "name": "Hermes-Function-Calling",
-  "description": "This repository provides the implementation and examples for enabling function calling and JSON mode in Hermes 2 Pro models. It utilizes a recursive loop to generate, execute, and process tool calls based on provided schemas, primarily using the ChatML prompt format for structured dialogue. Users can define custom tools via Python functions or enforce specific output structures using Pydantic models. The included examples demonstrate practical applications in financial data retrieval, such as fe",
+  "description": "This repository provides the implementation and training data for enabling function calling and structured JSON output in Hermes LLMs, specifically optimized for the Hermes 2 Pro series. It utilizes a recursive inference loop to parse user queries, execute tools via the yfinance library, and return validated data within a ChatML-formatted dialogue. Users can define custom tools using Python decorators or generate structured data objects by integrating Pydantic schemas. The project serves as a re",
   "url": "https://hermesatlas.com/projects/NousResearch/Hermes-Function-Calling",
   "codeRepository": "https://github.com/NousResearch/Hermes-Function-Calling",
   "applicationCategory": "DeveloperApplication",
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">This repository provides the implementation and examples for enabling function calling and JSON mode in Hermes 2 Pro models. It utilizes a recursive loop to generate, execute, and process tool calls based on provided schemas, primarily using the ChatML prompt format for structured dialogue. Users can define custom tools via Python functions or enforce specific output structures using Pydantic models. The included examples demonstrate practical applications in financial data retrieval, such as fetching stock prices and fundamentals through the yfinance library.</p>
+    <p class="summary-text">This repository provides the implementation and training data for enabling function calling and structured JSON output in Hermes LLMs, specifically optimized for the Hermes 2 Pro series. It utilizes a recursive inference loop to parse user queries, execute tools via the yfinance library, and return validated data within a ChatML-formatted dialogue. Users can define custom tools using Python decorators or generate structured data objects by integrating Pydantic schemas. The project serves as a reference for building agentic workflows that require reliable financial data retrieval and strict schema adherence.</p>
     <ul class="summary-highlights">
-      <li>Enables recursive function calling and tool execution loops</li>
-      <li>Supports structured JSON mode using Pydantic schema validation</li>
-      <li>Uses ChatML format for OpenAI-compatible multi-turn interactions</li>
+      <li>Implements recursive function calling using ChatML prompt formatting</li>
+      <li>Supports structured data generation via Pydantic-based JSON mode</li>
+      <li>Includes pre-configured tools for retrieving real-time financial and stock data</li>
     </ul>
   </div>
 </section>
@@ -382,7 +382,7 @@ You are a helpful assistant that answers in JSON. Here&#39;s the json schema you
   <div>
     <div class="related-list">
       <a class="related-row" href="/projects/NousResearch/hermes-agent">
-        <div class="stars">★ 155.4K</div>
+        <div class="stars">★ 155.5K</div>
         <div class="name"><span class="org">NousResearch /</span> hermes-agent</div>
       </a>
       <a class="related-row" href="/projects/NousResearch/atropos">
@@ -398,7 +398,7 @@ You are a helpful assistant that answers in JSON. Here&#39;s the json schema you
         <div class="name"><span class="org">NousResearch /</span> hermes-paperclip-adapter</div>
       </a>
       <a class="related-row" href="/projects/NousResearch/autonovel">
-        <div class="stars">★ 950</div>
+        <div class="stars">★ 949</div>
         <div class="name"><span class="org">NousResearch /</span> autonovel</div>
       </a>
     </div>
