@@ -4,7 +4,7 @@
     "repo": "hermes-agent",
     "name": "hermes-agent",
     "description": "The self-improving AI agent that grows with you — persistent memory, auto-generated skills, 14 platforms, 6 execution backends",
-    "stars": 166507,
+    "stars": 166509,
     "url": "https://github.com/NousResearch/hermes-agent",
     "official": true,
     "category": "Core & Official"
@@ -74,7 +74,7 @@
     "repo": "hermes-desktop",
     "name": "hermes-desktop",
     "description": "Desktop companion app for installing, configuring, and chatting with Hermes Agent",
-    "stars": 6938,
+    "stars": 6939,
     "url": "https://github.com/fathah/hermes-desktop",
     "official": false,
     "category": "Workspaces & GUIs"
@@ -104,7 +104,7 @@
     "repo": "Anthropic-Cybersecurity-Skills",
     "name": "Anthropic-Cybersecurity-Skills",
     "description": "754 structured cybersecurity skills mapped to MITRE ATT&CK, NIST CSF 2.0, ATLAS, D3FEND & NIST AI RMF",
-    "stars": 8803,
+    "stars": 8805,
     "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
     "official": false,
     "category": "Skills & Skill Registries"
@@ -894,7 +894,7 @@
     "repo": "gbrain",
     "name": "gbrain",
     "description": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
-    "stars": 18831,
+    "stars": 18833,
     "url": "https://github.com/garrytan/gbrain",
     "official": false,
     "category": "Memory & Context"
@@ -974,7 +974,7 @@
     "repo": "hermes-web-ui",
     "name": "hermes-web-ui",
     "description": "Web dashboard for Hermes Agent — multi-platform AI chat, session management, scheduled jobs, usage analytics & channel configuration (Telegram, Discord, Slack, WhatsApp)",
-    "stars": 6026,
+    "stars": 6027,
     "url": "https://github.com/EKKOLearnAI/hermes-web-ui",
     "official": false,
     "category": "Workspaces & GUIs"
@@ -994,7 +994,7 @@
     "repo": "mnemosyne",
     "name": "mnemosyne",
     "description": "The Zero-Dependency, Sub-Millisecond AI Memory System for Hermes Agents",
-    "stars": 513,
+    "stars": 514,
     "url": "https://github.com/AxDSan/mnemosyne",
     "official": false,
     "category": "Memory & Context"
@@ -1164,7 +1164,7 @@
     "repo": "OpenViking",
     "name": "OpenViking",
     "description": "Open-source context database for AI agents — official Hermes Agent memory provider using viking:// URIs and tiered L0/L1/L2 loading; 91% token reduction and 43-49% task-completion gain over baseline on LoCoMo10. AGPL-3.0.",
-    "stars": 24635,
+    "stars": 24636,
     "url": "https://github.com/volcengine/OpenViking",
     "official": false,
     "category": "Memory & Context"

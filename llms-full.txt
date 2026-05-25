@@ -1572,7 +1572,7 @@ Skip to content
 URL: https://hermesatlas.com/projects/NousResearch/hermes-agent
 GitHub: https://github.com/NousResearch/hermes-agent
 Category: Core & Official
-Stars: 166,507
+Stars: 166,509
 Official: Yes (maintained by Nous Research)
 The self-improving AI agent that grows with you — persistent memory, auto-generated skills, 14 platforms, 6 execution backends
 
@@ -1607,7 +1607,7 @@ Highlights:
 URL: https://hermesatlas.com/projects/volcengine/OpenViking
 GitHub: https://github.com/volcengine/OpenViking
 Category: Memory & Context
-Stars: 24,635
+Stars: 24,636
 Open-source context database for AI agents — official Hermes Agent memory provider using viking:// URIs and tiered L0/L1/L2 loading; 91% token reduction and 43-49% task-completion gain over baseline on LoCoMo10. AGPL-3.0.
 
 OpenViking is an open-source context database designed to manage the fragmented memory, resources, and skills required by AI agents. It utilizes a filesystem paradigm to organize agent data, replacing traditional flat vector storage with a structured directory-based retrieval system. The platform implements a tiered L0/L1/L2 loading architecture to optimize token usage and provides visual trajectories for debugging retrieval logic. As the official memory provider for Hermes Agent, it automates session management by extracting long-term memories from ongoing interactions.
@@ -1641,7 +1641,7 @@ Highlights:
 URL: https://hermesatlas.com/projects/garrytan/gbrain
 GitHub: https://github.com/garrytan/gbrain
 Category: Memory & Context
-Stars: 18,831
+Stars: 18,833
 Garry's Opinionated OpenClaw/Hermes Agent Brain
 
 GBrain is an autonomous memory and synthesis layer designed to serve as the institutional or personal knowledge base for AI agents. It combines a self-wiring knowledge graph with a synthesis engine to provide cited prose answers and gap analysis rather than simple document retrieval. The system automatically extracts entity relationships and runs background processes to consolidate memory from diverse sources like meetings, emails, and notes. It supports multi-user environments with scoped data access and integrates directly with Hermes and OpenClaw via the Model Context Protocol.
@@ -1676,7 +1676,7 @@ Highlights:
 URL: https://hermesatlas.com/projects/mukul975/Anthropic-Cybersecurity-Skills
 GitHub: https://github.com/mukul975/Anthropic-Cybersecurity-Skills
 Category: Skills & Skill Registries
-Stars: 8,803
+Stars: 8,805
 754 structured cybersecurity skills mapped to MITRE ATT&CK, NIST CSF 2.0, ATLAS, D3FEND & NIST AI RMF
 
 Anthropic Cybersecurity Skills is an open-source library of 754 structured skills designed to provide AI agents with the domain-specific knowledge of a senior security analyst. Each skill follows the agentskills.io standard, utilizing YAML frontmatter and structured Markdown to define step-by-step execution workflows and decision-making logic. The library maps every skill across five major frameworks, including MITRE ATT&CK, NIST CSF 2.0, and the NIST AI RMF. It is compatible with over 26 platforms such as Claude Code, GitHub Copilot, and Hermes Agent for use cases in threat hunting, digital forensics, and cloud security.
@@ -1710,7 +1710,7 @@ Highlights:
 URL: https://hermesatlas.com/projects/fathah/hermes-desktop
 GitHub: https://github.com/fathah/hermes-desktop
 Category: Workspaces & GUIs
-Stars: 6,938
+Stars: 6,939
 Desktop companion app for installing, configuring, and chatting with Hermes Agent
 
 Hermes Desktop is a native GUI companion for the Hermes Agent that simplifies the installation and management of the self-improving AI assistant. The application automates dependency resolution and environment setup, allowing users to interact with the agent through a streaming chat interface rather than a CLI. It provides centralized control over 14 toolsets, 16 messaging gateways, and complex features like cron-based task scheduling and memory management. Users can run the agent on a local backend or connect to remote API servers while managing multiple isolated profiles and model providers.
@@ -1727,7 +1727,7 @@ Highlights:
 URL: https://hermesatlas.com/projects/EKKOLearnAI/hermes-web-ui
 GitHub: https://github.com/EKKOLearnAI/hermes-web-ui
 Category: Workspaces & GUIs
-Stars: 6,026
+Stars: 6,027
 Web dashboard for Hermes Agent — multi-platform AI chat, session management, scheduled jobs, usage analytics & channel configuration (Telegram, Discord, Slack, WhatsApp)
 
 Hermes Web UI is a full-featured dashboard designed to manage and monitor Hermes Agent instances through a responsive web interface. It facilitates real-time AI chat streaming via Socket.IO and provides a unified configuration hub for eight communication platforms, including Telegram, Discord, and WhatsApp. The system includes local SQLite session management, usage analytics for cost tracking, and a multi-profile architecture for isolated agent configurations. Users can also manage scheduled cron jobs, browse remote files, and access an integrated web terminal for direct system interaction.
@@ -2175,7 +2175,7 @@ Highlights:
 URL: https://hermesatlas.com/projects/AxDSan/mnemosyne
 GitHub: https://github.com/AxDSan/mnemosyne
 Category: Memory & Context
-Stars: 513
+Stars: 514
 The Zero-Dependency, Sub-Millisecond AI Memory System for Hermes Agents
 
 Mnemosyne is a local-first memory system designed for the Hermes Agent framework to provide persistent storage for conversations and knowledge without cloud dependencies. It utilizes an SQLite backend with native vector search and full-text search to enable sub-millisecond retrieval and storage. The system features the MEMORIA Fact Engine for structured fact extraction and recursive gap analysis to support multi-hop reasoning. It offers a fully private, offline-capable alternative to cloud-based memory providers with built-in tools for importing data from other platforms.
