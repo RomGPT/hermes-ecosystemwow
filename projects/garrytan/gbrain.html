@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/garrytan/gbrain#software",
   "name": "gbrain",
-  "description": "GBrain is an autonomous memory and synthesis layer designed to serve as the institutional or personal knowledge base for AI agents. It combines a self-wiring knowledge graph with a synthesis engine to provide cited prose answers and gap analysis rather than simple document retrieval. The system automatically extracts entity relationships and runs background processes to consolidate memory from diverse sources like meetings, emails, and notes. It supports multi-user environments with scoped data ",
+  "description": "GBrain is a memory and context layer designed to provide AI agents with a synthesized institutional memory. It combines a self-wiring knowledge graph for entity relationship extraction with a synthesis layer that generates cited prose and identifies information gaps. The system operates as a background daemon that autonomously ingests, enriches, and consolidates data from various sources like meetings and emails. It supports multi-user environments with scoped data access and integrates directly",
   "url": "https://hermesatlas.com/projects/garrytan/gbrain",
   "codeRepository": "https://github.com/garrytan/gbrain",
   "applicationCategory": "UtilitiesApplication",
@@ -47,13 +47,13 @@
     "name": "garrytan",
     "url": "https://github.com/garrytan"
   },
-  "dateModified": "2026-05-25T06:08:54.000Z",
+  "dateModified": "2026-05-26T03:00:03.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 18833
+    "userInteractionCount": 19029
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -112,11 +112,11 @@
   <p class="project-desc">Garry's Opinionated OpenClaw/Hermes Agent Brain</p>
 
   <div class="meta-row">
-    <span class="stars">★ 18.8K</span>
+    <span class="stars">★ 19.0K</span>
     <span><span class="meta-label">lang</span>TypeScript</span>
     <span><span class="meta-label">license</span>MIT</span>
     
-    <span><span class="meta-label">updated</span>2026-05-25</span>
+    <span><span class="meta-label">updated</span>2026-05-26</span>
   </div>
 
   <div class="actions">
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">GBrain is an autonomous memory and synthesis layer designed to serve as the institutional or personal knowledge base for AI agents. It combines a self-wiring knowledge graph with a synthesis engine to provide cited prose answers and gap analysis rather than simple document retrieval. The system automatically extracts entity relationships and runs background processes to consolidate memory from diverse sources like meetings, emails, and notes. It supports multi-user environments with scoped data access and integrates directly with Hermes and OpenClaw via the Model Context Protocol.</p>
+    <p class="summary-text">GBrain is a memory and context layer designed to provide AI agents with a synthesized institutional memory. It combines a self-wiring knowledge graph for entity relationship extraction with a synthesis layer that generates cited prose and identifies information gaps. The system operates as a background daemon that autonomously ingests, enriches, and consolidates data from various sources like meetings and emails. It supports multi-user environments with scoped data access and integrates directly with Hermes and OpenClaw via MCP.</p>
     <ul class="summary-highlights">
-      <li>Synthesizes cited prose answers across people, companies, and ideas.</li>
       <li>Self-wiring knowledge graph extracts entity relationships without LLM calls.</li>
-      <li>Automated background cycles for memory consolidation and data enrichment.</li>
+      <li>Synthesis layer provides cited answers and explicit gap analysis.</li>
+      <li>Supports local PGLite deployment or scalable Postgres and Supabase backends.</li>
     </ul>
   </div>
 </section>
@@ -321,6 +321,7 @@ gbrain schema use my-pack           # activate
 <li><strong>Voice</strong>: Phone calls create brain pages via Twilio + OpenAI Realtime (or DIY STT+LLM+TTS). Setup recipe: <a href="https://github.com/garrytan/gbrain/blob/main/recipes/twilio-voice-brain.md"><code>recipes/twilio-voice-brain.md</code></a>.</li>
 <li><strong>Email + calendar</strong>: webhook handlers that route to brain signals. <a href="https://github.com/garrytan/gbrain/blob/main/docs/integrations/meeting-webhooks.md"><code>docs/integrations/meeting-webhooks.md</code></a>.</li>
 <li><strong>Embedding providers</strong>: 16 recipes covering OpenAI (default fallback), OpenRouter, Voyage, ZeroEntropy (default), Google Gemini, Azure OpenAI, MiniMax, Alibaba DashScope, Zhipu, Ollama (local), llama.cpp llama-server (local), LiteLLM proxy. Pricing matrix + decision tree in <a href="https://github.com/garrytan/gbrain/blob/main/docs/integrations/embedding-providers.md"><code>docs/integrations/embedding-providers.md</code></a>.</li>
+<li><strong>Rerankers</strong>: ZeroEntropy <code>zerank-2</code> hosted (default in <code>tokenmax</code> mode) plus the v0.40.6.1 <code>llama-server-reranker</code> recipe for fully-local cross-encoder rerank via llama.cpp — runs Qwen3-Reranker or self-hosted ZeroEntropy weights against the same <code>gateway.rerank()</code> seam. Setup walkthrough in <a href="https://github.com/garrytan/gbrain/blob/main/docs/ai-providers/llama-server-reranker.md"><code>docs/ai-providers/llama-server-reranker.md</code></a>.</li>
 <li><strong>Credential gateway</strong>: vault-aware secret distribution. <a href="https://github.com/garrytan/gbrain/blob/main/docs/integrations/credential-gateway.md"><code>docs/integrations/credential-gateway.md</code></a>.</li>
 <li><strong>MCP clients</strong>: every major MCP client is supported. <a href="docs/mcp/"><code>docs/mcp/</code></a> per-client setup.</li>
 </ul>
@@ -371,7 +372,7 @@ gbrain schema use my-pack           # activate
         <div class="name"><span class="org">mem0ai /</span> mem0</div>
       </a>
       <a class="related-row" href="/projects/vectorize-io/hindsight">
-        <div class="stars">★ 14.5K</div>
+        <div class="stars">★ 14.6K</div>
         <div class="name"><span class="org">vectorize-io /</span> hindsight</div>
       </a>
       <a class="related-row" href="/projects/greyhaven-ai/autocontext">
@@ -379,15 +380,15 @@ gbrain schema use my-pack           # activate
         <div class="name"><span class="org">greyhaven-ai /</span> autocontext</div>
       </a>
       <a class="related-row" href="/projects/elkimek/honcho-self-hosted">
-        <div class="stars">★ 261</div>
+        <div class="stars">★ 263</div>
         <div class="name"><span class="org">elkimek /</span> honcho-self-hosted</div>
       </a>
       <a class="related-row" href="/projects/yoloshii/ClawMem">
-        <div class="stars">★ 173</div>
+        <div class="stars">★ 174</div>
         <div class="name"><span class="org">yoloshii /</span> ClawMem</div>
       </a>
       <a class="related-row" href="/projects/plur-ai/plur">
-        <div class="stars">★ 138</div>
+        <div class="stars">★ 140</div>
         <div class="name"><span class="org">plur-ai /</span> plur</div>
       </a>
       <a class="related-row" href="/projects/amanning3390/flowstate-qmd">
@@ -395,7 +396,7 @@ gbrain schema use my-pack           # activate
         <div class="name"><span class="org">amanning3390 /</span> flowstate-qmd</div>
       </a>
       <a class="related-row" href="/projects/stephenschoettler/hermes-lcm">
-        <div class="stars">★ 585</div>
+        <div class="stars">★ 591</div>
         <div class="name"><span class="org">stephenschoettler /</span> hermes-lcm</div>
       </a>
     </div>

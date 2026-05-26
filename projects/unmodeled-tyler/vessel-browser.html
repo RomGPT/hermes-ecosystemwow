@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/unmodeled-tyler/vessel-browser#software",
   "name": "vessel-browser",
-  "description": "Vessel is an open-source, Chromium-based browser designed specifically for autonomous agent control rather than traditional human-centric browsing. It provides a persistent runtime with durable state and a visible interface that allows humans to audit, intervene, and redirect long-running agent workflows. The browser integrates with external agent harnesses via the Model Context Protocol (MCP) and includes built-in tools for page schema inference, action undo/rollback, and agent-meaningful bookm",
+  "description": "Vessel is an open-source, Chromium-based browser designed specifically for autonomous agent control rather than traditional human-first navigation. It operates as a persistent runtime where agents drive workflows via the Model Context Protocol (MCP) while humans monitor and intervene through a visible supervisory interface. The browser maintains durable state through named sessions, annotated checkpoints, and an action undo feature that rolls back the session to a state prior to the last agent a",
   "url": "https://hermesatlas.com/projects/unmodeled-tyler/vessel-browser",
   "codeRepository": "https://github.com/unmodeled-tyler/vessel-browser",
   "applicationCategory": "DeveloperApplication",
@@ -47,7 +47,7 @@
     "name": "unmodeled-tyler",
     "url": "https://github.com/unmodeled-tyler"
   },
-  "dateModified": "2026-05-24T16:17:14.000Z",
+  "dateModified": "2026-05-25T23:51:02.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
@@ -116,7 +116,7 @@
     <span><span class="meta-label">lang</span>TypeScript</span>
     <span><span class="meta-label">license</span>MIT</span>
     
-    <span><span class="meta-label">updated</span>2026-05-24</span>
+    <span><span class="meta-label">updated</span>2026-05-25</span>
   </div>
 
   <div class="actions">
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Vessel is an open-source, Chromium-based browser designed specifically for autonomous agent control rather than traditional human-centric browsing. It provides a persistent runtime with durable state and a visible interface that allows humans to audit, intervene, and redirect long-running agent workflows. The browser integrates with external agent harnesses via the Model Context Protocol (MCP) and includes built-in tools for page schema inference, action undo/rollback, and agent-meaningful bookmarks. It is optimized for persistent web agents that require a real browser environment instead of a headless, stateless execution model.</p>
+    <p class="summary-text">Vessel is an open-source, Chromium-based browser designed specifically for autonomous agent control rather than traditional human-first navigation. It operates as a persistent runtime where agents drive workflows via the Model Context Protocol (MCP) while humans monitor and intervene through a visible supervisory interface. The browser maintains durable state through named sessions, annotated checkpoints, and an action undo feature that rolls back the session to a state prior to the last agent action. It integrates with various LLM providers and agent harnesses like Hermes Agent to support long-running, auditable web tasks.</p>
     <ul class="summary-highlights">
-      <li>Provides a human-visible UI for auditing and supervising autonomous agents</li>
-      <li>Integrates with MCP clients like Hermes Agent for external control</li>
-      <li>Maintains durable state with named sessions, checkpoints, and action rollback</li>
+      <li>Provides a visible UI for human supervision of autonomous agents</li>
+      <li>Exposes browser control and page visibility via MCP endpoints</li>
+      <li>Maintains durable state with session checkpoints and action rollback</li>
     </ul>
   </div>
 </section>
@@ -181,7 +181,7 @@ vessel-browser
 <pre><code class="language-bash">npx @quanta-intellect/vessel-browser
 </code></pre>
 <h4>Source Install</h4>
-<pre><code class="language-bash">curl -fsSL https://raw.githubusercontent.com/unmodeled-tyler/quanta-vessel-browser/main/scripts/install.sh | bash
+<pre><code class="language-bash">curl -fsSL https://raw.githubusercontent.com/unmodeled-tyler/vessel-browser/main/scripts/install.sh | bash
 </code></pre>
 <h4>Development From Source</h4>
 <p>Vessel development uses Node.js 22. If you use <code>fnm</code>, run <code>fnm use</code> from the repo root to pick up <code>.node-version</code>.</p>
@@ -192,11 +192,11 @@ npm run dev
 <p>If you want extra local AI tracing in development, create an optional <code>src/main/telemetry/trace-logger.local.cjs</code> file. Vessel will load it only in local dev builds, and packaged production builds ignore it.</p>
 <h4>Why Vessel?</h4>
 <p>Most browser automation stacks are either headless, stateless, or designed around a human as the primary operator. Vessel is built around the opposite model: the browser is the agent&#39;s operating surface, and the human stays in the loop through a visible interface with clear supervisory controls.</p>
-<img width="1280" height="800" alt="@quanta-intellectvessel-browser_2026-03-17_200224_6613" src="https://github.com/user-attachments/assets/8e208ee1-cb89-4318-87a2-9561a7d9aecf" />
-<img width="1280" height="800" alt="vessel_2026-03-16_144201_7545" src="https://github.com/user-attachments/assets/da7b28ea-6c5f-4aa7-909e-0a255c80d508" />
-<img width="1280" height="800" alt="@quanta-intellectvessel-browser_2026-03-17_195754_6624" src="https://github.com/user-attachments/assets/3b3d2033-5a59-4806-bbc1-359efb7b43a9" />
+<img width="1280" height="800" alt="Vessel Browser supervisor sidebar showing agent workflow controls" src="https://github.com/user-attachments/assets/8e208ee1-cb89-4318-87a2-9561a7d9aecf" />
+<img width="1280" height="800" alt="Vessel Browser command bar and agent-driven page interaction" src="https://github.com/user-attachments/assets/da7b28ea-6c5f-4aa7-909e-0a255c80d508" />
+<img width="1280" height="800" alt="Vessel Browser persistent session and checkpoint interface" src="https://github.com/user-attachments/assets/3b3d2033-5a59-4806-bbc1-359efb7b43a9" />
 
-<img width="1280" height="800" alt="vessel_2026-03-17_145154_5389" src="https://github.com/user-attachments/assets/b1c08d6c-bcdf-4c9a-8429-a71a23a61903" />
+<img width="1280" height="800" alt="Vessel Browser integrated chat assistant with browser tools" src="https://github.com/user-attachments/assets/b1c08d6c-bcdf-4c9a-8429-a71a23a61903" />
 
 <p>Vessel is built for persistent web agents that need a real browser, durable state, and a human-visible interface. The agent is the primary operator. The human follows along in the live browser UI, audits what the agent is doing, and steers when needed.</p>
 <p>Today, Vessel provides the browser shell, page visibility, and supervisory surfaces needed to support that model. The long-term goal is not &quot;a browser with AI features,&quot; but a browser runtime for autonomous agents with a clear supervisory experience for humans.</p>
@@ -727,15 +727,15 @@ vessel-browser-launch --dry-run
         <div class="name"><span class="org">junhoyeo /</span> tokscale</div>
       </a>
       <a class="related-row" href="/projects/joeynyc/hermes-skins">
-        <div class="stars">★ 392</div>
+        <div class="stars">★ 396</div>
         <div class="name"><span class="org">joeynyc /</span> hermes-skins</div>
       </a>
       <a class="related-row" href="/projects/AlexAI-MCP/hermes-CCC">
-        <div class="stars">★ 107</div>
+        <div class="stars">★ 108</div>
         <div class="name"><span class="org">AlexAI-MCP /</span> hermes-CCC</div>
       </a>
       <a class="related-row" href="/projects/Abruptive/Ankh.md">
-        <div class="stars">★ 56</div>
+        <div class="stars">★ 58</div>
         <div class="name"><span class="org">Abruptive /</span> Ankh.md</div>
       </a>
       <a class="related-row" href="/projects/roli-lpci/lintlang">
@@ -743,7 +743,7 @@ vessel-browser-launch --dry-run
         <div class="name"><span class="org">roli-lpci /</span> lintlang</div>
       </a>
       <a class="related-row" href="/projects/0xNyk/openclaw-to-hermes">
-        <div class="stars">★ 30</div>
+        <div class="stars">★ 31</div>
         <div class="name"><span class="org">0xNyk /</span> openclaw-to-hermes</div>
       </a>
       <a class="related-row" href="/projects/42-evey/evey-setup">

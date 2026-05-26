@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/junhoyeo/tokscale#software",
   "name": "tokscale",
-  "description": "Tokscale is a high-performance CLI tool and visualization dashboard designed to track token consumption and costs across various AI coding agents. It works by scanning local data directories, databases, and session files from supported clients to aggregate usage statistics into a native Rust TUI or a web-based dashboard. The tool provides detailed daily summaries, model-specific breakdowns, and a 3D contribution graph for visualizing activity. It supports a wide range of integrations including H",
+  "description": "Tokscale is a high-performance CLI tool and visualization dashboard designed to track token usage and financial costs across various AI coding agents. It works by scanning local data directories, databases, and session logs from supported clients to aggregate consumption metrics into a unified interface. The tool features a native Rust TUI for real-time monitoring and a web-based dashboard for long-term analysis. It supports a wide range of integrations including Hermes Agent, Claude Code, OpenC",
   "url": "https://hermesatlas.com/projects/junhoyeo/tokscale",
   "codeRepository": "https://github.com/junhoyeo/tokscale",
   "applicationCategory": "DeveloperApplication",
@@ -47,13 +47,13 @@
     "name": "junhoyeo",
     "url": "https://github.com/junhoyeo"
   },
-  "dateModified": "2026-05-25T05:21:05.000Z",
+  "dateModified": "2026-05-26T04:32:36.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 3193
+    "userInteractionCount": 3208
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -116,7 +116,7 @@
     <span><span class="meta-label">lang</span>Rust</span>
     <span><span class="meta-label">license</span>MIT</span>
     
-    <span><span class="meta-label">updated</span>2026-05-25</span>
+    <span><span class="meta-label">updated</span>2026-05-26</span>
   </div>
 
   <div class="actions">
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Tokscale is a high-performance CLI tool and visualization dashboard designed to track token consumption and costs across various AI coding agents. It works by scanning local data directories, databases, and session files from supported clients to aggregate usage statistics into a native Rust TUI or a web-based dashboard. The tool provides detailed daily summaries, model-specific breakdowns, and a 3D contribution graph for visualizing activity. It supports a wide range of integrations including Hermes Agent, Claude Code, OpenClaw, and GitHub Copilot CLI.</p>
+    <p class="summary-text">Tokscale is a high-performance CLI tool and visualization dashboard designed to track token usage and financial costs across various AI coding agents. It works by scanning local data directories, databases, and session logs from supported clients to aggregate consumption metrics into a unified interface. The tool features a native Rust TUI for real-time monitoring and a web-based dashboard for long-term analysis. It supports a wide range of integrations including Hermes Agent, Claude Code, OpenClaw, and GitHub Copilot CLI.</p>
     <ul class="summary-highlights">
-      <li>Tracks token usage and costs across multiple AI coding agents</li>
-      <li>Native Rust TUI for high-performance local data visualization</li>
-      <li>Supports Hermes Agent, Claude Code, Gemini, and Cursor IDE</li>
+      <li>Tracks token consumption and costs across multiple AI coding agents</li>
+      <li>Features a native Rust TUI for cross-platform usage monitoring</li>
+      <li>Supports Hermes Agent, Claude Code, Gemini, and Cursor integrations</li>
     </ul>
   </div>
 </section>
@@ -375,6 +375,12 @@ I drop new open-source work every week. Don&#39;t miss the next one.</p>
 <td>✅ Yes</td>
 </tr>
 <tr>
+<td>Kiro</td>
+<td>Kiro</td>
+<td><code>~/.kiro/sessions/cli/*.json</code> (+ <code>*.jsonl</code>) and <code>~/.local/share/kiro-cli/data.sqlite3</code> (macOS: <code>~/Library/Application Support/kiro-cli/data.sqlite3</code>)</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
 <td><img width="48px" src="https://raw.githubusercontent.com/junhoyeo/tokscale/main/.github/assets/client-synthetic.png" alt="Synthetic" /></td>
 <td><a href="https://synthetic.new/">Synthetic</a></td>
 <td>Re-attributed from other sources via <code>hf:</code> model prefix or <code>synthetic</code> provider (+ <a href="https://github.com/synthetic-lab/octofriend">Octofriend</a>: <code>~/.local/share/octofriend/sqlite.db</code>)</td>
@@ -462,7 +468,7 @@ I drop new open-source work every week. Don&#39;t miss the next one.</p>
 <li>Zero flicker rendering</li>
 </ul>
 </li>
-<li><strong>Multi-platform support</strong> - Track usage across OpenCode, Claude Code, Codex CLI, Copilot CLI, Cursor IDE, Gemini CLI, Amp, Codebuff, Droid, OpenClaw, Hermes Agent, Pi, Kimi CLI, Qwen CLI, Roo Code, Kilo, Mux, Kilo CLI, Crush, Goose, Antigravity, Trae, and Synthetic</li>
+<li><strong>Multi-platform support</strong> - Track usage across OpenCode, Claude Code, Codex CLI, Copilot CLI, Cursor IDE, Gemini CLI, Amp, Codebuff, Droid, OpenClaw, Hermes Agent, Pi, Kimi CLI, Qwen CLI, Roo Code, Kilo, Mux, Kilo CLI, Crush, Goose, Antigravity, Zed, Kiro, Trae, and Synthetic</li>
 <li><strong>Real-time pricing</strong> - Fetches current pricing from LiteLLM with 1-hour disk cache; automatic OpenRouter fallback and Cursor model pricing for newly released models</li>
 <li><strong>Detailed breakdowns</strong> - Input, output, cache read/write, and reasoning token tracking</li>
 <li><strong>Native Rust core</strong> - All parsing and aggregation done in Rust for 10x faster processing</li>
@@ -737,7 +743,7 @@ tokscale --client synthetic
 # Combine with other filters
 tokscale --client opencode,claude --week --json
 </code></pre>
-<p>Possible values: <code>opencode</code>, <code>claude</code>, <code>codex</code>, <code>copilot</code>, <code>gemini</code>, <code>cursor</code>, <code>amp</code>, <code>codebuff</code>, <code>droid</code>, <code>openclaw</code>, <code>hermes</code>, <code>pi</code>, <code>kimi</code>, <code>qwen</code>, <code>roocode</code>, <code>kilocode</code>, <code>kilo</code>, <code>mux</code>, <code>crush</code>, <code>goose</code>, <code>antigravity</code>, <code>trae</code>, <code>synthetic</code>.</p>
+<p>Possible values: <code>opencode</code>, <code>claude</code>, <code>codex</code>, <code>copilot</code>, <code>gemini</code>, <code>cursor</code>, <code>amp</code>, <code>codebuff</code>, <code>droid</code>, <code>openclaw</code>, <code>hermes</code>, <code>pi</code>, <code>kimi</code>, <code>qwen</code>, <code>roocode</code>, <code>kilocode</code>, <code>kilo</code>, <code>mux</code>, <code>crush</code>, <code>goose</code>, <code>antigravity</code>, <code>zed</code>, <code>kiro</code>, <code>trae</code>, <code>synthetic</code>.</p>
 <blockquote>
 <p><strong>Deprecation notice</strong>: The legacy single-client flags (<code>--opencode</code>, <code>--claude</code>, <code>--codex</code>, etc.) still work for backward compatibility but are hidden from <code>--help</code> and will be removed in the next major release. Migrate to <code>--client</code> whenever possible. Running tokscale in an interactive terminal will print a one-line warning when a legacy flag is used.</p>
 </blockquote>
@@ -1271,7 +1277,7 @@ tokscale sources --json
 <li><strong>Interactive tooltips</strong>: Hover for detailed daily breakdowns</li>
 <li><strong>Day breakdown panel</strong>: Click to see per-source and per-model details</li>
 <li><strong>Year filtering</strong>: Navigate between years</li>
-<li><strong>Source filtering</strong>: Filter by platform (OpenCode, Claude, Codex, Copilot, Cursor, Gemini, Amp, Codebuff, Droid, OpenClaw, Hermes Agent, Pi, Kimi, Qwen, Roo Code, Kilo, Mux, Kilo CLI, Crush, Goose, Antigravity, Trae, Synthetic)</li>
+<li><strong>Source filtering</strong>: Filter by platform (OpenCode, Claude, Codex, Copilot, Cursor, Gemini, Amp, Codebuff, Droid, OpenClaw, Hermes Agent, Pi, Kimi, Qwen, Roo Code, Kilo, Mux, Kilo CLI, Crush, Goose, Antigravity, Zed, Kiro, Trae, Synthetic)</li>
 <li><strong>Stats panel</strong>: Total cost, tokens, active days, streaks</li>
 <li><strong>FOUC prevention</strong>: Theme applied before React hydrates (no flash)</li>
 </ul>
@@ -1465,22 +1471,9 @@ cd packages/cli &amp;&amp; bun src/index.ts --light
 </tr>
 <tr>
 <td><code>bun run build:core</code></td>
-<td>Build native Rust module (release)</td>
-</tr>
-<tr>
-<td><code>bun run build:cli</code></td>
-<td>Build CLI TypeScript to dist/</td>
-</tr>
-<tr>
-<td><code>bun run build</code></td>
-<td>Build both core and CLI</td>
-</tr>
-<tr>
-<td><code>bun run dev:frontend</code></td>
-<td>Run frontend development server</td>
+<td>Build native R</td>
 </tr>
 </tbody></table>
-<p>**Package-specific scripts</p>
 <hr>
 <p><em>README truncated. <a href="https://github.com/junhoyeo/tokscale#readme">Continue reading on GitHub</a></em></p>
 
@@ -1495,11 +1488,11 @@ cd packages/cli &amp;&amp; bun src/index.ts --light
   <div>
     <div class="related-list">
       <a class="related-row" href="/projects/joeynyc/hermes-skins">
-        <div class="stars">★ 392</div>
+        <div class="stars">★ 396</div>
         <div class="name"><span class="org">joeynyc /</span> hermes-skins</div>
       </a>
       <a class="related-row" href="/projects/AlexAI-MCP/hermes-CCC">
-        <div class="stars">★ 107</div>
+        <div class="stars">★ 108</div>
         <div class="name"><span class="org">AlexAI-MCP /</span> hermes-CCC</div>
       </a>
       <a class="related-row" href="/projects/unmodeled-tyler/vessel-browser">
@@ -1507,7 +1500,7 @@ cd packages/cli &amp;&amp; bun src/index.ts --light
         <div class="name"><span class="org">unmodeled-tyler /</span> vessel-browser</div>
       </a>
       <a class="related-row" href="/projects/Abruptive/Ankh.md">
-        <div class="stars">★ 56</div>
+        <div class="stars">★ 58</div>
         <div class="name"><span class="org">Abruptive /</span> Ankh.md</div>
       </a>
       <a class="related-row" href="/projects/roli-lpci/lintlang">
@@ -1515,7 +1508,7 @@ cd packages/cli &amp;&amp; bun src/index.ts --light
         <div class="name"><span class="org">roli-lpci /</span> lintlang</div>
       </a>
       <a class="related-row" href="/projects/0xNyk/openclaw-to-hermes">
-        <div class="stars">★ 30</div>
+        <div class="stars">★ 31</div>
         <div class="name"><span class="org">0xNyk /</span> openclaw-to-hermes</div>
       </a>
       <a class="related-row" href="/projects/42-evey/evey-setup">

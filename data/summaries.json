@@ -805,18 +805,17 @@
     "auditedAt": "2026-05-25T09:16:44.746Z"
   },
   "junhoyeo/tokscale": {
-    "summary": "Tokscale is a high-performance CLI tool and visualization dashboard designed to track token consumption and costs across various AI coding agents. It works by scanning local data directories, databases, and session files from supported clients to aggregate usage statistics into a native Rust TUI or a web-based dashboard. The tool provides detailed daily summaries, model-specific breakdowns, and a 3D contribution graph for visualizing activity. It supports a wide range of integrations including Hermes Agent, Claude Code, OpenClaw, and GitHub Copilot CLI.",
+    "summary": "Tokscale is a high-performance CLI tool and visualization dashboard designed to track token usage and financial costs across various AI coding agents. It works by scanning local data directories, databases, and session logs from supported clients to aggregate consumption metrics into a unified interface. The tool features a native Rust TUI for real-time monitoring and a web-based dashboard for long-term analysis. It supports a wide range of integrations including Hermes Agent, Claude Code, OpenClaw, and GitHub Copilot CLI.",
     "highlights": [
-      "Tracks token usage and costs across multiple AI coding agents",
-      "Native Rust TUI for high-performance local data visualization",
-      "Supports Hermes Agent, Claude Code, Gemini, and Cursor IDE"
+      "Tracks token consumption and costs across multiple AI coding agents",
+      "Features a native Rust TUI for cross-platform usage monitoring",
+      "Supports Hermes Agent, Claude Code, Gemini, and Cursor integrations"
     ],
-    "readmeHash": "9af3a83e813d773876c5580ec3c3bdb222e3b1666f628030bac99ea20cd168da",
-    "generatedAt": "2026-05-25T08:03:22.653Z",
+    "readmeHash": "cce2eae232ec51c21b3204ffa607bbf03c0aa3e7314a9fbefd52af2e2f0d9a9b",
+    "generatedAt": "2026-05-26T07:46:52.796Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
-    "audit": "pass",
-    "auditedAt": "2026-05-25T09:16:47.228Z"
+    "audit": "pass"
   },
   "joeynyc/hermes-skins": {
     "summary": "Hermes Skins is a collection of community-contributed visual themes for the Hermes CLI agent. The project uses YAML configuration files to customize terminal aesthetics including banner colors, ASCII art, spinner animations, and branding text without altering the agent's underlying logic. Users can apply themes for a session or permanently by placing files in a local directory, with missing values automatically inheriting from a default template. Available styles range from retro computing and cyberpunk aesthetics to minimalist monochrome and anime-inspired designs.",
@@ -846,14 +845,14 @@
     "auditedAt": "2026-05-25T09:16:53.130Z"
   },
   "unmodeled-tyler/vessel-browser": {
-    "summary": "Vessel is an open-source, Chromium-based browser designed specifically for autonomous agent control rather than traditional human-centric browsing. It provides a persistent runtime with durable state and a visible interface that allows humans to audit, intervene, and redirect long-running agent workflows. The browser integrates with external agent harnesses via the Model Context Protocol (MCP) and includes built-in tools for page schema inference, action undo/rollback, and agent-meaningful bookmarks. It is optimized for persistent web agents that require a real browser environment instead of a headless, stateless execution model.",
+    "summary": "Vessel is an open-source, Chromium-based browser designed specifically for autonomous agent control rather than traditional human-first navigation. It operates as a persistent runtime where agents drive workflows via the Model Context Protocol (MCP) while humans monitor and intervene through a visible supervisory interface. The browser maintains durable state through named sessions, annotated checkpoints, and an action undo feature that rolls back the session to a state prior to the last agent action. It integrates with various LLM providers and agent harnesses like Hermes Agent to support long-running, auditable web tasks.",
     "highlights": [
-      "Provides a human-visible UI for auditing and supervising autonomous agents",
-      "Integrates with MCP clients like Hermes Agent for external control",
-      "Maintains durable state with named sessions, checkpoints, and action rollback"
+      "Provides a visible UI for human supervision of autonomous agents",
+      "Exposes browser control and page visibility via MCP endpoints",
+      "Maintains durable state with session checkpoints and action rollback"
     ],
-    "readmeHash": "1a295e147508e1e4c89f35ca61d2bf33a9555b06b034dd3487f5bd6d96197d96",
-    "generatedAt": "2026-05-25T09:22:53.840Z",
+    "readmeHash": "f7f1fa9fc9d95e99f44a04d6208b8fdfe8b8275a0cede567a5cb98f2cd748472",
+    "generatedAt": "2026-05-26T07:46:57.183Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -1202,27 +1201,27 @@
     "auditedAt": "2026-05-25T09:18:33.485Z"
   },
   "nesquena/hermes-webui": {
-    "summary": "Hermes WebUI provides a lightweight, browser-based interface for the Hermes Agent, offering a graphical alternative to the standard command-line environment. Built with Python and vanilla JavaScript, the application requires no build steps or frameworks and maintains full feature parity with the CLI. The interface features a three-panel layout for session management, chat, and workspace file browsing, including a visual context ring for monitoring token usage. It allows users to manage persistent memory, scheduled cron jobs, and self-improving skills through a secure web portal accessible via mobile or desktop.",
+    "summary": "Hermes WebUI provides a browser-based interface for the Hermes Agent, offering a graphical alternative to the standard terminal and messaging app interactions. Built with Python and vanilla JavaScript, the application requires no build steps or frameworks and maintains full feature parity with the CLI. The interface features a three-panel layout for session management, chat, and workspace file browsing, including a context ring for monitoring token usage. It allows users to manage persistent memory, scheduled jobs, and agent skills through a centralized control center.",
     "highlights": [
       "Three-panel layout for chat, sessions, and workspace file browsing",
       "Full feature parity with Hermes CLI using vanilla JavaScript",
-      "Visual context ring for real-time token usage monitoring"
+      "Integrated context ring for real-time token usage monitoring"
     ],
-    "readmeHash": "66c812f1242bfff477aa32f3354f3dafc8c43475ed857f698eb35fc7cf8e33c2",
-    "generatedAt": "2026-05-25T09:23:34.329Z",
+    "readmeHash": "a3bd0bf8acfe28a866a678b7e20dfdb219e8b42a2d3063455c41fde44bbed7e5",
+    "generatedAt": "2026-05-26T07:47:06.861Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
   },
   "garrytan/gbrain": {
-    "summary": "GBrain is an autonomous memory and synthesis layer designed to serve as the institutional or personal knowledge base for AI agents. It combines a self-wiring knowledge graph with a synthesis engine to provide cited prose answers and gap analysis rather than simple document retrieval. The system automatically extracts entity relationships and runs background processes to consolidate memory from diverse sources like meetings, emails, and notes. It supports multi-user environments with scoped data access and integrates directly with Hermes and OpenClaw via the Model Context Protocol.",
+    "summary": "GBrain is a memory and context layer designed to provide AI agents with a synthesized institutional memory. It combines a self-wiring knowledge graph for entity relationship extraction with a synthesis layer that generates cited prose and identifies information gaps. The system operates as a background daemon that autonomously ingests, enriches, and consolidates data from various sources like meetings and emails. It supports multi-user environments with scoped data access and integrates directly with Hermes and OpenClaw via MCP.",
     "highlights": [
-      "Synthesizes cited prose answers across people, companies, and ideas.",
       "Self-wiring knowledge graph extracts entity relationships without LLM calls.",
-      "Automated background cycles for memory consolidation and data enrichment."
+      "Synthesis layer provides cited answers and explicit gap analysis.",
+      "Supports local PGLite deployment or scalable Postgres and Supabase backends."
     ],
-    "readmeHash": "292f1078cb615b76f03ae2964bd94e247724de30f86c9cad2c4780e68403c5d5",
-    "generatedAt": "2026-05-25T09:23:38.345Z",
+    "readmeHash": "1302cb67552e0f67011aa5519e1972fa6baceb1b271a9d9ce824ef9022b96074",
+    "generatedAt": "2026-05-26T07:47:10.758Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -1348,14 +1347,14 @@
     "auditedAt": "2026-04-27T08:50:53.111Z"
   },
   "AxDSan/mnemosyne": {
-    "summary": "Mnemosyne is a local-first memory system designed for the Hermes Agent framework to provide persistent storage for conversations and knowledge without cloud dependencies. It utilizes an SQLite backend with native vector search and full-text search to enable sub-millisecond retrieval and storage. The system features the MEMORIA Fact Engine for structured fact extraction and recursive gap analysis to support multi-hop reasoning. It offers a fully private, offline-capable alternative to cloud-based memory providers with built-in tools for importing data from other platforms.",
+    "summary": "Mnemosyne is a local-first memory system designed to provide Hermes Agents with persistent storage for conversations, preferences, and knowledge. It utilizes a SQLite backend with native vector search and full-text search to enable sub-millisecond retrieval without external cloud dependencies. The system implements a bilevel architecture consisting of working memory for hot context and episodic memory for long-term storage. It features hybrid scoring that combines vector similarity, keyword ranking, and importance weights to manage agent context efficiently.",
     "highlights": [
       "Local-first SQLite storage with native vector and full-text search",
-      "Sub-millisecond latency for memory read, write, and search operations",
-      "MEMORIA engine for structured fact extraction and temporal reasoning"
+      "Bilevel memory architecture for working, episodic, and scratchpad context",
+      "Extensive Hermes integration with 17 specialized memory management tools"
     ],
-    "readmeHash": "bf8e7d236fd01f7c069b67a80492327b2b646e5ea3bb707a44954dbd5eee0d49",
-    "generatedAt": "2026-05-25T09:24:05.107Z",
+    "readmeHash": "18d60b47881225c15317336f30b4a777d8976e2656bf4423f325d7c65919d19d",
+    "generatedAt": "2026-05-26T07:47:16.856Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
