@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/stephenschoettler/hermes-lcm#software",
   "name": "hermes-lcm",
-  "description": "Hermes-LCM is a context management plugin for the Hermes Agent that prevents information loss during long-running conversations. It replaces standard flat summarization with a hierarchical Directed Acyclic Graph (DAG) that compacts older messages while preserving raw data in a local SQLite store. The agent can use specialized tools like grep and expand to drill back into specific historical details without flooding the active context window. This approach ensures that even as the context window ",
+  "description": "Hermes-LCM is a context management plugin for the Hermes Agent that prevents information loss during long-running conversations. It replaces standard flat summarization with a hierarchical Directed Acyclic Graph (DAG) that preserves raw message history in a local SQLite store. This architecture allows the agent to use specialized tools to drill back into specific details or expand compacted summaries without flooding the active context window. The system includes granular controls for sensitive ",
   "url": "https://hermesatlas.com/projects/stephenschoettler/hermes-lcm",
   "codeRepository": "https://github.com/stephenschoettler/hermes-lcm",
   "applicationCategory": "UtilitiesApplication",
@@ -46,13 +46,13 @@
     "name": "stephenschoettler",
     "url": "https://github.com/stephenschoettler"
   },
-  "dateModified": "2026-05-26T19:58:03.000Z",
+  "dateModified": "2026-05-27T18:58:18.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 601
+    "userInteractionCount": 603
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -81,7 +81,7 @@
   <a href="/" class="brand" aria-label="Hermes Atlas — home">hermes atlas</a>
   <div class="mast-meta" aria-label="Site metadata">
     <span>apr·2026</span>
-    <span id="meta-count">123·repos</span>
+    <span id="meta-count">124·repos</span>
     <span id="meta-version">hermes·v0.10.0</span>
     <a class="mast-star" id="meta-atlas" href="https://github.com/ksimback/hermes-ecosystem" target="_blank" rel="noopener" aria-label="Star Hermes Atlas on GitHub">★ star this repo</a>
   </div>
@@ -111,11 +111,11 @@
   <p class="project-desc">Lossless Context Management plugin for Hermes Agent — DAG-based context engine that never loses a message</p>
 
   <div class="meta-row">
-    <span class="stars">★ 601</span>
+    <span class="stars">★ 603</span>
     <span><span class="meta-label">lang</span>Python</span>
     
     
-    <span><span class="meta-label">updated</span>2026-05-26</span>
+    <span><span class="meta-label">updated</span>2026-05-27</span>
   </div>
 
   <div class="actions">
@@ -130,11 +130,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Hermes-LCM is a context management plugin for the Hermes Agent that prevents information loss during long-running conversations. It replaces standard flat summarization with a hierarchical Directed Acyclic Graph (DAG) that compacts older messages while preserving raw data in a local SQLite store. The agent can use specialized tools like grep and expand to drill back into specific historical details without flooding the active context window. This approach ensures that even as the context window reaches its limit, the model retains a structured path to retrieve exact original content.</p>
+    <p class="summary-text">Hermes-LCM is a context management plugin for the Hermes Agent that prevents information loss during long-running conversations. It replaces standard flat summarization with a hierarchical Directed Acyclic Graph (DAG) that preserves raw message history in a local SQLite store. This architecture allows the agent to use specialized tools to drill back into specific details or expand compacted summaries without flooding the active context window. The system includes granular controls for sensitive data redaction, large payload externalization, and session-specific storage rules.</p>
     <ul class="summary-highlights">
-      <li>Hierarchical DAG structure for depth-aware context compaction</li>
-      <li>SQLite-backed message store for lossless raw data persistence</li>
-      <li>Agent tools for searching and expanding compacted conversation history</li>
+      <li>Uses a hierarchical DAG to compact context without losing details</li>
+      <li>Provides agent tools for grepping and expanding historical conversation nodes</li>
+      <li>Preserves raw messages in a local SQLite database for precise recovery</li>
     </ul>
   </div>
 </section>
@@ -486,6 +486,13 @@ LCM_LEAF_CHUNK_TOKENS=8000
 </code></pre>
 <p><code>target_after_compaction=0.55</code> is still benchmark provenance, not a runtime
 setting, because the engine does not expose that live knob yet.</p>
+<p>For dashboards and agents, <code>lcm_status</code> also exposes the same information under
+<code>preset_suggestion</code> as read-only JSON: suggested preset name/family, selection
+reason, match confidence, provenance, explicit override diagnostics, invalid
+override diagnostics, unsupported benchmark-only fields, and the dry-run delta.
+This surface is safe to consume without scraping slash-command text; it does not
+write files, mutate process state, expose local benchmark run paths, or apply
+<code>LCM_*</code> environment changes.</p>
 <h4>FAQ: tuning LCM for large context windows</h4>
 <p>Long-context models change the tuning problem. A 1M-token model does not mean
 you always want to spend 750k prompt tokens before LCM starts compacting. Start
@@ -901,7 +908,7 @@ See the <a href="https://github.com/stephenschoettler/hermes-lcm/releases">relea
   <div>
     <div class="related-list">
       <a class="related-row" href="/projects/mem0ai/mem0">
-        <div class="stars">★ 56.8K</div>
+        <div class="stars">★ 56.9K</div>
         <div class="name"><span class="org">mem0ai /</span> mem0</div>
       </a>
       <a class="related-row" href="/projects/vectorize-io/hindsight">
@@ -909,28 +916,28 @@ See the <a href="https://github.com/stephenschoettler/hermes-lcm/releases">relea
         <div class="name"><span class="org">vectorize-io /</span> hindsight</div>
       </a>
       <a class="related-row" href="/projects/greyhaven-ai/autocontext">
-        <div class="stars">★ 1.1K</div>
+        <div class="stars">★ 1.2K</div>
         <div class="name"><span class="org">greyhaven-ai /</span> autocontext</div>
       </a>
       <a class="related-row" href="/projects/elkimek/honcho-self-hosted">
-        <div class="stars">★ 266</div>
+        <div class="stars">★ 267</div>
         <div class="name"><span class="org">elkimek /</span> honcho-self-hosted</div>
       </a>
       <a class="related-row" href="/projects/yoloshii/ClawMem">
         <div class="stars">★ 176</div>
         <div class="name"><span class="org">yoloshii /</span> ClawMem</div>
       </a>
+      <a class="related-row" href="/projects/Signet-AI/signetai">
+        <div class="stars">★ 174</div>
+        <div class="name"><span class="org">Signet-AI /</span> signetai</div>
+      </a>
       <a class="related-row" href="/projects/plur-ai/plur">
-        <div class="stars">★ 140</div>
+        <div class="stars">★ 142</div>
         <div class="name"><span class="org">plur-ai /</span> plur</div>
       </a>
       <a class="related-row" href="/projects/amanning3390/flowstate-qmd">
         <div class="stars">★ 27</div>
         <div class="name"><span class="org">amanning3390 /</span> flowstate-qmd</div>
-      </a>
-      <a class="related-row" href="/projects/garrytan/gbrain">
-        <div class="stars">★ 19.3K</div>
-        <div class="name"><span class="org">garrytan /</span> gbrain</div>
       </a>
     </div>
     <p class="list-link"><a href="/lists/best-memory-providers">see all memory &amp; context →</a></p>

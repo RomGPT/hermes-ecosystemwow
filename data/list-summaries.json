@@ -1,29 +1,30 @@
 {
   "best-memory-providers": {
     "entries": {
-      "mem0ai/mem0": "A universal memory layer providing multi-level storage for users, sessions, and autonomous states. It differentiates itself with temporal reasoning for time-aware ranking and hybrid retrieval combining semantic, keyword, and entity signals.",
-      "volcengine/OpenViking": "An open-source context database that treats agent memory as a filesystem using viking:// URIs. It utilizes a tiered L0/L1/L2 loading system to significantly reduce token consumption while improving task completion rates.",
-      "supermemoryai/supermemory": "A high-performance memory engine featuring a custom vector graph and sub-300ms recall for massive token volumes. It offers native connectors for productivity tools like Notion and Google Drive to maintain auto-updating user profiles.",
-      "garrytan/gbrain": "An opinionated brain for Hermes Agents that automatically extracts typed entity relationships into a self-wiring knowledge graph. It is designed for multi-tenant company deployments to synthesize cited answers across people and meeting notes.",
-      "vectorize-io/hindsight": "A learning-centric memory system that implements specific retain, recall, and reflect workflows for long-term knowledge. It provides an easy-to-integrate LLM wrapper with enterprise storage support for PostgreSQL and Oracle AI Database.",
-      "campfirein/byterover-cli": "A unique memory provider that manages context trees as git repositories, allowing for branching, merging, and versioning of markdown files. It features a high-speed 5-tier retrieval system with sub-100ms latency.",
-      "plastic-labs/honcho": "A stateful agent library that focuses on extracting reasoning-based conclusions from conversations rather than simple vector matching. It tracks evolving entities across users, groups, and projects using hybrid BM25 and vector search.",
-      "greyhaven-ai/autocontext": "A recursive self-improving harness that uses a five-role architecture to manage strategy and curation. It helps agents succeed on complex tasks by producing reusable playbooks and detailed execution traces.",
-      "stephenschoettler/hermes-lcm": "A lossless context management plugin utilizing a hierarchical DAG structure for depth-aware compaction. It ensures no message is lost by combining a SQLite-backed raw history store with targeted retrieval tools.",
-      "elkimek/honcho-self-hosted": "A self-hosted backend for the Honcho library that enables private, cross-session persistence for Hermes Agent. It supports local inference servers and OpenAI-compatible providers via a Docker-based setup.",
-      "yoloshii/ClawMem": "A local-first memory engine that operates entirely on-device without cloud dependencies or API keys. It integrates via MCP servers and Claude Code hooks using a mix of BM25, vector search, and knowledge graphs.",
-      "EfficientContext/ContextPilot": "A context optimization tool that accelerates LLM inference by reordering and deduplicating shared context blocks. It boosts prefill throughput by 1.5–3× while maintaining accuracy across SGLang, vLLM, and Hermes Agent.",
-      "plur-ai/plur": "A shared memory layer for multi-agent systems that stores data as open-format YAML engrams. It employs ACT-R activation to strengthen relevant facts and decay stale information over time.",
-      "keepnotes-ai/keep": "A reflective memory system featuring automated indexing for local directories, URLs, and multimedia. It uses ranked graph traversal and edge tags to create navigable relationships between pieces of information.",
-      "AxDSan/mnemosyne": "A zero-dependency memory system offering sub-millisecond latency through local SQLite storage. Its MEMORIA engine performs structured fact extraction and recursive gap analysis for high-speed retrieval.",
-      "yepyhun/Brainstack": "A memory kernel that prevents 'flat memory blob' issues by using a five-shelf architecture. It consolidates temporal continuity, graph truth, and corpus retrieval into a single plugin using SQLite and Kuzu.",
-      "yantrikos/yantrikdb-hermes-plugin": "A self-maintaining plugin that provides explainable retrieval by tagging every recall with a 'why_retrieved' reason. It natively tracks contradictions and manages agent-authored skills via an outcome ledger.",
-      "Ladybug-Memory/hermes-memory-plugin": "A local-only plugin using a columnar .lbdb embedded graph database. It prioritizes the most critical information using a 1-10 importance ranking system during context prefetch.",
-      "amanning3390/flowstate-qmd": "An anticipatory memory system that prefetches context by analyzing agent session logs. It is an MCP-native server using SQLite-vec and local GGUF models for proactive RAG.",
-      "MukundaKatta/hermes-agentmemory": "A pull-model episodic memory plugin that ensures true deletion of records to prevent outdated summaries from affecting recall. It includes a trace.jsonl audit log for full transparency of memory operations.",
-      "alias8818/hermes-tool-slimmer": "A utility designed to reduce tool-schema token overhead through BM25 ranking and keyword selection. It optimizes how Hermes Agent handles native tools and MCP integrations to save context space."
+      "mem0ai/mem0": "A universal memory layer providing multi-level retention for users, sessions, and autonomous agents. It utilizes hybrid retrieval and temporal reasoning to rank memories by date and state.",
+      "volcengine/OpenViking": "A context database that treats memory and skills as a file system using viking:// URIs. It employs tiered L0/L1/L2 loading to significantly reduce token costs and improve task completion.",
+      "supermemoryai/supermemory": "A high-performance memory engine featuring sub-300ms recall and byte-level deduplication for prompt-cache discounts. It includes native connectors for Google Drive, Notion, GitHub, and Gmail.",
+      "garrytan/gbrain": "An opinionated brain for Hermes agents that uses a self-wiring knowledge graph to extract entity relationships without LLM calls. It includes a synthesis layer for cited answers and over 30 MCP tools.",
+      "vectorize-io/hindsight": "A learning-centric memory system implementing retain, recall, and reflect workflows for long-term knowledge. It offers a simple LLM wrapper with enterprise storage support for PostgreSQL and Oracle AI Database.",
+      "campfirein/byterover-cli": "A memory provider that treats context as a git repository, enabling branching, merging, and versioning of markdown trees. It features a fast 5-tier retrieval system with sub-100ms latency.",
+      "plastic-labs/honcho": "A stateful agent library that extracts reasoning-based conclusions rather than relying on simple vector matching. It maintains evolving representations of users and projects in prompt-ready formats.",
+      "greyhaven-ai/autocontext": "A recursive self-improvement harness that uses five specialized agent roles to generate structured playbooks. It ensures persistent knowledge transfer via CLI-first skill exports.",
+      "AxDSan/mnemosyne": "A zero-dependency, SQLite-backed memory system designed for sub-millisecond performance. It combines vector similarity, FTS5, and importance scoring with native MCP support.",
+      "stephenschoettler/hermes-lcm": "A lossless context management plugin using a hierarchical DAG to compact conversation history without losing detail. It allows agents to grep and expand historical nodes via a local SQLite database.",
+      "elkimek/honcho-self-hosted": "A self-hosted backend for Honcho that enables private, cross-session persistence for Hermes Agent. It supports Docker, PostgreSQL, and Redis with compatibility for any OpenAI-style LLM.",
+      "yoloshii/ClawMem": "A local-first context engine that eliminates cloud dependencies and API keys. It employs a hybrid retrieval approach combining BM25, vector search, and knowledge graphs.",
+      "Signet-AI/signetai": "A portable identity and memory layer using SQLite and markdown for local data ownership. It provides cross-harness continuity across Hermes Agent, Claude Code, and OpenClaw.",
+      "plur-ai/plur": "A shared memory layer using an open YAML engram format for multi-agent systems. It utilizes ACT-R activation to strengthen relevant facts and decay stale information over time.",
+      "EfficientContext/ContextPilot": "A context optimization tool that increases cache hits and reduces prefill latency through prefix reordering and deduplication. It integrates natively with SGLang, vLLM, and the Hermes ecosystem.",
+      "keepnotes-ai/keep": "A reflective memory system featuring ranked graph traversal and BM25 full-text search. It provides automated indexing for local directories, URLs, and multimedia files via edge tags.",
+      "yepyhun/Brainstack": "A memory kernel that consolidates temporal continuity, graph truth, and corpus retrieval. It uses a multi-layered storage stack comprising SQLite, Kuzu, and Chroma.",
+      "amanning3390/flowstate-qmd": "An anticipatory memory system that prefetches context by monitoring agent session logs. It is a local-first MCP server utilizing SQLite-vec and GGUF models.",
+      "yantrikos/yantrikdb-hermes-plugin": "A self-maintaining plugin that provides explainable recall via why_retrieved tags. It automatically handles canonicalization, contradiction tracking, and recency ranking.",
+      "Ladybug-Memory/hermes-memory-plugin": "A local-only plugin using a columnar .lbdb embedded graph database. It employs importance-weighted recall and BM25 search to surface high-priority memories first.",
+      "alias8818/hermes-tool-slimmer": "A utility that reduces tool-schema overhead using BM25 ranking for keyword-based tool selection. It includes a dashboard to track prompt token savings for Hermes and MCP tools.",
+      "MukundaKatta/hermes-agentmemory": "An episodic memory plugin featuring a pull-model for retrieval and true deletion of memories. It maintains a trace.jsonl audit log for every memory operation."
     },
-    "generatedAt": "2026-05-24T11:49:29.702Z",
+    "generatedAt": "2026-05-27T19:16:31.487Z",
     "version": 1
   },
   "top-skills": {
@@ -81,16 +82,16 @@
   },
   "developer-tools": {
     "entries": {
-      "junhoyeo/tokscale": "This Rust-based TUI provides a centralized dashboard for monitoring token consumption and costs across multiple AI coding agents, including Hermes. It features a 3D contributions graph to visualize usage patterns, offering developers a cross-platform tool for managing the expenses of autonomous workflows.",
-      "joeynyc/hermes-skins": "This utility allows users to personalize the Hermes terminal interface through YAML-based themes that modify ASCII banners and spinner animations. By inheriting from default configurations, it enables easy sharing and partial customization of the agent's visual identity.",
-      "AlexAI-MCP/hermes-CCC": "This project ports the Hermes Agent brain and its 46 core skills directly into the Claude Code Channel, eliminating the need for OAuth or external processes. It specifically caters to MLOps workflows by including native tools for vLLM inference, GGUF management, and reinforcement learning training.",
-      "unmodeled-tyler/vessel-browser": "Vessel is an AI-native browser that exposes control and page visibility to agents via MCP endpoints while providing a UI for human supervision. It enhances agent reliability through durable session checkpoints and the ability to roll back actions during autonomous browsing tasks.",
-      "Abruptive/Ankh.md": "This framework introduces per-folder scoping for Hermes, allowing developers to define project-specific memories, tools, and instructions. It enables seamless switching between global and local agent configurations, ensuring that the agent's behavior is tailored to the immediate workspace context.",
-      "roli-lpci/lintlang": "A cost-effective static linter that uses seven deterministic detector patterns to analyze agent configurations and system prompts without making LLM calls. It is designed for offline CI integration, ensuring that Hermes tool descriptions and prompts meet structural standards before deployment.",
-      "42-evey/evey-setup": "This deployment script automates the setup of a full Hermes Agent stack using Docker, LiteLLM, and Qdrant for local or free model routing. It comes pre-configured with 29 community plugins, providing a zero-cost entry point for developers to run a feature-complete agent environment.",
-      "0xNyk/openclaw-to-hermes": "This migration utility streamlines the transition from OpenClaw to Hermes by mapping personas, skills, and workspace files to the Hermes YAML format. It automates the transfer of complex model configurations and local credentials, preserving existing agent progress during the platform switch."
+      "junhoyeo/tokscale": "This Rust-based CLI tool provides a high-performance TUI and 3D dashboard for monitoring token consumption and costs across various AI coding agents. It is essential for Hermes developers who need to track usage metrics and budget overhead across multiple model integrations simultaneously.",
+      "joeynyc/hermes-skins": "This utility allows users to personalize the Hermes terminal experience through YAML-based themes, custom ASCII banners, and unique spinner animations. It belongs in this list as the primary visual customization engine for developers who want to share or modify the aesthetic identity of their agent interface.",
+      "AlexAI-MCP/hermes-CCC": "This project ports the Hermes Agent brain and its 46 core skills directly into the Claude Code Channel, enabling native execution without external processes or OAuth requirements. It is a specialized tool for developers who require MLOps capabilities, such as vLLM inference and RL training, within a unified environment.",
+      "unmodeled-tyler/vessel-browser": "Vessel is an AI-native browser that exposes page visibility and control to autonomous agents via MCP endpoints while providing a UI for human supervision. It serves as a critical bridge for Hermes agents that need to navigate the web with durable session state and action rollback capabilities.",
+      "abruptive/Ankh.md": "Ankh.md introduces a per-folder scoping framework that allows developers to create specialized Hermes agents with project-local memories, tools, and instructions. It is ideal for managing complex workflows where the agent must automatically switch configurations based on the current working directory.",
+      "roli-lpci/lintlang": "This static linter uses seven deterministic detector patterns to analyze agent configurations and system prompts without making expensive LLM calls. It provides a cost-effective way to enforce structural quality and HERM v1.1 scoring standards within offline CI/CD pipelines.",
+      "42-evey/evey-setup": "This deployment script automates the setup of a full Hermes stack including LiteLLM, Ollama, and Qdrant using Docker for zero-cost local inference. It is the go-to resource for quickly bootstrapping an environment pre-configured with 29 community plugins and optimized model routing.",
+      "0xNyk/openclaw-to-hermes": "Designed specifically for ecosystem migration, this tool automates the transfer of personas, skills, and workspace files from OpenClaw to the Hermes YAML format. It ensures a seamless transition for developers by mapping complex model configurations and local credentials to the Hermes architecture."
     },
-    "generatedAt": "2026-05-27T07:53:26.275Z",
+    "generatedAt": "2026-05-27T19:16:48.042Z",
     "version": 1
   },
   "workspaces-and-guis": {

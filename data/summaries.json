@@ -805,14 +805,14 @@
     "auditedAt": "2026-05-25T09:16:44.746Z"
   },
   "junhoyeo/tokscale": {
-    "summary": "Tokscale is a high-performance CLI tool and visualization dashboard designed to monitor token consumption and costs across various AI coding agents. It functions by analyzing local data files, databases, and API caches from supported clients to aggregate usage statistics. The tool provides a native Rust TUI for cross-platform support and includes a 3D contributions graph for visual analysis. It integrates with a wide range of agents including Hermes Agent, Claude Code, and GitHub Copilot CLI.",
+    "summary": "Tokscale is a high-performance CLI tool and visualization dashboard designed to track token consumption and costs across various AI coding agents. It functions by scanning local databases, session logs, and configuration directories to aggregate usage data from multiple providers into a unified interface. The tool features a native Rust TUI for real-time monitoring and supports a web-based frontend with 3D contribution graphs. It enables developers to audit their spending and usage patterns across a wide range of platforms including Hermes Agent, Claude Code, and GitHub Copilot.",
     "highlights": [
       "Tracks token usage and costs across multiple AI coding agents",
-      "Native Rust TUI with cross-platform support",
-      "Visualizes data via a 3D contributions graph and dashboard"
+      "Features a native Rust TUI and 3D visualization dashboard",
+      "Supports integrations for Hermes, Claude, Gemini, and Cursor"
     ],
-    "readmeHash": "f5c6acbb4af4c9289e8a62b126aac075423be6e4892f335a71b70fe105527c03",
-    "generatedAt": "2026-05-27T07:52:07.224Z",
+    "readmeHash": "6c8bde0ecfa877a7343997fc362619cda1d5133e81486d71e221ba6d9a5ef817",
+    "generatedAt": "2026-05-27T19:15:29.395Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -1052,14 +1052,14 @@
     "auditedAt": "2026-05-25T09:17:35.538Z"
   },
   "OnlyTerp/hermes-optimization-guide": {
-    "summary": "The Hermes Optimization Guide is a comprehensive documentation and resource repository designed to help users deploy and scale Hermes Agent in production environments. It provides a 24-part instructional series alongside runnable artifacts like VPS bootstrap scripts, opinionated configuration templates, and pre-configured skills. The project enables users to implement advanced features such as multi-platform orchestration, MCP server integration, and cost-optimized model routing across 22+ communication channels. By utilizing reference architectures and security playbooks, it bridges the gap between a basic installation and a hardened, observable agent deployment.",
+    "summary": "The Hermes Optimization Guide is a comprehensive documentation and resource repository designed to help users deploy and scale Hermes Agent in production environments. It provides 24 instructional parts alongside runnable artifacts, including 13 installable skills, 5 pre-configured YAML templates, and a one-command VPS bootstrap script. The guide covers advanced implementations such as multi-platform orchestration across 22+ services, MCP server integration, and cost-optimized model routing using providers like Anthropic, OpenAI, and local deployments. It also includes reference architectures for various use cases ranging from homelabs to small agencies.",
     "highlights": [
-      "One-command VPS bootstrap script for automated production-ready deployment.",
-      "Thirteen installable skills and five opinionated configuration templates.",
-      "Cost-optimized routing across 12 models with context compression strategies."
+      "One-command VPS bootstrap script for automated production-ready deployment",
+      "13 installable skills and 5 opinionated configuration templates",
+      "Support for 22+ platforms including Telegram, Discord, and Slack"
     ],
-    "readmeHash": "4e52f6c752823de785a17d48e04b91f9d8bbdcaf45852e7455682f508729fffb",
-    "generatedAt": "2026-05-25T09:23:11.002Z",
+    "readmeHash": "f0a1c7d8674a22e8c5ca85b2f904c33bb440ce3b8b829b6274db9fe3a036e3f6",
+    "generatedAt": "2026-05-27T19:15:38.217Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -1214,14 +1214,14 @@
     "audit": "pass"
   },
   "garrytan/gbrain": {
-    "summary": "GBrain is a memory and synthesis layer designed to provide AI agents with structured institutional knowledge and long-term context. It combines a self-wiring knowledge graph that extracts entity relationships without LLM calls with a synthesis engine that performs gap analysis on available data. The system automates the ingestion of meetings, emails, and notes while consolidating and enriching memory through an autonomous background process. It supports multi-tenant configurations for team use and integrates directly with Hermes and OpenClaw via the Model Context Protocol.",
+    "summary": "GBrain is a memory and synthesis layer designed to provide AI agents with structured institutional knowledge. It combines a self-wiring knowledge graph for entity relationship extraction with a synthesis engine that generates cited prose and gap analysis. The system automates background tasks like memory consolidation and data enrichment from sources such as meetings, emails, and tweets. It supports multi-user environments with scoped access controls and integrates directly with Hermes and OpenClaw via MCP.",
     "highlights": [
-      "Self-wiring knowledge graph extracts typed entity relationships without LLM calls",
-      "Synthesis layer provides cited prose answers and explicit gap analysis",
-      "Autonomous dream cycle consolidates memory and enriches data overnight"
+      "Self-wiring knowledge graph extracts entity relationships without LLM calls",
+      "Synthesis layer provides cited answers and explicit gap analysis",
+      "Exposes over 30 tools via MCP for agentic integration"
     ],
-    "readmeHash": "ab14999079803f5c6bc4064e2fe7e9667cb7d2a6bf2a5c1fd11f3854646507a3",
-    "generatedAt": "2026-05-27T07:52:22.632Z",
+    "readmeHash": "da16481ec325480ca49e23a27b0cc2d843c23ef8f3d391a02d768a802e0b502d",
+    "generatedAt": "2026-05-27T19:15:44.845Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -1267,14 +1267,14 @@
     "audit": "pass"
   },
   "stephenschoettler/hermes-lcm": {
-    "summary": "Hermes-LCM is a context management plugin for the Hermes Agent that prevents information loss during long-running conversations. It replaces standard flat summarization with a hierarchical Directed Acyclic Graph (DAG) that compacts older messages while preserving raw data in a local SQLite store. The agent can use specialized tools like grep and expand to drill back into specific historical details without flooding the active context window. This approach ensures that even as the context window reaches its limit, the model retains a structured path to retrieve exact original content.",
+    "summary": "Hermes-LCM is a context management plugin for the Hermes Agent that prevents information loss during long-running conversations. It replaces standard flat summarization with a hierarchical Directed Acyclic Graph (DAG) that preserves raw message history in a local SQLite store. This architecture allows the agent to use specialized tools to drill back into specific details or expand compacted summaries without flooding the active context window. The system includes granular controls for sensitive data redaction, large payload externalization, and session-specific storage rules.",
     "highlights": [
-      "Hierarchical DAG structure for depth-aware context compaction",
-      "SQLite-backed message store for lossless raw data persistence",
-      "Agent tools for searching and expanding compacted conversation history"
+      "Uses a hierarchical DAG to compact context without losing details",
+      "Provides agent tools for grepping and expanding historical conversation nodes",
+      "Preserves raw messages in a local SQLite database for precise recovery"
     ],
-    "readmeHash": "6c0bb12045022193186420effd95463df824ef25591b83b9ef1a54dee59cee69",
-    "generatedAt": "2026-05-27T07:52:27.494Z",
+    "readmeHash": "a335c6f4910e0082b83eed6325940edeceb67cad46d83dbc97873383273e4179",
+    "generatedAt": "2026-05-27T19:15:50.985Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -1690,6 +1690,19 @@
     ],
     "readmeHash": "be49221d828b94b1bab306354901846ea4601a8b540e196320208c2da8285e7d",
     "generatedAt": "2026-05-25T09:25:06.333Z",
+    "model": "google/gemma-4-31b-it:free",
+    "version": 1,
+    "audit": "pass"
+  },
+  "Signet-AI/signetai": {
+    "summary": "Signet-AI is a local-first context and memory layer designed to provide persistent identity and knowledge across different AI agent harnesses. It captures session history and workspace data in a local SQLite and markdown substrate, indexing it for retrieval through hybrid search and graph traversal. This architecture allows users to maintain continuity and secrets when switching between tools like Hermes Agent, Claude Code, and OpenClaw. By decoupling memory from specific model providers, it ensures that agent context remains inspectable, portable, and under the user's direct control.",
+    "highlights": [
+      "Local-first storage using SQLite and markdown for data ownership",
+      "Cross-harness continuity for Hermes Agent, Claude Code, and OpenClaw",
+      "Hybrid retrieval combining vector search, FTS5, and graph traversal"
+    ],
+    "readmeHash": "65b7e595874b042d6545813e41e2ea8620db8ce5e0685db5f44eeab338184ac6",
+    "generatedAt": "2026-05-27T19:15:17.563Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"

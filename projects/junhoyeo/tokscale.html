@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/junhoyeo/tokscale#software",
   "name": "tokscale",
-  "description": "Tokscale is a high-performance CLI tool and visualization dashboard designed to monitor token consumption and costs across various AI coding agents. It functions by analyzing local data files, databases, and API caches from supported clients to aggregate usage statistics. The tool provides a native Rust TUI for cross-platform support and includes a 3D contributions graph for visual analysis. It integrates with a wide range of agents including Hermes Agent, Claude Code, and GitHub Copilot CLI.",
+  "description": "Tokscale is a high-performance CLI tool and visualization dashboard designed to track token consumption and costs across various AI coding agents. It functions by scanning local databases, session logs, and configuration directories to aggregate usage data from multiple providers into a unified interface. The tool features a native Rust TUI for real-time monitoring and supports a web-based frontend with 3D contribution graphs. It enables developers to audit their spending and usage patterns acro",
   "url": "https://hermesatlas.com/projects/junhoyeo/tokscale",
   "codeRepository": "https://github.com/junhoyeo/tokscale",
   "applicationCategory": "DeveloperApplication",
@@ -47,13 +47,13 @@
     "name": "junhoyeo",
     "url": "https://github.com/junhoyeo"
   },
-  "dateModified": "2026-05-26T09:12:28.000Z",
+  "dateModified": "2026-05-27T16:35:26.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 3240
+    "userInteractionCount": 3260
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -82,7 +82,7 @@
   <a href="/" class="brand" aria-label="Hermes Atlas — home">hermes atlas</a>
   <div class="mast-meta" aria-label="Site metadata">
     <span>apr·2026</span>
-    <span id="meta-count">123·repos</span>
+    <span id="meta-count">124·repos</span>
     <span id="meta-version">hermes·v0.10.0</span>
     <a class="mast-star" id="meta-atlas" href="https://github.com/ksimback/hermes-ecosystem" target="_blank" rel="noopener" aria-label="Star Hermes Atlas on GitHub">★ star this repo</a>
   </div>
@@ -112,11 +112,11 @@
   <p class="project-desc">🛰️ A CLI tool for tracking token usage from OpenCode, Claude Code, 🦞OpenClaw (Clawdbot/Moltbot), Pi, Codex, Gemini, Cursor, AmpCode, Factory Droid, Kimi, and more! • 🏅Global Leaderboard + 2D/3D Contributions Graph</p>
 
   <div class="meta-row">
-    <span class="stars">★ 3.2K</span>
+    <span class="stars">★ 3.3K</span>
     <span><span class="meta-label">lang</span>Rust</span>
     <span><span class="meta-label">license</span>MIT</span>
     
-    <span><span class="meta-label">updated</span>2026-05-26</span>
+    <span><span class="meta-label">updated</span>2026-05-27</span>
   </div>
 
   <div class="actions">
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Tokscale is a high-performance CLI tool and visualization dashboard designed to monitor token consumption and costs across various AI coding agents. It functions by analyzing local data files, databases, and API caches from supported clients to aggregate usage statistics. The tool provides a native Rust TUI for cross-platform support and includes a 3D contributions graph for visual analysis. It integrates with a wide range of agents including Hermes Agent, Claude Code, and GitHub Copilot CLI.</p>
+    <p class="summary-text">Tokscale is a high-performance CLI tool and visualization dashboard designed to track token consumption and costs across various AI coding agents. It functions by scanning local databases, session logs, and configuration directories to aggregate usage data from multiple providers into a unified interface. The tool features a native Rust TUI for real-time monitoring and supports a web-based frontend with 3D contribution graphs. It enables developers to audit their spending and usage patterns across a wide range of platforms including Hermes Agent, Claude Code, and GitHub Copilot.</p>
     <ul class="summary-highlights">
       <li>Tracks token usage and costs across multiple AI coding agents</li>
-      <li>Native Rust TUI with cross-platform support</li>
-      <li>Visualizes data via a 3D contributions graph and dashboard</li>
+      <li>Features a native Rust TUI and 3D visualization dashboard</li>
+      <li>Supports integrations for Hermes, Claude, Gemini, and Cursor</li>
     </ul>
   </div>
 </section>
@@ -281,7 +281,7 @@ I drop new open-source work every week. Don&#39;t miss the next one.</p>
 <tr>
 <td><img width="48px" src="https://raw.githubusercontent.com/junhoyeo/tokscale/main/.github/assets/client-cursor.jpg" alt="Cursor" /></td>
 <td><a href="https://cursor.com/">Cursor IDE</a></td>
-<td>API sync via <code>~/.config/tokscale/cursor-cache/</code></td>
+<td>Cursor API export cached at <code>~/.config/tokscale/cursor-cache/usage*.csv</code> (not <code>~/.cursor</code>)</td>
 <td>✅ Yes</td>
 </tr>
 <tr>
@@ -734,7 +734,7 @@ tokscale --client opencode,claude
 # Repeated: same effect, useful with shell aliases
 tokscale -c opencode -c claude
 
-# Cursor IDE requires `tokscale cursor login` first
+# Cursor IDE uses Tokscale&#39;s API cache; run login + sync first
 tokscale --client cursor
 
 # Synthetic (synthetic.new) is detected from other agent sessions
@@ -890,7 +890,20 @@ tokscale logout
 <img alt="CLI Submit" src="https://raw.githubusercontent.com/junhoyeo/tokscale/main/.github/assets/cli-submit.png" />
 
 <h4>Cursor IDE Commands</h4>
-<p>Cursor IDE requires separate authentication via session token (different from the social platform login):</p>
+<p>Cursor IDE support uses Cursor&#39;s web API export, cached by Tokscale at <code>~/.config/tokscale/cursor-cache/usage*.csv</code>. Tokscale does not parse local Cursor Agent CLI state under <code>~/.cursor</code>.</p>
+<p>Setup:</p>
+<ol>
+<li>Open <a href="https://www.cursor.com/settings">https://www.cursor.com/settings</a> in your browser and sign in.</li>
+<li>Copy the <code>WorkosCursorSessionToken</code> cookie value:<ul>
+<li>Network tab: make any request to <code>cursor.com/api/*</code>, then copy the value after <code>WorkosCursorSessionToken=</code> from the <code>Cookie</code> request header.</li>
+<li>Application tab: open Cookies -&gt; <code>https://www.cursor.com</code>, then copy the <code>WorkosCursorSessionToken</code> value.</li>
+</ul>
+</li>
+<li>Run <code>tokscale cursor login --name work</code> and paste the token.</li>
+<li>Run <code>tokscale cursor sync</code> to populate <code>~/.config/tokscale/cursor-cache/usage.csv</code>.</li>
+<li>Run <code>tokscale --client cursor</code> or any report command.</li>
+</ol>
+<p>Treat the session token like a password. It is stored locally in <code>~/.config/tokscale/cursor-credentials.json</code>.</p>
 <pre><code class="language-bash"># Login to Cursor (requires session token from browser)
 # --name is optional; it just helps you identify accounts later
 tokscale cursor login --name work
@@ -919,19 +932,8 @@ tokscale cursor logout --all
 # Logout from all accounts and delete cached usage
 tokscale cursor logout --all --purge-cache
 </code></pre>
-<p>By default, tokscale <strong>aggregates usage across all saved Cursor accounts</strong> (all <code>cursor-cache/usage*.csv</code>).</p>
-<p>When you log out, tokscale keeps your cached usage history by moving it to <code>cursor-cache/archive/</code> (so it won&#39;t be aggregated). Use <code>--purge-cache</code> if you want to delete the cached usage instead.</p>
-<p><strong>Credentials storage</strong>: Cursor accounts are stored in <code>~/.config/tokscale/cursor-credentials.json</code>. Usage data is cached at <code>~/.config/tokscale/cursor-cache/</code> (active account uses <code>usage.csv</code>, additional accounts use <code>usage.&lt;account&gt;.csv</code>).</p>
-<p><strong>To get your Cursor session token:</strong></p>
-<ol>
-<li>Open <a href="https://www.cursor.com/settings">https://www.cursor.com/settings</a> in your browser</li>
-<li>Open Developer Tools (F12)</li>
-<li><strong>Option A - Network tab</strong>: Make any action on the page, find a request to <code>cursor.com/api/*</code>, look in the Request Headers for the <code>Cookie</code> header, and copy only the value after <code>WorkosCursorSessionToken=</code></li>
-<li><strong>Option B - Application tab</strong>: Go to Application → Cookies → <code>https://www.cursor.com</code>, find the <code>WorkosCursorSessionToken</code> cookie, and copy its value (not the cookie name)</li>
-</ol>
-<blockquote>
-<p>⚠️ <strong>Security Warning</strong>: Treat your session token like a password. Never share it publicly or commit it to version control. The token grants full access to your Cursor account.</p>
-</blockquote>
+<p>By default, Tokscale aggregates usage across all saved Cursor accounts by reading <code>cursor-cache/usage*.csv</code>. The active account syncs to <code>usage.csv</code>; additional accounts sync to <code>usage.&lt;account&gt;.csv</code>.</p>
+<p>When you log out, Tokscale moves cached usage to <code>cursor-cache/archive/</code> so it is no longer aggregated. Use <code>--purge-cache</code> to delete cached usage instead.</p>
 <h4>Antigravity Commands</h4>
 <p>Antigravity sync currently works on macOS and Linux only. The Antigravity-enabled editor must be running and its local language server available; tokscale reads usage from that local language server and caches normalized artifacts locally.</p>
 <pre><code class="language-bash"># Check whether tokscale can see running Antigravity language servers
@@ -1075,6 +1077,10 @@ tokscale usage --light
       &quot;codex&quot;: [
         &quot;/Users/me/workspace/project-a/.codex/sessions&quot;,
         &quot;/Users/me/workspace/project-b/.codex/archived_sessions&quot;
+      ],
+      &quot;hermes&quot;: [
+        &quot;/Users/me/.hermes/profiles/director_planning&quot;,
+        &quot;/Users/me/.hermes/profiles/research/state.db&quot;
       ]
     }
   }
@@ -1144,7 +1150,7 @@ tokscale usage --light
 <td>Additional per-client scan roots for sessions outside Tokscale&#39;s default home-root locations</td>
 </tr>
 </tbody></table>
-<p>Use <code>scanner.extraScanPaths</code> for persistent extra roots such as project-level <code>.codex</code> directories or imported Gemini/OpenClaw histories. Tokscale merges these paths with the default scan roots on every run and deduplicates overlapping roots by canonical path.</p>
+<p>Use <code>scanner.extraScanPaths</code> for persistent extra roots such as project-level <code>.codex</code> directories, imported Gemini/OpenClaw histories, or Hermes profile databases. Hermes entries may point at a profile directory containing <code>state.db</code> or directly at a <code>state.db</code> file. Tokscale merges these paths with the default scan roots on every run and deduplicates overlapping roots by canonical path.</p>
 <p>Use <code>defaultClients</code> to pin a personal default — for example, set it to <code>[&quot;opencode&quot;, &quot;claude&quot;]</code> if those are the only clients you use, and <code>tokscale</code> (with no flags) will scope every report to them automatically. Pass <code>--client</code> on the command line to override for a single run.</p>
 <h5>Enabling the Minutely tab</h5>
 <p>The Minutely tab shows a per-minute breakdown of token usage and is most useful for diagnosing burst patterns, debugging a single session, or watching activity in near-real-time alongside <code>autoRefreshEnabled</code>. It is hidden by default because the per-minute aggregation runs over every parsed message during data loading, which adds RAM and CPU cost that most users do not need.</p>
@@ -1446,20 +1452,12 @@ cargo --version
 </code></pre>
 <h4>How to Run</h4>
 <p>After following the <a href="#development-setup">Development Setup</a>, you can:</p>
-<pre><code class="language-bash"># Build native module (optional but recommended)
-bun run build:core
+<pre><code class="language-bash"># Build n
 
-# Run in development mode (launches TUI)
-cd packages/cli &amp;&amp; bun src/index.ts
+---
 
-# Or use legacy CLI mode
-cd packages/cli &amp;&amp; bun src/index.ts --light
+*README truncated. [Continue reading on GitHub](https://github.com/junhoyeo/tokscale#readme)*
 </code></pre>
-<details>
-<summary>Adva
-
-<hr>
-<p><em>README truncated. <a href="https://github.com/junhoyeo/tokscale#readme">Continue reading on GitHub</a></em></p>
 
   </section>
 </details>
@@ -1472,7 +1470,7 @@ cd packages/cli &amp;&amp; bun src/index.ts --light
   <div>
     <div class="related-list">
       <a class="related-row" href="/projects/joeynyc/hermes-skins">
-        <div class="stars">★ 401</div>
+        <div class="stars">★ 403</div>
         <div class="name"><span class="org">joeynyc /</span> hermes-skins</div>
       </a>
       <a class="related-row" href="/projects/AlexAI-MCP/hermes-CCC">
@@ -1480,7 +1478,7 @@ cd packages/cli &amp;&amp; bun src/index.ts --light
         <div class="name"><span class="org">AlexAI-MCP /</span> hermes-CCC</div>
       </a>
       <a class="related-row" href="/projects/unmodeled-tyler/vessel-browser">
-        <div class="stars">★ 82</div>
+        <div class="stars">★ 83</div>
         <div class="name"><span class="org">unmodeled-tyler /</span> vessel-browser</div>
       </a>
       <a class="related-row" href="/projects/Abruptive/Ankh.md">
@@ -1492,11 +1490,11 @@ cd packages/cli &amp;&amp; bun src/index.ts --light
         <div class="name"><span class="org">roli-lpci /</span> lintlang</div>
       </a>
       <a class="related-row" href="/projects/0xNyk/openclaw-to-hermes">
-        <div class="stars">★ 31</div>
+        <div class="stars">★ 32</div>
         <div class="name"><span class="org">0xNyk /</span> openclaw-to-hermes</div>
       </a>
       <a class="related-row" href="/projects/42-evey/evey-setup">
-        <div class="stars">★ 36</div>
+        <div class="stars">★ 37</div>
         <div class="name"><span class="org">42-evey /</span> evey-setup</div>
       </a>
     </div>

@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/garrytan/gbrain#software",
   "name": "gbrain",
-  "description": "GBrain is a memory and synthesis layer designed to provide AI agents with structured institutional knowledge and long-term context. It combines a self-wiring knowledge graph that extracts entity relationships without LLM calls with a synthesis engine that performs gap analysis on available data. The system automates the ingestion of meetings, emails, and notes while consolidating and enriching memory through an autonomous background process. It supports multi-tenant configurations for team use a",
+  "description": "GBrain is a memory and synthesis layer designed to provide AI agents with structured institutional knowledge. It combines a self-wiring knowledge graph for entity relationship extraction with a synthesis engine that generates cited prose and gap analysis. The system automates background tasks like memory consolidation and data enrichment from sources such as meetings, emails, and tweets. It supports multi-user environments with scoped access controls and integrates directly with Hermes and OpenC",
   "url": "https://hermesatlas.com/projects/garrytan/gbrain",
   "codeRepository": "https://github.com/garrytan/gbrain",
   "applicationCategory": "UtilitiesApplication",
@@ -47,13 +47,13 @@
     "name": "garrytan",
     "url": "https://github.com/garrytan"
   },
-  "dateModified": "2026-05-27T07:50:27.000Z",
+  "dateModified": "2026-05-27T18:29:36.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 19262
+    "userInteractionCount": 19384
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -82,7 +82,7 @@
   <a href="/" class="brand" aria-label="Hermes Atlas — home">hermes atlas</a>
   <div class="mast-meta" aria-label="Site metadata">
     <span>apr·2026</span>
-    <span id="meta-count">123·repos</span>
+    <span id="meta-count">124·repos</span>
     <span id="meta-version">hermes·v0.10.0</span>
     <a class="mast-star" id="meta-atlas" href="https://github.com/ksimback/hermes-ecosystem" target="_blank" rel="noopener" aria-label="Star Hermes Atlas on GitHub">★ star this repo</a>
   </div>
@@ -112,7 +112,7 @@
   <p class="project-desc">Garry's Opinionated OpenClaw/Hermes Agent Brain</p>
 
   <div class="meta-row">
-    <span class="stars">★ 19.3K</span>
+    <span class="stars">★ 19.4K</span>
     <span><span class="meta-label">lang</span>TypeScript</span>
     <span><span class="meta-label">license</span>MIT</span>
     
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">GBrain is a memory and synthesis layer designed to provide AI agents with structured institutional knowledge and long-term context. It combines a self-wiring knowledge graph that extracts entity relationships without LLM calls with a synthesis engine that performs gap analysis on available data. The system automates the ingestion of meetings, emails, and notes while consolidating and enriching memory through an autonomous background process. It supports multi-tenant configurations for team use and integrates directly with Hermes and OpenClaw via the Model Context Protocol.</p>
+    <p class="summary-text">GBrain is a memory and synthesis layer designed to provide AI agents with structured institutional knowledge. It combines a self-wiring knowledge graph for entity relationship extraction with a synthesis engine that generates cited prose and gap analysis. The system automates background tasks like memory consolidation and data enrichment from sources such as meetings, emails, and tweets. It supports multi-user environments with scoped access controls and integrates directly with Hermes and OpenClaw via MCP.</p>
     <ul class="summary-highlights">
-      <li>Self-wiring knowledge graph extracts typed entity relationships without LLM calls</li>
-      <li>Synthesis layer provides cited prose answers and explicit gap analysis</li>
-      <li>Autonomous dream cycle consolidates memory and enriches data overnight</li>
+      <li>Self-wiring knowledge graph extracts entity relationships without LLM calls</li>
+      <li>Synthesis layer provides cited answers and explicit gap analysis</li>
+      <li>Exposes over 30 tools via MCP for agentic integration</li>
     </ul>
   </div>
 </section>
@@ -272,11 +272,12 @@ voice, OCR) against the versioned <code>IngestionSource</code> contract at
 <code>gbrain/ingestion</code>. See <a href="https://github.com/garrytan/gbrain/blob/main/docs/skillpack-anatomy.md"><code>docs/skillpack-anatomy.md</code></a>.</p>
 <h3>Your brain&#39;s shape (schema packs)</h3>
 <p>Most personal-knowledge tools force one fixed layout: their idea of &quot;notes&quot; + &quot;people&quot; + &quot;tags.&quot; Drop a Notion export or your own years-old Obsidian vault on top, and the agent doesn&#39;t know what a <code>Projects/</code> folder means or whether <code>Reading/</code> is people or sources.</p>
-<p><strong>gbrain doesn&#39;t have a fixed layout.</strong> It ships with two bundled schema packs and lets you author your own when neither fits:</p>
+<p><strong>gbrain doesn&#39;t have a fixed layout.</strong> It ships with bundled schema packs and lets you author your own when none fit:</p>
 <ul>
-<li><strong><code>gbrain-base</code></strong> (default) — the layout my production brain uses: <code>people/</code>, <code>companies/</code>, <code>concepts/</code>, <code>meetings/</code>, <code>deal/</code>, <code>daily/</code>, <code>originals/</code>, <code>writing/</code>, etc. Zero config. Drop a brain that fits this shape and everything works.</li>
+<li><strong><code>gbrain-base-v2</code></strong> (default as of v0.41.22) — 15-type DRY/MECE canonical taxonomy (14 canonical + <code>note</code> catch-all): <code>person</code>, <code>company</code>, <code>media</code>, <code>tweet</code>, <code>social-digest</code>, <code>analysis</code>, <code>atom</code>, <code>concept</code>, <code>source</code>, <code>deal</code>, <code>email</code>, <code>slack</code>, <code>writing</code>, <code>project</code>, <code>note</code>. Subtypes/format/origin pushed to frontmatter. The taxonomy that responds to issue #1479.</li>
+<li><strong><code>gbrain-base</code></strong> (legacy, v0.41 and earlier brains) — the original 24-type layout. Stays bundled for back-compat; brains on it can upgrade via <code>gbrain onboard --check --explain</code> → <code>gbrain jobs submit unify-types --allow-protected --params &#39;{&quot;target_pack&quot;:&quot;gbrain-base-v2&quot;}&#39;</code>.</li>
 <li><strong><code>gbrain-recommended</code></strong> — extends <code>gbrain-base</code> with the 13 additional directories from <code>docs/GBRAIN_RECOMMENDED_SCHEMA.md</code> (source, place, trip, conversation, personal, civic, project, etc.). Activate with <code>gbrain schema use gbrain-recommended</code>.</li>
-<li><strong>Your own pack</strong> — <code>gbrain schema detect</code> clusters your actual filesystem into proposed types, <code>gbrain schema suggest</code> runs an LLM pass over them, and <code>gbrain schema review-candidates --apply</code> promotes the ones you like. Three commands and the brain knows your shape.</li>
+<li><strong>Your own pack</strong> — <code>gbrain schema detect</code> clusters your actual filesystem into proposed types, <code>gbrain schema suggest</code> runs an LLM pass over them, and <code>gbrain schema review-candidates --apply</code> promotes the ones you like. Three commands and the brain knows your shape. Authoring a successor pack (declares <code>migration_from:</code> so existing brains can opt in): see <a href="https://github.com/garrytan/gbrain/blob/main/docs/architecture/pack-upgrade-mechanism.md"><code>docs/architecture/pack-upgrade-mechanism.md</code></a>.</li>
 </ul>
 <pre><code class="language-bash">gbrain schema active                # which pack is running, which tier set it
 gbrain schema list                  # bundled + installed packs
@@ -369,6 +370,14 @@ export GBRAIN_BULK_RETRY_MAX_MS=15000  # int &gt;= base
 (not at first-retry mid-cycle). PGLite-only installs pay zero cost — the
 retry wrap is engine-level, but PGLite has no pooler so retries never
 fire in practice.</p>
+<p><strong><code>gbrain brainstorm</code> returning <code>judge_failed: true</code> with 0 scored
+ideas?</strong> v0.41.21.0 closes the two bugs that caused it. The judge
+hard-coded a 4K-token output cap; for any run past ~40 ideas the call
+truncated mid-JSON and the parser threw. Same release closes a slash-
+form pricing miss: <code>gbrain brainstorm --judge-model anthropic/claude-sonnet-4-6 --max-cost 5</code> failed with
+<code>BudgetExhausted reason=no_pricing</code> because every pricing site only
+matched the colon form. Both shapes work now. No config change, no
+schema migration — <code>gbrain upgrade</code> is the whole fix.</p>
 <h3>Docs</h3>
 <ul>
 <li><a href="https://github.com/garrytan/gbrain/blob/main/docs/INSTALL.md"><code>docs/INSTALL.md</code></a> — every install path, end to end</li>
@@ -405,7 +414,7 @@ fire in practice.</p>
   <div>
     <div class="related-list">
       <a class="related-row" href="/projects/mem0ai/mem0">
-        <div class="stars">★ 56.8K</div>
+        <div class="stars">★ 56.9K</div>
         <div class="name"><span class="org">mem0ai /</span> mem0</div>
       </a>
       <a class="related-row" href="/projects/vectorize-io/hindsight">
@@ -413,28 +422,28 @@ fire in practice.</p>
         <div class="name"><span class="org">vectorize-io /</span> hindsight</div>
       </a>
       <a class="related-row" href="/projects/greyhaven-ai/autocontext">
-        <div class="stars">★ 1.1K</div>
+        <div class="stars">★ 1.2K</div>
         <div class="name"><span class="org">greyhaven-ai /</span> autocontext</div>
       </a>
       <a class="related-row" href="/projects/elkimek/honcho-self-hosted">
-        <div class="stars">★ 266</div>
+        <div class="stars">★ 267</div>
         <div class="name"><span class="org">elkimek /</span> honcho-self-hosted</div>
       </a>
       <a class="related-row" href="/projects/yoloshii/ClawMem">
         <div class="stars">★ 176</div>
         <div class="name"><span class="org">yoloshii /</span> ClawMem</div>
       </a>
+      <a class="related-row" href="/projects/Signet-AI/signetai">
+        <div class="stars">★ 174</div>
+        <div class="name"><span class="org">Signet-AI /</span> signetai</div>
+      </a>
       <a class="related-row" href="/projects/plur-ai/plur">
-        <div class="stars">★ 140</div>
+        <div class="stars">★ 142</div>
         <div class="name"><span class="org">plur-ai /</span> plur</div>
       </a>
       <a class="related-row" href="/projects/amanning3390/flowstate-qmd">
         <div class="stars">★ 27</div>
         <div class="name"><span class="org">amanning3390 /</span> flowstate-qmd</div>
-      </a>
-      <a class="related-row" href="/projects/stephenschoettler/hermes-lcm">
-        <div class="stars">★ 601</div>
-        <div class="name"><span class="org">stephenschoettler /</span> hermes-lcm</div>
       </a>
     </div>
     <p class="list-link"><a href="/lists/best-memory-providers">see all memory &amp; context →</a></p>
