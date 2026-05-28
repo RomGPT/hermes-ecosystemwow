@@ -40,11 +40,14 @@
   "codeRepository": "https://github.com/aivrar/portable-hermes-agent",
   "applicationCategory": "DesktopEnhancementApplication",
   "operatingSystem": "Cross-platform",
+  "programmingLanguage": "Python",
+  "license": "https://spdx.org/licenses/MIT.html",
   "author": {
     "@type": "Organization",
     "name": "aivrar",
     "url": "https://github.com/aivrar"
   },
+  "dateModified": "2026-05-22T03:35:25.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
@@ -110,10 +113,10 @@
 
   <div class="meta-row">
     <span class="stars">★ 143</span>
+    <span><span class="meta-label">lang</span>Python</span>
+    <span><span class="meta-label">license</span>MIT</span>
     
-    
-    
-    
+    <span><span class="meta-label">updated</span>2026-05-22</span>
   </div>
 
   <div class="actions">
@@ -140,12 +143,12 @@
 <details class="readme-details">
   <summary class="readme-toggle">full readme from github</summary>
   <section class="readme" data-nosnippet>
-    <h3>Portable Hermes Agent</h3>
+    <h2>Portable Hermes Agent</h2>
 <p><strong>Portable AI agent desktop for Windows</strong> — 100 tools, GUI, local models via LM Studio, TTS, Music, ComfyUI, workflows, tool maker. No install. No Docker. No admin rights.</p>
 <p>Built on <a href="https://github.com/NousResearch/hermes-agent">NousResearch/hermes-agent</a> (MIT License) with extensive customization for non-technical users.</p>
 <hr>
-<h4>Features</h4>
-<h5>Desktop GUI</h5>
+<h3>Features</h3>
+<h4>Desktop GUI</h4>
 <ul>
 <li>Dark-themed Tkinter interface with chat, sidebar, and session management</li>
 <li>Image attachment with thumbnails (vision model support)</li>
@@ -153,7 +156,7 @@
 <li>API key setup wizard with individual service configuration</li>
 <li>Permissions panel with granular control over file, network, and system access</li>
 </ul>
-<h5>100 Tools Across 20+ Toolsets</h5>
+<h4>100 Tools Across 20+ Toolsets</h4>
 <table>
 <thead>
 <tr>
@@ -219,7 +222,7 @@
 </tr>
 </tbody></table>
 <p>Plus all built-in hermes-agent tools: web search, file operations, browser automation, code execution, delegation, memory, skills, messaging, Home Assistant, and more.</p>
-<h5>Extension Modules</h5>
+<h4>Extension Modules</h4>
 <p>Three portable AI generation servers from <a href="https://github.com/aivrar">aivrar</a>:</p>
 <table>
 <thead>
@@ -250,23 +253,23 @@
 </tr>
 </tbody></table>
 <p>Each extension auto-installs on first use. No system dependencies.</p>
-<h5>Workflow Engine</h5>
+<h4>Workflow Engine</h4>
 <p>Chain tool calls into automated pipelines with data flow, conditions, loops, parallel execution, error handling, and cron scheduling.</p>
-<h5>Dynamic Tool Maker</h5>
+<h4>Dynamic Tool Maker</h4>
 <p>Create new tools at runtime — wrap any REST API or write custom Python handlers. Tools persist across sessions and reload automatically.</p>
-<h5>Guided Mode</h5>
+<h4>Guided Mode</h4>
 <p>No API key? No problem. The chat works offline using a built-in 1,054-line user guide. New users get step-by-step guidance to set up their first AI model.</p>
 <hr>
-<h4>Quick Start</h4>
-<h5>1. Install</h5>
+<h3>Quick Start</h3>
+<h4>1. Install</h4>
 <pre><code class="language-batch">install.bat
 </code></pre>
 <p>Downloads embedded Python 3.13, all dependencies, LM Studio SDK, and Node.js tools. No admin rights needed.</p>
-<h5>2. Launch</h5>
+<h4>2. Launch</h4>
 <pre><code class="language-batch">hermes.bat          :: CLI mode
 hermes_gui.bat      :: GUI mode
 </code></pre>
-<h5>3. Connect an AI Model</h5>
+<h4>3. Connect an AI Model</h4>
 <p><strong>Cloud (2 minutes, free):</strong></p>
 <ol>
 <li>File &gt; API Key Setup &gt; OpenRouter</li>
@@ -282,18 +285,18 @@ hermes_gui.bat      :: GUI mode
 <li>Load model, click &quot;Use for Chat&quot;</li>
 </ol>
 <hr>
-<h4>Requirements</h4>
+<h3>Requirements</h3>
 <ul>
 <li>Windows 10/11</li>
 <li>Internet connection (for cloud AI) or NVIDIA GPU 8GB+ (for local AI)</li>
 <li>No admin rights, no system Python, no Docker</li>
 </ul>
 <hr>
-<h4>Documentation</h4>
+<h3>Documentation</h3>
 <p>A searchable user guide is built into the agent — ask it anything or use the <code>search_guide</code> tool. The <a href="https://github.com/aivrar/portable-hermes-agent/releases/latest">PDF manual</a> is included in every release.</p>
 <p>Key topics: getting started, API setup, the interface, permissions, LM Studio local models, extensions (TTS/Music/ComfyUI), all 100 tools, custom tool creation, workflows, and a glossary of AI terms.</p>
 <hr>
-<h4>Architecture</h4>
+<h3>Architecture</h3>
 <pre><code>User
  |
  v
@@ -319,16 +322,17 @@ AIAgent (run_agent.py)
       +-- Any OpenAI-compatible endpoint
 </code></pre>
 <hr>
-<h4>Credits</h4>
+<h3>Credits</h3>
 <ul>
 <li><strong>Base framework</strong>: <a href="https://github.com/NousResearch/hermes-agent">NousResearch/hermes-agent</a> (MIT License)</li>
 <li><strong>Extension modules</strong>: <a href="https://github.com/aivrar">aivrar</a> — portable-tts-server, portable-music-server, comfyui-portable-installer</li>
 <li><strong>Custom tools, GUI, and integrations</strong>: Built with <a href="https://claude.ai/claude-code">Claude Code</a></li>
 </ul>
 <hr>
-<h4>License</h4>
+<h3>License</h3>
 <p>MIT License — see <a href="LICENSE">LICENSE</a> for details.</p>
 <p>Original framework copyright (c) 2025 Nous Research.</p>
+
   </section>
 </details>
 
@@ -344,7 +348,7 @@ AIAgent (run_agent.py)
         <div class="name"><span class="org">outsourc-e /</span> hermes-workspace</div>
       </a>
       <a class="related-row" href="/projects/fathah/hermes-desktop">
-        <div class="stars">★ 8.2K</div>
+        <div class="stars">★ 8.3K</div>
         <div class="name"><span class="org">fathah /</span> hermes-desktop</div>
       </a>
       <a class="related-row" href="/projects/sanchomuzax/hermes-webui">
@@ -356,7 +360,7 @@ AIAgent (run_agent.py)
         <div class="name"><span class="org">Euraika-Labs /</span> pan-ui</div>
       </a>
       <a class="related-row" href="/projects/Eynzof/hermes-agent-cn-desktop">
-        <div class="stars">★ 198</div>
+        <div class="stars">★ 199</div>
         <div class="name"><span class="org">Eynzof /</span> hermes-agent-cn-desktop</div>
       </a>
       <a class="related-row" href="/projects/Felix-Forever/hermes-agent-desktop">
@@ -364,11 +368,11 @@ AIAgent (run_agent.py)
         <div class="name"><span class="org">Felix-Forever /</span> hermes-agent-desktop</div>
       </a>
       <a class="related-row" href="/projects/jazzyalex/agent-sessions">
-        <div class="stars">★ 586</div>
+        <div class="stars">★ 587</div>
         <div class="name"><span class="org">jazzyalex /</span> agent-sessions</div>
       </a>
       <a class="related-row" href="/projects/nickvasilescu/hermes-desktop-os1">
-        <div class="stars">★ 446</div>
+        <div class="stars">★ 447</div>
         <div class="name"><span class="org">nickvasilescu /</span> hermes-desktop-os1</div>
       </a>
     </div>

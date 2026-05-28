@@ -638,14 +638,14 @@
     "auditedAt": "2026-05-25T09:16:11.338Z"
   },
   "numtide/llm-agents.nix": {
-    "summary": "llm-agents.nix is a collection of Nix packages designed to simplify the deployment and management of AI coding agents and development tools. It provides a centralized repository of pre-configured Nix expressions that allow users to run various agentic tools directly via the Nix package manager without manual installation. The project is updated daily to ensure compatibility with the latest versions of tools like Hermes, Claude Code, and Goose. This infrastructure enables developers to maintain reproducible environments for multi-agent orchestrators and terminal-based AI assistants.",
+    "summary": "llm-agents.nix provides a curated collection of Nix packages designed to streamline the installation and management of AI coding agents and development tools. It functions as a centralized repository that automatically updates daily to ensure users have access to the latest versions of various CLI-based agents. The project enables developers to easily deploy tools like multi-agent orchestrators, terminal-based coding assistants, and unified API proxies. This ecosystem supports a wide range of providers including OpenAI, Claude, Gemini, and xAI.",
     "highlights": [
-      "Provides Nix packages for numerous AI coding agents and tools",
-      "Automated daily updates ensure access to the latest software versions",
-      "Supports both open-source and proprietary binary-distributed agentic tools"
+      "Daily automatic updates for all included packages",
+      "Supports diverse AI coding agents and orchestrators",
+      "Provides unified proxy APIs for multiple model providers"
     ],
-    "readmeHash": "e3b8d2639a62c690aa4ae06f6a2b529c047c93d2a934337ce6fba51b410fef70",
-    "generatedAt": "2026-05-27T07:51:57.041Z",
+    "readmeHash": "cbd396e0d1438eb5c7a120f1ed1fc54872d3f36ac229c35f384c00c9cb91080f",
+    "generatedAt": "2026-05-28T14:55:09.230Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -1266,14 +1266,14 @@
     "audit": "pass"
   },
   "stephenschoettler/hermes-lcm": {
-    "summary": "Hermes-LCM is a context management plugin for the Hermes Agent that prevents information loss during long-running conversations. It replaces standard lossy compression with a hierarchical summary Directed Acyclic Graph (DAG) backed by a SQLite message store. This architecture allows the agent to maintain a bounded active context while using specialized tools to drill back into specific historical details. The system includes features for sensitive data redaction, large payload externalization, and source-aware retrieval to ensure high-quality memory recall without flooding the prompt.",
+    "summary": "Hermes-LCM is a context management plugin for the Hermes Agent that prevents information loss during long-running conversations. It replaces standard flat summarization with a hierarchical Directed Acyclic Graph (DAG) that compacts older messages while preserving their underlying details in a SQLite store. This architecture allows the agent to use specialized tools like grep and expand to drill back into specific historical data without flooding the active context window. The system also includes safety features such as sensitive pattern redaction and externalization of large payloads to maintain performance.",
     "highlights": [
-      "Uses a hierarchical summary DAG for depth-aware context compaction",
-      "Provides agent tools like lcm_grep and lcm_expand for precise recall",
-      "Persists raw message history in a local SQLite database"
+      "Hierarchical DAG structure for depth-aware context compaction",
+      "SQLite message store preserves raw history for precise retrieval",
+      "Agent tools for searching and expanding compacted conversation nodes"
     ],
-    "readmeHash": "b3d5012d3f43519e0d63de889f2a88a172bf3a491614f1785fb5e2b6d3e4d4b5",
-    "generatedAt": "2026-05-28T07:48:56.710Z",
+    "readmeHash": "323ffa2de330a3798c3ab5b421bbb6b26ee8b42b09300c138948644af607bfeb",
+    "generatedAt": "2026-05-28T14:55:27.067Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"
@@ -1319,14 +1319,14 @@
     "audit": "pass"
   },
   "EKKOLearnAI/hermes-web-ui": {
-    "summary": "Hermes Web UI is a comprehensive management dashboard for the Hermes Agent ecosystem that provides a graphical interface for AI interaction and system administration. It facilitates real-time chat streaming via Socket.IO and manages multi-platform integrations for services like Telegram, Discord, and Slack through a unified configuration panel. The platform includes specialized modules for monitoring token usage, scheduling cron jobs, and managing remote files across Docker, SSH, and local backends. Users can also configure multi-agent group chats, browse installed skills, and access an integrated web terminal for direct system control.",
+    "summary": "Hermes Web UI is a comprehensive dashboard for managing Hermes Agent through a responsive web interface. It provides a centralized control plane for real-time AI chat, session management, and multi-platform channel configuration across services like Telegram, Discord, and WhatsApp. The system features a self-built SQLite session database, usage analytics for cost tracking, and a multi-profile architecture for isolated agent environments. Users can also manage scheduled cron jobs, browse remote files, and access an integrated web terminal for direct system interaction.",
     "highlights": [
-      "Unified configuration for eight messaging platforms including Discord and WhatsApp",
-      "Real-time chat streaming with markdown support and tool call inspection",
+      "Unified configuration for eight messaging platforms including Slack and WhatsApp",
+      "Real-time chat streaming with multi-session management and Markdown support",
       "Usage analytics for tracking token consumption, costs, and model distribution"
     ],
-    "readmeHash": "dd5480b165780f0a572d54845ed219ac4c95286feb435b6c07ef535b8461b4de",
-    "generatedAt": "2026-05-28T07:49:01.172Z",
+    "readmeHash": "93ad65083ce7d083656530dc77267e37bfa01ac8622dc7f5de0dc1ef574db8e6",
+    "generatedAt": "2026-05-28T14:55:31.717Z",
     "model": "google/gemma-4-31b-it:free",
     "version": 1,
     "audit": "pass"

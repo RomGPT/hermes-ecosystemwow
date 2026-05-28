@@ -4,7 +4,7 @@
     "repo": "hermes-agent",
     "name": "hermes-agent",
     "description": "The self-improving AI agent that grows with you — persistent memory, auto-generated skills, 14 platforms, 6 execution backends",
-    "stars": 171015,
+    "stars": 171198,
     "url": "https://github.com/NousResearch/hermes-agent",
     "official": true,
     "category": "Core & Official"
@@ -14,7 +14,7 @@
     "repo": "Hermes-Function-Calling",
     "name": "Hermes-Function-Calling",
     "description": "Function calling examples and training data for Hermes LLM models",
-    "stars": 1363,
+    "stars": 1364,
     "url": "https://github.com/NousResearch/Hermes-Function-Calling",
     "official": true,
     "category": "Core & Official"
@@ -24,7 +24,7 @@
     "repo": "atropos",
     "name": "atropos",
     "description": "RL training environments framework for tool-calling models",
-    "stars": 1233,
+    "stars": 1235,
     "url": "https://github.com/NousResearch/atropos",
     "official": true,
     "category": "Core & Official"
@@ -34,7 +34,7 @@
     "repo": "hermes-agent-self-evolution",
     "name": "hermes-agent-self-evolution",
     "description": "Evolutionary self-improvement using DSPy + GEPA — optimizes skills, prompts, and code",
-    "stars": 3650,
+    "stars": 3653,
     "url": "https://github.com/NousResearch/hermes-agent-self-evolution",
     "official": true,
     "category": "Core & Official"
@@ -44,7 +44,7 @@
     "repo": "hermes-paperclip-adapter",
     "name": "hermes-paperclip-adapter",
     "description": "Run Hermes as a managed employee in Paperclip company systems",
-    "stars": 1419,
+    "stars": 1420,
     "url": "https://github.com/NousResearch/hermes-paperclip-adapter",
     "official": true,
     "category": "Core & Official"
@@ -54,7 +54,7 @@
     "repo": "autonovel",
     "name": "autonovel",
     "description": "Autonomous novel-writing pipeline generating 100k+ word manuscripts",
-    "stars": 1021,
+    "stars": 1022,
     "url": "https://github.com/NousResearch/autonovel",
     "official": true,
     "category": "Core & Official"
@@ -64,7 +64,7 @@
     "repo": "hermes-workspace",
     "name": "hermes-workspace",
     "description": "Native web workspace — chat, terminal, memory browser, skills manager, and inspector panel",
-    "stars": 4987,
+    "stars": 4995,
     "url": "https://github.com/outsourc-e/hermes-workspace",
     "official": false,
     "category": "Workspaces & GUIs"
@@ -74,7 +74,7 @@
     "repo": "hermes-desktop",
     "name": "hermes-desktop",
     "description": "Desktop companion app for installing, configuring, and chatting with Hermes Agent",
-    "stars": 8245,
+    "stars": 8293,
     "url": "https://github.com/fathah/hermes-desktop",
     "official": false,
     "category": "Workspaces & GUIs"
@@ -104,7 +104,7 @@
     "repo": "Anthropic-Cybersecurity-Skills",
     "name": "Anthropic-Cybersecurity-Skills",
     "description": "754 structured cybersecurity skills mapped to MITRE ATT&CK, NIST CSF 2.0, ATLAS, D3FEND & NIST AI RMF",
-    "stars": 11378,
+    "stars": 11403,
     "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
     "official": false,
     "category": "Skills & Skill Registries"
@@ -114,7 +114,7 @@
     "repo": "avoid-ai-writing",
     "name": "avoid-ai-writing",
     "description": "Audits and rewrites content to eliminate detectable AI writing patterns",
-    "stars": 1594,
+    "stars": 1595,
     "url": "https://github.com/conorbronsdon/avoid-ai-writing",
     "official": false,
     "category": "Skills & Skill Registries"
@@ -124,7 +124,7 @@
     "repo": "skills",
     "name": "wondelai/skills",
     "description": "Cross-platform skills library for Claude Code and agentskills.io-compatible agents",
-    "stars": 1134,
+    "stars": 1135,
     "url": "https://github.com/wondelai/skills",
     "official": false,
     "category": "Skills & Skill Registries"
@@ -144,7 +144,7 @@
     "repo": "drawio-skill",
     "name": "drawio-skill",
     "description": "Generate draw.io diagrams from natural language descriptions",
-    "stars": 1934,
+    "stars": 1937,
     "url": "https://github.com/Agents365-ai/drawio-skill",
     "official": false,
     "category": "Skills & Skill Registries"
@@ -254,7 +254,7 @@
     "repo": "hermeshub",
     "name": "hermeshub",
     "description": "Community skill browsing, search, and one-click installation hub",
-    "stars": 202,
+    "stars": 203,
     "url": "https://github.com/amanning3390/hermeshub",
     "official": false,
     "category": "Skills & Skill Registries"
@@ -274,7 +274,7 @@
     "repo": "mem0",
     "name": "mem0",
     "description": "Universal memory layer for AI Agents — official Hermes Agent memory provider, available as managed cloud or Apache-2.0 self-hosted OSS",
-    "stars": 56970,
+    "stars": 56980,
     "url": "https://github.com/mem0ai/mem0",
     "official": false,
     "category": "Memory & Context"
@@ -284,7 +284,7 @@
     "repo": "hindsight",
     "name": "hindsight",
     "description": "Agent memory that learns — long-term retain/recall/reflect workflows",
-    "stars": 14956,
+    "stars": 14981,
     "url": "https://github.com/vectorize-io/hindsight",
     "official": true,
     "category": "Memory & Context"
@@ -314,7 +314,7 @@
     "repo": "ClawMem",
     "name": "ClawMem",
     "description": "On-device memory and context engine for agents — local-first, no cloud dependencies",
-    "stars": 176,
+    "stars": 177,
     "url": "https://github.com/yoloshii/ClawMem",
     "official": false,
     "category": "Memory & Context"
@@ -364,7 +364,7 @@
     "repo": "hermes-plugins",
     "name": "hermes-plugins",
     "description": "Goal management, inter-agent bridge, model selection, and cost control plugins",
-    "stars": 156,
+    "stars": 157,
     "url": "https://github.com/42-evey/hermes-plugins",
     "official": false,
     "category": "Plugins & Extensions"
@@ -414,7 +414,7 @@
     "repo": "mission-control",
     "name": "mission-control",
     "description": "Self-hosted AI agent orchestration — dispatch tasks, run multi-agent workflows, monitor spend",
-    "stars": 5043,
+    "stars": 5045,
     "url": "https://github.com/builderz-labs/mission-control",
     "official": false,
     "category": "Multi-Agent & Orchestration"
@@ -484,7 +484,7 @@
     "repo": "hermes-agent-team",
     "name": "hermes-agent-team",
     "description": "Local multi-agent team collaboration web system built on Hermes Agent profiles, MCP, ACP, and Hermes Kanban",
-    "stars": 114,
+    "stars": 116,
     "url": "https://github.com/linke-ai/hermes-agent-team",
     "official": false,
     "category": "Multi-Agent & Orchestration"
@@ -494,7 +494,7 @@
     "repo": "hermes-agent-cn-desktop",
     "name": "hermes-agent-cn-desktop",
     "description": "Windows-first Chinese desktop app for Hermes Agent built with Tauri, TypeScript, and Rust",
-    "stars": 198,
+    "stars": 199,
     "url": "https://github.com/Eynzof/hermes-agent-cn-desktop",
     "official": false,
     "category": "Workspaces & GUIs"
@@ -534,7 +534,7 @@
     "repo": "codegraph",
     "name": "codegraph",
     "description": "Local pre-indexed code knowledge graph for Hermes Agent and other coding agents to reduce token usage and tool calls",
-    "stars": 31088,
+    "stars": 31285,
     "url": "https://github.com/colbymchenry/codegraph",
     "official": false,
     "category": "Developer Tools"
@@ -564,7 +564,7 @@
     "repo": "hermes-agent-control-room",
     "name": "hermes-agent-control-room",
     "description": "Control Room-first template for scaling Hermes Agent from one VPS agent to specialist teams and automated workflows",
-    "stars": 486,
+    "stars": 487,
     "url": "https://github.com/shannhk/hermes-agent-control-room",
     "official": false,
     "category": "Multi-Agent & Orchestration"
@@ -584,7 +584,7 @@
     "repo": "claude-tap",
     "name": "claude-tap",
     "description": "Local trace viewer for inspecting coding-agent API traffic from Hermes Agent, Claude Code, Codex, Gemini, Cursor, OpenCode, and others",
-    "stars": 951,
+    "stars": 955,
     "url": "https://github.com/liaohch3/claude-tap",
     "official": false,
     "category": "Developer Tools"
@@ -594,7 +594,7 @@
     "repo": "agent-sessions",
     "name": "agent-sessions",
     "description": "Native macOS session browser, agent cockpit, analytics, and limits tracker for Hermes agents and other coding-agent CLIs",
-    "stars": 586,
+    "stars": 587,
     "url": "https://github.com/jazzyalex/agent-sessions",
     "official": false,
     "category": "Workspaces & GUIs"
@@ -674,7 +674,7 @@
     "repo": "hermes-desktop-os1",
     "name": "hermes-desktop-os1",
     "description": "Native macOS workspace for Hermes Agent running on Orgo cloud computers and SSH hosts",
-    "stars": 446,
+    "stars": 447,
     "url": "https://github.com/nickvasilescu/hermes-desktop-os1",
     "official": false,
     "category": "Workspaces & GUIs"
@@ -744,7 +744,7 @@
     "repo": "agent-of-empires",
     "name": "agent-of-empires",
     "description": "TUI and web control surface for managing multiple coding agents including Hermes Agent, Claude Code, OpenCode, Codex, Gemini, and others",
-    "stars": 2438,
+    "stars": 2441,
     "url": "https://github.com/agent-of-empires/agent-of-empires",
     "official": false,
     "category": "Multi-Agent & Orchestration"
@@ -754,7 +754,7 @@
     "repo": "open-design",
     "name": "open-design",
     "description": "Local-first open-source design/prototyping system with coding-agent CLI support including Hermes Agent",
-    "stars": 54496,
+    "stars": 54611,
     "url": "https://github.com/nexu-io/open-design",
     "official": false,
     "category": "Skills & Skill Registries"
@@ -764,7 +764,7 @@
     "repo": "cc-switch",
     "name": "cc-switch",
     "description": "Cross-platform all-in-one manager for Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI, and Hermes Agent",
-    "stars": 83432,
+    "stars": 83574,
     "url": "https://github.com/farion1231/cc-switch",
     "official": false,
     "category": "Workspaces & GUIs"
@@ -774,7 +774,7 @@
     "repo": "AionUi",
     "name": "AionUi",
     "description": "Local open-source cowork app for OpenClaw, Hermes Agent, Claude Code, Codex, OpenCode, Gemini CLI, and other agent CLIs",
-    "stars": 26976,
+    "stars": 26999,
     "url": "https://github.com/iOfficeAI/AionUi",
     "official": false,
     "category": "Workspaces & GUIs"
@@ -874,7 +874,7 @@
     "repo": "hermes-council",
     "name": "hermes-council",
     "description": "Adversarial multi-perspective council MCP server for decision-making",
-    "stars": 31,
+    "stars": 30,
     "url": "https://github.com/Ridwannurudeen/hermes-council",
     "official": false,
     "category": "Integrations & Bridges"
@@ -894,7 +894,7 @@
     "repo": "tokscale",
     "name": "tokscale",
     "description": "CLI tool for tracking token usage from Claude Code, OpenClaw, Hermes, Codex, Gemini, and more",
-    "stars": 3293,
+    "stars": 3297,
     "url": "https://github.com/junhoyeo/tokscale",
     "official": false,
     "category": "Developer Tools"
@@ -914,7 +914,7 @@
     "repo": "hermes-CCC",
     "name": "hermes-CCC",
     "description": "Hermes Agent ported to Claude Code Channel — 46 native skills, no OAuth, no external process",
-    "stars": 108,
+    "stars": 109,
     "url": "https://github.com/AlexAI-MCP/hermes-CCC",
     "official": false,
     "category": "Developer Tools"
@@ -1054,7 +1054,7 @@
     "repo": "awesome-hermes-agent",
     "name": "awesome-hermes-agent",
     "description": "Curated list of awesome skills, tools, integrations, and resources for Hermes Agent",
-    "stars": 3519,
+    "stars": 3521,
     "url": "https://github.com/0xNyk/awesome-hermes-agent",
     "official": false,
     "category": "Guides & Docs"
@@ -1064,7 +1064,7 @@
     "repo": "hermes-agent-orange-book",
     "name": "hermes-agent-orange-book",
     "description": "Hermes Agent practical guide — Orange Book series (Chinese language)",
-    "stars": 3901,
+    "stars": 3902,
     "url": "https://github.com/alchaincyf/hermes-agent-orange-book",
     "official": false,
     "category": "Guides & Docs"
@@ -1144,7 +1144,7 @@
     "repo": "hermes-control-interface",
     "name": "hermes-control-interface",
     "description": "A self-hosted web dashboard for the Hermes AI agent stack. Provides a browser-based terminal, file explorer, session overview, cron management, system metrics, and an agent status panel — all behind a",
-    "stars": 710,
+    "stars": 711,
     "url": "https://github.com/xaspx/hermes-control-interface",
     "official": false,
     "category": "Workspaces & GUIs"
@@ -1154,7 +1154,7 @@
     "repo": "hermes-ecosystem",
     "name": "hermes-ecosystem",
     "description": "Hermes Atlas — the community map of every tool, skill, and integration for Hermes Agent by Nous Research",
-    "stars": 902,
+    "stars": 901,
     "url": "https://github.com/ksimback/hermes-ecosystem",
     "official": false,
     "category": "Guides & Docs"
@@ -1164,7 +1164,7 @@
     "repo": "hermes-desktop",
     "name": "hermes-desktop",
     "description": "A native Mac workspace for Hermes: real SSH, real terminal, real session data.",
-    "stars": 1581,
+    "stars": 1585,
     "url": "https://github.com/dodo-reach/hermes-desktop",
     "official": false,
     "category": "Workspaces & GUIs"
@@ -1184,7 +1184,7 @@
     "repo": "hermes-webui",
     "name": "hermes-webui",
     "description": "Hermes WebUI: The best way to use Hermes Agent from the web or from your phone!",
-    "stars": 9034,
+    "stars": 9055,
     "url": "https://github.com/nesquena/hermes-webui",
     "official": false,
     "category": "Workspaces & GUIs"
@@ -1194,7 +1194,7 @@
     "repo": "gbrain",
     "name": "gbrain",
     "description": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
-    "stars": 19524,
+    "stars": 19544,
     "url": "https://github.com/garrytan/gbrain",
     "official": false,
     "category": "Memory & Context"
@@ -1224,7 +1224,7 @@
     "repo": "hermesclaw",
     "name": "hermesclaw",
     "description": "Run Hermes Agent and OpenClaw on the same WeChat account",
-    "stars": 545,
+    "stars": 546,
     "url": "https://github.com/AaronWong1999/hermesclaw",
     "official": false,
     "category": "Integrations & Bridges"
@@ -1274,7 +1274,7 @@
     "repo": "hermes-web-ui",
     "name": "hermes-web-ui",
     "description": "Web dashboard for Hermes Agent — multi-platform AI chat, session management, scheduled jobs, usage analytics & channel configuration (Telegram, Discord, Slack, WhatsApp)",
-    "stars": 6406,
+    "stars": 6422,
     "url": "https://github.com/EKKOLearnAI/hermes-web-ui",
     "official": false,
     "category": "Workspaces & GUIs"
@@ -1294,7 +1294,7 @@
     "repo": "mnemosyne",
     "name": "mnemosyne",
     "description": "The Zero-Dependency, Sub-Millisecond AI Memory System for Hermes Agents",
-    "stars": 695,
+    "stars": 699,
     "url": "https://github.com/AxDSan/mnemosyne",
     "official": false,
     "category": "Memory & Context"
@@ -1304,7 +1304,7 @@
     "repo": "SkillClaw",
     "name": "SkillClaw",
     "description": "Let Skills Evolve Collectively with Agentic Evolver",
-    "stars": 1526,
+    "stars": 1527,
     "url": "https://github.com/AMAP-ML/SkillClaw",
     "official": false,
     "category": "Skills & Skill Registries"
@@ -1344,7 +1344,7 @@
     "repo": "agent-browser-mcp",
     "name": "agent-browser-mcp",
     "description": "让 Agent 直接操作真实 Chrome 的 MCP 服务，支持页面扫描、CDP、截图与物理输入",
-    "stars": 217,
+    "stars": 218,
     "url": "https://github.com/335234131/agent-browser-mcp",
     "official": false,
     "category": "Plugins & Extensions"
@@ -1354,7 +1354,7 @@
     "repo": "hermes-agent-guide",
     "name": "hermes-agent-guide",
     "description": "A systematic Chinese-language guide to Hermes Agent — 16 books, 300K+ words, covering installation, advanced development, single- and multi-agent orchestration.",
-    "stars": 271,
+    "stars": 273,
     "url": "https://github.com/jwangkun/hermes-agent-guide",
     "official": false,
     "category": "Guides & Docs"
@@ -1384,7 +1384,7 @@
     "repo": "honcho",
     "name": "honcho",
     "description": "Memory library for building stateful agents — the upstream library that the elkimek/honcho-self-hosted Hermes wrapper builds on.",
-    "stars": 4423,
+    "stars": 4432,
     "url": "https://github.com/plastic-labs/honcho",
     "official": true,
     "category": "Memory & Context"
@@ -1424,7 +1424,7 @@
     "repo": "Brainstack",
     "name": "Brainstack",
     "description": "Memory kernel stack for Hermes agent",
-    "stars": 36,
+    "stars": 37,
     "url": "https://github.com/yepyhun/Brainstack",
     "official": false,
     "category": "Memory & Context"
@@ -1444,7 +1444,7 @@
     "repo": "MeiGen-AI-Design-MCP",
     "name": "MeiGen-AI-Design-MCP",
     "description": "Supports GPT Image 2, Nanobanana & ComfyUI, with a 1,400+ prompt library, carefully crafted hooks and a multi-task orchestration system",
-    "stars": 1273,
+    "stars": 1279,
     "url": "https://github.com/jau123/MeiGen-AI-Design-MCP",
     "official": false,
     "category": "Plugins & Extensions"
@@ -1464,7 +1464,7 @@
     "repo": "OpenViking",
     "name": "OpenViking",
     "description": "Open-source context database for AI agents — official Hermes Agent memory provider using viking:// URIs and tiered L0/L1/L2 loading; 91% token reduction and 43-49% task-completion gain over baseline on LoCoMo10. AGPL-3.0.",
-    "stars": 24823,
+    "stars": 24832,
     "url": "https://github.com/volcengine/OpenViking",
     "official": false,
     "category": "Memory & Context"
@@ -1474,7 +1474,7 @@
     "repo": "supermemory",
     "name": "supermemory",
     "description": "Memory engine and API — official Hermes Agent memory provider with sub-300ms recall sustained at 100B+ tokens/month, custom vector graph engine, context fencing, and byte-level dedupe with 100% prompt-cache discount.",
-    "stars": 22730,
+    "stars": 22733,
     "url": "https://github.com/supermemoryai/supermemory",
     "official": false,
     "category": "Memory & Context"
@@ -1484,7 +1484,7 @@
     "repo": "byterover-cli",
     "name": "byterover-cli",
     "description": "Memory as a git repo (formerly Cipher) — official Hermes Agent memory provider with 5-tier retrieval (4 tiers non-LLM, sub-100ms), brv vc commit/branch/merge versioning over plain markdown context tree. Elastic License 2.0.",
-    "stars": 4796,
+    "stars": 4798,
     "url": "https://github.com/campfirein/byterover-cli",
     "official": false,
     "category": "Memory & Context"
