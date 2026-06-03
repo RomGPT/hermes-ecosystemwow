@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/sheawinkler/hermes-agent-ultra#software",
   "name": "hermes-agent-ultra",
-  "description": "Hermes Agent Ultra is a Rust-native autonomous agent runtime designed to provide a more deterministic and secure alternative to the original Hermes Agent. It implements the upstream project's functionality using a Rust-only strategy to improve execution paths, observability, and operator control. The system features a runtime policy engine for tool auditing and a session time-travel mechanism for checkpointing and replaying agent interactions. It supports a wide array of local backends including",
+  "description": "Hermes Agent Ultra is a Rust-native autonomous agent runtime designed to provide functional parity with the original Hermes Agent while adding advanced reliability and security layers. It replaces the upstream Python-based implementation with a high-performance Rust core that manages agent loops, tool execution, and multi-provider inference routing. The project features a robust operational surface including session time-travel, runtime policy enforcement, and deep diagnostic tools for debugging",
   "url": "https://hermesatlas.com/projects/sheawinkler/hermes-agent-ultra",
   "codeRepository": "https://github.com/sheawinkler/hermes-agent-ultra",
   "applicationCategory": "DeveloperApplication",
@@ -130,11 +130,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Hermes Agent Ultra is a Rust-native autonomous agent runtime designed to provide a more deterministic and secure alternative to the original Hermes Agent. It implements the upstream project's functionality using a Rust-only strategy to improve execution paths, observability, and operator control. The system features a runtime policy engine for tool auditing and a session time-travel mechanism for checkpointing and replaying agent interactions. It supports a wide array of local backends including Ollama and vLLM, as well as integration with Nous Portal for managed model access.</p>
+    <p class="summary-text">Hermes Agent Ultra is a Rust-native autonomous agent runtime designed to provide functional parity with the original Hermes Agent while adding advanced reliability and security layers. It replaces the upstream Python-based implementation with a high-performance Rust core that manages agent loops, tool execution, and multi-provider inference routing. The project features a robust operational surface including session time-travel, runtime policy enforcement, and deep diagnostic tools for debugging long-running sessions. It supports a wide range of local backends like Ollama and vLLM alongside managed providers via the Nous Portal.</p>
     <ul class="summary-highlights">
-      <li>Rust-native core runtime for deterministic execution and improved performance</li>
-      <li>Runtime policy engine for auditing and simulating tool-call outcomes</li>
-      <li>Session branching with checkpoint, rollback, and replay capabilities</li>
+      <li>Rust-native core for deterministic execution and high-performance agent loops</li>
+      <li>Session branching and time-travel for checkpointing and replaying agent states</li>
+      <li>Extensive local backend support including Ollama, llama.cpp, and Apple ANE</li>
     </ul>
   </div>
 </section>

@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/vectorize-io/hindsight#software",
   "name": "hindsight",
-  "description": "Hindsight is an agent memory system designed to help AI agents learn and evolve over time rather than just recalling conversation history. It utilizes a three-stage workflow—retain, recall, and reflect—to manage long-term information and develop mental models. The system can be integrated via an LLM wrapper for automatic memory management or through direct API calls for granular control. It supports multiple LLM providers including OpenAI, Anthropic, and Ollama, and is compatible with PostgreSQL",
+  "description": "Hindsight is an agent memory system designed to help AI agents learn and evolve through long-term retention, recall, and reflection workflows. It moves beyond simple conversation history by using a three-step process to store information, search memories, and generate disposition-aware responses. The system can be integrated via a two-line LLM wrapper or a direct API, supporting metadata filtering for per-user memory isolation. It is compatible with major LLM providers including OpenAI, Anthropi",
   "url": "https://hermesatlas.com/projects/vectorize-io/hindsight",
   "codeRepository": "https://github.com/vectorize-io/hindsight",
   "applicationCategory": "UtilitiesApplication",
@@ -53,7 +53,7 @@
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 15567
+    "userInteractionCount": 15568
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -136,11 +136,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Hindsight is an agent memory system designed to help AI agents learn and evolve over time rather than just recalling conversation history. It utilizes a three-stage workflow—retain, recall, and reflect—to manage long-term information and develop mental models. The system can be integrated via an LLM wrapper for automatic memory management or through direct API calls for granular control. It supports multiple LLM providers including OpenAI, Anthropic, and Ollama, and is compatible with PostgreSQL and Oracle AI Database for storage.</p>
+    <p class="summary-text">Hindsight is an agent memory system designed to help AI agents learn and evolve through long-term retention, recall, and reflection workflows. It moves beyond simple conversation history by using a three-step process to store information, search memories, and generate disposition-aware responses. The system can be integrated via a two-line LLM wrapper or a direct API, supporting metadata filtering for per-user memory isolation. It is compatible with major LLM providers including OpenAI, Anthropic, and Ollama, and can be deployed via Docker or as an embedded Python library.</p>
     <ul class="summary-highlights">
-      <li>Implements retain, recall, and reflect workflows for long-term learning.</li>
-      <li>Provides an LLM wrapper for two-line integration with existing agents.</li>
-      <li>Supports per-user memory isolation using custom metadata filtering.</li>
+      <li>Implements retain, recall, and reflect workflows for long-term agent learning.</li>
+      <li>Provides a two-line LLM wrapper for automatic memory storage and retrieval.</li>
+      <li>Supports multiple providers including OpenAI, Anthropic, Gemini, and local models.</li>
     </ul>
   </div>
 </section>
@@ -395,7 +395,7 @@ client.reflect(bank_id=&quot;my-bank&quot;, query=&quot;What should I know about
         <div class="name"><span class="org">greyhaven-ai /</span> autocontext</div>
       </a>
       <a class="related-row" href="/projects/elkimek/honcho-self-hosted">
-        <div class="stars">★ 285</div>
+        <div class="stars">★ 286</div>
         <div class="name"><span class="org">elkimek /</span> honcho-self-hosted</div>
       </a>
       <a class="related-row" href="/projects/yoloshii/ClawMem">

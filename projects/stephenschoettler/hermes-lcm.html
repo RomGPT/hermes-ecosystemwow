@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/stephenschoettler/hermes-lcm#software",
   "name": "hermes-lcm",
-  "description": "Hermes-LCM is a context engine plugin for Hermes Agent that prevents data loss during conversation compression. It replaces flat summaries with a hierarchical summary DAG and a SQLite message store to maintain a recoverable history. This approach allows the agent to use specialized tools to drill back into specific raw messages or child summaries without flooding the active context. It includes built-in controls for sensitive data redaction and large payload externalization.",
+  "description": "Hermes-LCM is a context management plugin for Hermes Agent that prevents information loss during long-running conversations. It replaces standard flat-summary compression with a hierarchical Directed Acyclic Graph (DAG) that stores raw messages in a SQLite database while compacting older context into depth-aware summary nodes. This architecture allows the agent to maintain a bounded active context window while using specialized tools to retrieve exact historical details through drill-down querie",
   "url": "https://hermesatlas.com/projects/stephenschoettler/hermes-lcm",
   "codeRepository": "https://github.com/stephenschoettler/hermes-lcm",
   "applicationCategory": "UtilitiesApplication",
@@ -130,11 +130,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Hermes-LCM is a context engine plugin for Hermes Agent that prevents data loss during conversation compression. It replaces flat summaries with a hierarchical summary DAG and a SQLite message store to maintain a recoverable history. This approach allows the agent to use specialized tools to drill back into specific raw messages or child summaries without flooding the active context. It includes built-in controls for sensitive data redaction and large payload externalization.</p>
+    <p class="summary-text">Hermes-LCM is a context management plugin for Hermes Agent that prevents information loss during long-running conversations. It replaces standard flat-summary compression with a hierarchical Directed Acyclic Graph (DAG) that stores raw messages in a SQLite database while compacting older context into depth-aware summary nodes. This architecture allows the agent to maintain a bounded active context window while using specialized tools to retrieve exact historical details through drill-down queries. The system includes automated controls for sensitive data redaction and externalizes large payloads to ensure storage efficiency without sacrificing recoverability.</p>
     <ul class="summary-highlights">
-      <li>Hierarchical summary DAG for depth-aware context compaction</li>
-      <li>SQLite-backed storage for raw message preservation</li>
-      <li>Dedicated retrieval tools like lcm_grep and lcm_expand</li>
+      <li>Uses a DAG-based engine to compact history into hierarchical summaries</li>
+      <li>Provides agent tools like lcm_grep and lcm_expand for detail recovery</li>
+      <li>Persists raw conversation data in a local SQLite message store</li>
     </ul>
   </div>
 </section>
@@ -931,7 +931,7 @@ See the <a href="https://github.com/stephenschoettler/hermes-lcm/releases">relea
         <div class="name"><span class="org">greyhaven-ai /</span> autocontext</div>
       </a>
       <a class="related-row" href="/projects/elkimek/honcho-self-hosted">
-        <div class="stars">★ 285</div>
+        <div class="stars">★ 286</div>
         <div class="name"><span class="org">elkimek /</span> honcho-self-hosted</div>
       </a>
       <a class="related-row" href="/projects/yoloshii/ClawMem">

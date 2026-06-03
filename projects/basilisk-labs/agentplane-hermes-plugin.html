@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/basilisk-labs/agentplane-hermes-plugin#software",
   "name": "agentplane-hermes-plugin",
-  "description": "🔌 Hermes plugin for spawning AgentPlane as an external worker lane.",
+  "description": "This plugin integrates AgentPlane into the Hermes ecosystem by enabling external Kanban worker lanes. It functions by intercepting Kanban assignees matching specific patterns and resolving them to an external supervisor command rather than a standard Hermes profile. The integration maintains strict boundaries by requiring AgentPlane to manage task lifecycles through official APIs instead of direct database mutations. It supports path allowlisting for secure workspace management and includes a di",
   "url": "https://hermesatlas.com/projects/basilisk-labs/agentplane-hermes-plugin",
   "codeRepository": "https://github.com/basilisk-labs/agentplane-hermes-plugin",
   "applicationCategory": "BrowserApplication",
@@ -128,9 +128,20 @@
 
 
 
+<section class="project-summary">
+  <div class="section-label">overview</div>
+  <div>
+    <p class="summary-text">This plugin integrates AgentPlane into the Hermes ecosystem by enabling external Kanban worker lanes. It functions by intercepting Kanban assignees matching specific patterns and resolving them to an external supervisor command rather than a standard Hermes profile. The integration maintains strict boundaries by requiring AgentPlane to manage task lifecycles through official APIs instead of direct database mutations. It supports path allowlisting for secure workspace management and includes a diagnostic tool for verifying registry and binary configurations.</p>
+    <ul class="summary-highlights">
+      <li>Maps agentplane-* Kanban assignees to external supervisor commands</li>
+      <li>Requires explicit task ID mapping via card metadata</li>
+      <li>Enforces security through AGENTPLANE_HERMES_ALLOWED_ROOTS path allowlisting</li>
+    </ul>
+  </div>
+</section>
 
-<details class="readme-details" open>
-  <summary class="readme-toggle">readme</summary>
+<details class="readme-details">
+  <summary class="readme-toggle">full readme from github</summary>
   <section class="readme" data-nosnippet>
     <h2>AgentPlane Hermes Plugin</h2>
 <p><a href="https://github.com/basilisk-labs/agentplane-hermes-plugin/actions/workflows/ci.yml"><img src="https://github.com/basilisk-labs/agentplane-hermes-plugin/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
@@ -260,7 +271,7 @@ or CLI surfaces.</p>
         <div class="name"><span class="org">Shelpuk-AI-Technology-Consulting /</span> kindly-web-search-mcp-server</div>
       </a>
       <a class="related-row" href="/projects/stainlu/hermes-labyrinth">
-        <div class="stars">★ 279</div>
+        <div class="stars">★ 278</div>
         <div class="name"><span class="org">stainlu /</span> hermes-labyrinth</div>
       </a>
     </div>

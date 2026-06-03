@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/plastic-labs/honcho#software",
   "name": "honcho",
-  "description": "Honcho is a memory infrastructure designed to provide stateful agents with a persistent understanding of people, groups, and projects over time. It operates via a loop that stores messages and events, reasons about them asynchronously in the background, and allows users to query peer representations or session context. The system can be deployed as a managed service or self-hosted as a FastAPI server. It integrates with various agent tools and frameworks, including MCP, Claude Code, and Hermes.",
+  "description": "Honcho is a memory infrastructure library designed to build stateful agents that track evolving relationships between users, agents, and projects over time. It functions by capturing messages and events in sessions, then asynchronously extracting conclusions and peer representations through a background reasoning loop. This approach allows developers to query natural-language insights or retrieve prompt-ready context for injection into LLM calls. The system supports hybrid search, document impor",
   "url": "https://hermesatlas.com/projects/plastic-labs/honcho",
   "codeRepository": "https://github.com/plastic-labs/honcho",
   "applicationCategory": "UtilitiesApplication",
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Honcho is a memory infrastructure designed to provide stateful agents with a persistent understanding of people, groups, and projects over time. It operates via a loop that stores messages and events, reasons about them asynchronously in the background, and allows users to query peer representations or session context. The system can be deployed as a managed service or self-hosted as a FastAPI server. It integrates with various agent tools and frameworks, including MCP, Claude Code, and Hermes.</p>
+    <p class="summary-text">Honcho is a memory infrastructure library designed to build stateful agents that track evolving relationships between users, agents, and projects over time. It functions by capturing messages and events in sessions, then asynchronously extracting conclusions and peer representations through a background reasoning loop. This approach allows developers to query natural-language insights or retrieve prompt-ready context for injection into LLM calls. The system supports hybrid search, document imports, and integrates with frameworks like MCP and Hermes.</p>
     <ul class="summary-highlights">
-      <li>Reasoning-first memory that extracts conclusions from conversations and events.</li>
-      <li>Peer-centric modeling of users, agents, and projects as evolving entities.</li>
-      <li>Hybrid search capabilities combining BM25 and vector search.</li>
+      <li>Extracts reasoning-based conclusions from conversations instead of just matching text chunks</li>
+      <li>Models multi-peer perspectives to track what entities know about each other</li>
+      <li>Provides FastAPI-based server for managed or self-hosted deployment options</li>
     </ul>
   </div>
 </section>
@@ -752,7 +752,7 @@ the results.</p>
         <div class="name"><span class="org">greyhaven-ai /</span> autocontext</div>
       </a>
       <a class="related-row" href="/projects/elkimek/honcho-self-hosted">
-        <div class="stars">★ 285</div>
+        <div class="stars">★ 286</div>
         <div class="name"><span class="org">elkimek /</span> honcho-self-hosted</div>
       </a>
       <a class="related-row" href="/projects/yoloshii/ClawMem">

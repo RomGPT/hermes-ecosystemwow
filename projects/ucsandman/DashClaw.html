@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/ucsandman/DashClaw#software",
   "name": "DashClaw",
-  "description": "DashClaw is a governance layer designed to secure AI agents that interact with real-world systems. It intercepts risky actions to evaluate them against declarative policies, routing requests for human approval via a dashboard, CLI, or messaging apps when necessary. The system ensures operational safety through cryptographic identity verification and durable outcome tracking to prevent double-execution during retries. It integrates with various runtimes via MCP, Node/Python SDKs, and REST APIs, s",
+  "description": "DashClaw is a governance and decision infrastructure layer designed to intercept and evaluate risky AI agent actions before they execute on real systems. It functions as a middleware that enforces declarative policies, manages human-in-the-loop approvals, and records verifiable evidence for every agent decision. The platform prevents double-execution of tasks through durable outcome tracking and provides cryptographic attribution using OIDC bearer tokens. It integrates with major frameworks incl",
   "url": "https://hermesatlas.com/projects/ucsandman/DashClaw",
   "codeRepository": "https://github.com/ucsandman/DashClaw",
   "applicationCategory": "BusinessApplication",
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">DashClaw is a governance layer designed to secure AI agents that interact with real-world systems. It intercepts risky actions to evaluate them against declarative policies, routing requests for human approval via a dashboard, CLI, or messaging apps when necessary. The system ensures operational safety through cryptographic identity verification and durable outcome tracking to prevent double-execution during retries. It integrates with various runtimes via MCP, Node/Python SDKs, and REST APIs, supporting frameworks like LangChain, CrewAI, and AutoGen.</p>
+    <p class="summary-text">DashClaw is a governance and decision infrastructure layer designed to intercept and evaluate risky AI agent actions before they execute on real systems. It functions as a middleware that enforces declarative policies, manages human-in-the-loop approvals, and records verifiable evidence for every agent decision. The platform prevents double-execution of tasks through durable outcome tracking and provides cryptographic attribution using OIDC bearer tokens. It integrates with major frameworks including LangChain, CrewAI, and AutoGen, as well as specific agents like Hermes Agent and Claude Code.</p>
     <ul class="summary-highlights">
-      <li>Policy-based interception for blocking, warning, or approving risky actions</li>
-      <li>Cryptographic identity verification using JWKS-verified OIDC bearer tokens</li>
-      <li>Broad integration support for MCP, LangChain, CrewAI, and AutoGen</li>
+      <li>Evaluates and blocks risky agent actions based on declarative policies.</li>
+      <li>Routes pending actions to human approval queues via CLI or mobile.</li>
+      <li>Provides native lifecycle hooks and plugins for Hermes Agent integration.</li>
     </ul>
   </div>
 </section>

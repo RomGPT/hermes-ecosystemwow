@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/Sahil-SS9/hermes-multichannel-prompt-optimizer#software",
   "name": "hermes-multichannel-prompt-optimizer",
-  "description": "Hermes Agent plugin: rewrites your prompts before they hit the LLM — across CLI, TUI, Discord, Telegram. Quality scoring + analytics + arrow-key interactive overlays.",
+  "description": "This Hermes Agent plugin intercepts and rewrites user prompts to improve clarity and reduce token consumption before they reach the LLM. It utilizes a heuristic engine to tailor rewrites based on the target model's vendor family and reasoning capabilities while preserving the original language of non-English inputs. Users can choose between silent automatic rewrites or an interactive mode that presents a before-and-after comparison for approval. The system also logs performance metrics to a loca",
   "url": "https://hermesatlas.com/projects/Sahil-SS9/hermes-multichannel-prompt-optimizer",
   "codeRepository": "https://github.com/Sahil-SS9/hermes-multichannel-prompt-optimizer",
   "applicationCategory": "DeveloperApplication",
@@ -128,9 +128,20 @@
 
 
 
+<section class="project-summary">
+  <div class="section-label">overview</div>
+  <div>
+    <p class="summary-text">This Hermes Agent plugin intercepts and rewrites user prompts to improve clarity and reduce token consumption before they reach the LLM. It utilizes a heuristic engine to tailor rewrites based on the target model's vendor family and reasoning capabilities while preserving the original language of non-English inputs. Users can choose between silent automatic rewrites or an interactive mode that presents a before-and-after comparison for approval. The system also logs performance metrics to a local SQLite database, allowing users to track quality improvements and token savings through built-in analytics commands.</p>
+    <ul class="summary-highlights">
+      <li>Tailors prompt structure based on model vendor and reasoning capabilities</li>
+      <li>Reduces token usage by 20–80% through noise and filler removal</li>
+      <li>Provides multi-surface support across CLI, TUI, Discord, and Telegram</li>
+    </ul>
+  </div>
+</section>
 
-<details class="readme-details" open>
-  <summary class="readme-toggle">readme</summary>
+<details class="readme-details">
+  <summary class="readme-toggle">full readme from github</summary>
   <section class="readme" data-nosnippet>
     <h2>hermes-multichannel-prompt-optimizer</h2>
 <p>A <a href="https://github.com/NousResearch/hermes-agent">Hermes Agent</a> plugin that rewrites your prompts before they reach the LLM. Works across every surface Hermes runs on: CLI, TUI, Discord, Telegram, and any other gateway adapter.</p>

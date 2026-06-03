@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/liaohch3/claude-tap#software",
   "name": "claude-tap",
-  "description": "claude-tap is a local proxy and trace viewer designed to help developers inspect the internal API traffic of AI coding agents. It intercepts requests to reveal system prompts, tool schemas, and token usage by running the agent's CLI through its proxy. This allows users to debug agent behavior via request diffs and export sessions as self-contained HTML files for offline review. It supports a wide range of clients including Hermes Agent, Claude Code, Cursor CLI, and Gemini CLI.",
+  "description": "claude-tap is a local proxy and trace viewer designed to help developers inspect the API traffic of AI coding agents like Hermes Agent and Claude Code. It works by running agent CLIs through a local interceptor to capture and display system prompts, tool schemas, and streaming responses in a web-based interface. Users can analyze token usage, compare request diffs between conversation turns, and export traces as self-contained HTML files. The tool prioritizes privacy by keeping data local and au",
   "url": "https://hermesatlas.com/projects/liaohch3/claude-tap",
   "codeRepository": "https://github.com/liaohch3/claude-tap",
   "applicationCategory": "DeveloperApplication",
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">claude-tap is a local proxy and trace viewer designed to help developers inspect the internal API traffic of AI coding agents. It intercepts requests to reveal system prompts, tool schemas, and token usage by running the agent's CLI through its proxy. This allows users to debug agent behavior via request diffs and export sessions as self-contained HTML files for offline review. It supports a wide range of clients including Hermes Agent, Claude Code, Cursor CLI, and Gemini CLI.</p>
+    <p class="summary-text">claude-tap is a local proxy and trace viewer designed to help developers inspect the API traffic of AI coding agents like Hermes Agent and Claude Code. It works by running agent CLIs through a local interceptor to capture and display system prompts, tool schemas, and streaming responses in a web-based interface. Users can analyze token usage, compare request diffs between conversation turns, and export traces as self-contained HTML files. The tool prioritizes privacy by keeping data local and automatically redacting common authentication headers.</p>
     <ul class="summary-highlights">
-      <li>Inspects system prompts, tool calls, and streaming responses</li>
-      <li>Compares adjacent requests with structured diffs to debug behavior</li>
-      <li>Exports trace sessions to portable, self-contained HTML viewers</li>
+      <li>Inspects prompts, tool calls, and reconstructed streaming responses locally</li>
+      <li>Supports Hermes Agent, Claude Code, Cursor, and Gemini CLI</li>
+      <li>Generates portable HTML artifacts for sharing and archiving traces</li>
     </ul>
   </div>
 </section>

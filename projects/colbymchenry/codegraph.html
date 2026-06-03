@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/colbymchenry/codegraph#software",
   "name": "codegraph",
-  "description": "CodeGraph is a local pre-indexed knowledge graph designed to reduce token consumption and tool calls for AI coding agents. It replaces expensive file scanning and grep operations by providing agents with immediate access to symbol relationships, call graphs, and code structure. This approach allows agents to answer architectural questions faster and more cheaply by querying the graph instead of reading multiple files. It integrates with various agents including Hermes Agent, Claude Code, Cursor,",
+  "description": "CodeGraph is a local developer tool that provides a pre-indexed semantic knowledge graph for AI coding agents to improve codebase navigation. It works by mapping symbol relationships, call graphs, and code structures into a local index, allowing agents to query the graph directly instead of performing expensive file scans or grep operations. This approach reduces token consumption and tool calls while accelerating response times for architectural queries. The tool integrates via MCP with various",
   "url": "https://hermesatlas.com/projects/colbymchenry/codegraph",
   "codeRepository": "https://github.com/colbymchenry/codegraph",
   "applicationCategory": "DeveloperApplication",
@@ -53,7 +53,7 @@
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 38823
+    "userInteractionCount": 38834
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">CodeGraph is a local pre-indexed knowledge graph designed to reduce token consumption and tool calls for AI coding agents. It replaces expensive file scanning and grep operations by providing agents with immediate access to symbol relationships, call graphs, and code structure. This approach allows agents to answer architectural questions faster and more cheaply by querying the graph instead of reading multiple files. It integrates with various agents including Hermes Agent, Claude Code, Cursor, and Gemini.</p>
+    <p class="summary-text">CodeGraph is a local developer tool that provides a pre-indexed semantic knowledge graph for AI coding agents to improve codebase navigation. It works by mapping symbol relationships, call graphs, and code structures into a local index, allowing agents to query the graph directly instead of performing expensive file scans or grep operations. This approach reduces token consumption and tool calls while accelerating response times for architectural queries. The tool integrates via MCP with various agents including Hermes Agent, Claude Code, and Cursor.</p>
     <ul class="summary-highlights">
-      <li>Reduces tool calls by 62% and costs by 25% on average</li>
-      <li>Provides local symbol relationships and call graphs for AI agents</li>
-      <li>Supports multiple agents including Hermes, Cursor, and Claude Code</li>
+      <li>Reduces tool calls by approximately 58% through pre-indexed symbol mapping</li>
+      <li>Operates 100% locally with no external dependencies or Node.js required</li>
+      <li>Supports Hermes Agent, Claude Code, Cursor, and other MCP-compatible agents</li>
     </ul>
   </div>
 </section>

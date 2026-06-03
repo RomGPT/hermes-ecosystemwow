@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/AxDSan/mnemosyne#software",
   "name": "mnemosyne",
-  "description": "Mnemosyne is a universal memory layer designed to provide AI agents with persistent, long-term context without requiring external cloud services. It utilizes a SQLite-backed architecture featuring a Bilevel Episodic-Associative Memory (BEAM) system for efficient storage and retrieval. The system supports various integration methods including a Python SDK and the Model Context Protocol (MCP). It is compatible with multiple platforms such as Cursor, Claude Code, and OpenWebUI, and includes a dedic",
+  "description": "Mnemosyne is a local, SQLite-backed memory system designed to provide persistent context for Hermes and other AI agents. It utilizes a single-file database architecture combining vector search and a temporal knowledge graph to manage working and long-term episodic memory. The system operates with zero external dependencies and achieves sub-millisecond retrieval speeds through binary vector optimization. It integrates natively with the Model Context Protocol (MCP) and popular agent frameworks lik",
   "url": "https://hermesatlas.com/projects/AxDSan/mnemosyne",
   "codeRepository": "https://github.com/AxDSan/mnemosyne",
   "applicationCategory": "UtilitiesApplication",
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Mnemosyne is a universal memory layer designed to provide AI agents with persistent, long-term context without requiring external cloud services. It utilizes a SQLite-backed architecture featuring a Bilevel Episodic-Associative Memory (BEAM) system for efficient storage and retrieval. The system supports various integration methods including a Python SDK and the Model Context Protocol (MCP). It is compatible with multiple platforms such as Cursor, Claude Code, and OpenWebUI, and includes a dedicated plugin for Hermes Agent.</p>
+    <p class="summary-text">Mnemosyne is a local, SQLite-backed memory system designed to provide persistent context for Hermes and other AI agents. It utilizes a single-file database architecture combining vector search and a temporal knowledge graph to manage working and long-term episodic memory. The system operates with zero external dependencies and achieves sub-millisecond retrieval speeds through binary vector optimization. It integrates natively with the Model Context Protocol (MCP) and popular agent frameworks like Cursor, Claude Code, and OpenWebUI.</p>
     <ul class="summary-highlights">
-      <li>Zero-dependency, single-file SQLite storage with sub-millisecond latency.</li>
-      <li>MCP-ready for seamless integration with Cursor, Claude Code, and Windsurf.</li>
-      <li>Supports temporal knowledge graphs, entity extraction, and episodic compression.</li>
+      <li>Zero-dependency SQLite backend with sub-millisecond retrieval performance</li>
+      <li>Supports MCP, Python SDK, and native plugins for major agent frameworks</li>
+      <li>Features episodic compression and temporal triples for long-term knowledge management</li>
     </ul>
   </div>
 </section>
@@ -749,7 +749,7 @@ hermes memory setup
         <div class="name"><span class="org">greyhaven-ai /</span> autocontext</div>
       </a>
       <a class="related-row" href="/projects/elkimek/honcho-self-hosted">
-        <div class="stars">★ 285</div>
+        <div class="stars">★ 286</div>
         <div class="name"><span class="org">elkimek /</span> honcho-self-hosted</div>
       </a>
       <a class="related-row" href="/projects/yoloshii/ClawMem">

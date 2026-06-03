@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/ReinaMacCredy/maestro#software",
   "name": "maestro",
-  "description": "Maestro is a local-first agent harness that manages the spec-to-ship lifecycle through a structured on-disk state model. It uses a CLI to maintain shared state in a local directory, allowing separate agent sessions to collaborate without a central database or server. By persisting specs, tasks, and handoff envelopes as files, it ensures agents can resume work with durable continuation records and auditable evidence. The system enforces discipline through machine-checked contracts and a determini",
+  "description": "Maestro is a Rust-based, local-first harness designed to provide a durable execution environment for coding agents. It manages the agent lifecycle by storing features, tasks, and decision logs as plain files within a repository's `.maestro/` directory. The system enforces gated state transitions, requiring agents to provide verifiable proof of work before tasks can be marked as complete. This approach ensures that agent actions remain auditable, persistent across sessions, and integrated directl",
   "url": "https://hermesatlas.com/projects/ReinaMacCredy/maestro",
   "codeRepository": "https://github.com/ReinaMacCredy/maestro",
   "applicationCategory": "DeveloperApplication",
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Maestro is a local-first agent harness that manages the spec-to-ship lifecycle through a structured on-disk state model. It uses a CLI to maintain shared state in a local directory, allowing separate agent sessions to collaborate without a central database or server. By persisting specs, tasks, and handoff envelopes as files, it ensures agents can resume work with durable continuation records and auditable evidence. The system enforces discipline through machine-checked contracts and a deterministic verification process that gates task completion.</p>
+    <p class="summary-text">Maestro is a Rust-based, local-first harness designed to provide a durable execution environment for coding agents. It manages the agent lifecycle by storing features, tasks, and decision logs as plain files within a repository's `.maestro/` directory. The system enforces gated state transitions, requiring agents to provide verifiable proof of work before tasks can be marked as complete. This approach ensures that agent actions remain auditable, persistent across sessions, and integrated directly into standard version control workflows.</p>
     <ul class="summary-highlights">
-      <li>Maintains shared agent state locally in .maestro/ without a database</li>
-      <li>Decomposes complex specs into multi-task execution plans and PRs</li>
-      <li>Emits passive JSON handoff envelopes for seamless cross-session agent transitions</li>
+      <li>Local-first architecture using plain files without background daemons</li>
+      <li>Gated state machine for features, tasks, and harness improvements</li>
+      <li>Evidence-based verification requiring recorded proof for task completion</li>
     </ul>
   </div>
 </section>

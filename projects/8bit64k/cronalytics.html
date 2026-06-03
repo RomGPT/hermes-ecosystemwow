@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/8bit64k/cronalytics#software",
   "name": "cronalytics",
-  "description": "Hermes Agent plugin for cron analytics and observability. The dashboard for agentic automations in Hermes.",
+  "description": "Cronalytics is an observability plugin for Hermes Agent designed to track and attribute usage costs for scheduled cron jobs. It captures session-level data such as token counts, model usage, and success states via the on_session_end hook, storing the results in a local SQLite database. Users can access these insights through a visual dashboard, a programmatic CLI tool, or a specialized agent skill for diagnostic assessments. This multi-interface approach allows for precise monitoring of automate",
   "url": "https://hermesatlas.com/projects/8bit64k/cronalytics",
   "codeRepository": "https://github.com/8bit64k/cronalytics",
   "applicationCategory": "BrowserApplication",
@@ -128,9 +128,20 @@
 
 
 
+<section class="project-summary">
+  <div class="section-label">overview</div>
+  <div>
+    <p class="summary-text">Cronalytics is an observability plugin for Hermes Agent designed to track and attribute usage costs for scheduled cron jobs. It captures session-level data such as token counts, model usage, and success states via the on_session_end hook, storing the results in a local SQLite database. Users can access these insights through a visual dashboard, a programmatic CLI tool, or a specialized agent skill for diagnostic assessments. This multi-interface approach allows for precise monitoring of automated job economics and performance trends over time.</p>
+    <ul class="summary-highlights">
+      <li>Tracks session-level token usage and estimated costs for cron jobs</li>
+      <li>Provides dashboard, CLI, and agent skill for data access</li>
+      <li>Automates historical data backfilling via a local SQLite fact database</li>
+    </ul>
+  </div>
+</section>
 
-<details class="readme-details" open>
-  <summary class="readme-toggle">readme</summary>
+<details class="readme-details">
+  <summary class="readme-toggle">full readme from github</summary>
   <section class="readme" data-nosnippet>
     <h2>Cronalytics</h2>
  <a href="https://github.com/8bit64k/cronalytics/releases">
@@ -545,7 +556,7 @@ provides_hooks:
         <div class="name"><span class="org">Shelpuk-AI-Technology-Consulting /</span> kindly-web-search-mcp-server</div>
       </a>
       <a class="related-row" href="/projects/stainlu/hermes-labyrinth">
-        <div class="stars">★ 279</div>
+        <div class="stars">★ 278</div>
         <div class="name"><span class="org">stainlu /</span> hermes-labyrinth</div>
       </a>
     </div>

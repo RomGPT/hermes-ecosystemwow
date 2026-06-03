@@ -4,7 +4,7 @@
     "repo": "hermes-agent",
     "name": "hermes-agent",
     "description": "The self-improving AI agent that grows with you — persistent memory, auto-generated skills, 14 platforms, 6 execution backends",
-    "stars": 178313,
+    "stars": 178323,
     "url": "https://github.com/NousResearch/hermes-agent",
     "official": true,
     "category": "Core & Official"
@@ -64,7 +64,7 @@
     "repo": "hermes-workspace",
     "name": "hermes-workspace",
     "description": "Native web workspace — chat, terminal, memory browser, skills manager, and inspector panel",
-    "stars": 5298,
+    "stars": 5299,
     "url": "https://github.com/outsourc-e/hermes-workspace",
     "official": false,
     "category": "Workspaces & GUIs"
@@ -74,7 +74,7 @@
     "repo": "hermes-desktop",
     "name": "hermes-desktop",
     "description": "Desktop companion app for installing, configuring, and chatting with Hermes Agent",
-    "stars": 9742,
+    "stars": 9747,
     "url": "https://github.com/fathah/hermes-desktop",
     "official": false,
     "category": "Workspaces & GUIs"
@@ -104,7 +104,7 @@
     "repo": "Anthropic-Cybersecurity-Skills",
     "name": "Anthropic-Cybersecurity-Skills",
     "description": "754 structured cybersecurity skills mapped to MITRE ATT&CK, NIST CSF 2.0, ATLAS, D3FEND & NIST AI RMF",
-    "stars": 13764,
+    "stars": 13766,
     "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
     "official": false,
     "category": "Skills & Skill Registries"
@@ -144,7 +144,7 @@
     "repo": "drawio-skill",
     "name": "drawio-skill",
     "description": "Generate draw.io diagrams from natural language descriptions",
-    "stars": 2065,
+    "stars": 2066,
     "url": "https://github.com/Agents365-ai/drawio-skill",
     "official": false,
     "category": "Skills & Skill Registries"
@@ -274,7 +274,7 @@
     "repo": "mem0",
     "name": "mem0",
     "description": "Universal memory layer for AI Agents — official Hermes Agent memory provider, available as managed cloud or Apache-2.0 self-hosted OSS",
-    "stars": 57557,
+    "stars": 57560,
     "url": "https://github.com/mem0ai/mem0",
     "official": false,
     "category": "Memory & Context"
@@ -284,7 +284,7 @@
     "repo": "hindsight",
     "name": "hindsight",
     "description": "Agent memory that learns — long-term retain/recall/reflect workflows",
-    "stars": 15567,
+    "stars": 15568,
     "url": "https://github.com/vectorize-io/hindsight",
     "official": true,
     "category": "Memory & Context"
@@ -304,7 +304,7 @@
     "repo": "honcho-self-hosted",
     "name": "honcho-self-hosted",
     "description": "Self-hosted Honcho memory backend for cross-session persistence",
-    "stars": 285,
+    "stars": 286,
     "url": "https://github.com/elkimek/honcho-self-hosted",
     "official": false,
     "category": "Memory & Context"
@@ -524,7 +524,7 @@
     "repo": "codegraph",
     "name": "codegraph",
     "description": "Local pre-indexed code knowledge graph for Hermes Agent and other coding agents to reduce token usage and tool calls",
-    "stars": 38823,
+    "stars": 38834,
     "url": "https://github.com/colbymchenry/codegraph",
     "official": false,
     "category": "Developer Tools"
@@ -714,7 +714,7 @@
     "repo": "hermes-labyrinth",
     "name": "hermes-labyrinth",
     "description": "Read-only observability plugin for Hermes Agent with journeys, crossings, guideposts, and reports",
-    "stars": 279,
+    "stars": 278,
     "url": "https://github.com/stainlu/hermes-labyrinth",
     "official": false,
     "category": "Plugins & Extensions"
@@ -744,7 +744,7 @@
     "repo": "open-design",
     "name": "open-design",
     "description": "Local-first open-source design/prototyping system with coding-agent CLI support including Hermes Agent",
-    "stars": 57919,
+    "stars": 57927,
     "url": "https://github.com/nexu-io/open-design",
     "official": false,
     "category": "Skills & Skill Registries"
@@ -754,7 +754,7 @@
     "repo": "cc-switch",
     "name": "cc-switch",
     "description": "Cross-platform all-in-one manager for Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI, and Hermes Agent",
-    "stars": 90208,
+    "stars": 90220,
     "url": "https://github.com/farion1231/cc-switch",
     "official": false,
     "category": "Workspaces & GUIs"
@@ -764,7 +764,7 @@
     "repo": "AionUi",
     "name": "AionUi",
     "description": "Local open-source cowork app for OpenClaw, Hermes Agent, Claude Code, Codex, OpenCode, Gemini CLI, and other agent CLIs",
-    "stars": 27493,
+    "stars": 27495,
     "url": "https://github.com/iOfficeAI/AionUi",
     "official": false,
     "category": "Workspaces & GUIs"
@@ -844,7 +844,7 @@
     "repo": "hermes-android",
     "name": "hermes-android",
     "description": "Android device control — bridge app + Python toolset for mobile automation",
-    "stars": 251,
+    "stars": 252,
     "url": "https://github.com/raulvidis/hermes-android",
     "official": false,
     "category": "Integrations & Bridges"
@@ -1174,7 +1174,7 @@
     "repo": "hermes-webui",
     "name": "hermes-webui",
     "description": "Hermes WebUI: The best way to use Hermes Agent from the web or from your phone!",
-    "stars": 12876,
+    "stars": 12879,
     "url": "https://github.com/nesquena/hermes-webui",
     "official": false,
     "category": "Workspaces & GUIs"
@@ -1184,7 +1184,7 @@
     "repo": "gbrain",
     "name": "gbrain",
     "description": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
-    "stars": 20744,
+    "stars": 20745,
     "url": "https://github.com/garrytan/gbrain",
     "official": false,
     "category": "Memory & Context"
@@ -1264,7 +1264,7 @@
     "repo": "hermes-web-ui",
     "name": "hermes-web-ui",
     "description": "Web dashboard for Hermes Agent — multi-platform AI chat, session management, scheduled jobs, usage analytics & channel configuration (Telegram, Discord, Slack, WhatsApp)",
-    "stars": 7133,
+    "stars": 7134,
     "url": "https://github.com/EKKOLearnAI/hermes-web-ui",
     "official": false,
     "category": "Workspaces & GUIs"
@@ -1464,7 +1464,7 @@
     "repo": "supermemory",
     "name": "supermemory",
     "description": "Memory engine and API — official Hermes Agent memory provider with sub-300ms recall sustained at 100B+ tokens/month, custom vector graph engine, context fencing, and byte-level dedupe with 100% prompt-cache discount.",
-    "stars": 24936,
+    "stars": 24938,
     "url": "https://github.com/supermemoryai/supermemory",
     "official": false,
     "category": "Memory & Context"

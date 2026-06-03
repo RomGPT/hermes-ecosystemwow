@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/willingning-coder/eagle-eye#software",
   "name": "eagle-eye",
-  "description": "🦅 5-Layer Intelligent Skill Retrieval for Hermes Agent — hard triggers, FTS5, synonym dictionary, dense embedding, RRF fusion. Zero core modification.",
+  "description": "Eagle Eye is a zero-invasive plugin for Hermes Agent that prevents token bloat and LLM confusion by filtering large skill libraries. It utilizes a five-layer retrieval pipeline consisting of deterministic hard triggers, FTS5 BM25, synonym dictionaries, dense embeddings, and RRF fusion to narrow down candidates to the top five most relevant skills. This system provides hints to the LLM without overriding its final decision and degrades gracefully if optional dependencies are missing.",
   "url": "https://hermesatlas.com/projects/willingning-coder/eagle-eye",
   "codeRepository": "https://github.com/willingning-coder/eagle-eye",
   "applicationCategory": "DeveloperApplication",
@@ -128,9 +128,20 @@
 
 
 
+<section class="project-summary">
+  <div class="section-label">overview</div>
+  <div>
+    <p class="summary-text">Eagle Eye is a zero-invasive plugin for Hermes Agent that prevents token bloat and LLM confusion by filtering large skill libraries. It utilizes a five-layer retrieval pipeline consisting of deterministic hard triggers, FTS5 BM25, synonym dictionaries, dense embeddings, and RRF fusion to narrow down candidates to the top five most relevant skills. This system provides hints to the LLM without overriding its final decision and degrades gracefully if optional dependencies are missing.</p>
+    <ul class="summary-highlights">
+      <li>Five-layer retrieval using deterministic and probabilistic matching</li>
+      <li>Reduces token consumption by filtering 100+ skills to five</li>
+      <li>Zero-invasive integration with graceful dependency fallback</li>
+    </ul>
+  </div>
+</section>
 
-<details class="readme-details" open>
-  <summary class="readme-toggle">readme</summary>
+<details class="readme-details">
+  <summary class="readme-toggle">full readme from github</summary>
   <section class="readme" data-nosnippet>
     <h2>🦅 Eagle Eye — 5-Layer Intelligent Skill Retrieval for Hermes Agent</h2>
 <blockquote>

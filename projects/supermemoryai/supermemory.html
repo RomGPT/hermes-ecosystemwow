@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/supermemoryai/supermemory#software",
   "name": "supermemory",
-  "description": "Supermemory is a memory and context layer for AI that prevents assistants from forgetting information between conversations. It uses a custom vector graph engine to automatically extract facts, maintain user profiles, and manage knowledge updates or contradictions. The system integrates via a single API or MCP server, providing RAG capabilities and connectors for services like Google Drive, Notion, and GitHub. It supports various clients including Cursor, Claude Code, and Hermes Agent to provide",
+  "description": "Supermemory is a context and memory layer for AI agents that prevents information loss between conversations. It uses a custom vector graph engine to extract facts, maintain auto-updating user profiles, and handle knowledge contradictions or expirations. The system provides a unified API for RAG, file processing, and real-time connectors to platforms like GitHub and Google Drive. It is the official memory provider for Hermes Agent and supports various MCP-compatible clients including Cursor and ",
   "url": "https://hermesatlas.com/projects/supermemoryai/supermemory",
   "codeRepository": "https://github.com/supermemoryai/supermemory",
   "applicationCategory": "UtilitiesApplication",
@@ -53,7 +53,7 @@
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 24936
+    "userInteractionCount": 24938
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -131,11 +131,11 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Supermemory is a memory and context layer for AI that prevents assistants from forgetting information between conversations. It uses a custom vector graph engine to automatically extract facts, maintain user profiles, and manage knowledge updates or contradictions. The system integrates via a single API or MCP server, providing RAG capabilities and connectors for services like Google Drive, Notion, and GitHub. It supports various clients including Cursor, Claude Code, and Hermes Agent to provide persistent, project-scoped context.</p>
+    <p class="summary-text">Supermemory is a context and memory layer for AI agents that prevents information loss between conversations. It uses a custom vector graph engine to extract facts, maintain auto-updating user profiles, and handle knowledge contradictions or expirations. The system provides a unified API for RAG, file processing, and real-time connectors to platforms like GitHub and Google Drive. It is the official memory provider for Hermes Agent and supports various MCP-compatible clients including Cursor and Claude Desktop.</p>
     <ul class="summary-highlights">
-      <li>Automatic fact extraction and user profile maintenance</li>
-      <li>Hybrid search combining RAG and personalized memory</li>
-      <li>Connectors for Google Drive, Gmail, Notion, and GitHub</li>
+      <li>Maintains persistent memory graphs across multiple AI conversations</li>
+      <li>Automated user profiling with static facts and dynamic recent activity</li>
+      <li>Hybrid search combining RAG knowledge bases with personalized context</li>
     </ul>
   </div>
 </section>
@@ -519,7 +519,7 @@ const results = await client.search.memories({
         <div class="name"><span class="org">greyhaven-ai /</span> autocontext</div>
       </a>
       <a class="related-row" href="/projects/elkimek/honcho-self-hosted">
-        <div class="stars">★ 285</div>
+        <div class="stars">★ 286</div>
         <div class="name"><span class="org">elkimek /</span> honcho-self-hosted</div>
       </a>
       <a class="related-row" href="/projects/yoloshii/ClawMem">
