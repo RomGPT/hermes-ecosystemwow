@@ -35,7 +35,7 @@
   "@type": "SoftwareApplication",
   "@id": "https://hermesatlas.com/projects/EKKOLearnAI/hermes-web-ui#software",
   "name": "hermes-web-ui",
-  "description": "Hermes Web UI is a comprehensive desktop and web-based management dashboard for the Hermes Agent. It provides a graphical interface to handle AI chat sessions, model configurations, and system logs through a responsive frontend. The tool integrates with multiple messaging platforms and remote backends to centralize agent control and resource monitoring. Users can manage multi-agent group chats, schedule cron jobs, and track token usage and costs in one place.",
+  "description": "Hermes Web UI is a comprehensive management interface and desktop application for the Hermes Agent. It utilizes a responsive web dashboard and Socket.IO for real-time chat streaming and terminal access. The system provides centralized control over multi-platform bot configurations, model providers, and scheduled cron jobs. Users can manage isolated profiles to organize sessions, memory, and usage analytics across various backends including Docker and SSH.",
   "url": "https://hermesatlas.com/projects/EKKOLearnAI/hermes-web-ui",
   "codeRepository": "https://github.com/EKKOLearnAI/hermes-web-ui",
   "applicationCategory": "DesktopEnhancementApplication",
@@ -46,13 +46,13 @@
     "name": "EKKOLearnAI",
     "url": "https://github.com/EKKOLearnAI"
   },
-  "dateModified": "2026-06-04T04:08:33.000Z",
+  "dateModified": "2026-06-05T07:47:48.000Z",
   "interactionStatistic": {
     "@type": "InteractionCounter",
     "interactionType": {
       "@type": "LikeAction"
     },
-    "userInteractionCount": 7237
+    "userInteractionCount": 7322
   },
   "isPartOf": {
     "@id": "https://hermesatlas.com/#website"
@@ -111,11 +111,11 @@
   <p class="project-desc">Web dashboard for Hermes Agent — multi-platform AI chat, session management, scheduled jobs, usage analytics </p>
 
   <div class="meta-row">
-    <span class="stars">★ 7.2K</span>
+    <span class="stars">★ 7.3K</span>
     <span><span class="meta-label">lang</span>TypeScript</span>
     
     
-    <span><span class="meta-label">updated</span>2026-06-04</span>
+    <span><span class="meta-label">updated</span>2026-06-05</span>
   </div>
 
   <div class="actions">
@@ -130,10 +130,10 @@
 <section class="project-summary">
   <div class="section-label">overview</div>
   <div>
-    <p class="summary-text">Hermes Web UI is a comprehensive desktop and web-based management dashboard for the Hermes Agent. It provides a graphical interface to handle AI chat sessions, model configurations, and system logs through a responsive frontend. The tool integrates with multiple messaging platforms and remote backends to centralize agent control and resource monitoring. Users can manage multi-agent group chats, schedule cron jobs, and track token usage and costs in one place.</p>
+    <p class="summary-text">Hermes Web UI is a comprehensive management interface and desktop application for the Hermes Agent. It utilizes a responsive web dashboard and Socket.IO for real-time chat streaming and terminal access. The system provides centralized control over multi-platform bot configurations, model providers, and scheduled cron jobs. Users can manage isolated profiles to organize sessions, memory, and usage analytics across various backends including Docker and SSH.</p>
     <ul class="summary-highlights">
-      <li>Unified configuration for 8 platforms including Telegram, Discord, and Slack</li>
-      <li>Multi-profile management with scoped configurations, sessions, and model visibility</li>
+      <li>Unified configuration for 8 messaging platforms including Telegram and Discord</li>
+      <li>Multi-profile management with isolated sessions, memory, and model visibility</li>
       <li>Integrated file browser and web terminal for remote backend management</li>
     </ul>
   </div>
@@ -415,8 +415,8 @@ and package installs such as <code>pip install hermes-agent</code>.</p>
 </tr>
 <tr>
 <td><code>CORS_ORIGINS</code></td>
-<td><code>*</code></td>
-<td>Koa CORS origin setting.</td>
+<td>same host only</td>
+<td>Comma- or space-separated cross-origin allowlist for HTTP, Socket.IO, and WebSocket requests. Set <code>*</code> only when you intentionally need legacy wildcard CORS.</td>
 </tr>
 <tr>
 <td><code>AUTH_TOKEN</code></td>
@@ -724,35 +724,35 @@ npm run dev
   <div>
     <div class="related-list">
       <a class="related-row" href="/projects/outsourc-e/hermes-workspace">
-        <div class="stars">★ 5.3K</div>
+        <div class="stars">★ 5.4K</div>
         <div class="name"><span class="org">outsourc-e /</span> hermes-workspace</div>
       </a>
       <a class="related-row" href="/projects/fathah/hermes-desktop">
-        <div class="stars">★ 10.1K</div>
+        <div class="stars">★ 10.4K</div>
         <div class="name"><span class="org">fathah /</span> hermes-desktop</div>
       </a>
       <a class="related-row" href="/projects/sanchomuzax/hermes-webui">
-        <div class="stars">★ 103</div>
+        <div class="stars">★ 104</div>
         <div class="name"><span class="org">sanchomuzax /</span> hermes-webui</div>
       </a>
       <a class="related-row" href="/projects/Euraika-Labs/pan-ui">
-        <div class="stars">★ 74</div>
+        <div class="stars">★ 76</div>
         <div class="name"><span class="org">Euraika-Labs /</span> pan-ui</div>
       </a>
       <a class="related-row" href="/projects/Eynzof/hermes-agent-cn-desktop">
-        <div class="stars">★ 233</div>
+        <div class="stars">★ 239</div>
         <div class="name"><span class="org">Eynzof /</span> hermes-agent-cn-desktop</div>
       </a>
       <a class="related-row" href="/projects/Felix-Forever/hermes-agent-desktop">
-        <div class="stars">★ 42</div>
+        <div class="stars">★ 43</div>
         <div class="name"><span class="org">Felix-Forever /</span> hermes-agent-desktop</div>
       </a>
       <a class="related-row" href="/projects/jazzyalex/agent-sessions">
-        <div class="stars">★ 608</div>
+        <div class="stars">★ 611</div>
         <div class="name"><span class="org">jazzyalex /</span> agent-sessions</div>
       </a>
       <a class="related-row" href="/projects/nickvasilescu/hermes-desktop-os1">
-        <div class="stars">★ 461</div>
+        <div class="stars">★ 462</div>
         <div class="name"><span class="org">nickvasilescu /</span> hermes-desktop-os1</div>
       </a>
     </div>
